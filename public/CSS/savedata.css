@@ -1,0 +1,52 @@
+.row {
+    padding-top: 20px;
+}
+h3 {
+    color: #EF5DA8;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.col-4 {
+    margin-bottom: 50px;
+}
+.col-4 .form {
+    border-radius: 15px;
+    padding: 10% 15% 10% 15%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mb-4 input {
+    border-radius: 15px;
+}
+.col select {
+    border-radius: 15px;
+}
+.button {
+    background: #ff75b1;
+    border: none;
+    border-radius: 15px;
+    width: 46%;
+    height: 38px;
+    margin: 20px 0 10px 0;
+    box-shadow: 2px 2px 4px gray;
+}
+.button:hover {background-color: #EF5DA8}
+.button:active {
+    background-color: #EF5DA8;
+    box-shadow: 2px 2px #bfbfbf;
+}
+.cancel {
+    background: #adadad;
+    border: none;
+    border-radius: 15px;
+    width: 46%;
+    height: 38px;
+    margin: 20px 0 10px 0;
+    box-shadow: 2px 2px 4px gray;
+}
+.cancel:hover {background-color: #8f8f8f}
+.cancel:active {
+    background-color: #8f8f8f;
+    box-shadow: 2px 2px #bfbfbf;
+}
+
+

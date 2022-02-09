@@ -1,0 +1,45 @@
+.card {
+    border: none;
+}
+
+#color-text {
+    color: deeppink;
+}
+
+#img-post {
+    border-Radius: 600px;
+    width: 50px;
+    height: 50px"
+
+}
+
+#title {
+    font-family: 'Kanit', sans-serif;
+}
+
+#btn-join {
+    margin-left: 105px;
+    background-color: #EF5DA8;
+    color: #fff
+}
+
+#a-href {
+    color: #EF5DA8;
+    text-decoration: none;
+    margin-left: 190px
+}
+
+#p-join {
+    color: #EF5DA8;
+}
+
+#img-join {
+    border-Radius: 600px;
+    width: 50px;
+    height: 50px;
+}
+
+#comment {
+    margin-top: 10px;
+    margin-left: 10px;
+}
