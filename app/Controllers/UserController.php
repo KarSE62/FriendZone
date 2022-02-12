@@ -25,6 +25,12 @@ class UserController extends ResourceController{
         echo view('savedata');
     }
     
+    public function showdata(){
+        //include helper form
+        helper(['form']);
+        echo view('showdata');
+    }
+
     public function register()
     {
         $rules = [
@@ -60,8 +66,14 @@ class UserController extends ResourceController{
         $password = $this->request->getVar('password');
         $data = $model->login($userName,$password);
         if($data){
+                $session = session();
                 $session->set($data);
-                return redirect()->to('/savedata');
+                $statusUser = $session->get("statusUser");
+                if($statusUser == "0"){
+                    return redirect()->to('/showdata');
+                }else{
+                    return redirect()->to('/savedata');
+                 }
         }else{
             $session->setFlashdata('msg','ไม่สามารถเข้าสู่ระบบได้ !!!');
             return redirect()->to('/login');
@@ -71,8 +83,10 @@ class UserController extends ResourceController{
 
 
     
-    public function saveGenaral($id=null)
+    public function saveGenaral($userId=null)
     {
+        $session = session();
+        $userId = $session->get("userId");
         $model = new UserModel();
         $status = "0";
         $data = [
@@ -92,18 +106,12 @@ class UserController extends ResourceController{
             'expIdCard' => $this->request->getVar('expIdCard'),
             'phoneNumber' => $this->request->getVar('phoneNumber'),
         ];
-        $check = $model->where('userId',$id)->first();
-        if($check){
-            $model->where('userId', $id)->set($data)->update();
-            $myRespond = [
-             "status"=>200,
-            "error"=>null,
-            "message" => "บันทึกข้อมูลสำเร็จ กรุณารอแอดมินตรวจสอบข้อมูล ^ ^"
-            ];
-            return $this->respond($myRespond);
-            }else{
-                return $this->failNotFound("ไม่สารถบันทึกข้อมูลได้");
+        
+        $data = $model->saveGenaral($userId,$data);
+        if($data){
+            return redirect()->to('/showdata');
         }
+        
     }
 
 

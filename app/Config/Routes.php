@@ -36,6 +36,8 @@ $routes->get('/home', 'Home::index',);
 $routes->get('/login', 'UserController::index',);
 $routes->get('/register', 'UserController::index2',);
 $routes->get('/savedata', 'UserController::index3',);
+$routes->get('/logout', 'UserController::Logout',);
+$routes->get('/showdata', 'UserController::showdata',);
 
 $routes->put('/api/savegenaral/(:num)', 'Register::saveGenaral/$1');
 

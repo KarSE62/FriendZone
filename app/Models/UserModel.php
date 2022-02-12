@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 
 class UserModel extends Model{
     protected $table = 'users';
-    protected $allowedFields = ['FName','LName','userName','password','idCard','idCardImage','status','gender','userImage','birthday','address','province','district','subDistrict','email','phoneNumber'];
+    protected $allowedFields = ['FName','LName','userName','password','idCard','idCardImage','statusUser','gender','userImage','birthday','address','province','district','subDistrict','email','expIdCard','phoneNumber'];
     protected $primaryKey = 'userId';
 
 
@@ -25,6 +25,12 @@ class UserModel extends Model{
                 $ses_data = [
                     'userId' => $data['userId'],
                     'userName' => $data['userName'],
+                    'FName' => $data['FName'],
+                    'LName' => $data['LName'],
+                    'idCard' => $data['idCard'],
+                    'idCardImage' => $data['idCardImage'],
+                    'statusUser' => $data['statusUser'],
+                    'userImage' => $data['userImage'],
                     'logged_in' => TRUE
                 ];
                 return $ses_data;
@@ -37,6 +43,15 @@ class UserModel extends Model{
         }
     }
 
+    public function saveGenaral($userId,$data){
+        $check = $this->where('userId',$userId)->first();
+        if($check){
+            $session = session();
+            $this->where('userId', $userId)->set($data)->update();
+            $session->set($data);
+            return TRUE;
+            }
+    }
     
 
 

@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 body { 
     background: pink; /* For browsers that do not support gradients */    
     background: -webkit-linear-gradient(left, #ff9ccf , #63beff); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, #ff9ccf , #63beff); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, #ff9ccf , #63beff); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, #ff9ccf , #63beff); /* Standard syntax (must be last) */
+   
+
+    font-family: 'Kanit', cursive;
+   
 }
 .container {
     margin-top: 80px;

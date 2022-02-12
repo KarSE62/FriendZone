@@ -1,0 +1,45 @@
+CRITICAL - 2022-02-12 00:32:37 --> Undefined array key "subdistrict"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\UserModel.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 39)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\UserModel->login('knp001', '123456')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->auth()
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#7 {main}
+CRITICAL - 2022-02-12 00:33:30 --> Undefined array key "subdistrict"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\UserModel.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 39)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\UserModel->login('knp001', '123456')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->auth()
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#7 {main}
+CRITICAL - 2022-02-12 00:34:23 --> Undefined array key "subdistrict"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\UserModel.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 39)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\UserModel->login('knp001', '123456')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->auth()
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#7 {main}
+CRITICAL - 2022-02-12 00:35:10 --> Undefined array key "subdistrict"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\UserModel.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 39)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\UserModel->login('knp001', '123456')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->auth()
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#7 {main}
+CRITICAL - 2022-02-12 00:36:50 --> Undefined array key "subdistrict"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\UserModel.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 39)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\UserModel->login('knp001', '123456')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->auth()
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#7 {main}

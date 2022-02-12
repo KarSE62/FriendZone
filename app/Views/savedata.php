@@ -30,22 +30,22 @@
 
         <div class="col-4">
             <div class="form">
-                <form>
+                <form action="/UserController/saveGenaral" method="post">
                     <h3>บันทึกข้อมูล</h3>
 
                     <div class="mb-4">
                         <label for="imgcard" class="form-label">รูปโปรไฟล์</label>
-                        <input class="form-control" type="file" name="idCardImage">
+                        <input class="form-control" type="text" name="userImage">
                     </div>
 
                     <div class="mb-4">
                         <label for="fname" class="form-label">ชื่อ</label>
-                        <input type="text" class="form-control" name="Fname" placeholder="Example : John">
+                        <input type="text" class="form-control" name="FName" placeholder="Example : John">
                     </div>
 
                     <div class="mb-4">
                         <label for="lname" class="form-label">นามสกุล</label>
-                        <input type="text" class="form-control" name="Lname" placeholder="Example : Smith">
+                        <input type="text" class="form-control" name="LName" placeholder="Example : Smith">
                     </div>
 
                     <div class="mb-4">
@@ -79,7 +79,7 @@
 
                     <div class="mb-4">
                         <label for="imgcard" class="form-label">รูปบัตรประชาชน</label>
-                        <input class="form-control" type="file" name="idCardImage">
+                        <input class="form-control" type="text" name="idCardImage">
                     </div>
 
                     <div class="mb-4">
@@ -95,7 +95,7 @@
                             <div class="col">
                                 <select class="form-select" name="province">
                                     <option selected>จังหวัด</option>
-                                    <option value="1">One</option>
+                                    <option value="นครปฐม">นครปฐม</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
@@ -103,7 +103,7 @@
                             <div class="col">
                                 <select class="form-select" name="district">
                                     <option selected>อำเภอ</option>
-                                    <option value="1">One</option>
+                                    <option value="เมือง">เมือง</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
@@ -111,7 +111,7 @@
                             <div class="col">
                                 <select class="form-select" name="subDistrict">
                                     <option selected>ตำบล</option>
-                                    <option value="1">One</option>
+                                    <option value="พระปฐมเจดีย์">พระปฐมเจดีย์</option>
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
@@ -131,7 +131,7 @@
 
                     <center>
                         <button type="submit" class="button">บันทึก</button> &nbsp;
-                        <button type="button" class="cancel">ยกเลิก</button>
+                        <button type="button" class="cancel"><a href="/logout" id="can">ยกเลิก</a></button>
                     </center>
                     
                 </form>
