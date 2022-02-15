@@ -69,7 +69,7 @@ class UserController extends ResourceController{
                 $session = session();
                 $session->set($data);
                 $statusUser = $session->get("statusUser");
-                if($statusUser == "0"){
+                if($statusUser == "0" || $statusUser == "1"){
                     return redirect()->to('/showdata');
                 }else{
                     return redirect()->to('/savedata');

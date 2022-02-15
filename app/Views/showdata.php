@@ -13,12 +13,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/CSS/navbar.css">
   <link rel="stylesheet" href="/CSS/post.css">
+  <link rel="stylesheet" href="/CSS/profile.css">
   <title>Home</title>
 </head>
 
 <body>
     <?php $session = session(); ?>
     <?php require('components/navbaruser.php'); ?>
-    <?php require('components/post.php'); ?>
+    <?php require('components/userpost.php'); ?>
 
 </html>

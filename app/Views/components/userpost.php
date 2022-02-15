@@ -4,37 +4,64 @@
 
         <div class="col-sm-3">
 
-            <div class="card shadow bg-body rounded">
-                <div class="card-body" id="color-text">
-                    <h4 class="card-title">ทริปที่น่าสนใจ</h4>
+           
+<div>
+    <div class="card cardimg">
+        <img src="" class="">
+    </div>
 
-                    <h5 class="card-text">#เกาะช้าง</h>
-                        <p class="text-secondary">10โพสต์</p>
-
-                        <h5 class="card-text">#เชียงใหม่</h>
-                            <p class="text-secondary">6โพสต์</p>
-
-                            <h5 class="card-text">#น่าน</h>
-                                <p class="text-secondary">9โพสต์</p>
-
-                                <h5 class="card-text">#วัดพระแก้ว</h>
-                                    <p class="text-secondary">5โพสต์</p>
-
-                                    <h5 class="card-text">#หัวหิน</h>
-                                        <p class="text-secondary">16โพสต์</p>
-
-                                        <h5 class="card-text">#พัทยา</h>
-                                            <p class="text-secondary">20โพสต์</p>
-
-                                            <h5 class="card-text">#กรุงเทพฯ</h>
-                                                <p class="text-secondary">9โพสต์</p>
-
-                                                <h5 class="card-text">#ชะอำ</h>
-                                                    <p class="text-secondary">4โพสต์</p>
-
-
-                </div>
+    <div class="card card2">
+        <div class="row">
+            <div class="col-4">
+                <img src="<?php echo $session->get('userImage'); ?>" class="card-img-top profileimg" alt="...">
             </div>
+            <div class="col-2">
+                <h5>1</h5>
+                <h6>โพสต์</h6>
+            </div>
+            <div class="col-2">
+                <h5>48</h5>
+                <h6>ผู้ติดตาม</h6>
+            </div>
+            <div class="col-3">
+                <h5>5</h5>
+                <h6>กำลังติดตาม</h6>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <h4><?php echo $session->get('userName'); ?></h4>
+            <p><?php echo $session->get('FName')." ".$session->get('LName'); ?></p>
+
+            <div class="information">
+                <h5>ข้อมูลทั่วไป</h5>
+
+                <label>สถานะ :</label>
+                <span><?php if($session->get('statusUser')=="0"){
+                    echo "รอการยืนยันตัวตน";
+                }else if($session->get('statusUser')=="1"){
+                    echo "ยืนยันตัวตนสำเร็จแล้ว";
+                } ; ?></span>
+                <br/>
+
+                <label>เพศ :</label>
+                <span><?php echo $session->get('gender'); ?> </span>
+                <i class="far fa-mars" style="color: #1194ff;"></i>
+                <!-- <i class="far fa-venus" style="color: #ff5ebc;"></i> --> 
+                <!-- <i class="far fa-venus-mars" style="color: #7e2dff;"></i> -->
+                <br/>
+
+
+                <i class="fas fa-map-marker-alt"></i>
+                <span><?php echo $session->get('province'); ?></span>
+            </div> <!--End information-->
+        </div> <!--End card-body-->
+    </div> <!--End card2-->
+
+    <a class="btn btn-light">
+        <i class="fas fa-cog"> &nbsp;</i>แก้ไขข้อมูลส่วนตัว
+    </a>
+</div>
         </div>
 
         <div class="col-sm-6 ">
@@ -60,7 +87,7 @@
 
                 </form>
 
-                <div class="card  ">
+                <div class="card ">
                     <img src="https://img.kaidee.com/prd/20200220/351698349/m/eb03fa3a-0985-46aa-8e06-398867f87423.jpg" class="img-fluid">
                     <div class="card-body text-secondary">
 

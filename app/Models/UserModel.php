@@ -27,11 +27,10 @@ class UserModel extends Model{
                     'userName' => $data['userName'],
                     'FName' => $data['FName'],
                     'LName' => $data['LName'],
-                    'idCard' => $data['idCard'],
-                    'idCardImage' => $data['idCardImage'],
+                    'gender' => $data['gender'],
                     'statusUser' => $data['statusUser'],
                     'userImage' => $data['userImage'],
-                    'logged_in' => TRUE
+                    'province' => $data['province']
                 ];
                 return $ses_data;
             }else{
