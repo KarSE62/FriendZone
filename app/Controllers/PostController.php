@@ -6,17 +6,22 @@ use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
 
-class Post extends ResourceController{
+class PostController extends ResourceController{
     use RequestTrait;
     public function index(){
-        echo view('');
+        helper(['form']);
+        echo view('createPost');
     }
     
     public function createpost()
     {
+        $session = session();
+        $userId = $session->get("userId");
+        $statusPost = "1";
         $model = new PostModel();
         $dataPost = [
             'postTitle' => $this->request->getVar('postTitle'),
+            'categoryId' => $this->request->getVar('categoryId'),
             'imagePost' => $this->request->getVar('imagePost'),
             'detailPost' => $this->request->getVar('detailPost'),
             'note' => $this->request->getVar('note'),
@@ -28,9 +33,10 @@ class Post extends ResourceController{
             'date_start' => $this->request->getVar('date_start'),
             'date_end' => $this->request->getVar('date_end'),
             'userId' => $this->request->getVar('userId'),
-            'categoryId' => $this->request->getVar('categoryId')
-            
+            'statusPost' => $statusPost,
+            'userId' => $userId,
         ];
+        //var_dump($dataPost);
         $model->insert($dataPost);
         $myRespond = [
             "status"=>201,

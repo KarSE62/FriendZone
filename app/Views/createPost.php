@@ -2,44 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Post Page</title>
-
     <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/createPost.css">
 </head>
 
 <body>
-    <?php require('components/navbar.php'); ?>
+    <?php $session = session(); ?>
+    <?php require('components/navbaruser.php'); ?>
     <div class="container">
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4">
                 <div class="form">
-                    <form>
+                    <form action="/PostController/createpost" method="post">
                         <h3>สร้างกิจกรรม</h3>
 
                         <div class="mb-3">
                             <label class="form-label">หัวข้อ</label>
-                            <input type="text" class="form-control" name"" placeholder="ใส่หัวข้อกิจกรรมที่คุณต้องการโพสต์">
+                            <input type="text" class="form-control" name="postTitle" placeholder="ใส่หัวข้อกิจกรรมที่คุณต้องการโพสต์">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">หมวดหมู่</label>
-                            <div class="form-check">
-                                <img src="">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Loop Activity Type
-                                </label>
-                            </div>
+                            <select class="custom-select" name="categoryId">
+                                <option selected>เลือกหมวดหมู่</option>
+                                <option value="1">ภูเขา</option>
+                                <option value="2">น้ำตก</option>
+                                <option value="3">ทะเล</option>
+                                <option value="4">วัด</option>
+                                <option value="5">สวนสัตว์</option>
+                            </select>
                         </div>
 
                         <div class="mb-3">
@@ -50,32 +52,32 @@
                                         <input class="inputimg form-control" type="file" name="" id="formFile">
                                     </center>
                                 </div>
-                                <input type="text" class="form-control" id="testimg" name"" >
+                                <input type="text" class="form-control" id="testimg" name="imagePost">
                             </cancel>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">รายละเอียด</label>
-                            <input type="text" class="form-control" id="detail1" name"" placeholder="รายละเอียดเบื้องต้นเกี่ยวกับทริปของคุณ">
+                            <input type="text" class="form-control" id="detail1" name="detailPost" placeholder="รายละเอียดเบื้องต้นเกี่ยวกับทริปของคุณ">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">หมายเหตุ</label>
-                            <input type="text" class="form-control" id="detail2" name"" placeholder="หมายเหตุเพิ่มเติม เช่น เพศชายเท่านั้น">
+                            <input type="text" class="form-control" id="detail2" name="note" placeholder="หมายเหตุเพิ่มเติม เช่น เพศชายเท่านั้น">
                         </div>
 
                         <div class="row">
                             <div class="col-6">
                                 <label class="form-label">จำนวนคน</label>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" name="">
+                                    <input type="text" class="form-control" name="num_people">
                                     <span class="input-group-text">คน</span>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <label class="form-label">ค่าใช้จ่าย</label>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" name="">
+                                    <input type="text" class="form-control" name="expenses">
                                     <span class="input-group-text">บาท</span>
                                 </div>
                             </div>
@@ -86,25 +88,25 @@
 
                             <div class="row">
                                 <div class="col">
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" name="province">
                                         <option selected>จังหวัด</option>
-                                        <option value="1">One</option>
+                                        <option value="เชียงใหม่">เชียงใหม่</option>
                                         <option value="2">Two</option>
                                         <option value="3">Three</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" name="district">
                                         <option selected>อำเภอ</option>
-                                        <option value="1">One</option>
+                                        <option value="เมืองเชียงใหม่">เมืองเชียงใหม่</option>
                                         <option value="2">Two</option>
                                         <option value="3">Three</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" name="subDistrict">
                                         <option selected>ตำบล</option>
-                                        <option value="1">One</option>
+                                        <option value="สุเทพ">สุเทพ</option>
                                         <option value="2">Two</option>
                                         <option value="3">Three</option>
                                     </select>
@@ -114,11 +116,11 @@
 
                         <div class="mb-3">
                             <label class="form-label">วันที่ไป</label>
-                            <input type="date" class="form-control" id="birthday">
+                            <input type="date" class="form-control" id="date_start" name="date_start">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">วันที่กลับ</label>
-                            <input type="date" class="form-control" id="birthday">
+                            <input type="date" class="form-control" id="date_end" name="date_end">
                         </div>
 
                         <div class="mb-3">
@@ -129,10 +131,8 @@
                         </div>
 
                         <center>
-                            <a href="" type="submit" class="btn button">
-                                <label>โพสต์</label>
-                            </a> &nbsp;
-                            <a href="" type="button" class="btn cancel">
+                            <button class="btn button" type="submit">โพสต์กิจกรรม</button> &nbsp;
+                            <a href="/showdata" type="button" class="btn cancel">
                                 <label>ยกเลิก</label>
                             </a>
                         </center>

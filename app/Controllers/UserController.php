@@ -31,11 +31,7 @@ class UserController extends ResourceController{
         echo view('showdata');
     }
 
-    public function createPost(){
-        //include helper form
-        helper(['form']);
-        echo view('createPost');
-    }
+
 
     public function register()
     {
