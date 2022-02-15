@@ -42,7 +42,7 @@
                     </form>
                 </div>
             </nav>
-            <a href="/login" class="btn" id="btn1">สร้างกิจกรรม </a>&nbsp;
+            <a href="/createPost" class="btn" id="btn1">สร้างกิจกรรม </a>&nbsp;
             <form class="form-inline my-2 my-lg-0">
 
                 <div class="dropdown">

@@ -38,6 +38,7 @@ $routes->get('/register', 'UserController::index2',);
 $routes->get('/savedata', 'UserController::index3',);
 $routes->get('/logout', 'UserController::Logout',);
 $routes->get('/showdata', 'UserController::showdata',);
+$routes->get('/createPost', 'UserController::createPost',);
 
 $routes->put('/api/savegenaral/(:num)', 'Register::saveGenaral/$1');
 
