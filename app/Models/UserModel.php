@@ -52,9 +52,10 @@ class UserModel extends Model{
             }
     }
 
-    public function getProvince(){
+    public function getProvince($numprovince){
         return $this->db->table('users')
         ->join('provinces','users.province = provinces.id')
+        ->where('province' ,$numprovince)
         ->get()->getResultArray();
     }
     

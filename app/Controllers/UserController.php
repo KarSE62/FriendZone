@@ -72,7 +72,8 @@ class UserController extends ResourceController{
                 $session->set($data);
                 $statusUser = $session->get("statusUser");
                 if($statusUser == "0" || $statusUser == "1"){
-                    $datapro['province']=$model->getProvince();
+                    $numprovince = $session->get("province");
+                    $datapro['province']=$model->getProvince($numprovince);
                     echo view('showdata',$datapro);
                 }else{
                     return redirect()->to('/savedata');
@@ -112,7 +113,8 @@ class UserController extends ResourceController{
         
         $data = $model->saveGenaral($userId,$data);
         if($data){
-            $datapro['province']=$model->getProvince();
+            $numprovince = $session->get("province");
+            $datapro['province']=$model->getProvince($numprovince);
             echo view('showdata',$datapro);
         }
         
