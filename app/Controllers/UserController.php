@@ -112,7 +112,8 @@ class UserController extends ResourceController{
         
         $data = $model->saveGenaral($userId,$data);
         if($data){
-            return redirect()->to('/showdata');
+            $datapro['province']=$model->getProvince();
+            echo view('showdata',$datapro);
         }
         
     }
