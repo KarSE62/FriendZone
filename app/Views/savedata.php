@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+$con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +26,10 @@
 </head>
 
 <body>
-
+    <?php
+    $sql_provinces = "SELECT * FROM provinces";
+    $query = mysqli_query($con, $sql_provinces);
+    ?>
     <?php require('components/navbar.php'); ?>
 
     <div class="row">
@@ -90,18 +97,18 @@
                     <div class="mb-4">
                         <label for="exampleFormControlTextarea1" class="form-label">ที่อยู่</label>
                         <input type="text" class="form-control" name="address" placeholder="กรอกที่อยู่">
-                    
+
                         <div class="row">
                             <div class="col">
-                                <select class="form-select" name="province">
+                                <select class="form-select" name="province" id="provinces">
                                     <option selected>จังหวัด</option>
-                                    <option value="นครปฐม">นครปฐม</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <?php foreach ($query as $value) { ?>
+                                        <option value="<?= $value['id'] ?>"><?= $value['name_th'] ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="col">
-                                <select class="form-select" name="district">
+                                <select class="form-select" name="district" id="amphures">
                                     <option selected>อำเภอ</option>
                                     <option value="เมือง">เมือง</option>
                                     <option value="2">Two</option>
@@ -109,7 +116,7 @@
                                 </select>
                             </div>
                             <div class="col">
-                                <select class="form-select" name="subDistrict">
+                                <select class="form-select" name="subDistrict" id="districts">
                                     <option selected>ตำบล</option>
                                     <option value="พระปฐมเจดีย์">พระปฐมเจดีย์</option>
                                     <option value="2">Two</option>
@@ -133,7 +140,7 @@
                         <button type="submit" class="button">บันทึก</button> &nbsp;
                         <button type="button" class="cancel"><a href="/logout" id="can">ยกเลิก</a></button>
                     </center>
-                    
+
                 </form>
             </div>
         </div>
@@ -144,3 +151,4 @@
 </body>
 
 </html>
+<?php include('script.php');?>

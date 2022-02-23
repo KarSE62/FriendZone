@@ -51,6 +51,12 @@ class UserModel extends Model{
             return TRUE;
             }
     }
+
+    public function getProvince(){
+        return $this->db->table('users')
+        ->join('provinces','users.province = provinces.id')
+        ->get()->getResultArray();
+    }
     
 
 

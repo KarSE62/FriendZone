@@ -72,7 +72,8 @@ class UserController extends ResourceController{
                 $session->set($data);
                 $statusUser = $session->get("statusUser");
                 if($statusUser == "0" || $statusUser == "1"){
-                    return redirect()->to('/showdata');
+                    $datapro['province']=$model->getProvince();
+                    echo view('showdata',$datapro);
                 }else{
                     return redirect()->to('/savedata');
                  }

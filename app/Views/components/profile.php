@@ -45,7 +45,7 @@
 
 
                 <i class="fas fa-map-marker-alt"></i>
-                <span><?php echo $session->get('province'); ?></span>
+                <span><?php echo  $session->get('province'); ?></span>
             </div> <!--End information-->
         </div> <!--End card-body-->
     </div> <!--End card2-->
