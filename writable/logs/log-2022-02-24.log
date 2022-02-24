@@ -1,0 +1,15 @@
+ERROR - 2022-02-24 07:36:11 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-02-24 07:36:11 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\UserModel.php(19): CodeIgniter\BaseModel->first()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(69): App\Models\UserModel->login('', '')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->auth()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
