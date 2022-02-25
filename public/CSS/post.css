@@ -49,3 +49,19 @@ body{
     margin-top: 10px;
     margin-left: 10px;
 }
+@media (max-width: 767px) {
+    #color-text  {
+      display: none;
+      color: deeppink;
+    }
+  }
+  #color-text  {
+    
+    color: deeppink;
+  }
+  #btn-join {
+    
+    float: right;
+    background-color: #EF5DA8;
+    color: #fff;
+}

@@ -11,7 +11,6 @@
           $('#amphures').html(data); 
           $('#districts').html(' '); 
           $('#districts').val(' ');  
-          $('#zip_code').val(' '); 
       }
     });
   });
@@ -29,17 +28,4 @@
     });
   });
 
-   $('#districts').change(function() {
-    var id_districts= $(this).val();
-
-      $.ajax({
-      type: "POST",
-      url: "ajax_db.php",
-      data: {id:id_districts,function:'districts'},
-      success: function(data){
-          $('#zip_code').val(data)
-      }
-    });
-  
-  });
 </script>

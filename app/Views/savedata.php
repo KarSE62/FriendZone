@@ -110,17 +110,11 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                             <div class="col">
                                 <select class="form-select" name="district" id="amphures">
                                     <option selected>อำเภอ</option>
-                                    <option value="เมือง">เมือง</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
                                 </select>
                             </div>
                             <div class="col">
                                 <select class="form-select" name="subDistrict" id="districts">
                                     <option selected>ตำบล</option>
-                                    <option value="พระปฐมเจดีย์">พระปฐมเจดีย์</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
                                 </select>
                             </div>
                         </div>

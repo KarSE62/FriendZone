@@ -46,7 +46,9 @@ class UserController extends ResourceController{
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
              ];
             if($data){
+                $session = session();
                 $regis = $model->register($data);
+                $session->setFlashdata('msg1','สมัครสมาชิกสำเร็จ สามารถเข้าสู่ระบบได้เลยค่ะ');
                  return redirect()->to('/login');
             }
             }else{

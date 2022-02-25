@@ -25,6 +25,9 @@
     <div class="container">
 
         <div class="row">
+        <?php if(session()->getFlashdata('msg1')): ?>
+                    <div class="alert alert-success text-center"><?= session()->getFlashdata('msg1') ?></div>
+                    <?php endif ?>
             <div class="col-sm-6" id="cover">
                 <img src="https://shorturl.asia/5yLY8" class="cover">
             </div>
