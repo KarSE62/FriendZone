@@ -29,6 +29,9 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <?php
     $sql_provinces = "SELECT * FROM provinces";
     $query = mysqli_query($con, $sql_provinces);
+
+    
+
     ?>
     <?php require('components/navbar.php'); ?>
 
@@ -42,22 +45,22 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="imgcard" class="form-label">รูปโปรไฟล์</label>
-                        <input class="form-control" type="text" name="userImage">
+                        <input class="form-control" type="text" name="userImage" require>
                     </div>
 
                     <div class="mb-4">
                         <label for="fname" class="form-label">ชื่อ</label>
-                        <input type="text" class="form-control" name="FName" placeholder="Example : John">
+                        <input type="text" class="form-control" name="FName" placeholder="Example : John" require>
                     </div>
 
                     <div class="mb-4">
                         <label for="lname" class="form-label">นามสกุล</label>
-                        <input type="text" class="form-control" name="LName" placeholder="Example : Smith">
+                        <input type="text" class="form-control" name="LName" placeholder="Example : Smith" require>
                     </div>
 
                     <div class="mb-4">
                         <label for="birthday" class="form-label">วันเกิด</label>
-                        <input type="date" class="form-control" name="birthday">
+                        <input type="date" class="form-control" name="birthday" require>
                     </div>
 
                     <div class="mb-4">
@@ -81,22 +84,22 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="idcard" class="form-label">รหัสบัตรประชาชน</label>
-                        <input type="text" class="form-control" name="idCard" placeholder="กรอกรหัสบัตรประชาชน 13 หลัก">
+                        <input type="text" class="form-control" name="idCard" placeholder="กรอกรหัสบัตรประชาชน 13 หลัก" require>
                     </div>
 
                     <div class="mb-4">
                         <label for="imgcard" class="form-label">รูปบัตรประชาชน</label>
-                        <input class="form-control" type="text" name="idCardImage">
+                        <input class="form-control" type="text" name="idCardImage" require>
                     </div>
 
                     <div class="mb-4">
                         <label for="expIdCard" class="form-label">วันหมดอายุของบัตรประชาชน</label>
-                        <input type="date" class="form-control" name="expIdCard">
+                        <input type="date" class="form-control" name="expIdCard" require>
                     </div>
 
                     <div class="mb-4">
                         <label for="exampleFormControlTextarea1" class="form-label">ที่อยู่</label>
-                        <input type="text" class="form-control" name="address" placeholder="กรอกที่อยู่">
+                        <input type="text" class="form-control" name="address" placeholder="กรอกที่อยู่" require>
 
                         <div class="row">
                             <div class="col">
@@ -122,16 +125,16 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="tel" class="form-label">เบอร์โทร</label>
-                        <input class="form-control" type="text" name="phoneNumber" placeholder="082-XXXXXXX">
+                        <input class="form-control" type="text" name="phoneNumber" placeholder="082-XXXXXXX" require>
                     </div>
 
                     <div class="mb-4">
                         <label for="email" class="form-label">อีเมล</label>
-                        <input class="form-control" type="email" name="email" placeholder="John032@gmail.com">
+                        <input class="form-control" type="email" name="email" placeholder="John032@gmail.com" require>
                     </div>
 
                     <center>
-                        <button type="submit" class="button">บันทึก</button> &nbsp;
+                        <button type="submit" class="button" require>บันทึก</button> &nbsp;
                         <button type="button" class="cancel"><a href="/logout" id="can">ยกเลิก</a></button>
                     </center>
 

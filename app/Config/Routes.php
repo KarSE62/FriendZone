@@ -32,7 +32,8 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-$routes->get('/home', 'Home::index',);
+$routes->get('/', 'PostController::viewPost',);
+$routes->get('/home', 'Home::index');
 $routes->get('/login', 'UserController::index',);
 $routes->get('/register', 'UserController::index2',);
 $routes->get('/savedata', 'UserController::index3',);
@@ -40,12 +41,10 @@ $routes->get('/logout', 'UserController::Logout',);
 $routes->get('/showdata', 'UserController::showdata',);
 $routes->get('/createPost', 'PostController::index',);
 
+
+
+
 $routes->put('/api/savegenaral/(:num)', 'Register::saveGenaral/$1');
-
-
-
-
-$routes->post('/api/createPost', 'Post::createpost');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

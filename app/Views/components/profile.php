@@ -1,7 +1,6 @@
 
 <div>
    
-
     <div class="card card2">
         <div class="row">
             <div class="col-4">

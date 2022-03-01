@@ -63,7 +63,6 @@
     </a>
 </div>
         </div>
-
         <div class="col-sm-6 ">
             <div class="card shadow bg-body rounded">
                 <form class="row  ">
@@ -155,7 +154,6 @@
                 </div>
             </div>
             <br>
-            
             
         </div>
         

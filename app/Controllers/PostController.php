@@ -12,6 +12,13 @@ class PostController extends ResourceController{
         helper(['form']);
         echo view('createPost');
     }
+
+    public function viewPost()
+    {
+        $model = new PostModel();
+        $data['posts'] = $model->viewPost();
+        return view('home',$data);
+    }
     
     public function createpost()
     {
