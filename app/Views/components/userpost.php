@@ -10,7 +10,7 @@
         <img src="" class="">
     </div>
 
-    <div class="card card2">
+    <div class="card cardprofile">
         <div class="row">
             <div class="col-4">
                 <img src="<?php echo $session->get('userImage'); ?>" class="card-img-top profileimg" alt="...">
@@ -58,7 +58,7 @@
         </div> <!--End card-body-->
     </div> <!--End card2-->
 
-    <a class="btn btn-light">
+    <a href="/editProfile" class="btn btn-light">
         <i class="fas fa-cog"> &nbsp;</i>แก้ไขข้อมูลส่วนตัว
     </a>
 </div>
@@ -110,7 +110,7 @@
                                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg" class="card-img-top" alt="..." id="img-join">
                                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg" class="card-img-top" alt="..." id="img-join">
                                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/802451103404130314/140456311_896854401129979_6687474046750012869_n.jpg" class="card-img-top" alt="..." id="img-join">
-                                <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.6435-9/71324627_788827481534505_6590453897817489408_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeHjKltef0b2-uksii_rjm-RG-rGxd_ttnsb6sbF3-22ezucbcWUH7Iw9CnZ7GA58u_gTr7CEPiy_cyF7APkt8LN&_nc_ohc=vznSd0F00OEAX97VRLh&tn=HscLT6h9xUbAVcLQ&_nc_ht=scontent.fbkk10-1.fna&oh=00_AT81_jfc3HbwfNm7LyQNRmLHOyT7xKcb1B0b52Q5XQ2k7Q&oe=621B7B48" class=" card-img-top" id="img-join">
+                                <img src="https://shorturl.asia/j1bKf" class=" card-img-top" id="img-join">
                             </div>
                         </form>
                         <hr>

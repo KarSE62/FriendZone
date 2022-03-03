@@ -29,7 +29,7 @@
                     <div class="alert alert-success text-center"><?= session()->getFlashdata('msg1') ?></div>
                     <?php endif ?>
             <div class="col-sm-6" id="cover">
-                <img src="https://shorturl.asia/5yLY8" class="cover">
+                <img src="https://shorturl.asia/q1fW8" class="cover">
             </div>
 
             <div class="col-sm-6">

@@ -31,6 +31,12 @@ class UserController extends ResourceController{
         echo view('showdata');
     }
 
+    public function editProfile(){
+        //include helper form
+        helper(['form']);
+        echo view('editProfile');
+    }
+
 
 
     public function register()
