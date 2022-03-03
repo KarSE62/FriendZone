@@ -144,6 +144,6 @@ class UserController extends ResourceController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/home');
+        return redirect()->to('/');
     }
 }
