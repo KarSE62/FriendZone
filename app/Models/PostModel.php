@@ -14,6 +14,13 @@ class PostModel extends Model{
         ->join('users','post.userId = users.userId')
         ->get()->getResultArray();
     }
+
+    public function viewPostUser()
+    {
+        return $this->db->table('post')
+        ->join('users','post.userId = users.userId')
+        ->get()->getResultArray();
+    }
 }
 
 

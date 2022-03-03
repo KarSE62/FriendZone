@@ -79,11 +79,11 @@ class UserController extends ResourceController
             $statusUser = $session->get("statusUser");
             if ($statusUser == "0" || $statusUser == "1") {
                 $numprovince = $session->get("province");
-                $datapro['province'] = $model->getProvince($numprovince);
+                $datapost['province'] = $model->getProvince($numprovince);
                 $modelpost = new PostModel();
                 $datapost['posts'] = $modelpost->viewPost();
                 //var_dump($datapost);
-                return view('showdata', $datapro,$datapost);
+                return view('showdata',$datapost);
             } else {
                 return redirect()->to('/savedata');
             }
@@ -123,11 +123,12 @@ class UserController extends ResourceController
         $data = $model->saveGenaral($userId, $data);
         if ($data) {
             $numprovince = $session->get("province");
-            $datapro['province'] = $model->getProvince($numprovince);
+            $datapost['province'] = $model->getProvince($numprovince);
             $modelpost = new PostModel();
             $datapost['posts'] = $modelpost->viewPost();
-            echo view('showdata', $datapro, $datapost);
+            echo view('showdata', $datapost);
         }
+
     }
 
 
@@ -137,6 +138,6 @@ class UserController extends ResourceController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('/home');
     }
 }
