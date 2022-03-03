@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 body{
-    font-family: 'Kanit', cursive;
-    
+    font-family: 'Kanit', cursive;  
 }
 .card {
     border-radius: 15px;
-    box-shadow: 2px 2px 10px rgb(177, 177, 177);
+    box-shadow: 0px 0px 8px rgb(177, 177, 177);
 }
 .cardimg {
     margin: 3% 0% 0 0%;
@@ -15,8 +14,8 @@ body{
     width: auto;
     background-image:url('https://shorturl.asia/KSxPL');
 }
-.card2 {
-    margin: -8% 0% 0% 0%;
+.cardprofile {
+    margin: -15% 0% 0% 0%;
     border: none;
     background-color: #fdfdfd;
 }
@@ -24,8 +23,8 @@ body{
     border-radius: 50%;
     border: none;
     border: 2.5px solid white;
-    width: 90%;
-    margin: -40% 20% 5% 17%;
+    width: 100%;
+    margin: -50% 0% 0% 20%;
 }
 .col-2 h5 ,.col-3 h5 {
     font-size: 16px;
@@ -73,12 +72,12 @@ body{
 }
 
 .btn-light {
-    margin: 2% 0% 0% 0%;
+    margin: 6% 0% 0% 0%;
     color: #EF5DA8;
     width: 100%;
     border: none;
     border-radius: 15px;
-    box-shadow: 2px 2px 10px rgb(177, 177, 177);
+    box-shadow: 2px 2px 8px rgb(177, 177, 177);
 }
 .btn-light:hover {
     background-color: #EF5DA8;

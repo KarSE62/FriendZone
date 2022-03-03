@@ -10,7 +10,7 @@
         <img src="" class="">
     </div>
 
-    <div class="card card2">
+    <div class="card cardprofile">
         <div class="row">
             <div class="col-4">
                 <img src="<?php echo $session->get('userImage'); ?>" class="card-img-top profileimg" alt="...">
@@ -58,7 +58,7 @@
         </div> <!--End card-body-->
     </div> <!--End card2-->
 
-    <a class="btn btn-light">
+    <a href="/editProfile" class="btn btn-light">
         <i class="fas fa-cog"> &nbsp;</i>แก้ไขข้อมูลส่วนตัว
     </a>
 </div>
@@ -111,6 +111,7 @@
                                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg" class="card-img-top" alt="..." id="img-join">
                                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg" class="card-img-top" alt="..." id="img-join">
                                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/802451103404130314/140456311_896854401129979_6687474046750012869_n.jpg" class="card-img-top" alt="..." id="img-join">
+
                             </div>
                         </form>
                         <hr>

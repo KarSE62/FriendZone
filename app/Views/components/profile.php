@@ -1,7 +1,5 @@
-
 <div>
-   
-    <div class="card card2">
+
         <div class="row">
             <div class="col-4">
                 <img src="<?php echo $session->get('userImage'); ?>" class="card-img-top profileimg" alt="...">
@@ -49,7 +47,7 @@
         </div> <!--End card-body-->
     </div> <!--End card2-->
 
-    <a class="btn btn-light">
+    <!-- <a class="btn btn-light">
         <i class="fas fa-cog"> &nbsp;</i>แก้ไขข้อมูลส่วนตัว
-    </a>
+    </a> -->
 </div>
