@@ -12,9 +12,16 @@ class PostModel extends Model{
         return $this->db->table('post')
         ->join('provinces','post.province = provinces.id')
         ->join('users','post.userId = users.userId')
+        ->orderBy('postId','DESC' )
+        ->where('statusPost','1')
         ->get()->getResultArray();
     }
 
+    public function createpost($dataPost)
+    {
+        $this->insert($dataPost);
+        return TRUE;
+    }
 
 }
 

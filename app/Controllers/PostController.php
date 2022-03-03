@@ -44,13 +44,11 @@ class PostController extends ResourceController{
             'userId' => $userId,
         ];
         //var_dump($dataPost);
-        $model->insert($dataPost);
-        $myRespond = [
-            "status"=>201,
-            "error"=>null,
-            "message" => "สร้างโพสประกาศกิจกรรม สำเร็จ!!!"
-        ];
-        return $this->respond($myRespond);
+        $post = $model->createpost($dataPost);
+        if($post){
+             echo view('home');
+        }
+        
     }
 
 
