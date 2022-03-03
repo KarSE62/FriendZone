@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2022 at 02:39 PM
+-- Generation Time: Mar 03, 2022 at 07:16 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -1059,7 +1059,8 @@ INSERT INTO `category` (`categoryId`, `name_category`) VALUES
 (2, 'น้ำตก'),
 (3, 'ทะเล'),
 (4, 'วัด'),
-(5, 'สวนสัตว์');
+(5, 'สวนสัตว์'),
+(6, 'สวนสนุก');
 
 -- --------------------------------------------------------
 
@@ -10011,8 +10012,8 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`postId`, `postTitle`, `imagePost`, `detailPost`, `note`, `num_people`, `expenses`, `province`, `district`, `subDistrict`, `date_start`, `date_end`, `creation_date`, `statusPost`, `userId`, `categoryId`) VALUES
-(1, 'หาเพื่อนเที่ยว วัดพระธาตุดอยสุเทพ', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=901&height=676', 'เที่ยวทิปทำบุญ 3 วัน 2 คืนสนุกๆกันเลย', 'ขอคนจิตใจดี มีมารยาททางสังคม', 5, '5000', 'เชียงใหม่', 'เมืองเชียงใหม่', 'สุเทพ', '2022-02-08', '2022-02-11', '2022-01-31', 0, 4, 4),
-(2, 'วัดกงลาด', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระ', 'รับทุกคนที่ใจบุญ', 5, '10000', 'เชียงใหม่', 'เมืองเชียงใหม่', 'สุเทพ', '2022-02-16', '2022-02-17', '2022-02-15', 1, 25, 4);
+(3, 'วัดกงลาด', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระ', 'รับทุกคนที่ใจบุญ', 5, '10000', '58', '810', '730407', '2022-03-03', '2022-03-05', '2022-03-01', 1, 40, 4),
+(4, 'เที่ยวเชียงใหม่', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 5, '20000', '38', '584', '501704', '2022-03-03', '2022-03-05', '2022-03-01', 1, 31, 4);
 
 -- --------------------------------------------------------
 
@@ -10171,11 +10172,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userId`, `FName`, `LName`, `userName`, `password`, `idCard`, `idCardImage`, `statusUser`, `gender`, `userImage`, `birthday`, `address`, `province`, `district`, `subDistrict`, `email`, `expIdCard`, `phoneNumber`) VALUES
-(1, 'กนกพล', 'พวงวัดโพธิ์', 'knp001', '$2y$10$lkm9Cc2J6d8QZcH6jigbR.Se1WQU.KrFw9PVWl.wVP3FX3/8pVHjK', '1515151515151', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '55555', 'นครปฐม', 'เมือง', 'พระปฐมเจดีย์', 'kanokphon.kar2017@hotmail.com', NULL, '0987392476'),
-(4, 'Nutthapon', 'Saefong', 'Nut', '$2y$10$lkm9Cc2J6d8QZcH6jigbR.Se1WQU.KrFw9PVWl.wVP3FX3/8pVHjK', '1765423541245', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '2000-02-02', 'น่าน', 'น่าน', 'น่าน', 'น่าน', '624259001@webmail.npru.ac.th', NULL, '0987392476'),
-(25, 'กนกพล', 'พวงวัดโพธิ์', 'kar001', '$2y$10$IWP47RxWBYpyfFhBvh1z7.S09C35v1mcR1er6gTpg63KqndVneFd2', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '1', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', 'นครปฐม', 'เมือง', 'พระปฐมเจดีย์', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392476'),
 (31, 'ณัฐพล', 'แซ่โฟ้ง', 'natthapon', '$2y$10$ATxGHB63RvgSf9lewLfxFuyF0ocBPC1JWZGFcmU1nr5GkaawQhwAO', '1515151515151', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '2022-02-01', '114 หมู่ 5', '72', '949', '920701', '624259001@webmail.npru.ac.th', '2022-02-28', '0987392476'),
-(32, 'กนกพล', 'พวงวัดโพธิ์', 'kanokphon', '$2y$10$StrA9HUA0KVfKkV3M7QnveaFfRrI3wTA2.lAxVzHKhn4PaQjsEFSi', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '2022-02-01', '114 หมู่ 5', '58', '810', '730407', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392476');
+(37, 'กนกพล', 'พวงวัดโพธิ์', 'kar001', '$2y$10$jqbSbA/ovoToS63IyVZzfeAka.X1CHAG.Ftc4.ppYTj5b7C1RIcIS', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', '68', '905', '850102', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392476'),
+(40, 'กนกพล', 'พวงวัดโพธิ์', 'kanokphon', '$2y$10$wXl6IDcXX0AkpsqL.NjTnOkrzFT47yoRnBur.Y8eVkiVYdXi2Ba1q', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', '58', '808', '730214', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392476');
 
 --
 -- Indexes for dumped tables
@@ -10271,7 +10270,7 @@ ALTER TABLE `amphures`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `categoryId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `categoryId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -10295,7 +10294,7 @@ ALTER TABLE `participate`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `postId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `postId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `provinces`
@@ -10319,7 +10318,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `userId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
