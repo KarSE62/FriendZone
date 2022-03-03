@@ -1,31 +1,39 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\UserModel;
+use App\Models\PostModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
 
-class UserController extends ResourceController{
+class UserController extends ResourceController
+{
     use RequestTrait;
-    public function index(){
+    public function index()
+    {
         //include helper form
         helper(['form']);
         echo view('login');
     }
 
-    public function index2(){
+    public function index2()
+    {
         //include helper form
         helper(['form']);
         echo view('register');
     }
-    public function index3(){
+    public function index3()
+    {
         //include helper form
         helper(['form']);
         echo view('savedata');
     }
-    
-    public function showdata(){
+
+    public function showdata()
+    {
         //include helper form
         helper(['form']);
         echo view('showdata');
@@ -45,57 +53,56 @@ class UserController extends ResourceController{
             'userName' => 'required|min_length[6]|max_length[20]',
             'password' => 'required|min_length[6]|max_length[20]',
         ];
-        if($this->validate($rules)){
+        if ($this->validate($rules)) {
             $model = new UserModel();
             $data = [
                 'userName' => $this->request->getVar('userName'),
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
-             ];
-            if($data){
+            ];
+            if ($data) {
                 $session = session();
                 $regis = $model->register($data);
-                $session->setFlashdata('msg1','สมัครสมาชิกสำเร็จ สามารถเข้าสู่ระบบได้เลยค่ะ');
-                 return redirect()->to('/login');
+                $session->setFlashdata('msg1', 'สมัครสมาชิกสำเร็จ สามารถเข้าสู่ระบบได้เลยค่ะ');
+                return redirect()->to('/login');
             }
-            }else{
-                 $data['validation'] = $this->validator;
-                 echo view('register',$data);
-             }
-        
-       
-       
-        
-        
+        } else {
+            $data['validation'] = $this->validator;
+            echo view('register', $data);
+        }
     }
 
 
-    public function auth(){
+    public function auth()
+    {
         $session = session();
         $model = new UserModel();
         $userName = $this->request->getVar('userName');
         $password = $this->request->getVar('password');
-        $data = $model->login($userName,$password);
-        if($data){
-                $session = session();
-                $session->set($data);
-                $statusUser = $session->get("statusUser");
-                if($statusUser == "0" || $statusUser == "1"){
-                    $numprovince = $session->get("province");
-                    $datapro['province']=$model->getProvince($numprovince);
-                    echo view('showdata',$datapro);
-                }else{
-                    return redirect()->to('/savedata');
-                 }
-        }else{
-            $session->setFlashdata('msg','ไม่สามารถเข้าสู่ระบบได้ !!!');
+        $data = $model->login($userName, $password);
+        if ($data) {
+            $session = session();
+            $session->set($data);
+            $statusUser = $session->get("statusUser");
+            if ($statusUser == "0" || $statusUser == "1") {
+                $numprovince = $session->get("province");
+                $datapost['province'] = $model->getProvince($numprovince);
+                $modelpost = new PostModel();
+                $datapost['posts'] = $modelpost->viewPost();
+                //var_dump($datapost);
+                return view('showdata',$datapost);
+            } else {
+                return redirect()->to('/savedata');
+            }
+        } else {
+            $session->setFlashdata('msg', 'ไม่สามารถเข้าสู่ระบบได้ !!!');
             return redirect()->to('/login');
         }
     }
 
 
 
-    
-    public function saveGenaral($userId=null)
+
+    public function saveGenaral($userId = null)
     {
         $session = session();
         $userId = $session->get("userId");
@@ -118,22 +125,25 @@ class UserController extends ResourceController{
             'expIdCard' => $this->request->getVar('expIdCard'),
             'phoneNumber' => $this->request->getVar('phoneNumber'),
         ];
-        
-        $data = $model->saveGenaral($userId,$data);
-        if($data){
+
+        $data = $model->saveGenaral($userId, $data);
+        if ($data) {
             $numprovince = $session->get("province");
-            $datapro['province']=$model->getProvince($numprovince);
-            echo view('showdata',$datapro);
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewPost();
+            echo view('showdata', $datapost);
         }
-        
+
     }
 
 
-    
 
-    public function Logout(){
+
+    public function Logout()
+    {
         $session = session();
         $session->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('/home');
     }
 }

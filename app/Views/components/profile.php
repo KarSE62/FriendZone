@@ -1,8 +1,5 @@
 <div>
-    <div class="card cardimg">
-        <img src="" class="">
-    </div>
-    <div class="card cardprofile">
+
         <div class="row">
             <div class="col-4">
                 <img src="<?php echo $session->get('userImage'); ?>" class="card-img-top profileimg" alt="...">

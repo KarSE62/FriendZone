@@ -38,19 +38,22 @@
         </div>
 
         <div class="col-sm-6 ">
+            
+        <?php foreach ($posts as $post) { ?>
+            
             <div class="card shadow bg-body rounded">
                 <form class="row  ">
                     <div class="col-sm-1  ">
-                        <img src="https://cdn.discordapp.com/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg" class="card-img-top" alt="..." id="img-post">
+                        <img src="<?php echo $post["userImage"]?>" class="card-img-top" alt="..." id="img-post">
                     </div>
                     <div class="col-sm">
-                        <h5 class="card-title">Nutthapon </h5>
+                        <h5 class="card-title"><?php echo $post["FName"]." ".$post["LName"]?> </h5>
                         <p class="text-secondary">เมื่อสักครู่</p>
                     </div>
                     <div class="container">
                         <div class="row ">
                             <div class="col-8">
-                                <h4 id="title"> &nbsp;หาเพื่อนเที่ยวเชียงใหม่ในช่วงปีใหม่</h4>
+                                <h4 id="title"> &nbsp;<?php echo $post["postTitle"]?></h4>
                             </div>
                             <div class="col-4">
                                 <a href="#" class="btn btn" id="btn-join">+เข้าร่วม</a>
@@ -61,18 +64,18 @@
                 </form>
 
                 <div class="card  ">
-                    <img src="https://img.kaidee.com/prd/20200220/351698349/m/eb03fa3a-0985-46aa-8e06-398867f87423.jpg" class="img-fluid">
+                    <img src="<?php echo $post["imagePost"]?>" class="img-fluid">
                     <div class="card-body text-secondary">
 
-                        <i class="fas fa-calendar-alt "> &nbsp;&nbsp; 29 ธันวาคม 2564 - 1 มกราคม 2565
+                        <i class="fas fa-calendar-alt "> &nbsp;&nbsp; <?php echo $post["date_start"]." ถึง ".$post["date_end"]?>
                         </i>
 
 
                         <a href="url" id="a-href">รายละเอียดเพิ่มเติม</a>
                         <br>
-                        <i class="fas fa-map-marker-alt"> &nbsp; &nbsp;&nbsp;เชียงใหม่</i>
+                        <i class="fas fa-map-marker-alt"> &nbsp; &nbsp;&nbsp;<?php echo $post["name_th"]?></i>
                         <br>
-                        <i class="fas fa-user-friends"> &nbsp; 10 คน</i>
+                        <i class="fas fa-user-friends"> &nbsp; <?php echo $post["num_people"]?> คน</i>
                     </div>
                     <div class="card-body">
                         <form class="row">
@@ -83,7 +86,7 @@
                                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg" class="card-img-top" alt="..." id="img-join">
                                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg" class="card-img-top" alt="..." id="img-join">
                                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/802451103404130314/140456311_896854401129979_6687474046750012869_n.jpg" class="card-img-top" alt="..." id="img-join">
-                                <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.6435-9/71324627_788827481534505_6590453897817489408_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeHjKltef0b2-uksii_rjm-RG-rGxd_ttnsb6sbF3-22ezucbcWUH7Iw9CnZ7GA58u_gTr7CEPiy_cyF7APkt8LN&_nc_ohc=vznSd0F00OEAX97VRLh&tn=HscLT6h9xUbAVcLQ&_nc_ht=scontent.fbkk10-1.fna&oh=00_AT81_jfc3HbwfNm7LyQNRmLHOyT7xKcb1B0b52Q5XQ2k7Q&oe=621B7B48" class=" card-img-top" id="img-join">
+                                
                             </div>
                         </form>
                         <hr>
@@ -127,8 +130,9 @@
                     </div>
                 </div>
             </div>
+           
             <br>
-            
+             <?php } ?>
             
         </div>
         

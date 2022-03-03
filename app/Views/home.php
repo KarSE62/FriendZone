@@ -15,6 +15,7 @@
   <title>Home</title>
 </head>
 <body>
+
   <?php require('components/navbar.php'); ?>
   <?php require('components/post.php'); ?>
   

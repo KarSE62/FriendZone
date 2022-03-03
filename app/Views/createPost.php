@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+$con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
+?>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +19,13 @@
 </head>
 
 <body>
+<?php
+    $sql_category = "SELECT * FROM category";
+    $query = mysqli_query($con, $sql_category);
+
+    $sql_provinces = "SELECT * FROM provinces";
+    $query1 = mysqli_query($con, $sql_provinces);
+    ?>
     <?php $session = session(); ?>
     <?php require('components/navbaruser.php'); ?>
     <div class="container">
@@ -36,11 +45,9 @@
                             <label class="form-label">หมวดหมู่</label>
                             <select class="custom-select" name="categoryId">
                                 <option selected>เลือกหมวดหมู่</option>
-                                <option value="1">ภูเขา</option>
-                                <option value="2">น้ำตก</option>
-                                <option value="3">ทะเล</option>
-                                <option value="4">วัด</option>
-                                <option value="5">สวนสัตว์</option>
+                                <?php foreach ($query as $value) { ?>
+                                        <option value="<?= $value['categoryId'] ?>"><?= $value['name_category'] ?></option>
+                                    <?php } ?>
                             </select>
                         </div>
 
@@ -88,27 +95,23 @@
 
                             <div class="row">
                                 <div class="col">
-                                    <select class="form-select" aria-label="Default select example" name="province">
+                                    <select class="form-select" aria-label="Default select example" name="province" id="provinces">
                                         <option selected>จังหวัด</option>
-                                        <option value="เชียงใหม่">เชียงใหม่</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        <?php foreach ($query1 as $value_province) { ?>
+                                        <option value="<?= $value_province['id'] ?>"><?= $value_province['name_th'] ?></option>
+                                    <?php } ?>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <select class="form-select" aria-label="Default select example" name="district">
+                                    <select class="form-select" aria-label="Default select example" name="district" id="amphures">
                                         <option selected>อำเภอ</option>
-                                        <option value="เมืองเชียงใหม่">เมืองเชียงใหม่</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <select class="form-select" aria-label="Default select example" name="subDistrict">
+                                    <select class="form-select" aria-label="Default select example" name="subDistrict" id="districts">
                                         <option selected>ตำบล</option>
-                                        <option value="สุเทพ">สุเทพ</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                       
                                     </select>
                                 </div>
                             </div>
@@ -146,3 +149,4 @@
 </body>
 
 </html>
+<?php include('script.php');?>
