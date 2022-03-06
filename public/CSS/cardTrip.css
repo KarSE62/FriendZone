@@ -9,6 +9,13 @@
     border-radius: 15px;
     border: none;
 }
+
+@media (max-width: 767px) {
+    .card-trip-body{
+      display: none;
+     
+    }
+  }
 .text-trip-title {
     margin-bottom: 14%;
     color: #EF5DA8;
