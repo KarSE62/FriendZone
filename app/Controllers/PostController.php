@@ -1,14 +1,19 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\PostModel;
+use App\Models\UserModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
 
-class PostController extends ResourceController{
+class PostController extends ResourceController
+{
     use RequestTrait;
-    public function index(){
+    public function index()
+    {
         helper(['form']);
         echo view('createPost');
     }
@@ -17,9 +22,9 @@ class PostController extends ResourceController{
     {
         $model = new PostModel();
         $data['posts'] = $model->viewPost();
-        return view('home',$data);
+        return view('home', $data);
     }
-    
+
     public function createpost()
     {
         $session = session();
@@ -45,16 +50,13 @@ class PostController extends ResourceController{
         ];
         //var_dump($dataPost);
         $post = $model->createpost($dataPost);
-        if($post){
-             echo view('home');
+        if ($post) {
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewPost();
+            return view('showdata', $datapost);
         }
-        
     }
-
-
-
 }
-
-
-
-?>
