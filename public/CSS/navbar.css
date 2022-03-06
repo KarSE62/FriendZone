@@ -26,3 +26,8 @@ body{
 .logo-form {
     width: 50%;
 }
+#img-join {
+    border-Radius: 600px;
+    width: 50px;
+    height: 50px;
+}

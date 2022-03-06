@@ -12,13 +12,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/CSS/navbar.css">
   <link rel="stylesheet" href="/CSS/post.css">
+  <link rel="stylesheet" href="/CSS/cardTrip.css">
   <title>Home</title>
 </head>
 <body>
 
-  <?php require('components/navbar.php'); ?>
-  <?php require('components/post.php'); ?>
-  
+    <?php require('components/navbar.php'); ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <?php require('components/cardTrip.php'); ?>
+            </div>
+            <div class="col-6">
+                <?php require('components/post.php'); ?>
+            </div>
+            <div class="col-3">
+                <?php require('components/carousel.php'); ?>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

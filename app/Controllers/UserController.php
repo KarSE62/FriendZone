@@ -48,8 +48,12 @@ class UserController extends ResourceController
 
     public function editProfile(){
         //include helper form
+        $session = session();
         helper(['form']);
-        echo view('editProfile');
+        $model = new UserModel();
+        $numprovince = $session->get("province");
+        $datapost['province'] = $model->getProvince($numprovince);
+        return view('editProfile', $datapost);
     }
 
 
