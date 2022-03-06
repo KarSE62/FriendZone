@@ -41,6 +41,7 @@ body{
 .text-post-title { /*? หัวข้อ */
     float: left;
     margin: 0% 0% 2% 0%;
+    font-size: 100%;
 }
 .btn-post-join { /*? ปุ่มเข้าร่วม */
     margin: 0% 2% 2% 0%;
