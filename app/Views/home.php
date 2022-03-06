@@ -20,13 +20,13 @@
     <?php require('components/navbar.php'); ?>
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-sm-3">
                 <?php require('components/cardTrip.php'); ?>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <?php require('components/post.php'); ?>
             </div>
-            <div class="col-3">
+            <div class="col-sm-3">
                 <?php require('components/carousel.php'); ?>
             </div>
         </div>
