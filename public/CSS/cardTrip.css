@@ -1,0 +1,27 @@
+.card-trip {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 1px 1px 10px rgb(223, 223, 223);
+    margin-top: 6%; 
+}
+.card-trip-body {
+    padding: 10%;
+    border-radius: 15px;
+    border: none;
+}
+.text-trip-title {
+    margin-bottom: 14%;
+    color: #EF5DA8;
+    font-weight: bolder;
+    font-size: 24px;
+}
+.text-trip-namePlace {
+    color: #EF5DA8;
+    font-weight: bolder;
+    font-size: 16px;
+}
+.text-trip-numPost {
+    margin: 1% 0% 10% 0%;
+    color: #8B8C94;
+    font-size: 13px;
+}
