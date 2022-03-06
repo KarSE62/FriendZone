@@ -7,18 +7,7 @@
             <div class="col-4">
                 <img src="<?php echo $session->get('userImage'); ?>" class="card-img-top profileimg" alt="...">
             </div>
-            <div class="col-2">
-                <h5>1</h5>
-                <h6>โพสต์</h6>
-            </div>
-            <div class="col-2">
-                <h5>48</h5>
-                <h6>ผู้ติดตาม</h6>
-            </div>
-            <div class="col-3">
-                <h5>5</h5>
-                <h6>กำลังติดตาม</h6>
-            </div>
+            
         </div>
 
         <div class="card-body">

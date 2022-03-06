@@ -16,20 +16,28 @@
         <h4 class="cardProfile-username"><?php echo $session->get('userName'); ?></h4>
         <p class="cardProfile-fname-lname">@<?php echo $session->get('FName') . " " . $session->get('LName'); ?></p>
 
-        <div class="row cardProfile-row">
-            <div class="col-4 cardProfile-col-4">
-                <h5 class="cardProfile-num">1</h5> 
-                <h6 class="cardProfile-text">โพสต์</h6>
-            </div>
-            <div class="col-4 cardProfile-col-4">
-                <h5 class="cardProfile-num">48</h5> 
-                <h6 class="cardProfile-text">ผู้ติดตาม</h6>
-            </div>
-            <div class="col-4 cardProfile-col-4">
-                <h5 class="cardProfile-num">5</h5>
-                <h6 class="cardProfile-text">กำลังติดตาม</h6>
-            </div>
-        </div>
+        <div class="information">
+            <h5>ข้อมูลทั่วไป</h5>
+
+            <label>สถานะ :</label>
+            <span><?php if ($session->get('statusUser') == "0") {
+                        echo "รอการยืนยันตัวตน";
+                    } else if ($session->get('statusUser') == "1") {
+                        echo "ยืนยันตัวตนสำเร็จแล้ว";
+                    }; ?></span>
+            <br />
+
+            <label>เพศ :</label>
+            <span><?php echo $session->get('gender'); ?> </span>
+            <i class="far fa-mars" style="color: #1194ff;"></i>
+            <!-- <i class="far fa-venus" style="color: #ff5ebc;"></i> -->
+            <!-- <i class="far fa-venus-mars" style="color: #7e2dff;"></i> -->
+            <br />
+
+            <i class="fas fa-map-marker-alt"></i>
+            <span><?php echo $province[0]["name_th"]; ?></span>
+            
+        </div><!--End information-->
     </div>
 
 </div>

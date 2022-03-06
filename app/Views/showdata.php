@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/cardTrip.css">
     <link rel="stylesheet" href="/CSS/cardProfile.css">
+    <link rel="stylesheet" href="/CSS/profile.css">
     <!-- <link rel="stylesheet" href="/CSS/profile.css"> -->
 
     <title>Home</title>
