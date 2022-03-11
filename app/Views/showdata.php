@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+$con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
+?>
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +19,21 @@
     <link rel="stylesheet" href="/CSS/cardTrip.css">
     <link rel="stylesheet" href="/CSS/cardProfile.css">
     <link rel="stylesheet" href="/CSS/profile.css">
+    <link rel="stylesheet" href="/CSS/modalCreatePost.css">
     <!-- <link rel="stylesheet" href="/CSS/profile.css"> -->
 
     <title>Home</title>
   
-
 </head>
 
 <body>
+    <?php
+        $sql_category = "SELECT * FROM category";
+        $query = mysqli_query($con, $sql_category);
+
+        $sql_provinces = "SELECT * FROM provinces";
+        $query1 = mysqli_query($con, $sql_provinces);
+    ?>
     <?php $session = session(); ?>
     <?php require('components/navbaruser.php'); ?>
 
@@ -39,9 +48,11 @@
                 <?php require('components/postUser.php'); ?>
             </div>
             <div class="col-sm-3">
+                <?php require('components/modalCreatePost.php'); ?>
                 <?php require('components/carousel.php'); ?>
             </div>
         </div>
     </div>
-    
+</body>
 </html>
+<?php include('script.php');?>
