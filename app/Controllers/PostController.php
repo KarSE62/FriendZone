@@ -5,6 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\PostModel;
 use App\Models\UserModel;
+use App\Models\CommentModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -20,8 +21,11 @@ class PostController extends ResourceController
 
     public function viewPost()
     {
-        $model = new PostModel();
-        $data['posts'] = $model->viewPost();
+        $modelPost = new PostModel();
+        $modelCom = new CommentModel();
+        $data['posts'] = $modelPost->viewPost();
+        $data['comments'] = $modelCom ->viewComment();
+        //var_dump($data);
         return view('home', $data);
     }
 
