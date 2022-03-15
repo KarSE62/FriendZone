@@ -12,39 +12,51 @@
 <?php foreach ($posts as $post) { ?>
     <div class="card-post">
         <div class="card-post-title1">
-            <img src="<?php echo $post["userImage"]?>" class="img-post-profileUser">
-            
-            <h6 class="text-post-user"><?php echo $post["FName"]." ".$post["LName"]?> </h6>
+            <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
+
+            <h6 class="text-post-user"><?php echo $post["FName"] . " " . $post["LName"] ?> </h6>
+
+            <div class="card-post-dropdown">
+                <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                    <i class="fas fa-ellipsis-h"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">แก้ไขโพสต์</a></li>
+                    <li><a class="dropdown-item" href="#">ลบโพสต์</a></li>
+                </ul>
+            </div>
+
             <p class="text-post-title-time">เมื่อสักครู่</p>
         </div>
         <div class="card-post-title2">
             <div class="div-post-title">
-                <h5 class="text-post-title"><?php echo $post["postTitle"]?> 555555 5 555555555555555555555 55555555555555 5555555555 55555555 </h5>
+                <h5 class="text-post-title"><?php echo $post["postTitle"] ?> 555555 5 555555555555555555555 55555555555555 5555555555 55555555 </h5>
             </div>
         </div>
 
-        <img src="<?php echo $post["imagePost"]?>" class="card-img-top">
-        
+        <img src="<?php echo $post["imagePost"] ?>" class="card-img-top">
+
         <div class="card-post-body">
             <div class="row row-post-body">
                 <div class="col-8">
                     <i class="far fa-calendar-alt fa-post-calendar"></i>
                     <label class="text-post-date">วันที่ :</label>
-                    <span class="span span-post-date">&nbsp;<?php echo $post["date_start"]?>&nbsp;</span>
+                    <span class="span span-post-date">&nbsp;<?php echo $post["date_start"] ?>&nbsp;</span>
                     <label class="text-post-date">ถึง</label>
-                    <span class="span span-post-date">&nbsp;<?php echo $post["date_end"]?></span>
+                    <span class="span span-post-date">&nbsp;<?php echo $post["date_end"] ?></span>
 
                     <br />
 
                     <i class="fas fa-map-marker-alt fa-post-location"></i>
                     <label class="text-post-province">จังหวัด :</label>
-                    <span class="span span-post-province">&nbsp;<?php echo $post["name_th"]?></span>
+                    <span class="span span-post-province">&nbsp;<?php echo $post["name_th"] ?></span>
 
                     <br />
 
                     <i class="fas fa-users fa-post-numPeople"></i>
                     <label class="text-post-numPeople">ต้องการผู้เข้าร่วม :</label>
-                    <span class="span span-post-numPeople">&nbsp;<?php echo $post["num_people"]?> &nbsp; คน</span>
+                    <span class="span span-post-numPeople">&nbsp;<?php echo $post["num_people"] ?> &nbsp; คน</span>
                 </div>
 
                 <div class="col-4">
@@ -81,15 +93,15 @@
                 </div>
             </div>
             <div class="post-comment-body">
-                <img src="<?php echo $post["userImage"]?>" class="img-post-user-commentOwner">
+                <img src="<?php echo $post["userImage"] ?>" class="img-post-user-commentOwner">
                 <div class="text-post-user-comment">
                     <span class="span-post-user-commentOwner">
-                        <a href="#" class="post-user-comment-username"><?php echo $post["FName"]?> : </a>
+                        <a href="#" class="post-user-comment-username"><?php echo $post["FName"] ?> : </a>
                         รถยนต์ส่วนตัวครับ บบบบบบบ บบบบบบ บบบบบบบบ บบบบบบบบบบบบบ บบบบบบบบบบบบบบบบบบ
                     </span>
                 </div>
             </div>
-        
+
             <div class="card-post-footer">
                 <img src="<?php echo $session->get('userImage'); ?>" class="img-post-footer-comment">
                 <input type="text" class="form-control input-post-footer" placeholder="แสดงความคิดเห็น . . .">
@@ -98,6 +110,6 @@
         </div>
 
     </div>
-    
+
     <br>
 <?php } ?>
