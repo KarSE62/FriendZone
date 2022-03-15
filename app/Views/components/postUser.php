@@ -18,8 +18,9 @@
             <p class="text-post-title-time">เมื่อสักครู่</p>
         </div>
         <div class="card-post-title2">
-            <h5 class="text-post-title"><?php echo $post["postTitle"]?></h5>
-            <a href="#" class="btn btn-post-join justify-content-end"> <i class="far fa-plus-circle"></i>&nbsp; เข้าร่วม</a>
+            <div class="div-post-title">
+                <h5 class="text-post-title"><?php echo $post["postTitle"]?> 555555 5 555555555555555555555 55555555555555 5555555555 55555555 </h5>
+            </div>
         </div>
 
         <img src="<?php echo $post["imagePost"]?>" class="card-img-top">
@@ -72,13 +73,21 @@
         <div class="slidedown" id="slidedown">
             <div class="post-comment-body">
                 <img src="https://shorturl.asia/BdVyr" class="img-post-user-comment">
-                <label class="text-post-user-comment">เดินทางยังไงครับ ??</label>
-                <br/>
+                <div class="text-post-user-comment">
+                    <span class="span-post-user-comment">
+                        <a href="#" class="post-user-comment-username">Yannasit : </a>
+                        เดินทางยังไงครับ ??
+                    </span>
+                </div>
             </div>
             <div class="post-comment-body">
                 <img src="<?php echo $post["userImage"]?>" class="img-post-user-commentOwner">
-                <label class="text-post-user-commentOwner">รถยนต์ส่วนตัวครับ</label>
-                <br/>
+                <div class="text-post-user-comment">
+                    <span class="span-post-user-commentOwner">
+                        <a href="#" class="post-user-comment-username"><?php echo $post["FName"]?> : </a>
+                        รถยนต์ส่วนตัวครับ บบบบบบบ บบบบบบ บบบบบบบบ บบบบบบบบบบบบบ บบบบบบบบบบบบบบบบบบ
+                    </span>
+                </div>
             </div>
         
             <div class="card-post-footer">
