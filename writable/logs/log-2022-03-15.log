@@ -1,0 +1,13 @@
+CRITICAL - 2022-03-15 02:49:05 --> Undefined variable $session
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\post.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 26)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\home.php(27): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\PostController.php(29): view('home', Array)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\PostController->viewPost()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}

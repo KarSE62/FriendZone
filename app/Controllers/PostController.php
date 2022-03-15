@@ -60,7 +60,8 @@ class PostController extends ResourceController
             $datapost['province'] = $model->getProvince($numprovince);
             $modelpost = new PostModel();
             $datapost['posts'] = $modelpost->viewPost();
-            return view('showdata', $datapost);
+            echo view('showdata', $datapost);
+            return redirect()->to('/showdata');
         }
     }
 }
