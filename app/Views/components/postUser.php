@@ -1,13 +1,4 @@
-<script>
-    function slidedown() {
-        var x = document.getElementById("slidedown");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-</script>
+
 
 <?php foreach ($posts as $post) { ?>
     <div class="card-post">
@@ -15,23 +6,25 @@
             <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
             <h6 class="text-post-user"><?php echo $post["FName"] . " " . $post["LName"] ?> </h6>
+            <?php if ($post["userId"] == $session->get('userId')) { ?>
+                <div class="card-post-dropdown">
+                    <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
 
-            <div class="card-post-dropdown">
-                <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
-                    <i class="fas fa-ellipsis-h"></i>
-                </a>
-
-                <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">แก้ไขโพสต์</a></li>
-                    <li><a class="dropdown-item" href="#">ลบโพสต์</a></li>
-                </ul>
-            </div>
-
+                    <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
+                        <li><button type="button" class="modalCreatePost-btn" data-bs-toggle="modal" data-bs-target="#edit<?= $post["postId"] ?>">
+                                แก้ไขกิจกรรม
+                            </button></li>
+                        <li><a class="dropdown-item" href="/deletePost/<?php echo $post["postId"] ?>">ลบโพสต์</a></li>
+                    </ul>
+                </div>
+            <?php } ?>
             <p class="text-post-title-time">เมื่อสักครู่</p>
         </div>
         <div class="card-post-title2">
             <div class="div-post-title">
-                <h5 class="text-post-title"><?php echo $post["postTitle"] ?> 555555 5 555555555555555555555 55555555555555 5555555555 55555555 </h5>
+                <h5 class="text-post-title"><?php echo $post["postTitle"] ?></h5>
             </div>
         </div>
 
@@ -76,13 +69,13 @@
 
             <div class="post-line"></div>
 
-            <div class="post-comment-title" onclick="slidedown()">
+            <div class="post-comment-title btn-show-comment" id="<?php echo $post["postId"] ?>">
                 <a class="text-post-comment" id="down">ดูความคิดเห็นทั้งหมด</a>
             </div>
 
         </div>
 
-        <div class="slidedown" id="slidedown">
+        <div class="slidedown">
             <div class="post-comment-body">
                 <img src="https://shorturl.asia/BdVyr" class="img-post-user-comment">
                 <div class="text-post-user-comment">

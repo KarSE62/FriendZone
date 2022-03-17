@@ -100,8 +100,9 @@ class UserController extends ResourceController
                 $modelpost = new PostModel();
                 $datapost['posts'] = $modelpost->viewPost();
                 //var_dump($datapost);
-                return view('showdata',$datapost);
-            } else {
+                echo view('showdata',$datapost);
+                return redirect()->to('/showdata');
+            } else if($statusUser == "2" || $statusUser == "") {
                 return redirect()->to('/savedata');
             }
         } else {
