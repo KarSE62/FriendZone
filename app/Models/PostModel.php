@@ -23,6 +23,11 @@ class PostModel extends Model{
         return TRUE;
     }
 
+    public function deletePost($id)
+    {
+        $this->where('postId', $id)->delete();
+        return TRUE;
+    }
 }
 
 

@@ -42,10 +42,10 @@ $routes->get('/showdata', 'UserController::showdata',);
 $routes->get('/createPost', 'PostController::index',);
 $routes->get('/editProfile', 'UserController::editProfile',);
 
+$routes->get('/deletePost/(:any)', 'PostController::deletePost/$1',);
 
 
 
-$routes->put('/api/savegenaral/(:num)', 'Register::saveGenaral/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

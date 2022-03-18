@@ -64,4 +64,25 @@ class PostController extends ResourceController
             return redirect()->to('/showdata');
         }
     }
+
+    public function deletePost($id=null)
+    {
+        $session = session();
+        $model = new PostModel();
+        $deleted = $model->deletePost($id);
+        if($deleted){
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewPost();
+            echo view('showdata',$datapost);
+            return redirect()->to('/showdata');
+        }
+    }
+    public function editPost($id=null)
+    {
+       
+        
+    }
 }

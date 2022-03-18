@@ -3,6 +3,7 @@
 <?php
 $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,16 +24,16 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <!-- <link rel="stylesheet" href="/CSS/profile.css"> -->
 
     <title>Home</title>
-  
+
 </head>
 
 <body>
     <?php
-        $sql_category = "SELECT * FROM category";
-        $query = mysqli_query($con, $sql_category);
+    $sql_category = "SELECT * FROM category";
+    $query = mysqli_query($con, $sql_category);
 
-        $sql_provinces = "SELECT * FROM provinces";
-        $query1 = mysqli_query($con, $sql_provinces);
+    $sql_provinces = "SELECT * FROM provinces";
+    $query1 = mysqli_query($con, $sql_provinces);
     ?>
     <?php $session = session(); ?>
     <?php require('components/navbaruser.php'); ?>
@@ -42,10 +43,12 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
             <div class="col-sm-3">
                 <?php require('components/cardProfile.php'); ?>
                 <?php require('components/cardTrip.php'); ?>
-                <?php //require('components/buttonEdit.php'); ?>
+                <?php //require('components/buttonEdit.php'); 
+                ?>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 allPost">
                 <?php require('components/postUser.php'); ?>
+
             </div>
             <div class="col-sm-3">
                 <?php require('components/modalCreatePost.php'); ?>
@@ -53,6 +56,28 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cardPost = document.querySelector(".allPost");
+            let toggle = false;
+            cardPost.addEventListener("click", (e) => {
+                const target = e.target.closest(".btn-show-comment")
+                if (!target) return
+                console.log(target.id);
+                const card = target.closest(".card-post");
+                const slidedown = card.querySelector(".slidedown");
+                console.log(toggle);
+                if (!toggle) {
+                    toggle = true;
+                    slidedown.style.display = "block";
+                } else {
+                    toggle = false;
+                    slidedown.style.display = "none";
+                }
+            })
+        }, false);
+    </script>
 </body>
+
 </html>
-<?php include('script.php');?>
+<?php include('script.php'); ?>
