@@ -102,11 +102,11 @@
 
                         <div class="mb-3">
                             <label class="form-label modalCreatePost-label">วันที่ไป</label>
-                            <input type="date" class="form-control modalCreatePost-input" id="date_start" name="date_start">
+                            <input type="date" class="form-control modalCreatePost-input" id="date_start" name="date_start" min="2022-01-02" max="2022-12-31">
                         </div>
                         <div class="mb-3">
                             <label class="form-label modalCreatePost-label">วันที่กลับ</label>
-                            <input type="date" class="form-control modalCreatePost-input" id="date_end" name="date_end">
+                            <input type="date" class="form-control modalCreatePost-input" id="date_end" name="date_end" min="2022-01-02" max="2022-12-31">
                         </div>
 
                         <div class="mb-3 modalCreatePost-text-radio">
