@@ -23,10 +23,10 @@ class PostController extends ResourceController
     {
         $modelPost = new PostModel();
         $modelCom = new CommentModel();
-        $data['posts'] = $modelPost->viewPost();
-        $data['comments'] = $modelCom ->viewComment();
+        $datapost['posts'] = $modelPost->viewPost();
+        $datapost['comments'] = $modelCom ->viewComment();
         //var_dump($data);
-        return view('home', $data);
+        return view('home', $datapost);
     }
 
     public function createpost()

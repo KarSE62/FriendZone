@@ -23,7 +23,7 @@
             <div class="col-sm-3">
                 <?php require('components/cardTrip.php'); ?>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 allPost">
                 <?php require('components/post.php'); ?>
             </div>
             <div class="col-sm-3">
@@ -31,6 +31,27 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cardPost = document.querySelector(".allPost");
+            let toggle = false;
+            cardPost.addEventListener("click", (e) => {
+                const target = e.target.closest(".btn-show-comment")
+                if (!target) return
+                console.log(target.id);
+                const card = target.closest(".card-post");
+                const slidedown = card.querySelector(".slidedown");
+                console.log(toggle);
+                if (!toggle) {
+                    toggle = true;
+                    slidedown.style.display = "block";
+                } else {
+                    toggle = false;
+                    slidedown.style.display = "none";
+                }
+            })
+        }, false);
+    </script>
 </body>
 
 </html>

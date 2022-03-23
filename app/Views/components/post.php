@@ -1,13 +1,4 @@
-<script>
-    function slidedown() {
-        var x = document.getElementById("slidedown");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-</script>
+
 
 <?php foreach ($posts as $post) { ?>
     <div class="card-post">
@@ -15,11 +6,13 @@
             <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
             <h6 class="text-post-user"><?php echo $post["FName"] . " " . $post["LName"] ?> </h6>
+            
             <p class="text-post-title-time">เมื่อสักครู่</p>
         </div>
         <div class="card-post-title2">
-            <h5 class="text-post-title"><?php echo $post["postTitle"] ?></h5>
-            <a href="#" class="btn btn-post-join justify-content-end"> <i class="far fa-plus-circle"></i>&nbsp; เข้าร่วม</a>
+            <div class="div-post-title">
+                <h5 class="text-post-title"><?php echo $post["postTitle"] ?></h5>
+            </div>
         </div>
 
         <img src="<?php echo $post["imagePost"] ?>" class="card-img-top">
@@ -63,22 +56,29 @@
 
             <div class="post-line"></div>
 
-            <div class="post-comment-title" onclick="slidedown()">
+            <div class="post-comment-title btn-show-comment" id="<?php echo $post["postId"] ?>">
                 <a class="text-post-comment" id="down">ดูความคิดเห็นทั้งหมด</a>
             </div>
 
         </div>
 
-
+        <div class="slidedown">
         <?php foreach ($comments as $comment) { ?>
             <?php if ($post["postId"] == $comment["postId"]) { ?>
-                <div class="post-comment-body">
-                    <img src="<?php echo $comment["userImage"] ?>" class="img-post-user-commentOwner">
-                    <label class="text-post-user-commentOwner"><?php echo $comment["commentDetail"] ?></label>
-                    <br />
+            <div class="post-comment-body">
+                <img src="<?php echo $comment["userImage"] ?>" class="img-post-user-comment">
+                <div class="text-post-user-comment">
+                    <span class="span-post-user-comment">
+                        <a href="#" class="post-user-comment-username">Yannasit : </a>
+                        <?php echo $comment["commentDetail"] ?>
+                    </span>
                 </div>
+            </div>
             <?php } ?>
         <?php } ?>
+
+            
+        </div>
 
     </div>
 

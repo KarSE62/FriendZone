@@ -48,7 +48,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
             </div>
             <div class="col-sm-6 allPost">
                 <?php require('components/postUser.php'); ?>
-
+                
             </div>
             <div class="col-sm-3">
                 <?php require('components/modalCreatePost.php'); ?>

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 use App\Models\PostModel;
+use App\Models\CommentModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -42,6 +43,8 @@ class UserController extends ResourceController
         $datapost['province'] = $model->getProvince($numprovince);
         $modelpost = new PostModel();
         $datapost['posts'] = $modelpost->viewPost();
+        $modelCom = new CommentModel();
+        $datapost['comments'] = $modelCom ->viewComment();
         return view('showdata', $datapost);
         
     }
@@ -99,6 +102,8 @@ class UserController extends ResourceController
                 $datapost['province'] = $model->getProvince($numprovince);
                 $modelpost = new PostModel();
                 $datapost['posts'] = $modelpost->viewPost();
+                $modelCom = new CommentModel();
+                $datapost['comments'] = $modelCom ->viewComment();
                 //var_dump($datapost);
                 echo view('showdata',$datapost);
                 return redirect()->to('/showdata');
@@ -144,6 +149,8 @@ class UserController extends ResourceController
             $datapost['province'] = $model->getProvince($numprovince);
             $modelpost = new PostModel();
             $datapost['posts'] = $modelpost->viewPost();
+            $modelCom = new CommentModel();
+            $datapost['comments'] = $modelCom ->viewComment();
             echo view('showdata', $datapost);
         }
 

@@ -76,24 +76,19 @@
         </div>
 
         <div class="slidedown">
+        <?php foreach ($comments as $comment) { ?>
+            <?php if ($post["postId"] == $comment["postId"]) { ?>
             <div class="post-comment-body">
-                <img src="https://shorturl.asia/BdVyr" class="img-post-user-comment">
+                <img src="<?php echo $comment["userImage"] ?>" class="img-post-user-comment">
                 <div class="text-post-user-comment">
                     <span class="span-post-user-comment">
                         <a href="#" class="post-user-comment-username">Yannasit : </a>
-                        เดินทางยังไงครับ ??
+                        <?php echo $comment["commentDetail"] ?>
                     </span>
                 </div>
             </div>
-            <div class="post-comment-body">
-                <img src="<?php echo $post["userImage"] ?>" class="img-post-user-commentOwner">
-                <div class="text-post-user-comment">
-                    <span class="span-post-user-commentOwner">
-                        <a href="#" class="post-user-comment-username"><?php echo $post["FName"] ?> : </a>
-                        รถยนต์ส่วนตัวครับ บบบบบบบ บบบบบบ บบบบบบบบ บบบบบบบบบบบบบ บบบบบบบบบบบบบบบบบบ
-                    </span>
-                </div>
-            </div>
+            <?php } ?>
+        <?php } ?>
 
             <div class="card-post-footer">
                 <img src="<?php echo $session->get('userImage'); ?>" class="img-post-footer-comment">
