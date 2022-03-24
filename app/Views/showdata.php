@@ -15,6 +15,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/CSS/navbar.css">
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/cardTrip.css">
@@ -22,7 +23,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <link rel="stylesheet" href="/CSS/profile.css">
     <link rel="stylesheet" href="/CSS/modalCreatePost.css">
     <!-- <link rel="stylesheet" href="/CSS/profile.css"> -->
-
+    
     <title>Home</title>
 
 </head>
@@ -39,6 +40,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <?php require('components/navbaruser.php'); ?>
 
     <div class="container">
+        
         <div class="row">
             <div class="col-sm-3">
                 <?php require('components/cardProfile.php'); ?>
@@ -48,7 +50,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
             </div>
             <div class="col-sm-6 allPost">
                 <?php require('components/postUser.php'); ?>
-                
+
             </div>
             <div class="col-sm-3">
                 <?php require('components/modalCreatePost.php'); ?>

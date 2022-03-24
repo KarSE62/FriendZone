@@ -2,6 +2,26 @@
 
 <?php foreach ($posts as $post) { ?>
     <div class="card-post">
+    <?php if (session()->getFlashdata('Err')) : ?>
+                    <div>
+                        <script>
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'ไม่สามารถสร้างโพสต์ได้กรุณารอการยืนยันตัวตน!!',
+                            })
+                        </script>
+                    </div>
+    <?php endif ?>
+    <?php if (session()->getFlashdata('Success')) : ?>
+                    <div>
+                        <script>
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'สร้างโพสต์ประกาศกิจกรรมสำเร็จ',
+                            })
+                        </script>
+                    </div>
+    <?php endif ?>
         <div class="card-post-title1">
             <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
@@ -13,9 +33,7 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><button type="button" class="modalCreatePost-btn" data-bs-toggle="modal" data-bs-target="#edit<?= $post["postId"] ?>">
-                                แก้ไขกิจกรรม
-                            </button></li>
+                        <li><a class="dropdown-item" href="/editPost/<?php echo $post["postId"] ?>">แก้ไขกิจกรรม</a></li>
                         <li><a class="dropdown-item" href="/deletePost/<?php echo $post["postId"] ?>">ลบโพสต์</a></li>
                     </ul>
                 </div>

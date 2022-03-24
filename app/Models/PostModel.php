@@ -28,6 +28,23 @@ class PostModel extends Model{
         $this->where('postId', $id)->delete();
         return TRUE;
     }
+
+    public function viewsinglepost($id)
+    {
+        return $this->db->table('post')
+        ->join('provinces','post.province = provinces.id')
+        ->join('amphures','post.district = amphures.id')
+        ->join('districts','post.subDistrict = districts.id')
+        ->join('category','post.categoryId = category.categoryId')
+        ->where('postId',$id)
+        ->get()->getResultArray();
+    }
+
+    public function updatepost($dataPost,$id)
+    {
+        $this->where('postId', $id)->set($dataPost)->update();
+        return true;
+    }
 }
 
 
