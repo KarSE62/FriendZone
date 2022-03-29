@@ -22,7 +22,6 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <link rel="stylesheet" href="/CSS/cardProfile.css">
     <link rel="stylesheet" href="/CSS/profile.css">
     <link rel="stylesheet" href="/CSS/modalCreatePost.css">
-    <!-- <link rel="stylesheet" href="/CSS/profile.css"> -->
     
     <title>Home</title>
 
