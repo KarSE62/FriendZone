@@ -25,7 +25,7 @@ class PostController extends ResourceController
         $modelCom = new CommentModel();
         $datapost['posts'] = $modelPost->viewPost();
         $datapost['comments'] = $modelCom->viewComment();
-        //var_dump($data);
+        //var_dump($datapost);
         return view('home', $datapost);
     }
 

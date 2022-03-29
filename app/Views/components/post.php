@@ -7,7 +7,7 @@
 
             <h6 class="text-post-user"><?php echo $post["FName"] . " " . $post["LName"] ?> </h6>
             
-            <p class="text-post-title-time">เมื่อสักครู่</p>
+            <p class="text-post-title-time"><?php echo $post["creation_date"] ?></p>
         </div>
         <div class="card-post-title2">
             <div class="div-post-title">
@@ -69,7 +69,7 @@
                 <img src="<?php echo $comment["userImage"] ?>" class="img-post-user-comment">
                 <div class="text-post-user-comment">
                     <span class="span-post-user-comment">
-                        <a href="#" class="post-user-comment-username">Yannasit : </a>
+                        <a href="#" class="post-user-comment-username"><?php echo $comment["FName"] ?> : </a>
                         <?php echo $comment["commentDetail"] ?>
                     </span>
                 </div>

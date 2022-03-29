@@ -1,3 +1,8 @@
+<?php
+$con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
+$sql_category = "SELECT * FROM category";
+$query = mysqli_query($con, $sql_category);
+?>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
@@ -20,9 +25,12 @@
                         <i class="fas fa-filter"></i> &nbsp;หมวดหมู่
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <?php foreach ($query as $value) { ?>
+                            <li><a class="dropdown-item" href="#"><?= $value['categoryId'] ?><?= $value['name_category'] ?></a></li>
+
+                        <?php } ?>
+
+
                     </ul>
                 </li>
                 <li class="nav-item">

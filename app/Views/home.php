@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
     <?php require('components/nav.php'); ?>
     <div class="container">
         <div class="row">
