@@ -51,38 +51,42 @@
 .fa-car { /*? icon car */
     color: #ffb0d5;
 }
-
-.nav-regis-login-li {
+.nav-profile {
     display: none;
 }
-
-
-.nav-regis-login { /*? div regis,login */
-    color: #ef5da8;
+li {
+    list-style: none;
 }
-.nav-regis , .nav-login { /*? text regis,login */
+.nav-logout {
+    display: none;
+    color: #ff0000;
     text-decoration: none;
-    color: #ef5da8;
 }
-.nav-regis:hover {
-    color: #ffb3dd;
+.nav-logout:hover {
+    color: #bd0000;
 }
-.nav-login:hover {
-    color: #ffb3dd;
+
+.nav-user-imgprofile {
+    width: 55px;
+    border-radius: 50%;
 }
+
 
 @media screen and (max-width:992px){
-    .nav-regis-login {
+    .nav-imgprofile {
         display: none;
+    }
+    .nav-profile {
+        display: block;
     }
     .nav-link {
         display: flex;
         justify-content: center;
     }
-    .fa-home , .fa-filter , .fa-bell ,.fa-car {
+    .fa-home, .fa-filter, .fa-bell, .fa-car {
         display: none;
     }
-    .nav-regis-login-li { 
+    .nav-logout{ 
         display: block;
         display: flex;
         justify-content: center;

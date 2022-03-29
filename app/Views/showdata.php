@@ -16,7 +16,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/navUser.css">
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/cardTrip.css">
     <link rel="stylesheet" href="/CSS/cardProfile.css">
@@ -37,7 +37,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     $query1 = mysqli_query($con, $sql_provinces);
     ?>
     <?php $session = session(); ?>
-    <?php require('components/navbaruser.php'); ?>
+    <?php require('components/navUser.php'); ?>
 
     <div class="container">
         
