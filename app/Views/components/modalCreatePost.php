@@ -103,11 +103,11 @@
                         <div class="row">
                             <div class="col-6">
                                 <label class="form-label modalCreatePost-label">วันที่ไป</label>
-                                <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" id="date_start" data-date-language="th-th">
+                                <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" name="date_start" id="date_start" data-date-language="th-th">
                             </div>
                             <div class="col-6">
                                 <label class="form-label modalCreatePost-label">วันที่กลับ</label>
-                                <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" id="date_end" data-date-language="th-th">
+                                <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" name="date_end" id="date_end" data-date-language="th-th">
                             </div>
                         </div>
 

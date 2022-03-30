@@ -38,7 +38,7 @@
                     </ul>
                 </div>
             <?php } ?>
-            <p class="text-post-title-time">เมื่อสักครู่</p>
+            <p class="text-post-title-time"><?php echo $post["creation_date"] ?></p>
         </div>
         <div class="card-post-title2">
             <div class="div-post-title">
