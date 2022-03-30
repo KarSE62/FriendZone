@@ -12,7 +12,7 @@
     
     <title>Profile</title>
 
-    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/navUser.css">
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/profile.css">
     <link rel="stylesheet" href="/CSS/formEditProfile.css">
@@ -21,7 +21,7 @@
 <body>
     
     <?php $session = session(); ?>
-    <?php require('components/navbaruser.php'); ?>
+    <?php require('components/navUser.php'); ?>
     <div class="container-xl">
         <div class="row">
             <div class="col-1"></div>

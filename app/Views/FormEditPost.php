@@ -13,7 +13,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EditPost Page</title>
-    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/navUser.css">
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/createPost.css">
     <link rel="stylesheet" href="/CSS/cardProfile.css">
@@ -29,7 +29,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     $query1 = mysqli_query($con, $sql_provinces);
     ?>
     <?php $session = session(); ?>
-    <?php require('components/navbaruser.php'); ?>
+    <?php require('components/navUser.php'); ?>
     <div class="container">
         <div class="row">
             <div class="col-4">
@@ -124,11 +124,11 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                         <div class="mb-3">
                             <label class="form-label">วันที่ไป</label>
-                            <input type="date" class="form-control" id="date_start" name="date_start" value="<?php echo $posts[0]['date_start']?>">
+                            <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" name="date_start" id="date_start"  value="<?php echo $posts[0]['date_start']?>">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">วันที่กลับ</label>
-                            <input type="date" class="form-control" id="date_end" name="date_end" value="<?php echo $posts[0]['date_end']?>">
+                            <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" name="date_end" id="date_end"  value="<?php echo $posts[0]['date_end']?>">
                         </div>
 
                     
@@ -148,6 +148,8 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
             </div>
         </div>
     </div>
+    <?php include('scriptDateStart.php');?>
+    <?php include('scriptDateEnd.php');?>
 </body>
 
 </html>

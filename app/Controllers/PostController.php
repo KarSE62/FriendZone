@@ -101,7 +101,7 @@ class PostController extends ResourceController
         }
     }
 
-    public function showDetailPost($id = null)
+    public function showDetailPost()
     {
         helper(['form']);
         echo view('FormEditPost');
