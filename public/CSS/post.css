@@ -54,7 +54,7 @@ body{
 }
 .text-post-title { /*? หัวข้อ */
     float: left;
-    margin: 0% 0% 2% 0%;
+    margin: 0% 0% 6% 0%;
     font-size: 100%;
 }
 .btn-post-join { /*? ปุ่มเข้าร่วม */
@@ -197,7 +197,7 @@ body{
     color: #000000;
 }
 .span-post-user-comment { /*? ข้อความที่คอมเมนต์ */
-    background-color: #c9c9c9;
+    background-color: #e9e9e9;
     padding: 1.5% 3%;
     font-size: 92%;
     border-top-right-radius: 20px;
