@@ -17,7 +17,7 @@
                         <script>
                             Swal.fire({
                                 icon: 'success',
-                                title: 'สร้างโพสต์ประกาศกิจกรรมสำเร็จ',
+                                title: "<?= session()->getFlashdata('Success') ?>",
                             })
                         </script>
                     </div>
@@ -108,12 +108,15 @@
             <?php } ?>
         <?php } ?>
 
+        <form action="/CommentController/insertComment" method="post">
             <div class="card-post-footer">
                 <img src="<?php echo $session->get('userImage'); ?>" class="img-post-footer-comment">
-                <input type="text" class="form-control input-post-footer" placeholder="แสดงความคิดเห็น . . .">
-                <a class="fa-post-inbox"><i class="fad fa-inbox-out"></i></a>
+                <input type="hidden" class="form-control input-post-footer" name="postId" value="<?php echo $post["postId"] ?>">
+                <input type="text" class="form-control input-post-footer" name="Comment" placeholder="แสดงความคิดเห็น . . .">
+                <button class="fa-post-inbox"><i class="fad fa-inbox-out"></i></button>
             </div>
         </div>
+        </form> 
 
     </div>
 

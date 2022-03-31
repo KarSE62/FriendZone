@@ -96,6 +96,7 @@ class PostController extends ResourceController
             $datapost['posts'] = $modelpost->viewPost();
             $modelCom = new CommentModel();
             $datapost['comments'] = $modelCom->viewComment();
+            $session->setFlashdata('Success', 'ลบโพสต์ประกาศกิจกรรมสำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
         }

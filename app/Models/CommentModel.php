@@ -14,6 +14,11 @@ class CommentModel extends Model{
         ->get()->getResultArray();
     }
 
+    public function insertComment($Comment)
+    {
+        $this->insert($Comment);
+        return TRUE;
+    }
    
 
 }
