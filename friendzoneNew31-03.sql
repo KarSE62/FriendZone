@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2022 at 07:16 AM
+-- Generation Time: Mar 31, 2022 at 04:46 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `amphures` (
   `id` int(5) NOT NULL,
   `code` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
-  `name_th` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `name_th_am` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `name_en` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `province_id` int(5) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -39,7 +39,7 @@ CREATE TABLE `amphures` (
 -- Dumping data for table `amphures`
 --
 
-INSERT INTO `amphures` (`id`, `code`, `name_th`, `name_en`, `province_id`) VALUES
+INSERT INTO `amphures` (`id`, `code`, `name_th_am`, `name_en`, `province_id`) VALUES
 (1, '1001', 'เขตพระนคร', 'Khet Phra Nakhon', 1),
 (2, '1002', 'เขตดุสิต', 'Khet Dusit', 1),
 (3, '1003', 'เขตหนองจอก', 'Khet Nong Chok', 1),
@@ -1065,15 +1065,26 @@ INSERT INTO `category` (`categoryId`, `name_category`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comment`
+-- Table structure for table `commented`
 --
 
-CREATE TABLE `comment` (
+CREATE TABLE `commented` (
   `commentId` int(50) NOT NULL,
   `commentDetail` varchar(100) NOT NULL,
   `userId` int(50) NOT NULL,
   `postId` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `commented`
+--
+
+INSERT INTO `commented` (`commentId`, `commentDetail`, `userId`, `postId`) VALUES
+(5, 'สนใจครัช มีกิจกรรมที่ชายหาดไหมครับ', 31, 44),
+(6, 'เดินทางยังไงครับ', 42, 44),
+(7, 'อยากไปทำบุญไหว้พระด้วยครับ', 40, 5),
+(8, 'อากาศหนาวไหมครับ', 42, 4),
+(9, 'บ้านอยู่ห่างจากชาดหาดไหมค่ะ', 44, 44);
 
 -- --------------------------------------------------------
 
@@ -1084,7 +1095,7 @@ CREATE TABLE `comment` (
 CREATE TABLE `districts` (
   `id` varchar(6) COLLATE utf8_bin NOT NULL,
   `zip_code` int(11) NOT NULL,
-  `name_th` varchar(150) COLLATE utf8_bin NOT NULL,
+  `name_th_dis` varchar(150) COLLATE utf8_bin NOT NULL,
   `name_en` varchar(150) COLLATE utf8_bin NOT NULL,
   `amphure_id` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='InnoDB free: 8192 kB';
@@ -1093,7 +1104,7 @@ CREATE TABLE `districts` (
 -- Dumping data for table `districts`
 --
 
-INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) VALUES
+INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id`) VALUES
 ('100101', 10200, 'พระบรมมหาราชวัง', 'Phra Borom Maha Ratchawang', 1),
 ('100102', 10200, 'วังบูรพาภิรมย์', 'Wang Burapha Phirom', 1),
 ('100103', 10200, 'วัดราชบพิธ', 'Wat Ratchabophit', 1),
@@ -2158,7 +2169,7 @@ INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) V
 ('191011', 18160, 'เมืองเก่า', 'Mueang Kao', 132),
 ('191012', 18160, 'สวนดอกไม้', 'Suan Dok Mai', 132),
 ('191101', 18180, 'มวกเหล็ก', 'Muak Lek', 133);
-INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) VALUES
+INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id`) VALUES
 ('191102', 18180, 'มิตรภาพ', 'Mittraphap', 133),
 ('191103', 0, '*แสลงพัน', '*Salaeng Phan', 133),
 ('191104', 18180, 'หนองย่างเสือ', 'Nong Yang Suea', 133),
@@ -3225,7 +3236,7 @@ INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) V
 ('310207', 31190, 'หนองขมาร', 'Nong Khaman', 251),
 ('310301', 31160, 'กระสัง', 'Krasang', 252),
 ('310302', 31160, 'ลำดวน', 'Lamduan', 252);
-INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) VALUES
+INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id`) VALUES
 ('310303', 31160, 'สองชั้น', 'Song Chan', 252),
 ('310304', 31160, 'สูงเนิน', 'Sung Noen', 252),
 ('310305', 31160, 'หนองเต็ง', 'Nong Teng', 252),
@@ -4339,7 +4350,7 @@ INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) V
 ('360306', 36140, 'บ้านโสก', 'Ban Sok', 357),
 ('360307', 36140, 'โคกมั่งงอย', 'Khok Mang Ngoi', 357),
 ('360308', 36140, 'หนองขาม', 'Nong Kham', 357);
-INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) VALUES
+INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id`) VALUES
 ('360309', 36140, 'ศรีสำราญ', 'Si Samran', 357),
 ('360401', 36120, 'บ้านยาง', 'Ban Yang', 358),
 ('360402', 36120, 'บ้านหัน', 'Ban Han', 358),
@@ -5430,9 +5441,9 @@ INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) V
 ('441302', 44160, 'กุดปลาดุก', 'Kut Pla Duk', 489),
 ('441303', 44160, 'เหล่าดอกไม้', 'Lao Dok Mai', 489),
 ('441304', 44160, 'หนองกุง', 'Nong Kung', 489),
-('450101', 45000, 'ในเมือง', 'Nai Mueang', 491),
-('450102', 45000, 'รอบเมือง', 'Rop Mueang', 491);
-INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) VALUES
+('450101', 45000, 'ในเมือง', 'Nai Mueang', 491);
+INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id`) VALUES
+('450102', 45000, 'รอบเมือง', 'Rop Mueang', 491),
 ('450103', 45000, 'เหนือเมือง', 'Nuea Mueang', 491),
 ('450104', 45000, 'ขอนแก่น', 'Khon Kaen', 491),
 ('450105', 45000, 'นาโพธิ์', 'Na Pho', 491),
@@ -6519,9 +6530,9 @@ INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) V
 ('520805', 52160, 'เวียงมอก', 'Wiang Mok', 610),
 ('520806', 52160, 'นาโป่ง', 'Na Pong', 610),
 ('520807', 52160, 'แม่ถอด', 'Mae Thot', 610),
-('520808', 52160, 'เถินบุรี', 'Thoen Buri', 610),
-('520901', 52180, 'แม่พริก', 'Mae Phrik', 611);
-INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) VALUES
+('520808', 52160, 'เถินบุรี', 'Thoen Buri', 610);
+INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id`) VALUES
+('520901', 52180, 'แม่พริก', 'Mae Phrik', 611),
 ('520902', 52180, 'ผาปัง', 'Pha Pang', 611),
 ('520903', 52180, 'แม่ปุ', 'Mae Pu', 611),
 ('520904', 52180, 'พระบาทวังตวง', 'Phra Bat Wang Tuang', 611),
@@ -7599,9 +7610,9 @@ INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) V
 ('650111', 65000, 'หัวรอ', 'Hua Ro', 739),
 ('650112', 65000, 'จอมทอง', 'Chom Thong', 739),
 ('650113', 65000, 'บ้านกร่าง', 'Ban Krang', 739),
-('650114', 65000, 'บ้านคลอง', 'Ban Khlong', 739),
-('650115', 65000, 'พลายชุมพล', 'Phlai Chumphon', 739);
-INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) VALUES
+('650114', 65000, 'บ้านคลอง', 'Ban Khlong', 739);
+INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id`) VALUES
+('650115', 65000, 'พลายชุมพล', 'Phlai Chumphon', 739),
 ('650116', 65000, 'มะขามสูง', 'Makham Sung', 739),
 ('650117', 65000, 'อรัญญิก', 'Aranyik', 739),
 ('650118', 65000, 'บึงพระ', 'Bueng Phra', 739),
@@ -8660,10 +8671,10 @@ INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) V
 ('800408', 0, '*ถ้ำพรรณรา', '*Tham Pannara', 839),
 ('800409', 80260, 'ห้วยปริก', 'Huai Prik', 839),
 ('800410', 80150, 'ไสหร้า', 'Saira', 839),
-('800411', 0, 'หลักช้าง*', 'Lak Chang*', 839),
+('800411', 0, 'หลักช้าง*', 'Lak Chang*', 839);
+INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id`) VALUES
 ('800412', 0, 'สวนขัน*', 'Suan Kan*', 839),
-('800413', 0, '*คลองเส', '*Khlong Se', 839);
-INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) VALUES
+('800413', 0, '*คลองเส', '*Khlong Se', 839),
 ('800414', 0, '*ดุสิต', '*Dusit', 839),
 ('800415', 80260, 'นาเขลียง', 'Na Khliang', 839),
 ('800416', 80250, 'จันดี', 'Chan Di', 839),
@@ -9759,10 +9770,10 @@ INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) V
 ('950113', 0, '*กรงปินัง', '*Krong Pi Nang', 977),
 ('950114', 95160, 'พร่อน', 'Phron', 977),
 ('950115', 95000, 'บันนังสาเรง', 'Bannang Sareng', 977),
-('950116', 95000, 'สะเตงนอก', 'Sateng Nok', 977),
+('950116', 95000, 'สะเตงนอก', 'Sateng Nok', 977);
+INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id`) VALUES
 ('950117', 0, '*ห้วยกระทิง', '*Hua Krating', 977),
-('950118', 95000, 'ตาเซะ', 'Ta Se', 977);
-INSERT INTO `districts` (`id`, `zip_code`, `name_th`, `name_en`, `amphure_id`) VALUES
+('950118', 95000, 'ตาเซะ', 'Ta Se', 977),
 ('950201', 95110, 'เบตง', 'Betong', 978),
 ('950202', 95110, 'ยะรม', 'Yarom', 978),
 ('950203', 95110, 'ตาเนาะแมเราะ', 'Tano Maero', 978),
@@ -9999,9 +10010,9 @@ CREATE TABLE `post` (
   `province` varchar(100) NOT NULL,
   `district` varchar(100) NOT NULL,
   `subDistrict` varchar(100) NOT NULL,
-  `date_start` date NOT NULL,
-  `date_end` date NOT NULL,
-  `creation_date` date NOT NULL DEFAULT current_timestamp(),
+  `date_start` varchar(50) NOT NULL,
+  `date_end` varchar(50) NOT NULL,
+  `creation_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `statusPost` int(50) NOT NULL,
   `userId` int(50) NOT NULL,
   `categoryId` int(50) NOT NULL
@@ -10012,8 +10023,10 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`postId`, `postTitle`, `imagePost`, `detailPost`, `note`, `num_people`, `expenses`, `province`, `district`, `subDistrict`, `date_start`, `date_end`, `creation_date`, `statusPost`, `userId`, `categoryId`) VALUES
-(3, 'วัดกงลาด', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระ', 'รับทุกคนที่ใจบุญ', 5, '10000', '58', '810', '730407', '2022-03-03', '2022-03-05', '2022-03-01', 1, 40, 4),
-(4, 'เที่ยวเชียงใหม่', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 5, '20000', '38', '584', '501704', '2022-03-03', '2022-03-05', '2022-03-01', 1, 31, 4);
+(3, 'วัดกงลาด', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระ', 'รับทุกคนที่ใจบุญ', 5, '10000', '58', '810', '730407', '2022-03-03', '2022-03-05', '2022-02-28 17:00:00', 0, 40, 4),
+(4, 'เที่ยวเชียงใหม่', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 5, '20000', '38', '584', '501704', '2022-03-03', '2022-03-05', '2022-02-28 17:00:00', 1, 31, 4),
+(5, 'องค์พระปฐมเจดีย์', 'https://media.discordapp.net/attachments/778499819072913482/948829468460478565/d7f60ea9cbdd4b33.jpg', 'ทำบุญไหว้พระร่วงโรจฤทธิ์', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 2, '10000', '58', '807', '730101', '2022-03-04', '2022-03-04', '2022-03-02 17:00:00', 1, 42, 4),
+(44, 'หาเพื่อนเที่ยวบ้านพักพลูวิลล่าทะเลชะอำ', 'https://media.discordapp.net/attachments/778499819072913482/949144347880853574/84f124989805b53b.jpg', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'ขอคนแบบปาร์ตี้ๆไม่หาเรื่อง', 20, '2000', '14', '172', '230202', '01-04-2565', '03-04-2565', '2022-03-19 17:00:00', 1, 40, 4);
 
 -- --------------------------------------------------------
 
@@ -10173,8 +10186,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userId`, `FName`, `LName`, `userName`, `password`, `idCard`, `idCardImage`, `statusUser`, `gender`, `userImage`, `birthday`, `address`, `province`, `district`, `subDistrict`, `email`, `expIdCard`, `phoneNumber`) VALUES
 (31, 'ณัฐพล', 'แซ่โฟ้ง', 'natthapon', '$2y$10$ATxGHB63RvgSf9lewLfxFuyF0ocBPC1JWZGFcmU1nr5GkaawQhwAO', '1515151515151', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '2022-02-01', '114 หมู่ 5', '72', '949', '920701', '624259001@webmail.npru.ac.th', '2022-02-28', '0987392476'),
-(37, 'กนกพล', 'พวงวัดโพธิ์', 'kar001', '$2y$10$jqbSbA/ovoToS63IyVZzfeAka.X1CHAG.Ftc4.ppYTj5b7C1RIcIS', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', '68', '905', '850102', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392476'),
-(40, 'กนกพล', 'พวงวัดโพธิ์', 'kanokphon', '$2y$10$wXl6IDcXX0AkpsqL.NjTnOkrzFT47yoRnBur.Y8eVkiVYdXi2Ba1q', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', '58', '808', '730214', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392476');
+(40, 'กนกพล', 'พวงวัดโพธิ์', 'kanokphon', '$2y$10$wXl6IDcXX0AkpsqL.NjTnOkrzFT47yoRnBur.Y8eVkiVYdXi2Ba1q', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '1', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', '58', '808', '730214', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392476'),
+(42, 'ญาณสิชฌ์', 'สันติเอกชุน', 'com007', '$2y$10$VcpBwr8Z96Ikvzy5aC11serJBFzzMRUWtV/0XQOemNlrRZzlBo1WK', '1739901526485', 'https://cdn.discordapp.com/attachments/901413238841946187/901413325861171210/Com.jpg', '0', 'ชาย', 'https://cdn.discordapp.com/attachments/901413238841946187/901413325861171210/Com.jpg', '2000-01-01', '157/131', '58', '807', '730109', '624259011@webmail.npru.ac.th', '2022-03-04', '0801912652'),
+(44, 'ชนกานต์', 'บัวขาว', 'gus007', '$2y$10$5MnoGCrUWMEnffg8G.GLnu8Qc9VfspTlakfw4EihMrZHEcdYxPtay', '1739901546247', 'https://media.discordapp.net/attachments/901413238841946187/946620558420873306/-2021-.jpg', '0', 'หญิง', 'https://media.discordapp.net/attachments/778499819072913482/958981116663050270/gus.jpg?width=673&height=676', '2001-01-01', '157/131', '3', '60', '120301', '624259009@webmail.npru.ac.th', '2022-03-30', '0987659874');
 
 --
 -- Indexes for dumped tables
@@ -10193,9 +10207,9 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`categoryId`);
 
 --
--- Indexes for table `comment`
+-- Indexes for table `commented`
 --
-ALTER TABLE `comment`
+ALTER TABLE `commented`
   ADD PRIMARY KEY (`commentId`),
   ADD KEY `userId` (`userId`),
   ADD KEY `postId` (`postId`);
@@ -10273,10 +10287,10 @@ ALTER TABLE `category`
   MODIFY `categoryId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `comment`
+-- AUTO_INCREMENT for table `commented`
 --
-ALTER TABLE `comment`
-  MODIFY `commentId` int(50) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `commented`
+  MODIFY `commentId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `officer`
@@ -10294,7 +10308,7 @@ ALTER TABLE `participate`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `postId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `postId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `provinces`
@@ -10318,7 +10332,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `userId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
