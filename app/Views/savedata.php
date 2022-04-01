@@ -20,7 +20,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
     <title>Save Data</title>
 
-    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/nav.css">
     <link rel="stylesheet" href="/CSS/savedata.css">
 
 </head>
@@ -28,12 +28,12 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 <body>
     <?php
     $sql_provinces = "SELECT * FROM provinces";
-    $query = mysqli_query($con, $sql_provinces);
+    $query_province = mysqli_query($con, $sql_provinces);
 
     
 
     ?>
-    <?php require('components/navbar.php'); ?>
+    <?php require('components/nav.php');?>
 
     <div class="row">
         <div class="col-4"></div>
@@ -105,7 +105,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                             <div class="col">
                                 <select class="form-select" name="province" id="provinces">
                                     <option selected>จังหวัด</option>
-                                    <?php foreach ($query as $value) { ?>
+                                    <?php foreach ($query_province as $value) { ?>
                                         <option value="<?= $value['id'] ?>"><?= $value['name_th'] ?></option>
                                     <?php } ?>
                                 </select>
