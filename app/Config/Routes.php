@@ -46,6 +46,7 @@ $routes->get('/showdetailpost', 'PostController::showDetailPost',);
 $routes->get('/editPost/(:any)', 'PostController::editPost/$1',);
 $routes->get('/deletePost/(:any)', 'PostController::deletePost/$1',);
 
+$routes->get('/deleteComment/(:any)', 'CommentController::deleteComment/$1',);
 
 
 /*

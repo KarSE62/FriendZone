@@ -103,6 +103,18 @@
                         <a href="#" class="post-user-comment-username"><?php echo $comment["FName"] ?> : </a>
                         <?php echo $comment["commentDetail"] ?>
                     </span>
+                    <?php if ($comment["userId"] == $session->get('userId')) { ?>
+                    <div class="card-post-dropdown">
+                    <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขคอมเม้นท์</a></li>
+                        <li><a class="dropdown-item" href="/deleteComment/<?php echo $comment["commentId"] ?>">ลบคอมเม้นท์</a></li>
+                    </ul>
+                </div>
+                <?php } ?>
                 </div>
             </div>
             <?php } ?>

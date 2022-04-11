@@ -19,6 +19,12 @@ class CommentModel extends Model{
         $this->insert($Comment);
         return TRUE;
     }
+
+    public function deleteComment($commentId)
+    {
+        $this->where('commentId', $commentId)->delete();
+        return TRUE;
+    }
    
 
 }
