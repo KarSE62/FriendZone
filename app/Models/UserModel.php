@@ -58,7 +58,20 @@ class UserModel extends Model{
         ->where('province' ,$numprovince)
         ->get()->getResultArray();
     }
+
+    public function getProfile($userId){
+        return $this->db->table('users')
+        ->join('provinces','users.province = provinces.id')
+        ->join('amphures','users.district = amphures.id')
+        ->join('districts','users.subDistrict = districts.id')
+        ->where('userId' ,$userId)
+        ->get()->getResultArray();
+    }
     
+    public function updateUser($userId, $dataUser){
+        $this->where('userId', $userId)->set($dataUser)->update();
+        return true;
+    }
 
 
 }

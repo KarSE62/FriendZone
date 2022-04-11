@@ -57,8 +57,46 @@ class UserController extends ResourceController
         $model = new UserModel();
         $numprovince = $session->get("province");
         $datapost['province'] = $model->getProvince($numprovince);
+        $userId = $session->get("userId");
+        $datapost['user'] = $model->getProfile($userId);
+        //var_dump($datapost);
         return view('editProfile', $datapost);
     }
+
+    public function updateProfile(){
+        //include helper form
+        $session = session();
+        helper(['form']);
+        $model = new UserModel();
+        $userId = [
+            'userId' => $this->request->getVar('userId'),
+        ];
+        $dataUser = [
+            'FName' => $this->request->getVar('FName'),
+            'LName' => $this->request->getVar('LName'),
+            'address' => $this->request->getVar('address'),
+            'province' => $this->request->getVar('province'),
+            'district' => $this->request->getVar('district'),
+            'subDistrict' => $this->request->getVar('subDistrict'),
+            'phoneNumber' => $this->request->getVar('phoneNumber'),
+            'email' => $this->request->getVar('email'),
+        ];
+        //var_dump($userId, $dataUser);
+        $save = $model->updateUser($dataUser, $userId);
+        // if($save){
+        //     $session = session();
+        //     helper(['form']);
+        //     $model = new UserModel();
+        //     $numprovince = $session->get("province");
+        //     $datapost['province'] = $model->getProvince($numprovince);
+        //     $userId = $session->get("userId");
+        //     $datapost['user'] = $model->getProfile($userId);
+        //     return view('editProfile', $datapost);
+        // }
+    
+       
+    }
+
 
 
 

@@ -27,7 +27,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
     $sql_provinces = "SELECT * FROM provinces";
     $query1 = mysqli_query($con, $sql_provinces);
-    ?>
+?>
     <?php $session = session(); ?>
     <?php require('components/navUser.php'); ?>
     <div class="container">
