@@ -83,16 +83,16 @@ class UserController extends ResourceController
         ];
         //var_dump($userId, $dataUser);
         $save = $model->updateUser($dataUser, $userId);
-        // if($save){
-        //     $session = session();
-        //     helper(['form']);
-        //     $model = new UserModel();
-        //     $numprovince = $session->get("province");
-        //     $datapost['province'] = $model->getProvince($numprovince);
-        //     $userId = $session->get("userId");
-        //     $datapost['user'] = $model->getProfile($userId);
-        //     return view('editProfile', $datapost);
-        // }
+        if($save){
+            $session = session();
+            helper(['form']);
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $userId = $session->get("userId");
+            $datapost['user'] = $model->getProfile($userId);
+            return view('editProfile', $datapost);
+        }
     
        
     }

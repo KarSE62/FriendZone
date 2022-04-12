@@ -68,7 +68,7 @@ class UserModel extends Model{
         ->get()->getResultArray();
     }
     
-    public function updateUser($userId, $dataUser){
+    public function updateUser($dataUser, $userId){
         $this->where('userId', $userId)->set($dataUser)->update();
         return true;
     }
