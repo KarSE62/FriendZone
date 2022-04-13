@@ -74,10 +74,6 @@ class UserController extends ResourceController
         $dataUser = [
             'FName' => $this->request->getVar('FName'),
             'LName' => $this->request->getVar('LName'),
-            'address' => $this->request->getVar('address'),
-            'province' => $this->request->getVar('province'),
-            'district' => $this->request->getVar('district'),
-            'subDistrict' => $this->request->getVar('subDistrict'),
             'phoneNumber' => $this->request->getVar('phoneNumber'),
             'email' => $this->request->getVar('email'),
         ];
@@ -91,7 +87,10 @@ class UserController extends ResourceController
             $datapost['province'] = $model->getProvince($numprovince);
             $userId = $session->get("userId");
             $datapost['user'] = $model->getProfile($userId);
-            return view('editProfile', $datapost);
+            $session->setFlashdata('Success', 'แก้ไขข้อมูลสำเร็จ!!');
+            echo view('editProfile', $datapost);
+            return redirect()->to('/showdata');
+
         }
     
        

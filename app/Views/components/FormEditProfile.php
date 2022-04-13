@@ -31,28 +31,25 @@
 
             <br/>
             <h5>ที่อยู่</h5>
-            <input type="text" class="form-control" name="address" value="<?php echo $user[0]['address']; ?>">
+            <input type="text" class="form-control" name="address" value="<?php echo $user[0]['address']; ?>" disabled>
 
             <br/>
             <div class="row">
                 <div class="col">
                     <h5>จังหวัด</h5>
-                    <select class="form-select select" name="province" id="provinces" >
+                    <select class="form-select select" name="province" id="provinces" disabled>
                         <option selected><?php echo $user[0]['name_th']; ?></option>
-                        <?php foreach ($query1 as $value_province) { ?>
-                        <option value="<?= $value_province['id'] ?>"><?= $value_province['name_th'] ?></option>
-                        <?php } ?>
                     </select>
                 </div>
                 <div class="col">
                     <h5>อำเภอ</h5>
-                    <select class="form-select select" name="district" id="amphures">
+                    <select class="form-select select" name="district" id="amphures" disabled>
                         <option selected><?php echo $user[0]['name_th_dis']; ?></option>
                     </select>
                 </div>
                 <div class="col">
                 <h5>ตำบล</h5>
-                    <select class="form-select select" name="subDistrict" id="districts">
+                    <select class="form-select select" name="subDistrict" id="districts" disabled>
                         <option selected><?php echo $user[0]['name_th_am']; ?></option>
                     </select>
                 </div>
@@ -68,7 +65,7 @@
 
             <center>
                 <button type="submit" class="submitEditProfile">บันทึก</button> &nbsp; &nbsp;
-                <button type="button" class="cancelEditProfile"><a href="">ยกเลิก</a></button>
+                <button type="button" class="cancelEditProfile"><a href="/showdata">ยกเลิก</a></button>
             </center>
             </form>
         </div>

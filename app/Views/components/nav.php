@@ -26,7 +26,7 @@ $query = mysqli_query($con, $sql_category);
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($query as $value) { ?>
-                            <li><a class="dropdown-item" href="#"><?= $value['categoryId'] ?><?= $value['name_category'] ?></a></li>
+                            <li><a class="dropdown-item" href="#"><?= $value['name_category'] ?></a></li>
 
                         <?php } ?>
 
