@@ -33,15 +33,15 @@
                 <div class="alert alert-success text-center"><?= session()->getFlashdata('msg1') ?></div>
             <?php endif ?>
             <div class="col-sm-6 col-start">
-                <img src="https://shorturl.asia/q1fW8" class="img-register">
+                <img src="https://media.discordapp.net/attachments/778499819072913482/964379161923821618/272771993_448168496793553_1013076838067798128_n.png" class="img-register">
                 <center>
-                    <img src="https://shorturl.asia/E6rSs" class="logo-register-mobile">
+                    <img src="https://media.discordapp.net/attachments/778499819072913482/964379893557248000/logoo.png" class="logo-register-mobile">
                 </center>
             </div>
 
             <div class="col-sm-6 col-end">
                 <center>
-                    <img src="https://shorturl.asia/E6rSs" class="logo-register">
+                    <img src="https://media.discordapp.net/attachments/778499819072913482/964379893557248000/logoo.png" class="logo-register">
                 </center>
                 <div class="form">
                     <form action="/UserController/auth" method="post">
