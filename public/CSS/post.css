@@ -204,20 +204,28 @@ body{
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-.img-post-user-commentOwner { /*? รูปคนที่คอมเมนต์ (เจ้าของโพสต์) */
+.card-post-dropdown-comment {
+    margin: 0% 0% 0% 2%;
+    display: flex;
+    align-items: center;
+}
+.dot-comment {
+    color: #adadad;
+}
+/* .img-post-user-commentOwner { 
     width: 9%;
     border-radius: 50%;
     float: left;
 }
 
-.span-post-user-commentOwner { /*? ข้อความที่คอมเมนต์ (เจ้าของโพสต์) */
+.span-post-user-commentOwner { 
     background-color: #ffc2e1;
     padding: 1.5% 3%;
     font-size: 92%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-}
+} */
 
 .card-post-footer { /*! div ล่าง (เจ้าของบัญชีแสดงความคิดเห็น) */
     background-color: #EF5DA8;
@@ -237,13 +245,18 @@ body{
     border-radius: 25px;
     border: none;
 }
-.fa-post-inbox { /*? ปุ่มกดส่งความคิดเห็น */
-    color: #000000;
+.btn-fa-post-inbox {
+    margin: 0% 2%;
+    background-color: #EF5DA8;
+    border: none;
+}
+.fa-comment-check {
+    color: #ffbce0;
     font-size: 22px;
     margin: 0% 2% 0% 2%;
     cursor: pointer;
 }
-.fa-post-inbox:hover {
+.fa-comment-check:hover {
     color: #ffffff;
     font-size: 22px;
     margin: 0% 2% 0% 2%;
