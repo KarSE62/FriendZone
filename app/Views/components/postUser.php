@@ -104,9 +104,9 @@
                         <?php echo $comment["commentDetail"] ?>
                     </span>
                     <?php if ($comment["userId"] == $session->get('userId')) { ?>
-                    <div class="card-post-dropdown">
+                    <div class="card-post-dropdown-comment">
                     <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
-                        <i class="fas fa-ellipsis-h"></i>
+                        <i class="fal fa-ellipsis-h dot-comment"></i>
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
@@ -125,7 +125,7 @@
                 <img src="<?php echo $session->get('userImage'); ?>" class="img-post-footer-comment">
                 <input type="hidden" class="form-control input-post-footer" name="postId" value="<?php echo $post["postId"] ?>">
                 <input type="text" class="form-control input-post-footer" name="Comment" placeholder="แสดงความคิดเห็น . . .">
-                <button class="fa-post-inbox"><i class="fad fa-inbox-out"></i></button>
+                <button class="btn-fa-post-inbox"><i class="fas fa-comment-check"></i></i></button>
             </div>
         </div>
         </form> 
