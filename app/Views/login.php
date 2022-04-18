@@ -48,8 +48,10 @@
                         <?php if (session()->getFlashdata('msg')) : ?>
                             <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
                         <?php endif ?>
-                        <input type="text" class="form-control bar" id="userName" placeholder="ชื่อบัญชีผู้ใช้" name="userName" value="<?= set_value('userName'); ?>" require>
-                        <input type="password" class="form-control bar" id="password" placeholder="รหัสผ่าน" name="password" value="<?= set_value('password'); ?>" require>
+                        <input type="text" class="form-control bar" id="userName" placeholder="ชื่อบัญชีผู้ใช้" name="userName" value="<?= set_value('userName'); ?>"
+                        required=""oninvalid="this.setCustomValidity('กรุณากรอกบัญชีผู้ใช้')"oninput="this.setCustomValidity('')" >
+                        <input type="password" class="form-control bar" id="password" placeholder="รหัสผ่าน" name="password" value="<?= set_value('password'); ?>" 
+                        required=""oninvalid="this.setCustomValidity('กรุณากรอกรหัสผ่าน')" oninput="this.setCustomValidity('')" >
                         <button type="submit" id="btn" class="button">เข้าสู่ระบบ</button>
 
                         <span class="span-register">

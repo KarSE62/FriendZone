@@ -50,12 +50,14 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="fname" class="form-label">ชื่อ</label>
-                        <input type="text" class="form-control" name="FName" placeholder="Example : John" require>
+                        <input type="text" class="form-control" name="FName" placeholder="Example : John" 
+                        required=""oninvalid="this.setCustomValidity('กรุณากรอกชื่อ')"oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
                         <label for="lname" class="form-label">นามสกุล</label>
-                        <input type="text" class="form-control" name="LName" placeholder="Example : Smith" require>
+                        <input type="text" class="form-control" name="LName" placeholder="Example : Smith" 
+                        required=""oninvalid="this.setCustomValidity('กรุณากรอกนามสกุล')"oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
@@ -84,7 +86,8 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="idcard" class="form-label">รหัสบัตรประชาชน</label>
-                        <input type="text" class="form-control" name="idCard" placeholder="กรอกรหัสบัตรประชาชน 13 หลัก" require>
+                        <input type="text" class="form-control" name="idCard" placeholder="กรอกรหัสบัตรประชาชน 13 หลัก" 
+                        required=""oninvalid="this.setCustomValidity('กรุณากรอกรหัสบัตรประจำตัวประชาชน')"oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
@@ -94,12 +97,14 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="expIdCard" class="form-label">วันหมดอายุของบัตรประชาชน</label>
-                        <input type="date" class="form-control" name="expIdCard" require>
+                        <input type="date" class="form-control" name="expIdCard" 
+                        required=""oninvalid="this.setCustomValidity('กรุณากรอกวันหมดอายุของบัตรประชาชน')"oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
                         <label for="exampleFormControlTextarea1" class="form-label">ที่อยู่</label>
-                        <input type="text" class="form-control" name="address" placeholder="กรอกที่อยู่" require>
+                        <input type="text" class="form-control" name="address" placeholder="กรอกที่อยู่" 
+                        required=""oninvalid="this.setCustomValidity('กรุณากรอกที่อยู่')"oninput="this.setCustomValidity('')">
 
                         <div class="row">
                             <div class="col">
@@ -125,12 +130,14 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="tel" class="form-label">เบอร์โทร</label>
-                        <input class="form-control" type="text" name="phoneNumber" placeholder="082-XXXXXXX" require>
+                        <input class="form-control" type="text" name="phoneNumber" placeholder="082-XXXXXXX" 
+                        required=""oninvalid="this.setCustomValidity('กรุณากรอกเบอร์โทร')"oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
                         <label for="email" class="form-label">อีเมล</label>
-                        <input class="form-control" type="email" name="email" placeholder="John032@gmail.com" require>
+                        <input class="form-control" type="email" name="email" placeholder="John032@gmail.com" 
+                        required=""oninvalid="this.setCustomValidity('กรุณากรอกอีเมล')"oninput="this.setCustomValidity('')">
                     </div>
 
                     <center>

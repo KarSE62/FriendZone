@@ -18,7 +18,8 @@
                             <div class="col-8">
                                 <div class="mb-3">
                                     <label class="form-label modalCreatePost-label">หัวข้อ</label>
-                                    <input type="text" class="form-control modalCreatePost-input" name="postTitle" placeholder="ใส่หัวข้อกิจกรรมของคุณ">
+                                    <input type="text" class="form-control modalCreatePost-input" name="postTitle" placeholder="ใส่หัวข้อกิจกรรมของคุณ"
+                                    required=""oninvalid="this.setCustomValidity('กรุณากรอกหัวข้อโพสต์ประกาศกิจกรรม')"oninput="this.setCustomValidity('')">
                                 </div>
                             </div>
                             <div class="col-4">
@@ -48,26 +49,30 @@
 
                         <div class="mb-3">
                             <label class="form-label modalCreatePost-label">รายละเอียด</label>
-                            <input type="text" class="form-control modalCreatePost-input" id="detail1" name="detailPost" placeholder="รายละเอียดเบื้องต้นเกี่ยวกับทริปของคุณ">
+                            <input type="text" class="form-control modalCreatePost-input" id="detail1" name="detailPost" placeholder="รายละเอียดเบื้องต้นเกี่ยวกับทริปของคุณ"
+                            required=""oninvalid="this.setCustomValidity('กรุณากรอกรายละเอียด')"oninput="this.setCustomValidity('')">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label modalCreatePost-label">หมายเหตุ</label>
-                            <input type="text" class="form-control modalCreatePost-input" id="detail2" name="note" placeholder="หมายเหตุเพิ่มเติม เช่น เพศชายเท่านั้น">
+                            <input type="text" class="form-control modalCreatePost-input" id="detail2" name="note" placeholder="หมายเหตุเพิ่มเติม เช่น เพศชายเท่านั้น"
+                            required=""oninvalid="this.setCustomValidity('กรุณากรอกหมายเหตุ')"oninput="this.setCustomValidity('')">
                         </div>
 
                         <div class="row">
                             <div class="col-5">
                                 <label class="form-label modalCreatePost-label">จำนวนคน</label>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control modalCreatePost-input modalCreatePost-input-people" name="num_people">
+                                    <input type="text" class="form-control modalCreatePost-input modalCreatePost-input-people" name="num_people"
+                                    required=""oninvalid="this.setCustomValidity('กรุณากรอกจำนวนคน')"oninput="this.setCustomValidity('')">
                                     <span class="input-group-text modalCreatePost-input">คน</span>
                                 </div>
                             </div>
                             <div class="col-7">
                                 <label class="form-label modalCreatePost-label">ค่าใช้จ่าย</label>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control modalCreatePost-input modalCreatePost-input-money" name="expenses">
+                                    <input type="text" class="form-control modalCreatePost-input modalCreatePost-input-money" name="expenses"
+                                    required=""oninvalid="this.setCustomValidity('กรุณากรอกค่าใช้จ่าย')"oninput="this.setCustomValidity('')">
                                     <span class="input-group-text modalCreatePost-input">บาท / คน</span>
                                 </div>
                             </div>
