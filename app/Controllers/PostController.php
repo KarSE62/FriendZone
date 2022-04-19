@@ -108,6 +108,12 @@ class PostController extends ResourceController
         echo view('FormEditPost');
     }
 
+    public function viewPostDetail()
+    {
+        helper(['form']);
+        echo view('viewPostDetail');
+    }
+
     public function editPost($id)
     {
         $session = session();
