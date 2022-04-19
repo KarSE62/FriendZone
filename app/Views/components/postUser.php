@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="col-4">
-                    <a href="#" class="text-post-viewDetail">รายละเอียดเพิ่มเติม</a>
+                    <a href="/viewPostDetail" class="text-post-viewDetail">รายละเอียดเพิ่มเติม</a>
                 </div>
 
             </div>

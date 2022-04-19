@@ -51,10 +51,10 @@ body{
     /* background-color: #ffcd8c; */
     display: flex;
     flex-wrap: wrap;
+    margin: 0% 0% 1% 0%;
 }
 .text-post-title { /*? หัวข้อ */
     float: left;
-    margin: 0% 0% 6% 0%;
     font-size: 100%;
 }
 .btn-post-join { /*? ปุ่มเข้าร่วม */
@@ -97,6 +97,15 @@ body{
     font-size: 18px;
     margin: 0% 1% 0% 1%;
 }
+.fa-post-paperplane { /*? icon เครื่องบินกระดาษ */
+    color: #f17db9;
+    font-size: 16px;
+}
+.fa-post-detail { /*? icon รายละเอียด */
+    color: #EF5DA8;
+    font-size: 18px;
+    margin: 4% 1% 0% 1%;
+}
 .fa-post-location { /*? icon หมุด */
     color: #EF5DA8;
     font-size: 18px;
@@ -104,8 +113,18 @@ body{
 }
 .fa-post-numPeople { /*? icon คน */
     color: #EF5DA8;
+    font-size: 17px;
+    margin: 4% 1% 0% 0%;
+}
+.fa-post-pay { /*? icon ถุงเงิน */
+    color: #EF5DA8;
     font-size: 18px;
     margin: 4% 1% 0% 0%;
+}
+.fa-post-note { /*? icon ดอกจันทร์ */
+    color: #ff0000;
+    font-size: 14px;
+    margin: 4% 1% 0% 1%;
 }
 .fa-post-flag { /*? icon ธง */
     color: #288cff;
@@ -114,16 +133,33 @@ body{
 }
 
 /*? คำอธิบายหลัง icon */
-.text-post-date , .text-post-province , .text-post-numPeople {
+.text-post-date , 
+.text-post-province , 
+.text-post-numPeople , 
+.text-post-detail  , 
+.text-post-note , 
+.text-post-pay {
     color: #EF5DA8;
     font-size: 14px;
     /* font-weight: bold; */
+}
+/* .text-post-note {
+    color: #ff0000;
+    font-size: 14px;
+} */
+.text-district , .text-subdistrict { /*? อำเภอ */
+    margin-left: 3%;
 }
 .span { /*? วันที่ จังหวัด คน ที่ดึงมาจากฐานข้อมูล */
     color: #919191;
     font-size: 14px;
 }
 
+.text-post-paperplane {
+    color: #EF5DA8;
+    font-size: 14px;
+    float: right;
+}
 .text-post-viewDetail { /*? รายละเอียดเพิ่มเติม */
     text-decoration: none;
     color: #EF5DA8;
@@ -204,28 +240,17 @@ body{
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-.card-post-dropdown-comment {
+.card-post-dropdown-comment { /*? div ของปุ่มหลังข้อความที่คอมเมนต์ */
     margin: 0% 0% 0% 2%;
     display: flex;
     align-items: center;
 }
-.dot-comment {
+.dot-comment { /*? ปุ่มหลังข้อความที่คอมเมนต์ */
     color: #adadad;
 }
-/* .img-post-user-commentOwner { 
-    width: 9%;
-    border-radius: 50%;
-    float: left;
+.dot-comment:hover { 
+    color: #7b7b7b;
 }
-
-.span-post-user-commentOwner { 
-    background-color: #ffc2e1;
-    padding: 1.5% 3%;
-    font-size: 92%;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-} */
 
 .card-post-footer { /*! div ล่าง (เจ้าของบัญชีแสดงความคิดเห็น) */
     background-color: #EF5DA8;
@@ -250,7 +275,7 @@ body{
     background-color: #EF5DA8;
     border: none;
 }
-.fa-comment-check {
+.fa-comment-check { /*? icon ปุ่มกดส่งข้อความ */
     color: #ffbce0;
     font-size: 22px;
     margin: 0% 2% 0% 2%;
