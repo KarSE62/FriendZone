@@ -1,8 +1,9 @@
+<?php foreach ($posts as $post) { ?>
 <div class="card-post">
     <div class="card-post-title1">
-        <img src="https://cdn.discordapp.com/attachments/778499819072913482/959279871413067828/David.jpg" class="img-post-profileUser">
+        <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
-        <h6 class="text-post-user">username</h6>
+        <h6 class="text-post-user"><?php echo $post["FName"] . " " . $post["LName"] ?></h6>
         <div class="card-post-dropdown">
             <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
                 <i class="fas fa-ellipsis-h"></i>
@@ -13,68 +14,68 @@
                 <li><a class="dropdown-item" href="#">ลบโพสต์</a></li>
             </ul>
         </div>
-        <p class="text-post-title-time">เมื่อสักครู่</p>
+        <p class="text-post-title-time"><?php echo $post["creation_date"] ?></p>
     </div>
     <div class="card-post-title2">
         <div class="div-post-title">
-            <h5 class="text-post-title">หาเพื่อนไป Dream world ค่ะ</h5>
+            <h5 class="text-post-title"><?php echo $post["postTitle"] ?></h5>
         </div>
     </div>
 
-    <img src="https://cdn.discordapp.com/attachments/778499819072913482/959278446809350204/dreamword.webp" class="card-img-top">
+    <img src="<?php echo $post["imagePost"] ?>" class="card-img-top">
 
     <div class="card-post-body">
         <div class="row row-post-body">
             <div class="col-8">
                 <i class="far fa-calendar-alt fa-post-calendar"></i>
                 <label class="text-post-date">วันที่ :</label>
-                <span class="span span-post-date">&nbsp; 01/05/65 &nbsp;</span>
+                <span class="span span-post-date">&nbsp; <?php echo $post["date_start"] ?> &nbsp;</span>
                 <label class="text-post-date">ถึง</label>
-                <span class="span span-post-date">&nbsp; 01/05/65</span>
+                <span class="span span-post-date">&nbsp; <?php echo $post["date_end"] ?></span>
             </div>
 
             <div class="col-4">
                 <label class="text-post-paperplane">
                     <i class="fad fa-paper-plane fa-post-paperplane"></i>
-                    สวนสนุก
+                    <?php echo $post["name_category"] ?>
                 </label>
             </div>
         </div>
 
         <i class="fad fa-sticky-note fa-post-detail"></i>
         <label class="text-post-detail">รายละเอียด :</label>
-        <span class="span span-post-detail">&nbsp; ผมได้บัตรฟรีมา 5 ใบครับ เพื่อนๆผมไม่มีใครว่างเลย บัตรเล่นได้ทุกเครื่องเล่นในดรีมเวิร์ล อยากทราบรายละเอียดเพิ่มเติมให้คอมเม้นต์ไว้ได้เลยครับ ผมจะกลับมาตอบ</span>
+        <span class="span span-post-detail">&nbsp; <?php echo $post["detailPost"] ?></span>
 
         <br />
 
         <i class="fas fa-users fa-post-numPeople"></i>
         <label class="text-post-numPeople">ต้องการผู้เข้าร่วม :</label>
-        <span class="span span-post-numPeople">&nbsp; 13 &nbsp; คน</span>
+        <span class="span span-post-numPeople">&nbsp; <?php echo $post["num_people"] ?> &nbsp; คน</span>
 
         <br />
 
         <!-- <i class="fas fa-sack-dollar"></i> -->
         <i class="fas fa-sack-dollar fa-post-pay"></i>
         <label class="text-post-pay">ค่าใช้จ่ายประมาณ :</label>
-        <span class="span span-post-pay">&nbsp;0&nbsp; บาท/คน</span>
+        <span class="span span-post-pay">&nbsp;<?php echo $post["expenses"] ?>&nbsp; บาท/คน</span>
 
         <br />
 
         <i class="fas fa-map-marker-alt fa-post-location"></i>
         <label class="text-post-province">จังหวัด :</label>
-        <span class="span span-post-province">&nbsp;ปทุมธานี</span>
+        <span class="span span-post-province">&nbsp;<?php echo $post["name_th"] ?></span>
 
         <label class="text-post-province text-district">อำเภอ :</label>
-        <span class="span span-post-province">&nbsp;ธัญบุรี</span>
+        <span class="span span-post-province">&nbsp;<?php echo $post["name_th_am"] ?></span>
 
         <label class="text-post-province text-subdistrict">ตำบล :</label>
-        <span class="span span-post-province">&nbsp;บึงยี่โถ</span>
+        <span class="span span-post-province">&nbsp;<?php echo $post["name_th_dis"] ?></span>
 
         <br />
 
         <i class="fas fa-asterisk fa-post-note"></i>
         <label class="text-post-note">หมายเหตุ :</label>
-        <span class="span span-post-numPeople">&nbsp;อายุ 20 ปีขึ้นไป ไม่จำกัดเพศ ตัดสินใจดีๆก่อนเข้าร่วมนะครับ ไม่มายกเลิกทีหลัง</span>
+        <span class="span span-post-numPeople">&nbsp;<?php echo $post["note"] ?></span>
             
 
         <div class="post-people-join">
@@ -96,37 +97,42 @@
 
     <div class="slidedown">
 
-        <div class="post-comment-body">
-            <img src="https://cdn.discordapp.com/attachments/778499819072913482/959279871413067828/David.jpg" class="img-post-user-comment">
-            <div class="text-post-user-comment">
-                <span class="span-post-user-comment">
-                    <a href="#" class="post-user-comment-username">username : </a>
-                    ข้อความที่คอมเมนต์
-                </span>
-
-                <div class="card-post-dropdown-comment">
+    <?php foreach ($comments as $comment) { ?>
+            <?php if ($post["postId"] == $comment["postId"]) { ?>
+            <div class="post-comment-body">
+                <img src="<?php echo $comment["userImage"] ?>" class="img-post-user-comment">
+                <div class="text-post-user-comment">
+                    <span class="span-post-user-comment">
+                        <a href="#" class="post-user-comment-username"><?php echo $comment["FName"] ?> : </a>
+                        <?php echo $comment["commentDetail"] ?>
+                    </span>
+                    <?php if ($comment["userId"] == $session->get('userId')) { ?>
+                    <div class="card-post-dropdown-comment">
                     <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
                         <i class="fal fa-ellipsis-h dot-comment"></i>
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">แก้ไขคอมเม้นท์</a></li>
-                        <li><a class="dropdown-item" href="#">ลบคอมเม้นท์</a></li>
+                        <li><a class="dropdown-item" href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขคอมเม้นท์</a></li>
+                        <li><a class="dropdown-item" href="/deleteComment/<?php echo $comment["commentId"] ?>">ลบคอมเม้นท์</a></li>
                     </ul>
                 </div>
-
+                <?php } ?>
+                </div>
             </div>
-        </div>
+            <?php } ?>
+        <?php } ?>
 
         <form action="/CommentController/insertComment" method="post">
             <div class="card-post-footer">
-                <img src="https://cdn.discordapp.com/attachments/778499819072913482/959279871413067828/David.jpg" class="img-post-footer-comment">
-                <input type="hidden" class="form-control input-post-footer" name="postId" value="">
+                <img src="<?php echo $session->get('userImage'); ?>" class="img-post-footer-comment">
+                <input type="hidden" class="form-control input-post-footer" name="postId" value="<?php echo $post["postId"] ?>">
                 <input type="text" class="form-control input-post-footer" name="Comment" placeholder="แสดงความคิดเห็น . . .">
                 <button class="btn-fa-post-inbox"><i class="fas fa-comment-check"></i></i></button>
             </div>
-    </div>
-    </form>
+        </div>
+        </form> 
 </div>
 
 <br>
+<?php } ?>

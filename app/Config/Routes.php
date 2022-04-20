@@ -42,7 +42,8 @@ $routes->get('/showdata', 'UserController::showdata',);
 $routes->get('/createPost', 'PostController::index',);
 $routes->get('/editProfile', 'UserController::editProfile',);
 
-$routes->get('/viewPostDetail', 'PostController::viewPostDetail',);
+$routes->get('/viewPostDetail/(:any)', 'PostController::viewPostDetail/$1',);
+
 $routes->get('/showdetailpost', 'PostController::showDetailPost',);
 $routes->get('/editPost/(:any)', 'PostController::editPost/$1',);
 $routes->get('/deletePost/(:any)', 'PostController::deletePost/$1',);
