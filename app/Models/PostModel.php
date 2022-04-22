@@ -45,6 +45,19 @@ class PostModel extends Model{
         $this->where('postId', $id)->set($dataPost)->update();
         return true;
     }
+
+    public function viewPostSingle($postId)
+    {
+        return $this->db->table('post')
+        ->join('provinces','post.province = provinces.id')
+        ->join('amphures','post.district = amphures.id')
+        ->join('districts','post.subDistrict = districts.id')
+        ->join('users','post.userId = users.userId')
+        ->join('category','post.categoryId = category.categoryId')
+        ->orderBy('postId','DESC' )
+        ->where('postId',$postId)
+        ->get()->getResultArray();
+    }
 }
 
 

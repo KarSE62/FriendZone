@@ -108,11 +108,7 @@ class PostController extends ResourceController
         echo view('FormEditPost');
     }
 
-    public function viewPostDetail()
-    {
-        helper(['form']);
-        echo view('viewPostDetail');
-    }
+    
 
     public function editPost($id)
     {
@@ -162,4 +158,17 @@ class PostController extends ResourceController
             return redirect()->to('/showdata');
         }
     }
+
+    public function viewPostDetail($postId)
+    {
+        $modelPost = new PostModel();
+        $datapost['posts'] = $modelPost->viewPostSingle($postId);
+        $modelCom = new CommentModel();
+        $datapost['comments'] = $modelCom->viewComment();
+        //var_dump($datapost);
+        echo view('viewPostDetail', $datapost);
+    }
+
+    
+
 }
