@@ -16,6 +16,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <title>Profile</title>
 
     <link rel="stylesheet" href="/CSS/navUser.css">
+    <link rel="stylesheet" href="/CSS/notification.css">
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/profile.css">
     <link rel="stylesheet" href="/CSS/formEditProfile.css">

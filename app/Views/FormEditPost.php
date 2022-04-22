@@ -14,6 +14,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EditPost Page</title>
     <link rel="stylesheet" href="/CSS/navUser.css">
+    <link rel="stylesheet" href="/CSS/notification.css">
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/createPost.css">
     <link rel="stylesheet" href="/CSS/cardProfile.css">
