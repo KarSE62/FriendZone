@@ -41,6 +41,7 @@ $routes->get('/logout', 'UserController::Logout',);
 $routes->get('/showdata', 'UserController::showdata',);
 $routes->get('/createPost', 'PostController::index',);
 $routes->get('/editProfile', 'UserController::editProfile',);
+$routes->get('/notification', 'UserController::notification',);
 
 $routes->get('/viewPostDetail', 'PostController::viewPostDetail',);
 $routes->get('/showdetailpost', 'PostController::showDetailPost',);

@@ -203,4 +203,11 @@ class UserController extends ResourceController
         $session->destroy();
         return redirect()->to('/');
     }
+
+    public function notification()
+    {
+        //include helper form
+        helper(['form']);
+        echo view('notification');
+    }
 }

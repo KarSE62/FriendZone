@@ -25,13 +25,13 @@ $query = mysqli_query($con, $sql_category);
                         <i class="fas fa-filter"></i> &nbsp;หมวดหมู่
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <?php foreach ($query as $value) { ?>
+                        <?php foreach ($query as $value) { ?>
                             <li><a class="dropdown-item" href="#"><?= $value['name_category'] ?></a></li>
                         <?php } ?>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <i class="fas fa-bell"></i> &nbsp;การแจ้งเตือน
                     </a>
                 </li>
@@ -63,3 +63,5 @@ $query = mysqli_query($con, $sql_category);
 
     </div>
 </nav>
+
+<?php require('notification.php'); ?>
