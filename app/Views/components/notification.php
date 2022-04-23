@@ -55,22 +55,23 @@
         </div>
 
         <div class="noti-group" id="notiJoin"> <!-- แจ้งเตือนคำขอเข้าร่วมกิจกรรม -->
+        <?php foreach ($parts as $part) { ?>
             <div class="noti"> <!-- กล่องแจ้งเตือนคำขอเข้าร่วม -->
-                <img src="https://cdn.discordapp.com/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg" class="noti-img-user">
+                <img src="<?php echo $part["userImage"] ?>" class="noti-img-user">
 
                 <div class="noti-text">
-                    <a href="#" class="noti-text-username">Kanokphon</a>
+                    <a href="#" class="noti-text-username"><?php echo $part["FName"] ?></a>
                     <span class="noti-text-time">2 นาทีที่แล้ว</span>
 
-                    <p class="noti-text-join">ได้ส่งคำขอร่วมกิจกรรมใน หาเพื่อนไปเที่ยว Dream world ค่ะ</p>
+                    <p class="noti-text-join"><?php echo $part["postTitle"] ?></p>
 
-                    <button class="noti-btn-yes">ยืนยัน</button>
-                    <button type="button" class="noti-btn-no" data-bs-toggle="modal" data-bs-target="#exampleModalNoti">
-                        ปฏิเสธ
-                    </button>
+                    <a href="/acceptPartic/<?php echo $part["partId"] ?>"><button class="noti-btn-yes">ยืนยัน</button></a>
+                    <a href="/deletePartic/<?php echo $part["partId"] ?>"><button type="button" class="noti-btn-no" data-bs-toggle="modal" data-bs-target="#exampleModalNoti">
+                       ปฏิเสธ 
+                    </button></a>
                 </div>
-
             </div>
+            <?php } ?>
             
             <div class="noti"> <!-- กล่องแจ้งเตือนการปฏิเสธคำขอเข้าร่วม -->
                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/802451103404130314/140456311_896854401129979_6687474046750012869_n.jpg" class="noti-img-user">

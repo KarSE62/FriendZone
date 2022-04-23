@@ -1,0 +1,62 @@
+<?php
+
+namespace App\Controllers;
+
+use CodeIgniter\Controller;
+use App\Models\PostModel;
+use App\Models\UserModel;
+use App\Models\CommentModel;
+use App\Models\ParticModel;
+use CodeIgniter\RESTful\ResourceController;
+use CodeIgniter\HTTP\RequestTrait;
+use CodeIgniter\API\ResponseTrait;
+
+class ParticController extends ResourceController
+{
+    use RequestTrait;
+    public function deletePartic($partId = null)
+    {
+        $modelPart = new ParticModel();
+        $daletePart = $modelPart->deletePart($partId);
+        if ($daletePart) {
+            $session = session();
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewPost();
+            $modelCom = new CommentModel();
+            $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
+            $session->setFlashdata('Success', 'ปฏิเสธการเข้าร่วมกิจกรรมสำเร็จ!!');
+            echo view('showdata', $datapost);
+            return redirect()->to('/showdata');
+        }
+    }
+
+    public function acceptPartic($partId = null)
+    {
+        $modelPart = new ParticModel();
+        $status = "1";
+        $accept = [
+            'statusPart' => $status,
+        ];
+        $save = $modelPart->acceptPart($accept, $partId);
+        if($save){
+            $session = session();
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewPost();
+            $modelCom = new CommentModel();
+            $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
+            $session->setFlashdata('Success', 'ยอมรับเข้าร่วมกิจกรรมสำเร็จ!!');
+            echo view('showdata', $datapost);
+            return redirect()->to('/showdata');
+        }
+    }
+}

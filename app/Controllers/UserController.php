@@ -6,6 +6,7 @@ use CodeIgniter\Controller;
 use App\Models\UserModel;
 use App\Models\PostModel;
 use App\Models\CommentModel;
+use App\Models\ParticModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -45,6 +46,8 @@ class UserController extends ResourceController
         $datapost['posts'] = $modelpost->viewPost();
         $modelCom = new CommentModel();
         $datapost['comments'] = $modelCom ->viewComment();
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
         //var_dump($datapost);
         return view('showdata', $datapost);
         
