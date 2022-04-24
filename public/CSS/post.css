@@ -188,23 +188,56 @@ body{
 
 .post-line { /*! เส้นใต้ผู้เข้าร่วม */
     border-bottom: 1px solid #dadada;
-    margin: 3% 0% 2% 0%;
+    margin: 3% 0% 1% 0%;
 }
-.post-comment-title { /*! div ดูความคิดเห็นทั้งหมด */
+
+.post-bar-bottom { /*! div คลุมปุ่มเข้าร่วมและดูความคิดเห็น */
+    /* background-color: #9fdfff; */
+    padding: 1% 1% 2% 1%;
+}
+
+.post-join-title { /*? div เข้าร่วมกิจกรรม */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.fa-post-join-plus { /*? icon + */
+    color: #EF5DA8;
+    font-size: 16px;
+}
+.text-post-join { /*? text เข้าร่วมกิจกรรม */
+    color: #EF5DA8;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+.text-post-join:hover {
+    color: #ff178f;
+}
+
+.post-comment-title { /*? div ดูความคิดเห็นทั้งหมด */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-post-view-comment { /*? icon ดูความคิดเห็น */
+    color: #EF5DA8;
+    font-size: 16px;
 }
 .text-post-comment { /*? text ดูความคิดเห็นทั้งหมด */
     color: #EF5DA8;
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 2%;
     text-decoration: none;
     cursor: pointer;
 }
 .text-post-comment:hover {
-    color: #cf247a;
+    color: #ff178f;
+}
+.post-line-bottom { /*! เส้นใต้คั่น bar */
+    border-bottom: 1px solid #dadada;
 }
 
 .post-comment-body { /*! div คอมเมนต์ (ของใครของมัน) */
