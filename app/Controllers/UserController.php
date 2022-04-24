@@ -62,6 +62,8 @@ class UserController extends ResourceController
         $datapost['province'] = $model->getProvince($numprovince);
         $userId = $session->get("userId");
         $datapost['user'] = $model->getProfile($userId);
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
         //var_dump($datapost);
         return view('editProfile', $datapost);
     }

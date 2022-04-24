@@ -6,6 +6,7 @@ use CodeIgniter\Controller;
 use App\Models\PostModel;
 use App\Models\UserModel;
 use App\Models\CommentModel;
+use App\Models\ParticModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -119,6 +120,8 @@ class PostController extends ResourceController
         $model = new UserModel();
         $numprovince = $session->get("province");
         $datapost['province'] = $model->getProvince($numprovince);
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
         //var_dump($datapost);
         echo view('FormEditPost', $datapost);
     }
@@ -154,6 +157,8 @@ class PostController extends ResourceController
             $datapost['posts'] = $modelpost->viewPost();
             $modelCom = new CommentModel();
             $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
         }
@@ -165,6 +170,8 @@ class PostController extends ResourceController
         $datapost['posts'] = $modelPost->viewPostSingle($postId);
         $modelCom = new CommentModel();
         $datapost['comments'] = $modelCom->viewComment();
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
         //var_dump($datapost);
         echo view('viewPostDetail', $datapost);
     }
