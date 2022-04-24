@@ -145,6 +145,8 @@ class UserController extends ResourceController
                 $datapost['posts'] = $modelpost->viewPost();
                 $modelCom = new CommentModel();
                 $datapost['comments'] = $modelCom ->viewComment();
+                $modelPart = new ParticModel();
+                $datapost['parts'] = $modelPart->viewPartic();
                 //var_dump($datapost);
                 echo view('showdata',$datapost);
                 return redirect()->to('/showdata');
@@ -192,7 +194,10 @@ class UserController extends ResourceController
             $datapost['posts'] = $modelpost->viewPost();
             $modelCom = new CommentModel();
             $datapost['comments'] = $modelCom ->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
             echo view('showdata', $datapost);
+            return redirect()->to('/showdata');
         }
 
     }
@@ -207,10 +212,4 @@ class UserController extends ResourceController
         return redirect()->to('/');
     }
 
-    public function notification()
-    {
-        //include helper form
-        helper(['form']);
-        echo view('notification');
-    }
 }
