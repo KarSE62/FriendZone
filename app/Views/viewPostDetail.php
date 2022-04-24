@@ -18,6 +18,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/CSS/navUser.css">
     <link rel="stylesheet" href="/CSS/post.css">
+    <link rel="stylesheet" href="/CSS/notification.css">
     <link rel="stylesheet" href="/CSS/cardTrip.css">
     <link rel="stylesheet" href="/CSS/cardProfile.css">
     <link rel="stylesheet" href="/CSS/profile.css">
