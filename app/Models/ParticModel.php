@@ -4,14 +4,14 @@ use CodeIgniter\Model;
 
 class ParticModel extends Model{
     protected $table = 'participate';
-    protected $allowedFields = ['partId','statusPart','userId','postId'];
+    protected $allowedFields = ['partId','statusPart','userId_user','postId_post'];
     protected $primaryKey = 'partId';
 
     public function viewPartic()
     {
         return $this->db->table('participate')
-        ->join('users','participate.userId = users.userId')
-        ->join('post','participate.postId = post.postId')
+        ->join('users','participate.userId_user = users.userId')
+        ->join('post','participate.postId_post = post.postId')
         ->where('statusPart','0')
         ->orderBy('partId','ASCC' )
         ->get()->getResultArray();
@@ -27,6 +27,12 @@ class ParticModel extends Model{
     {
         $this->where('partId', $partId)->set($accept)->update();
         return true;
+    }
+
+    public function insertPart($dataPartic)
+    {
+        $this->insert($dataPartic);
+        return TRUE;
     }
 }
 

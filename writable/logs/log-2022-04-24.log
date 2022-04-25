@@ -1,0 +1,49 @@
+ERROR - 2022-04-24 22:25:12 --> Not unique table/alias: 'users'
+CRITICAL - 2022-04-24 22:25:12 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(50): App\Models\ParticModel->viewPartic()
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->showdata()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-04-24 22:30:25 --> Unknown column 'participate.postId' in 'on clause'
+CRITICAL - 2022-04-24 22:30:25 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(50): App\Models\ParticModel->viewPartic()
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->showdata()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-04-24 22:30:37 --> Unknown column 'participate.postId' in 'on clause'
+CRITICAL - 2022-04-24 22:30:37 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(50): App\Models\ParticModel->viewPartic()
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->showdata()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+CRITICAL - 2022-04-24 22:33:31 --> Undefined array key "userImage"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\notification.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 61)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\navUser.php(67): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\showdata.php(40): require('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('showdata', Array, true)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(52): view('showdata', Array)
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->showdata()
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#12 {main}
+CRITICAL - 2022-04-24 22:51:27 --> Call to undefined method App\Models\ParticModel::requestPartic
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\ParticController.php(30): CodeIgniter\Model->__call('requestPartic', Array)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\ParticController->requestPartic('69')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ParticController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}

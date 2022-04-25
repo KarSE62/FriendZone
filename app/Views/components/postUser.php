@@ -90,7 +90,7 @@
                     <div class="col">
                         <div class="post-join-title" id="">
                             <i class="fas fa-plus-circle fa-post-join-plus"></i>
-                            <a class="text-post-join">เข้าร่วมกิจกรรม</a>
+                            <a href="/requestPartic/<?php echo $post["postId"] ?>" class="text-post-join">เข้าร่วมกิจกรรม</a>
                         </div>
                     </div>
                     <div class="col">

@@ -14,6 +14,36 @@ use CodeIgniter\API\ResponseTrait;
 class ParticController extends ResourceController
 {
     use RequestTrait;
+
+    public function requestPartic($postId = null)
+    {
+        $session = session();
+        $userId_user = $session->get("userId");
+        $status = "0";
+        $dataPartic = [
+            'statusPart' => $status,
+            'userId_user' => $userId_user,
+            'postId_post' => $postId,
+        ];
+        //var_dump($dataPartic);
+        $modelPart = new ParticModel();
+        $insertPart = $modelPart->insertPart($dataPartic);
+        if($insertPart){
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewPost();
+            $modelCom = new CommentModel();
+            $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
+            $session->setFlashdata('Success', 'ส่งคำขอเข้าร่วมกิจกรรมสำเร็จ!!');
+            echo view('showdata', $datapost);
+            return redirect()->to('/showdata');
+        }
+    }
+
     public function deletePartic($partId = null)
     {
         $modelPart = new ParticModel();

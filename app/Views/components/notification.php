@@ -56,6 +56,7 @@
 
         <div class="noti-group" id="notiJoin"> <!-- แจ้งเตือนคำขอเข้าร่วมกิจกรรม -->
         <?php foreach ($parts as $part) { ?>
+            <?php if($part["userId"] == $session->get('userId')){?>
             <div class="noti"> <!-- กล่องแจ้งเตือนคำขอเข้าร่วม -->
                 <img src="<?php echo $part["userImage"] ?>" class="noti-img-user">
 
@@ -71,6 +72,7 @@
                     </button></a>
                 </div>
             </div>
+            <?php } ?>
             <?php } ?>
             
             <div class="noti"> <!-- กล่องแจ้งเตือนการปฏิเสธคำขอเข้าร่วม -->
