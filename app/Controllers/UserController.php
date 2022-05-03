@@ -53,6 +53,13 @@ class UserController extends ResourceController
         
     }
 
+    public function viewProfile()
+    {
+        //include helper form
+        helper(['form']);
+        echo view('viewProfile');
+    }
+    
     public function editProfile(){
         //include helper form
         $session = session();
