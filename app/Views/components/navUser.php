@@ -6,7 +6,7 @@ $query = mysqli_query($con, $sql_category);
 <nav class="navbar sticky-top navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/showdata">
-            <img src="https://shorturl.asia/E6rSs" class="nav-logo">
+            <img src="https://media.discordapp.net/attachments/778499819072913482/964379893557248000/logoo.png" class="nav-logo">
         </a> &nbsp; &nbsp;
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@ $query = mysqli_query($con, $sql_category);
                     </a>
                 </li>
                 <li class="nav-item nav-profile">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/viewProfile">
                         <i class="fas fa-car"></i> &nbsp;โปรไฟล์
                     </a>
                 </li>
@@ -55,7 +55,7 @@ $query = mysqli_query($con, $sql_category);
             <div class="dropdown">
                 <img src="<?php echo $session->get('userImage'); ?>" class="nav-user-imgprofile dropdown" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">โปรไฟล์</a></li>
+                    <li><a class="dropdown-item" href="/viewProfile">โปรไฟล์</a></li>
                     <li><a class="dropdown-item" href="/logout">ออกจากระบบ</a></li>
                 </ul>
             </div>

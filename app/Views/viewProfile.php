@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+$con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,30 +17,23 @@
     <title>Profile</title>
 
     <link rel="stylesheet" href="/CSS/viewProfile.css">
+    <link rel="stylesheet" href="/CSS/cardProfile.css">
+    <link rel="stylesheet" href="/CSS/profile.css">
+    <link rel="stylesheet" href="/CSS/navUser.css">
+    <link rel="stylesheet" href="/CSS/post.css">
+    <link rel="stylesheet" href="/CSS/notification.css">
 
 </head>
 
 <body>
+
+    <?php $session = session(); ?>
+    
+    <?php require('components/navUser.php'); ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <div class="card sm-profile-card">
-                    <div class="card-body sm-profile-body">
-                        <img class="sm-profile-img-user" src="https://cdn.discordapp.com/attachments/778499819072913482/959279871413067828/David.jpg">
-                        <label class="sm-profile-username">Username</label>
-                        <br />
-                        <label class="sm-profile-name">FirstName LastName
-                            <!-- <i class="fas fa-mars" style="color: #1194ff;"></i> -->
-                            <!-- <i class="fas fa-venus" style="color: #ff5ebc;"></i> -->
-                            <i class="far fa-venus-mars" style="color: #7e2dff;"></i>
-                        </label>
-                        <br />
-                        <label class="sm-profile-province">
-                            <i class="fas fa-map-marker-alt" style="color: #ff5ebc;"></i>
-                            กรุงเทพมหานคร
-                        </label>
-                    </div>
-                </div>
+            <?php require('components/cardProfile.php'); ?>
 
                 <div class="card menu-profile">
                     <div class="card-body menu-profile-body">
@@ -58,7 +53,7 @@
                 </div>
             </div>
             <div class="col-sm-8">
-
+            <?php require('components/postUser.php'); ?>
             </div>
         </div>
     </div>

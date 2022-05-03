@@ -55,9 +55,22 @@ class UserController extends ResourceController
 
     public function viewProfile()
     {
-        //include helper form
-        helper(['form']);
-        echo view('viewProfile');
+        
+        $session = session();
+        $userId = $session->get("userId");
+        //var_dump($userId);
+        $model = new UserModel();
+        $numprovince = $session->get("province");
+        $datapost['province'] = $model->getProvince($numprovince);
+        $modelpost = new PostModel();
+        $datapost['posts'] = $modelpost->viewMyPost($userId);
+        $modelCom = new CommentModel();
+        $datapost['comments'] = $modelCom ->viewComment();
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
+        //var_dump($datapost);
+        return view('viewProfile', $datapost);
+        
     }
     
     public function editProfile(){
@@ -99,6 +112,12 @@ class UserController extends ResourceController
             $datapost['province'] = $model->getProvince($numprovince);
             $userId = $session->get("userId");
             $datapost['user'] = $model->getProfile($userId);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewMyPost($userId);
+            $modelCom = new CommentModel();
+            $datapost['comments'] = $modelCom ->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
             $session->setFlashdata('Success', 'แก้ไขข้อมูลสำเร็จ!!');
             echo view('editProfile', $datapost);
             return redirect()->to('/showdata');

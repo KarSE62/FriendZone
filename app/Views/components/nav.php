@@ -6,7 +6,7 @@ $query = mysqli_query($con, $sql_category);
 <nav class="navbar sticky-top navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
-            <img src="https://shorturl.asia/E6rSs" class="nav-logo">
+            <img src="https://media.discordapp.net/attachments/778499819072913482/964379893557248000/logoo.png" class="nav-logo">
         </a> &nbsp; &nbsp;
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

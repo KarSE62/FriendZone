@@ -54,6 +54,7 @@ class PostController extends ResourceController
                 'userId' => $this->request->getVar('userId'),
                 'statusPost' => $statusPost,
                 'userId' => $userId,
+                'userId_user' => $userId,
             ];
             //var_dump($dataPost);
             $post = $model->createpost($dataPost);
@@ -65,6 +66,8 @@ class PostController extends ResourceController
                 $datapost['posts'] = $modelpost->viewPost();
                 $modelCom = new CommentModel();
                 $datapost['comments'] = $modelCom->viewComment();
+                $modelPart = new ParticModel();
+                $datapost['parts'] = $modelPart->viewPartic();
                 $session->setFlashdata('Success', 'สร้างโพสต์ประกาศกิจกรรมสำเร็จ');
                 echo view('showdata', $datapost);
                 return redirect()->to('/showdata');
@@ -77,6 +80,8 @@ class PostController extends ResourceController
             $datapost['posts'] = $modelpost->viewPost();
             $modelCom = new CommentModel();
             $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
             $session->setFlashdata('Err', 'ไม่สามารถสร้างโพสต์ได้กรุณารอการยืนยันตัวตน');
             //var_dump(session()->getFlashdata('Err'));
             echo view('showdata', $datapost);
@@ -97,6 +102,8 @@ class PostController extends ResourceController
             $datapost['posts'] = $modelpost->viewPost();
             $modelCom = new CommentModel();
             $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
             $session->setFlashdata('Success', 'ลบโพสต์ประกาศกิจกรรมสำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');

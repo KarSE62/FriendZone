@@ -50,3 +50,877 @@ CRITICAL - 2022-05-03 01:43:25 --> Undefined array key 0
 #9 C:\Users\chana\Downloads\fz\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #10 C:\Users\chana\Downloads\fz\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\chana\\...')
 #11 {main}
+CRITICAL - 2022-05-03 02:21:21 --> Undefined variable $con
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 24)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(60): view('viewProfile')
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#10 {main}
+CRITICAL - 2022-05-03 02:21:50 --> Undefined variable $province
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\cardProfile.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 38)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(28): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(60): view('viewProfile')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+CRITICAL - 2022-05-03 02:22:02 --> Undefined variable $province
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\cardProfile.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 38)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(28): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(60): view('viewProfile')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+CRITICAL - 2022-05-03 02:24:39 --> Undefined variable $parts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\notification.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 58)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\navUser.php(67): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(26): require('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): view('viewProfile', Array)
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#12 {main}
+CRITICAL - 2022-05-03 02:25:11 --> Undefined variable $parts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\notification.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 58)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\navUser.php(67): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(35): require('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): view('viewProfile', Array)
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#12 {main}
+CRITICAL - 2022-05-03 02:25:11 --> Undefined variable $parts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\notification.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 58)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\navUser.php(67): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(35): require('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): view('viewProfile', Array)
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#12 {main}
+CRITICAL - 2022-05-03 02:25:11 --> Undefined variable $parts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\notification.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 58)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\navUser.php(67): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(35): require('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): view('viewProfile', Array)
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#12 {main}
+CRITICAL - 2022-05-03 02:25:11 --> Undefined variable $parts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\notification.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 58)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\navUser.php(67): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(35): require('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): view('viewProfile', Array)
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#12 {main}
+ERROR - 2022-05-03 02:32:00 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:32:00 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:32:13 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:32:13 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:32:13 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:32:13 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:32:14 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:32:14 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:32:14 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:32:14 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:32:40 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:32:40 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+CRITICAL - 2022-05-03 02:32:41 --> Undefined variable $userId
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 26)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): App\Models\PostModel->viewMyPost('40')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#7 {main}
+CRITICAL - 2022-05-03 02:32:41 --> Undefined variable $userId
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 26)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(65): App\Models\PostModel->viewMyPost('40')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#7 {main}
+ERROR - 2022-05-03 02:34:52 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:34:52 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:35:13 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:35:13 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:35:13 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:35:13 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:35:14 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:35:14 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:36:44 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:36:44 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:36:45 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:36:45 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:36:45 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:36:45 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:36:45 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:36:45 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:37:44 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:37:44 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:37:44 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:37:44 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:37:45 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:37:45 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:37:45 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:37:45 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:37:45 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:37:45 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:37:45 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:37:45 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:37:45 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:37:45 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:37:45 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:37:45 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:37:46 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:37:46 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:11 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:11 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:53 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:53 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:54 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:54 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:54 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:54 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:54 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:54 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:55 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:55 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:55 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:55 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:55 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:55 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:55 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:55 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:55 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:55 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:55 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:55 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:57 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:57 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:57 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:57 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:57 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:57 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:57 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:57 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:57 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:57 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:58 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:58 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:58 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:58 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:58 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:58 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:41:58 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:41:58 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:42:55 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:42:55 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:42:55 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:42:55 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:42:55 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:42:55 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:42:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:42:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:42:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:42:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:42:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:42:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:42:56 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:42:56 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:42:57 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:42:57 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+CRITICAL - 2022-05-03 02:44:50 --> Undefined array key "userImage"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\postUser.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 24)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(55): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): view('viewProfile', Array)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-03 02:45:00 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:00 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:01 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:01 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:01 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:01 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:01 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:01 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:01 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:01 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:01 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:01 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:02 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:02 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:02 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:02 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:02 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:02 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:02 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:02 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:02 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:02 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:02 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:02 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:03 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:03 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:03 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:03 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:03 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:03 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:03 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:03 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:03 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:03 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:45:03 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:45:03 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:46:31 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:46:31 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-03 02:51:26 --> Column 'userId' in where clause is ambiguous
+CRITICAL - 2022-05-03 02:51:26 --> Call to a member function getResultArray() on bool
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(66): App\Models\PostModel->viewMyPost('40')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+CRITICAL - 2022-05-03 02:51:46 --> Undefined variable $parts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\notification.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 58)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\navUser.php(67): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\showdata.php(40): require('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('showdata', Array, true)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\PostController.php(70): view('showdata', Array)
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\PostController->createpost()
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#12 {main}
+CRITICAL - 2022-05-03 02:53:13 --> Undefined variable $parts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\notification.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 58)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\navUser.php(67): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\showdata.php(40): require('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('showdata', Array, true)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\PostController.php(106): view('showdata', Array)
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\PostController->deletePost('70')
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#12 {main}
+CRITICAL - 2022-05-03 03:07:59 --> Undefined variable $parts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\notification.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 58)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\navUser.php(67): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\editProfile.php(28): require('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('editProfile', Array, true)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(116): view('editProfile', Array)
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->updateProfile()
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#12 {main}

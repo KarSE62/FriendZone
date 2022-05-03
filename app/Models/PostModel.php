@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 
 class PostModel extends Model{
     protected $table = 'post';
-    protected $allowedFields = ['postTitle','imagePost','detailPost','note','num_people','expenses','province','district','subDistrict','date_start','date_end','statusPost','userId','categoryId'];
+    protected $allowedFields = ['postTitle','imagePost','detailPost','note','num_people','expenses','province','district','subDistrict','date_start','date_end','statusPost','userId','categoryId','userId_user'];
     protected $primaryKey = 'postId';
 
     public function viewPost()
@@ -14,6 +14,17 @@ class PostModel extends Model{
         ->join('users','post.userId = users.userId')
         ->orderBy('postId','DESC' )
         ->where('statusPost','1')
+        ->get()->getResultArray();
+    }
+
+    public function viewMyPost($id)
+    {
+        return $this->db->table('post')
+        ->join('provinces','post.province = provinces.id')
+        ->join('users','post.userId = users.userId')
+        ->orderBy('postId','DESC' )
+        ->where('statusPost','1')
+        ->where('userId_user',$id)
         ->get()->getResultArray();
     }
 
