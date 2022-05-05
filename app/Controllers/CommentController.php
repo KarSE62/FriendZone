@@ -6,6 +6,7 @@ use CodeIgniter\Controller;
 use App\Models\PostModel;
 use App\Models\UserModel;
 use App\Models\CommentModel;
+use App\Models\ParticModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -34,6 +35,8 @@ class CommentController extends ResourceController
             $datapost['posts'] = $modelpost->viewPost();
             $modelCom = new CommentModel();
             $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
             $session->setFlashdata('Success', 'สร้างความคิดเห็นสำเร็จ');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
@@ -53,6 +56,8 @@ class CommentController extends ResourceController
             $datapost['posts'] = $modelpost->viewPost();
             $modelCom = new CommentModel();
             $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
             $session->setFlashdata('Success', 'ลบคอมเม้นท์สำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
