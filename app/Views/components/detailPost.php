@@ -4,16 +4,28 @@
         <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
         <h6 class="text-post-user"><?php echo $post["FName"] . " " . $post["LName"] ?></h6>
-        <div class="card-post-dropdown">
-            <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
-                <i class="fas fa-ellipsis-h"></i>
-            </a>
+        <?php if ($post["userId"] == $session->get('userId')) { ?>
+                <div class="card-post-dropdown">
+                    <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
 
-            <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">แก้ไขกิจกรรม</a></li>
-                <li><a class="dropdown-item" href="#">ลบโพสต์</a></li>
-            </ul>
-        </div>
+                    <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="/editPost/<?php echo $post["postId"] ?>">แก้ไขกิจกรรม</a></li>
+                        <li><a class="dropdown-item" href="/deletePost/<?php echo $post["postId"] ?>">ลบโพสต์</a></li>
+                    </ul>
+                </div>
+            <?php }else if($post["userId"] != $session->get('userId')){ ?>
+                <div class="card-post-dropdown">
+                    <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">รายงานโพสต์</a></li>
+                    </ul>
+                </div>
+            <?php } ?>
         <p class="text-post-title-time"><?php echo $post["creation_date"] ?></p>
     </div>
     <div class="card-post-title2">
@@ -89,9 +101,24 @@
 
         <div class="post-line"></div>
 
-        <div class="post-comment-title btn-show-comment" id="">
-            <a class="text-post-comment" id="down">ดูความคิดเห็นทั้งหมด</a>
-        </div>
+        <div class="post-bar-bottom">
+                <div class="row">
+                    <div class="col">
+                        <div class="post-join-title" id="">
+                            <i class="fas fa-plus-circle fa-post-join-plus"></i>
+                            <a href="/requestPartic/<?php echo $post["postId"] ?>" class="text-post-join">เข้าร่วมกิจกรรม</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="post-comment-title btn-show-comment" id="<?php echo $post["postId"] ?>">
+                            <a class="text-post-comment" id="down">
+                                <i class="fad fa-comments-alt fa-post-view-comment"></i>
+                                &nbsp;ดูความคิดเห็นทั้งหมด
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     </div>
 

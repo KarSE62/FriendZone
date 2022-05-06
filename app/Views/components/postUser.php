@@ -35,6 +35,16 @@
                         <li><a class="dropdown-item" href="/deletePost/<?php echo $post["postId"] ?>">ลบโพสต์</a></li>
                     </ul>
                 </div>
+            <?php }else if($post["userId"] != $session->get('userId')){ ?>
+                <div class="card-post-dropdown">
+                    <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">รายงานโพสต์</a></li>
+                    </ul>
+                </div>
             <?php } ?>
             <p class="text-post-title-time"><?php echo $post["creation_date"] ?></p>
         </div>

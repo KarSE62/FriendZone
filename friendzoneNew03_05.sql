@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2022 at 05:56 AM
+-- Generation Time: May 03, 2022 at 10:13 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -10005,8 +10005,8 @@ CREATE TABLE `participate` (
 --
 
 INSERT INTO `participate` (`partId`, `statusPart`, `userId_user`, `postId_post`) VALUES
-(9, '0', 42, 44),
-(11, '0', 31, 69);
+(9, '1', 42, 44),
+(11, '1', 31, 69);
 
 -- --------------------------------------------------------
 
@@ -10030,19 +10030,20 @@ CREATE TABLE `post` (
   `creation_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `statusPost` int(50) NOT NULL,
   `userId` int(50) NOT NULL,
-  `categoryId` int(50) NOT NULL
+  `categoryId` int(50) NOT NULL,
+  `userId_user` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `post`
 --
 
-INSERT INTO `post` (`postId`, `postTitle`, `imagePost`, `detailPost`, `note`, `num_people`, `expenses`, `province`, `district`, `subDistrict`, `date_start`, `date_end`, `creation_date`, `statusPost`, `userId`, `categoryId`) VALUES
-(3, 'วัดกงลาด', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระ', 'รับทุกคนที่ใจบุญ', 5, '10000', '58', '810', '730407', '2022-03-03', '2022-03-05', '2022-02-28 17:00:00', 0, 40, 4),
-(4, 'เที่ยวเชียงใหม่', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 5, '20000', '38', '584', '501704', '2022-03-03', '2022-03-05', '2022-02-28 17:00:00', 1, 31, 4),
-(5, 'องค์พระปฐมเจดีย์', 'https://media.discordapp.net/attachments/778499819072913482/948829468460478565/d7f60ea9cbdd4b33.jpg', 'ทำบุญไหว้พระร่วงโรจฤทธิ์', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 2, '10000', '58', '807', '730101', '2022-03-04', '2022-03-04', '2022-03-02 17:00:00', 1, 42, 4),
-(44, 'หาเพื่อนเที่ยวบ้านพักพลูวิลล่าทะเลชะอำ', 'https://media.discordapp.net/attachments/778499819072913482/949144347880853574/84f124989805b53b.jpg', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'ขอคนแบบปาร์ตี้ๆไม่หาเรื่อง', 20, '2000', '14', '172', '230202', '01-04-2565', '03-04-2565', '2022-03-19 17:00:00', 1, 40, 4),
-(69, 'หาเพื่อนไป Dream world ครับ', 'https://media.discordapp.net/attachments/778499819072913482/959278446809350204/dreamword.webp?width=700&height=467', 'คือผมได้บัตรส่วนลดมา 14 ใบ เลยอยากหาเพื่อนไปด้วยกันครับ^^ เป็นทริป one day', 'ไม่พาเด็กมาด้วยนะครับ อยากให้เล่นสนุกแบบเต็มที่', 5, '2000', '16', '199', '251107', '20-04-2565', '21-04-2565', '2022-04-20 07:12:10', 1, 40, 6);
+INSERT INTO `post` (`postId`, `postTitle`, `imagePost`, `detailPost`, `note`, `num_people`, `expenses`, `province`, `district`, `subDistrict`, `date_start`, `date_end`, `creation_date`, `statusPost`, `userId`, `categoryId`, `userId_user`) VALUES
+(3, 'วัดกงลาด', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระ', 'รับทุกคนที่ใจบุญ', 5, '10000', '58', '810', '730407', '2022-03-03', '2022-03-05', '2022-02-28 17:00:00', 0, 40, 4, 40),
+(4, 'เที่ยวเชียงใหม่', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 5, '20000', '38', '584', '501704', '2022-03-03', '2022-03-05', '2022-02-28 17:00:00', 1, 31, 4, 31),
+(5, 'องค์พระปฐมเจดีย์', 'https://media.discordapp.net/attachments/778499819072913482/948829468460478565/d7f60ea9cbdd4b33.jpg', 'ทำบุญไหว้พระร่วงโรจฤทธิ์', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 2, '10000', '58', '807', '730101', '2022-03-04', '2022-03-04', '2022-03-02 17:00:00', 1, 42, 4, 42),
+(44, 'หาเพื่อนเที่ยวบ้านพักพลูวิลล่าทะเลชะอำ', 'https://media.discordapp.net/attachments/778499819072913482/949144347880853574/84f124989805b53b.jpg', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'ขอคนแบบปาร์ตี้ๆไม่หาเรื่อง', 20, '2000', '14', '172', '230202', '01-04-2565', '03-04-2565', '2022-03-19 17:00:00', 1, 40, 4, 40),
+(69, 'หาเพื่อนไป Dream world ครับ', 'https://media.discordapp.net/attachments/778499819072913482/959278446809350204/dreamword.webp?width=700&height=467', 'คือผมได้บัตรส่วนลดมา 14 ใบ เลยอยากหาเพื่อนไปด้วยกันครับ^^ เป็นทริป one day', 'ไม่พาเด็กมาด้วยนะครับ อยากให้เล่นสนุกแบบเต็มที่', 5, '2000', '16', '199', '251107', '20-04-2565', '21-04-2565', '2022-04-20 07:12:10', 1, 40, 6, 40);
 
 -- --------------------------------------------------------
 
@@ -10202,7 +10203,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userId`, `FName`, `LName`, `userName`, `password`, `idCard`, `idCardImage`, `statusUser`, `gender`, `userImage`, `birthday`, `address`, `province`, `district`, `subDistrict`, `email`, `expIdCard`, `phoneNumber`) VALUES
 (31, 'ณัฐพล', 'แซ่โฟ้ง', 'natthapon', '$2y$10$ATxGHB63RvgSf9lewLfxFuyF0ocBPC1JWZGFcmU1nr5GkaawQhwAO', '1515151515151', 'https://media.discordapp.net/attachments/901413238841946187/946620558420873306/-2021-.jpg', '1', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '2022-02-01', '114 หมู่ 5', '72', '949', '920701', '624259001@webmail.npru.ac.th', '2022-02-28', '0987392476'),
-(40, 'กนกพล', 'พวงวัดโพธิ์', 'kanokphon', '$2y$10$wXl6IDcXX0AkpsqL.NjTnOkrzFT47yoRnBur.Y8eVkiVYdXi2Ba1q', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '1', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', '58', '808', '730214', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392476'),
+(40, 'กนกพล', 'พวงวัดโพธิ์', 'kanokphon', '$2y$10$wXl6IDcXX0AkpsqL.NjTnOkrzFT47yoRnBur.Y8eVkiVYdXi2Ba1q', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '1', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', '58', '808', '730214', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392474'),
 (42, 'ญาณสิชฌ์', 'สันติเอกชุน', 'com007', '$2y$10$VcpBwr8Z96Ikvzy5aC11serJBFzzMRUWtV/0XQOemNlrRZzlBo1WK', '1739901526485', 'https://cdn.discordapp.com/attachments/901413238841946187/901413325861171210/Com.jpg', '0', 'ชาย', 'https://cdn.discordapp.com/attachments/901413238841946187/901413325861171210/Com.jpg', '2000-01-01', '157/131', '58', '807', '730109', '624259011@webmail.npru.ac.th', '2022-03-04', '0801912652'),
 (44, 'ชนกานต์', 'บัวขาว', 'gus007', '$2y$10$5MnoGCrUWMEnffg8G.GLnu8Qc9VfspTlakfw4EihMrZHEcdYxPtay', '1739901546247', 'https://media.discordapp.net/attachments/901413238841946187/946620558420873306/-2021-.jpg', '0', 'หญิง', 'https://media.discordapp.net/attachments/778499819072913482/958981116663050270/gus.jpg?width=673&height=676', '2001-01-01', '157/131', '3', '60', '120301', '624259009@webmail.npru.ac.th', '2022-03-30', '0987659874'),
 (45, 'กนกพล', 'พวงวัดโพธิ์', 'knp001', '$2y$10$ZnnmOMYUXoPZh5bTvrD5dO.C8bEnKC2gpwEF8GUFG8sY.Xv237Vce', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-04-12', '157/131', '18', '207', '270202', 'bow.aorapan@facebook.com', '2022-04-28', '0987392476');
@@ -10319,13 +10320,13 @@ ALTER TABLE `officer`
 -- AUTO_INCREMENT for table `participate`
 --
 ALTER TABLE `participate`
-  MODIFY `partId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `partId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `postId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `postId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `provinces`

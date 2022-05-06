@@ -56,8 +56,17 @@
 
             <div class="post-line"></div>
 
-            <div class="post-comment-title btn-show-comment" id="<?php echo $post["postId"] ?>">
-                <a class="text-post-comment" id="down">ดูความคิดเห็นทั้งหมด</a>
+            <div class="post-bar-bottom">
+                <div class="row"> 
+                    <div class="col">
+                        <div class="post-comment-title btn-show-comment" >
+                            <a class="text-post-comment" id="down">
+                                <i class="fad fa-comments-alt fa-post-view-comment"></i>
+                                &nbsp;ดูความคิดเห็นทั้งหมด
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
