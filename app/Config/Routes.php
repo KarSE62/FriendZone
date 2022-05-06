@@ -43,6 +43,8 @@ $routes->get('/createPost', 'PostController::index',);
 $routes->get('/editProfile', 'UserController::editProfile',);
 $routes->get('/viewProfile', 'UserController::viewProfile',);
 
+$routes->get('/viewUserProfile/(:any)', 'UserController::ViewUserProfile/$1',);
+
 $routes->get('/viewPostDetail/(:any)', 'PostController::viewPostDetail/$1',);
 
 $routes->get('/showdetailpost', 'PostController::showDetailPost',);

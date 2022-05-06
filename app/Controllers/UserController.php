@@ -231,7 +231,22 @@ class UserController extends ResourceController
     }
 
 
-
+    public function ViewUserProfile($userId)
+    { 
+        $session = session();
+        $model = new UserModel();
+        $numprovince = $session->get("province");
+        $datapost['province'] = $model->getProvince($numprovince);
+        $datapost['users'] = $model->getProfile($userId);
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
+        $modelpost = new PostModel();
+        $datapost['posts'] = $modelpost->viewMyPost($userId);
+        $modelCom = new CommentModel();
+        $datapost['comments'] = $modelCom ->viewComment();
+        //var_dump($datapost);
+        echo view('viewUserProfile', $datapost);
+    }
 
     public function Logout()
     {

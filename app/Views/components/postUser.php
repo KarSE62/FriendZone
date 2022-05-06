@@ -23,7 +23,8 @@
         <div class="card-post-title1">
             <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
-            <h6 class="text-post-user"><?php echo $post["FName"] . " " . $post["LName"] ?> </h6>
+            <h6 class="text-post-user"><a href="/viewUserProfile/<?php echo $post["userId"]?>"> <?php echo $post["FName"] . " " . $post["LName"] ?></a></h6>
+
             <?php if ($post["userId"] == $session->get('userId')) { ?>
                 <div class="card-post-dropdown">
                     <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
