@@ -71,7 +71,7 @@
 
         </div>
 
-        <div class="slidedown">
+        <div class="slidedown slidecomment">
         <?php foreach ($comments as $comment) { ?>
             <?php if ($post["postId"] == $comment["postId"]) { ?>
             <div class="post-comment-body">

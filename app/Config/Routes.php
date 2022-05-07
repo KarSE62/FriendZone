@@ -42,6 +42,7 @@ $routes->get('/showdata', 'UserController::showdata',);
 $routes->get('/createPost', 'PostController::index',);
 $routes->get('/editProfile', 'UserController::editProfile',);
 $routes->get('/viewProfile', 'UserController::viewProfile',);
+$routes->get('/report', 'UserController::report',);
 
 $routes->get('/viewUserProfile/(:any)', 'UserController::ViewUserProfile/$1',);
 
