@@ -248,6 +248,13 @@ class UserController extends ResourceController
         echo view('viewUserProfile', $datapost);
     }
 
+    public function report()
+    {
+        //include helper form
+        helper(['form']);
+        echo view('report');
+    }
+
     public function Logout()
     {
         $session = session();

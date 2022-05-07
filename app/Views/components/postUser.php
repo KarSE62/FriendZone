@@ -23,7 +23,7 @@
         <div class="card-post-title1">
             <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
-            <h6 class="text-post-user"><a href="/viewUserProfile/<?php echo $post["userId"]?>"> <?php echo $post["FName"] . " " . $post["LName"] ?></a></h6>
+            <h6 class="text-post-user"><a href="/viewUserProfile/<?php echo $post["userId"]?>" class="text-post-user-a"> <?php echo $post["FName"] . " " . $post["LName"] ?></a></h6>
 
             <?php if ($post["userId"] == $session->get('userId')) { ?>
                 <div class="card-post-dropdown">
@@ -43,7 +43,7 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">รายงานโพสต์</a></li>
+                        <li><a class="dropdown-item" href="/report">รายงานโพสต์</a></li>
                     </ul>
                 </div>
             <?php } ?>
