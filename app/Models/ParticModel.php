@@ -10,10 +10,11 @@ class ParticModel extends Model{
     public function viewPartic()
     {
         return $this->db->table('participate')
+        ->select("participate.partId,participate.userId_user,participate.statusPart,users.userId,users.FName,users.userImage,post.postTitle,post.userId_user")
         ->join('users','participate.userId_user = users.userId')
         ->join('post','participate.postId_post = post.postId')
         ->where('statusPart','0')
-        ->orderBy('partId','ASCC' )
+        ->orderBy('partId','ASC' )
         ->get()->getResultArray();
     }
 

@@ -22,17 +22,24 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <link rel="stylesheet" href="/CSS/navUser.css">
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/notification.css">
+    <link rel="stylesheet" href="/CSS/modalCreatePost.css">
 
 </head>
 
 <body>
+<?php
+    $sql_category = "SELECT * FROM category";
+    $query = mysqli_query($con, $sql_category);
 
+    $sql_provinces = "SELECT * FROM provinces";
+    $query1 = mysqli_query($con, $sql_provinces);
+    ?>
     <?php $session = session(); ?>
     
     <?php require('components/navUser.php'); ?>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
             <?php require('components/cardProfile.php'); ?>
 
                 <div class="card menu-profile">
@@ -52,8 +59,12 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
             <?php require('components/postUser.php'); ?>
+            </div>
+            <div class="col-sm-3">
+            <?php require('components/modalCreatePost.php'); ?>
+                <?php require('components/carousel.php'); ?>
             </div>
         </div>
     </div>

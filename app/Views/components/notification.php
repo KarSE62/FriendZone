@@ -56,12 +56,12 @@
 
         <div class="noti-group" id="notiJoin"> <!-- แจ้งเตือนคำขอเข้าร่วมกิจกรรม -->
         <?php foreach ($parts as $part) { ?>
-            <?php if($part["userId"] == $session->get('userId')){?>
+            <?php if($part["userId_user"] == $session->get('userId')){?>
             <div class="noti"> <!-- กล่องแจ้งเตือนคำขอเข้าร่วม -->
                 <img src="<?php echo $part["userImage"] ?>" class="noti-img-user">
 
                 <div class="noti-text">
-                    <a href="#" class="noti-text-username"><?php echo $part["FName"] ?></a>
+                    <a href="/viewUserProfile/<?php echo $part["userId"]?>" class="noti-text-username"><?php echo $part["FName"] ?></a>
                     <span class="noti-text-time">2 นาทีที่แล้ว</span>
 
                     <p class="noti-text-join"><?php echo $part["postTitle"] ?></p>

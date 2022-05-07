@@ -48,7 +48,7 @@ class UserController extends ResourceController
         $datapost['comments'] = $modelCom ->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
-        //var_dump($datapost);
+        //var_dump($datapost['parts']);
         return view('showdata', $datapost);
         
     }
@@ -244,7 +244,7 @@ class UserController extends ResourceController
         $datapost['posts'] = $modelpost->viewMyPost($userId);
         $modelCom = new CommentModel();
         $datapost['comments'] = $modelCom ->viewComment();
-        //var_dump($datapost);
+        //var_dump($datapost['parts']);
         echo view('viewUserProfile', $datapost);
     }
 
