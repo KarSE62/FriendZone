@@ -43,7 +43,7 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="/report">รายงานโพสต์</a></li>
+                        <li><a class="dropdown-item" href="/report/<?php echo $post["postId"] ?>">รายงานโพสต์</a></li>
                     </ul>
                 </div>
             <?php } ?>
