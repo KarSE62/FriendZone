@@ -64,4 +64,37 @@ class CommentController extends ResourceController
         }
         
     }
+
+    public function editComment()
+    {
+        $session = session();
+        $model = new CommentModel();
+        $userId = $session->get("userId");
+        $comment = [
+            'commentDetail' => $this->request->getVar('Comment'),
+            'userId' => $userId,
+            'postId' => $this->request->getVar('postId'),
+        ];
+        $commentId = [
+            'commentId' => $this->request->getVar('commentId'),
+        ];
+        //var_dump($Comment,$CommentId);
+        $editComment = $model->updateComment($comment, $commentId);
+        if($editComment){
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewPost();
+            $modelCom = new CommentModel();
+            $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
+            $session->setFlashdata('Success', 'แก้ไขคอมเม้นท์สำเร็จ!!');
+            echo view('showdata', $datapost);
+            return redirect()->to('/showdata');
+        }
+
+        
+    }
 }
