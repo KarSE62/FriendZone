@@ -42,7 +42,7 @@ $routes->get('/showdata', 'UserController::showdata',);
 $routes->get('/createPost', 'PostController::index',);
 $routes->get('/editProfile', 'UserController::editProfile',);
 $routes->get('/viewProfile', 'UserController::viewProfile',);
-$routes->get('/report', 'UserController::report',);
+$routes->get('/report/(:any)', 'UserController::report/$1',);
 
 $routes->get('/viewUserProfile/(:any)', 'UserController::ViewUserProfile/$1',);
 
@@ -53,6 +53,7 @@ $routes->get('/editPost/(:any)', 'PostController::editPost/$1',);
 $routes->get('/deletePost/(:any)', 'PostController::deletePost/$1',);
 
 $routes->get('/deleteComment/(:any)', 'CommentController::deleteComment/$1',);
+
 
 $routes->get('/deletePartic/(:any)', 'ParticController::deletePartic/$1',);
 $routes->get('/acceptPartic/(:any)', 'ParticController::acceptPartic/$1',);

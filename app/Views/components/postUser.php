@@ -43,7 +43,7 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="/report">รายงานโพสต์</a></li>
+                        <li><a class="dropdown-item" href="/report/<?php echo $post["postId"] ?>">รายงานโพสต์</a></li>
                     </ul>
                 </div>
             <?php } ?>
@@ -136,7 +136,7 @@
                                     </a>
 
                                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                                        <li><a class="dropdown-item" href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขคอมเม้นท์</a></li>
+                                        <li><a data-bs-target="#editcomment<?php echo $comment["commentId"] ?>" data-bs-toggle="modal" class="MainNavText"  href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขคอมเม้นท์</a></li>
                                         <li><a class="dropdown-item" href="/deleteComment/<?php echo $comment["commentId"] ?>">ลบคอมเม้นท์</a></li>
                                     </ul>
                                 </div>

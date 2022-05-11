@@ -79,6 +79,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
             })
         }, false);
     </script>
+    <?php require('components/ModalEditcomment.php'); ?>
 </body>
 
 </html>

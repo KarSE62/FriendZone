@@ -248,11 +248,19 @@ class UserController extends ResourceController
         echo view('viewUserProfile', $datapost);
     }
 
-    public function report()
+    public function report($postId)
     {
-        //include helper form
+        $session = session();
+        $model = new UserModel();
+        $numprovince = $session->get("province");
+        $datapost['province'] = $model->getProvince($numprovince);
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
+        $modelpost = new PostModel();
+        $datapost['posts'] = $modelpost->viewsinglepost($postId);
+        //var_dump($datapost['posts']);
         helper(['form']);
-        echo view('report');
+        echo view('report', $datapost);
     }
 
     public function Logout()
