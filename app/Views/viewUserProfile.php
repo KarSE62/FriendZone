@@ -33,27 +33,11 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-            <?php require('components/smallProfile.php'); ?>
-
-                <div class="card menu-profile">
-                    <div class="card-body menu-profile-body">
-                        <div class="div-txpost" id="">
-                            <label class="menu-profile-txpost">โพสต์</label>
-                        </div>
-                        <div class="div-txactivity" id="">
-                            <label class="menu-profile-txactivity">กิจกรรมที่เคยเข้าร่วม</label>
-                        </div>
-                        <div class="div-txreview" id="">
-                            <label class="menu-profile-txreview">รีวิว</label>
-                        </div>
-                        <div class="div-txpersonalinfo" id="">
-                            <label class="menu-profile-txpersonalinfo">ข้อมูลส่วนตัว</label>
-                        </div>
-                    </div>
-                </div>
+                <?php require('components/smallProfile.php'); ?>
+                <?php require('components/menuProfile.php'); ?>
             </div>
             <div class="col-sm-6 allPost">
-            <?php require('components/postUser.php'); ?>
+                <?php require('components/postUser.php'); ?>
             </div>
             <div class="col-sm-3">
             
