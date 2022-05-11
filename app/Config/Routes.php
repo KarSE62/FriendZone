@@ -54,6 +54,7 @@ $routes->get('/deletePost/(:any)', 'PostController::deletePost/$1',);
 
 $routes->get('/deleteComment/(:any)', 'CommentController::deleteComment/$1',);
 
+
 $routes->get('/deletePartic/(:any)', 'ParticController::deletePartic/$1',);
 $routes->get('/acceptPartic/(:any)', 'ParticController::acceptPartic/$1',);
 $routes->get('/requestPartic/(:any)', 'ParticController::requestPartic/$1',);

@@ -25,6 +25,12 @@ class CommentModel extends Model{
         $this->where('commentId', $commentId)->delete();
         return TRUE;
     }
+
+    public function updateComment($comment,$commentId)
+    {
+        $this->where('commentId', $commentId)->set($comment)->update();
+        return TRUE;
+    }
    
 
 }
