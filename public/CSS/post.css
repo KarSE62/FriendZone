@@ -147,12 +147,7 @@ body{
 .text-post-pay {
     color: #EF5DA8;
     font-size: 14px;
-    /* font-weight: bold; */
 }
-/* .text-post-note {
-    color: #ff0000;
-    font-size: 14px;
-} */
 .text-district , .text-subdistrict { /*? อำเภอ */
     margin-left: 3%;
 }
