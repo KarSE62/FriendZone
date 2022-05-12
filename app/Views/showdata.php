@@ -53,7 +53,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
             </div>
             <div class="col-sm-3">
-                <?php require('components/modalCreatePost.php'); ?>
+                <?php require('components/ModalCreatePost.php'); ?>
                 <?php require('components/carousel.php'); ?>
             </div>
         </div>
@@ -80,7 +80,9 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
         }, false);
     </script>
     <?php require('components/ModalEditcomment.php'); ?>
+    <?php require('components/ModalReport.php'); ?>
+    <?php require('components/ModalEditPost.php'); ?>
 </body>
+<?php include('script.php'); ?>
 
 </html>
-<?php include('script.php'); ?>
