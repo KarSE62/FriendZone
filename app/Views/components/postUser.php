@@ -136,8 +136,8 @@
                                     </a>
 
                                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                                        <li><a data-bs-target="#editcomment<?php echo $comment["commentId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขคอมเม้นท์</a></li>
-                                        <li><a class="dropdown-item" href="/deleteComment/<?php echo $comment["commentId"] ?>">ลบคอมเม้นท์</a></li>
+                                        <li><a data-bs-target="#editcomment<?php echo $comment["commentId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขความคิดเห็น</a></li>
+                                        <li><a class="dropdown-item" href="/deleteComment/<?php echo $comment["commentId"] ?>">ลบความคิดเห็น</a></li>
                                     </ul>
                                 </div>
                             <?php } ?>
