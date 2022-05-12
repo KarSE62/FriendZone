@@ -48,7 +48,7 @@ class UserController extends ResourceController
         $datapost['comments'] = $modelCom ->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
-        //var_dump($datapost['parts']);
+        //var_dump($datapost['posts']);
         return view('showdata', $datapost);
         
     }

@@ -23,7 +23,7 @@
         <div class="card-post-title1">
             <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
-            <h6 class="text-post-user"><a href="/viewUserProfile/<?php echo $post["userId"]?>" class="text-post-user-a"> <?php echo $post["FName"] . " " . $post["LName"] ?></a></h6>
+            <h6 class="text-post-user"><a href="/viewUserProfile/<?php echo $post["userId"] ?>" class="text-post-user-a"> <?php echo $post["FName"] . " " . $post["LName"] ?></a></h6>
 
             <?php if ($post["userId"] == $session->get('userId')) { ?>
                 <div class="card-post-dropdown">
@@ -32,18 +32,18 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="/editPost/<?php echo $post["postId"] ?>">แก้ไขกิจกรรม</a></li>
+                        <li><a data-bs-target="#editpost<?php echo $post["postId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="/editPost/<?php echo $post["postId"] ?>">แก้ไขกิจกรรม</a></li>
                         <li><a class="dropdown-item" href="/deletePost/<?php echo $post["postId"] ?>">ลบโพสต์</a></li>
                     </ul>
                 </div>
-            <?php }else if($post["userId"] != $session->get('userId')){ ?>
+            <?php } else if ($post["userId"] != $session->get('userId')) { ?>
                 <div class="card-post-dropdown">
                     <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
                         <i class="fas fa-ellipsis-h"></i>
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="/report/<?php echo $post["postId"] ?>">รายงานโพสต์</a></li>
+                        <li><a data-bs-target="#report<?php echo $post["postId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="/report/<?php echo $post["postId"] ?>">รายงานโพสต์</a></li>
                     </ul>
                 </div>
             <?php } ?>
@@ -136,7 +136,7 @@
                                     </a>
 
                                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                                        <li><a data-bs-target="#editcomment<?php echo $comment["commentId"] ?>" data-bs-toggle="modal" class="MainNavText"  href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขคอมเม้นท์</a></li>
+                                        <li><a data-bs-target="#editcomment<?php echo $comment["commentId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขคอมเม้นท์</a></li>
                                         <li><a class="dropdown-item" href="/deleteComment/<?php echo $comment["commentId"] ?>">ลบคอมเม้นท์</a></li>
                                     </ul>
                                 </div>
