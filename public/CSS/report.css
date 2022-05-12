@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://kit.fontawesome.com/1483030a44.js');
 body{
     font-family: 'Kanit', cursive;  
 }
@@ -8,85 +9,65 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card-report { /*! cardใหญ่ */
-    box-shadow: 1px 1px 10px rgb(200, 200, 200);
-    border-radius: 20px;
-    border: none;
-    width: 400px;
-    margin: 50px;
-}
-.card-header-report { /*? header */
-    background-color: #ef5da8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    height: 50px;
-}
-.text-header-report { 
-    /* color: #ef5da8; */
-    font-size: 20px;
+.modal-report-title {
+    color: #ef5da8;
     font-weight: bold;
 }
-
-.text-title-report { /*? text title */
-    color: #ef5da8;
-    font-size: 17px;
-    margin: 2% 0% 0% 1%;
+.modal-report-div-img { /*! div img */
+    display: flex;
+    flex-wrap: wrap;
 }
-.input-title-report { /*? input title */
-    border-radius: 15px;
-    border: 1px solid #d6d6d6;
-    height: 32px;
+.modal-report-img {
     width: 100%;
+    border-radius: 20px;
 }
 
-.text-detail-report { /*? text detail */
+.text-title-report {
+    margin: 5% 0% 0% 2%;
     color: #ef5da8;
-    font-size: 17px;
-    margin: 0% 0% 0% 1%;
+    font-size: 18px;
 }
-/* .input-detail-report {
-    border-radius: 15px;
-    border: 1px solid #d6d6d6;
-    height: 32px;
-    width: 100%;
-} */
-.input-detail-report { /*? input detail */
-    border-radius: 15px;
+.modal-report-select {
+    border-radius: 20px;
 }
 
-.btn-ok-report { /*? ปุ่มยืนยัน */
-    border: none;
-    border-radius: 15px;
-    background-color: #3ca1ff;
-    box-shadow: 1px 1px 10px rgb(200, 200, 200);
-    width: 35%;
-    height: 35px;
-    margin: 6% 0% 0% 0%
+.text-detail-report {
+    margin-left: 2%;
+    color: #ef5da8;
+    font-size: 18px;
 }
-.btn-ok-report:hover {
-    background-color: #0f75d3;
+.input-detail-report {
+    border-radius: 20px;
+}
+
+.modal-report-btn-ok {
+    background-color: #ff1f1f;
+    color: #222222;
+    border-radius:20px;
+    margin: 5% 3% 0% 0%;
+    width: 150px;
+    height: 37px;
+}
+.modal-report-btn-ok:hover {
+    background-color: #c90b0b;
     color: #ffffff;
 }
 
-.btn-cancel-report { /*? ปุ่มยกเลิก */
-    border: none;
-    border-radius: 15px;
+.modal-report-btn-cancel {
     background-color: #ababab;
-    box-shadow: 1px 1px 10px rgb(200, 200, 200);
-    width: 35%;
-    height: 35px;
-    margin: 6% 0% 0% 5%;
+    color: #222222;
+    border-radius: 20px;
+    margin-top: 5%;
+    width: 150px;
+    height: 37px;
 }
-.btn-cancel-report:hover {
-    background-color: #848484;
+.modal-report-btn-cancel:hover {
+    background-color: #797979;
     color: #ffffff;
+}
+
+.fa-model-report {
+    color: #c91313;
+    margin-right: 1%;
+    font-size: 20px;
 }
