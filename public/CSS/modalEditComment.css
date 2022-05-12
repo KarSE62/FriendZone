@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.modal-ecomment-title {
+    color: #ef5da8;
+    font-weight: bold;
+}
+.modal-ecomment-input {
+    border-radius: 20px;
+    margin-top: 2%;
+}
+
+.div-modal-ecomment-btn {
+    display: flex;
+    justify-content: end;
+}
+.modal-ecomment-btn-ok {
+    background-color: #6fb9ff;
+    color: #222222;
+    border-radius:20px;
+    margin: 5% 2% 0% 0%;
+    width: 100px;
+    height: 37px;  
+}
+.modal-ecomment-btn-ok:hover {
+    background-color: #3ca1ff;
+    color: #ffffff;
+}
+
+.modal-ecomment-btn-cancel {
+    background-color: #ababab;
+    color: #222222;
+    border-radius: 20px;
+    margin-top: 5%;
+    width: 100px;
+    height: 37px;
+}
+.modal-ecomment-btn-cancel:hover {
+    background-color: #959595;
+    color: #ffffff;
+}
