@@ -45,8 +45,21 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="imgcard" class="form-label">รูปโปรไฟล์</label>
+                        <img id="previewImgSaveDataProfile" class="img-fluid rounded">
+                        <input type="file" accept="image/*" id="imgInputSaveDataProfile" name="post_image" class="form-control mt-3">
                         <input class="form-control" type="text" name="userImage" require>
                     </div>
+                    <script>
+                        let imgInputSaveDataProfile = document.querySelector("#imgInputSaveDataProfile");
+                        let previewImgSaveDataProfile = document.querySelector("#previewImgSaveDataProfile");
+
+                        imgInputSaveDataProfile.onchange = evt => {
+                            const [file] = imgInputSaveDataProfile.files;
+                            if (file) {
+                                previewImgSaveDataProfile.src = URL.createObjectURL(file);
+                            }
+                        }
+                    </script>
 
                     <div class="mb-4">
                         <label for="fname" class="form-label">ชื่อ</label>
@@ -92,8 +105,21 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="imgcard" class="form-label">รูปบัตรประชาชน</label>
+                        <img id="previewImgSaveDataCard" class="img-fluid rounded">
+                        <input type="file" accept="image/*" id="imgInputSaveDataCard" name="post_image" class="form-control mt-3">
                         <input class="form-control" type="text" name="idCardImage" require>
                     </div>
+                    <script>
+                        let imgInputSaveDataCard = document.querySelector("#imgInputSaveDataCard");
+                        let previewImgSaveDataCard = document.querySelector("#previewImgSaveDataCard");
+
+                        imgInputSaveDataCard.onchange = evt => {
+                            const [file] = imgInputSaveDataCard.files;
+                            if (file) {
+                                previewImgSaveDataCard.src = URL.createObjectURL(file);
+                            }
+                        }
+                    </script>
 
                     <div class="mb-4">
                         <label for="expIdCard" class="form-label">วันหมดอายุของบัตรประชาชน</label>
@@ -108,7 +134,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                         <div class="row">
                             <div class="col">
-                                <select class="form-select" name="province" id="provinces">
+                               <select class="form-select" name="province" id="provinces">
                                     <option selected>จังหวัด</option>
                                     <?php foreach ($query_province as $value) { ?>
                                         <option value="<?= $value['id'] ?>"><?= $value['name_th'] ?></option>

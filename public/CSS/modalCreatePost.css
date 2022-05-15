@@ -16,7 +16,7 @@
     font-weight: bold;
 }
 .modalCreatePost-form {
-    padding: 5%;
+    padding: 2% 5%;
 }
 .modalCreatePost-label {
     color: #EF5DA8;
@@ -54,7 +54,7 @@
     text-align: center;
 }
 .col select {
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 .ok {
@@ -85,4 +85,40 @@
     color: #ffffff;
     width: 40%;
     margin: 5% 3% 2% 3%;
+}
+
+.fa-modal-edit-post {
+    color: #EF5DA8;
+    margin-right: 1%;
+    font-size: 18px;
+}
+.edit-post-line { /*! เส้นใต้ */
+    border-bottom: 1px solid #c9c9c9;
+    margin: 8% 0% 5% 0%;
+}
+.button {
+    display: flex;
+    justify-content: end;
+}
+.modalCreatePost-btn-post-e {
+    box-shadow: 0px 0px 8px rgb(202, 202, 202);
+    border-radius: 20px;
+    background-color: #6fb9ff;
+    width: 30%;
+    margin: 0% 3% 0% 0%;
+}
+.modalCreatePost-btn-post-e:hover {
+    background-color: #3ca1ff;
+    color: #ffffff;
+}
+.modalCreatePost-btn-cancel-e:hover {
+    background-color: #797979;
+    color: #ffffff;
+}
+.modalCreatePost-btn-cancel-e {
+    box-shadow: 0px 0px 8px rgb(202, 202, 202);
+    border-radius: 20px;
+    background-color: #ababab;
+    width: 30%;
+    
 }
