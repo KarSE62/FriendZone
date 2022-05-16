@@ -1,27 +1,5 @@
-<script>
-    // const list = document.querySelectorAll('.div-menu');
-    // function activeLink(){
-    //     list.forEach((item) =>
-    //     item.classList.remove('active'));
-    //     this.classList.add('active');
-    // }
-    // list.forEach((item) =>
-    // item.addEventListener('click',activeLink))
-
-    let divmenu = document.querySelectorAll('.divmenu');
-    for (let i=0; i<divmenu.length; i++) {
-        divmenu[i].onclick = function(){
-            let j = 0;
-            while(j < divmenu.length){
-                divmenu[j++].className = 'divmenu';
-            }
-            divmenu[i].className = 'divmenu active';
-        }
-    }
-</script>
-
 <div class="menu-card">
-    <ul>
+    <ul id="menu">
         <li class="divmenu" id="div-menu-text-post">
             <span class="menu-text menu-text-post">
                 <i class="fas fa-file-invoice fa-menu-post"></i>
@@ -48,3 +26,18 @@
         </li>
     </ul>
 </div>
+
+<script>
+    const list = document.querySelector("#menu");
+    list.addEventListener("click", function(e){
+        const divmenu = e.target.closest(".divmenu");
+        if (!divmenu) return
+            console.log(divmenu);
+            const alldivmenu = list.querySelectorAll(".divmenu");
+            alldivmenu.forEach(function(el){
+                el.classList.remove("active")
+            })
+            divmenu.classList.add("active");
+    })
+    
+</script>
