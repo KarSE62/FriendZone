@@ -3,6 +3,7 @@
 <?php
 $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,13 +24,14 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/notification.css">
     <link rel="stylesheet" href="/CSS/cardCategory.css">
+    <link rel="stylesheet" href="/CSS/postReview.css">
 
 </head>
 
 <body>
 
     <?php $session = session(); ?>
-    
+
     <?php require('components/navUser.php'); ?>
     <div class="container">
         <div class="row">
@@ -38,7 +40,33 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                 <?php require('components/menuProfile.php'); ?>
             </div>
             <div class="col-sm-6 allPost">
-                <?php require('components/postUser.php'); ?>
+
+                <div id="divPostMenuProfile">
+                    <label class="label-title-post-page">โพสต์</label>
+                    <label class="label-num-post-page">ทั้งหมด 13 โพสต์</label>
+                    <div class="post-line-bottom"></div>
+                    <?php require('components/postUser.php'); ?>
+                </div>
+
+                <div id="divActivityMenuProfile">
+                    <label class="label-title-activity-page">กิจกรรมที่เคยเข้าร่วม</label>
+                    <label class="label-num-post-page">ทั้งหมด 3 โพสต์</label>
+                    <div class="post-line-bottom"></div>
+                    <?php require('components/post.php'); ?>
+                </div>
+
+                <div id="divReviewMenuProfile">
+                    <label class="label-title-review-page">รีวิว</label>
+                    <label class="label-num-post-page">4.9 / 5 คะแนน</label>
+                    <div class="post-line-bottom"></div>
+                    <?php require('components/postReview.php'); ?>
+                </div>
+
+                <div id="divSettingMenuProfile">
+                    <label class="label-title-setting-page">ข้อมูลส่วนตัว</label>
+                    <div class="post-line-bottom"></div>
+                </div>
+
             </div>
             <div class="col-sm-3">
                 <?php require('components/cardCategory.php'); ?>
@@ -49,23 +77,57 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
 </html>
 <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const cardPost = document.querySelector(".allPost");
-            let toggle = false;
-            cardPost.addEventListener("click", (e) => {
-                const target = e.target.closest(".btn-show-comment")
-                if (!target) return
-                console.log(target.id);
-                const card = target.closest(".card-post");
-                const slidedown = card.querySelector(".slidedown");
-                console.log(toggle);
-                if (!toggle) {
-                    toggle = true;
-                    slidedown.style.display = "block";
-                } else {
-                    toggle = false;
-                    slidedown.style.display = "none";
-                }
-            })
-        }, false);
-    </script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const cardPost = document.querySelector(".allPost");
+        let toggle = false;
+        cardPost.addEventListener("click", (e) => {
+            const target = e.target.closest(".btn-show-comment")
+            if (!target) return
+            console.log(target.id);
+            const card = target.closest(".card-post");
+            const slidedown = card.querySelector(".slidedown");
+            console.log(toggle);
+            if (!toggle) {
+                toggle = true;
+                slidedown.style.display = "block";
+            } else {
+                toggle = false;
+                slidedown.style.display = "none";
+            }
+        })
+    }, false);
+
+    document.getElementById('divPostMenuProfile').style.display = 'block'
+    document.getElementById('divActivityMenuProfile').style.display = 'none'
+    document.getElementById('divReviewMenuProfile').style.display = 'none'
+    document.getElementById('divSettingMenuProfile').style.display = 'none'
+
+    document.getElementById('div-menu-text-post').addEventListener('click', () => {
+        event.preventDefault()
+        document.getElementById('divPostMenuProfile').style.display = 'block'
+        document.getElementById('divActivityMenuProfile').style.display = 'none'
+        document.getElementById('divReviewMenuProfile').style.display = 'none'
+        document.getElementById('divSettingMenuProfile').style.display = 'none'
+    })
+    document.getElementById('div-menu-text-trip').addEventListener('click', () => {
+        event.preventDefault()
+        document.getElementById('divPostMenuProfile').style.display = 'none'
+        document.getElementById('divActivityMenuProfile').style.display = 'block'
+        document.getElementById('divReviewMenuProfile').style.display = 'none'
+        document.getElementById('divSettingMenuProfile').style.display = 'none'
+    })
+    document.getElementById('div-menu-text-review').addEventListener('click', () => {
+        event.preventDefault()
+        document.getElementById('divPostMenuProfile').style.display = 'none'
+        document.getElementById('divActivityMenuProfile').style.display = 'none'
+        document.getElementById('divReviewMenuProfile').style.display = 'block'
+        document.getElementById('divSettingMenuProfile').style.display = 'none'
+    })
+    document.getElementById('div-menu-text-setting').addEventListener('click', () => {
+        event.preventDefault()
+        document.getElementById('divPostMenuProfile').style.display = 'none'
+        document.getElementById('divActivityMenuProfile').style.display = 'none'
+        document.getElementById('divReviewMenuProfile').style.display = 'none'
+        document.getElementById('divSettingMenuProfile').style.display = 'block'
+    })
+</script>
