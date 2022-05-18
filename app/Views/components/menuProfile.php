@@ -21,7 +21,7 @@
         <li class="divmenu" id="div-menu-text-setting">
             <span class="menu-text menu-text-setting">
                 <i class="fas fa-cog fa-menu-setting"></i>
-                &nbsp; จัดการข้อมูลส่วนตัว
+                &nbsp; ข้อมูลส่วนตัว
             </span>
         </li>
     </ul>

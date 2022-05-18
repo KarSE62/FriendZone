@@ -59,8 +59,8 @@
                     <div class="col">
                         <div class="post-comment-title btn-show-comment" >
                             <a class="text-post-comment" id="down">
-                                <i class="fad fa-comments-alt fa-post-view-comment"></i>
-                                &nbsp;ดูความคิดเห็นทั้งหมด
+                                <i class="fas fa-star"></i>
+                                &nbsp;ดูรีวิว
                             </a>
                         </div>
                     </div>
@@ -71,21 +71,38 @@
         </div>
 
         <div class="slidedown slidecomment">
-        <?php foreach ($comments as $comment) { ?>
-            <?php if ($post["postId"] == $comment["postId"]) { ?>
-            <div class="post-comment-body">
-                <img src="<?php echo $comment["userImage"] ?>" class="img-post-user-comment">
-                <div class="text-post-user-comment">
-                    <span class="span-post-user-comment">
-                        <a href="#" class="post-user-comment-username"><?php echo $comment["FName"] ?> : </a>
-                        <?php echo $comment["commentDetail"] ?>
+
+            <span class="sum-review">คะแนนรวม 4.3/5</span>
+            
+            <div class="div-review">
+                <img class="img-review" src="https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=463&height=467">
+                <i class="fas fa-star fa-star-review1"></i>
+                <i class="fas fa-star fa-star-review"></i>
+                <i class="fas fa-star fa-star-review"></i>
+                <i class="fas fa-star fa-star-review"></i>
+                <i class="far fa-star fa-star-review"></i>
+                <div class="div-text-review">
+                    <span class="span-review">
+                        <a href="#" class="username-review">ชื่อผู้ใช้ : </a>
+                        ผมว่า ...
                     </span>
                 </div>
             </div>
-            <?php } ?>
-        <?php } ?>
 
-            
+            <div class="div-review">
+                <img class="img-review" src="https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=463&height=467">
+                <i class="fas fa-star fa-star-review1"></i>
+                <i class="fas fa-star fa-star-review"></i>
+                <i class="fas fa-star fa-star-review"></i>
+                <i class="fas fa-star-half-alt fa-star-review"></i>
+                <i class="far fa-star fa-star-review"></i>
+                <div class="div-text-review">
+                    <span class="span-review">
+                        <a href="#" class="username-review">ชื่อผู้ใช้ : </a>
+                        ผมว่า ...
+                    </span>
+                </div>
+            </div>
         </div>
 
     </div>
