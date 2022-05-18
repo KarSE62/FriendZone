@@ -1,6 +1,6 @@
 <div class="menu-card">
     <ul id="menu">
-        <li class="divmenu" id="div-menu-text-post">
+        <li class="divmenu active" id="div-menu-text-post">
             <span class="menu-text menu-text-post">
                 <i class="fas fa-file-invoice fa-menu-post"></i>
                 &nbsp; โพสต์
@@ -12,7 +12,7 @@
                 &nbsp; กิจกรรมที่เคยเข้าร่วม
             </span>
         </li>
-        <li class="divmenu active" id="div-menu-text-review">
+        <li class="divmenu" id="div-menu-text-review">
             <span class="menu-text menu-text-review">
                 <i class="fas fa-stars fa-menu-review"></i>
                 &nbsp; รีวิว

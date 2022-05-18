@@ -41,23 +41,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
         <div class="row">
             <div class="col-sm-3">
             <?php require('components/cardProfile.php'); ?>
-
-                <div class="card menu-profile">
-                    <div class="card-body menu-profile-body">
-                        <div class="div-txpost" id="">
-                            <label class="menu-profile-txpost">โพสต์</label>
-                        </div>
-                        <div class="div-txactivity" id="">
-                            <label class="menu-profile-txactivity">กิจกรรมที่เคยเข้าร่วม</label>
-                        </div>
-                        <div class="div-txreview" id="">
-                            <label class="menu-profile-txreview">รีวิว</label>
-                        </div>
-                        <div class="div-txpersonalinfo" id="">
-                            <label class="menu-profile-txpersonalinfo">ข้อมูลส่วนตัว</label>
-                        </div>
-                    </div>
-                </div>
+            <?php require('components/menuProfile.php'); ?>
             </div>
             <div class="col-sm-6">
             <?php require('components/postUser.php'); ?>
@@ -71,3 +55,24 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 </body>
 
 </html>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cardPost = document.querySelector(".allPost");
+            let toggle = false;
+            cardPost.addEventListener("click", (e) => {
+                const target = e.target.closest(".btn-show-comment")
+                if (!target) return
+                console.log(target.id);
+                const card = target.closest(".card-post");
+                const slidedown = card.querySelector(".slidedown");
+                console.log(toggle);
+                if (!toggle) {
+                    toggle = true;
+                    slidedown.style.display = "block";
+                } else {
+                    toggle = false;
+                    slidedown.style.display = "none";
+                }
+            })
+        }, false);
+    </script>

@@ -22,6 +22,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <link rel="stylesheet" href="/CSS/navUser.css">
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/notification.css">
+    <link rel="stylesheet" href="/CSS/cardCategory.css">
 
 </head>
 
@@ -40,7 +41,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                 <?php require('components/postUser.php'); ?>
             </div>
             <div class="col-sm-3">
-            
+                <?php require('components/cardCategory.php'); ?>
             </div>
         </div>
     </div>
