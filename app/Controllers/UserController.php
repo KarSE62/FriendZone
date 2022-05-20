@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
 use App\Models\UserModel;
 use App\Models\PostModel;
 use App\Models\CommentModel;
 use App\Models\ParticModel;
+use App\Models\ReviewModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -68,7 +68,10 @@ class UserController extends ResourceController
         $datapost['comments'] = $modelCom ->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
-        //var_dump($datapost);
+        $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
+        $modelReview = new ReviewModel();
+        $datapost['reviews'] = $modelReview->viewReview();
+        //var_dump($datapost['hisparts']);
         return view('viewProfile', $datapost);
         
     }
@@ -242,9 +245,12 @@ class UserController extends ResourceController
         $datapost['parts'] = $modelPart->viewPartic();
         $modelpost = new PostModel();
         $datapost['posts'] = $modelpost->viewMyPost($userId);
+        $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
         $modelCom = new CommentModel();
-        $datapost['comments'] = $modelCom ->viewComment();
-        //var_dump($datapost['parts']);
+        $datapost['comments'] = $modelCom->viewComment();
+        $modelReview = new ReviewModel();
+        $datapost['reviews'] = $modelReview->viewReview();
+        //var_dump($datapost['reviews']);
         echo view('viewUserProfile', $datapost);
     }
 

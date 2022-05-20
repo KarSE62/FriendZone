@@ -52,7 +52,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                     <label class="label-title-activity-page">กิจกรรมที่เคยเข้าร่วม</label>
                     <label class="label-num-post-page">ทั้งหมด 3 โพสต์</label>
                     <div class="post-line-bottom"></div>
-                    <?php require('components/post.php'); ?>
+                    <?php require('components/postPatic.php'); ?>
                 </div>
 
                 <div id="divReviewMenuProfile">

@@ -24,7 +24,9 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <link rel="stylesheet" href="/CSS/post.css">
     <link rel="stylesheet" href="/CSS/notification.css">
     <link rel="stylesheet" href="/CSS/modalCreatePost.css">
-
+    <link rel="stylesheet" href="/CSS/postReview.css">
+    <link rel="stylesheet" href="/CSS/report.css">
+    
 </head>
 
 <body>
@@ -44,7 +46,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                 <?php require('components/cardProfile.php'); ?>
                 <?php require('components/menuProfile.php'); ?>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 allPost">
                 <div id="divPostMenuProfile">
                     <label class="label-title-post-page">โพสต์</label>
                     <label class="label-num-post-page">ทั้งหมด 13 โพสต์</label>
@@ -56,11 +58,11 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                     <label class="label-title-activity-page">กิจกรรมที่เคยเข้าร่วม</label>
                     <label class="label-num-post-page">ทั้งหมด 3 โพสต์</label>
                     <div class="post-line-bottom"></div>
-                    <?php require('components/post.php'); ?>
+                    <?php require('components/postPatic.php'); ?>
                 </div>
 
                 <div id="divReviewMenuProfile">
-                    <label class="label-title-review-page">รีวิว</label>
+                <label class="label-title-review-page">รีวิว</label>
                     <label class="label-num-post-page">4.9 / 5 คะแนน</label>
                     <div class="post-line-bottom"></div>
                     <?php require('components/postReview.php'); ?>
@@ -78,7 +80,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
         </div>
     </div>
 </body>
-
+<?php require('components/ModalReview.php'); ?>
 </html>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
