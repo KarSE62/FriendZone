@@ -1,0 +1,739 @@
+ERROR - 2022-05-20 01:45:02 --> Unknown column 'commented.userId' in 'on clause'
+CRITICAL - 2022-05-20 01:45:02 --> Unknown column 'commented.userId' in 'on clause'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ReviewModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(248): App\Models\ReviewModel->viewReview()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->ViewUserProfile('42')
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 01:45:06 --> Unknown column 'commented.userId' in 'on clause'
+CRITICAL - 2022-05-20 01:45:06 --> Unknown column 'commented.userId' in 'on clause'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ReviewModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(248): App\Models\ReviewModel->viewReview()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->ViewUserProfile('42')
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 01:45:09 --> Unknown column 'commented.userId' in 'on clause'
+CRITICAL - 2022-05-20 01:45:09 --> Unknown column 'commented.userId' in 'on clause'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ReviewModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(248): App\Models\ReviewModel->viewReview()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->ViewUserProfile('42')
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 01:45:31 --> Unknown column 'commented.userId' in 'on clause'
+CRITICAL - 2022-05-20 01:45:31 --> Unknown column 'commented.userId' in 'on clause'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ReviewModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(248): App\Models\ReviewModel->viewReview()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->ViewUserProfile('42')
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+CRITICAL - 2022-05-20 01:47:20 --> Undefined array key "review"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 249)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->ViewUserProfile('40')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+CRITICAL - 2022-05-20 02:14:36 --> Undefined variable $reviews
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\postReview.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 75)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(66): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): view('viewProfile', Array)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:44:19 --> Unknown column 'post.name_th' in 'field list'
+CRITICAL - 2022-05-20 02:44:19 --> Unknown column 'post.name_th' in 'field list'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(71): App\Models\ParticModel->viewHistoryPartic()
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+CRITICAL - 2022-05-20 02:49:18 --> Undefined array key "hisparts"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 74)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#6 {main}
+ERROR - 2022-05-20 02:51:57 --> Table 'friendzone.participlate' doesn't exist
+CRITICAL - 2022-05-20 02:51:57 --> Table 'friendzone.participlate' doesn't exist
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:52:34 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:52:34 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:52:52 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:52:52 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:52:53 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:52:53 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:52:54 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:52:54 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:52:54 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:52:54 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:54:32 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:54:32 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:54:33 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:54:33 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:54:33 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:54:33 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:54:33 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:54:33 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:55:05 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:55:05 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:55:06 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:55:06 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:55:06 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:55:06 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:55:06 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:55:06 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:57:27 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:57:27 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\PostModel.php(84): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(67): App\Models\PostModel->viewHistoryPostPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 02:59:50 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 02:59:50 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:01:21 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:01:21 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:01:22 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:01:22 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:01:22 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:01:22 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:01:23 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:01:23 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:01:58 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:01:58 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:01:58 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:01:58 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:01:59 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:01:59 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:01:59 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:01:59 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:00 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:00 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:00 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:00 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:05 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:05 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:06 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:06 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:06 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:06 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:06 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:06 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:06 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:06 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:02:07 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:20:37 --> Column 'userId_user' in where clause is ambiguous
+CRITICAL - 2022-05-20 03:20:37 --> Column 'userId_user' in where clause is ambiguous
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `partici...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `partici...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `partici...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `partici...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(71): App\Models\ParticModel->viewHistoryPartic('40')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:30:45 --> Unknown column 'post.postId_post' in 'on clause'
+CRITICAL - 2022-05-20 03:30:45 --> Unknown column 'post.postId_post' in 'on clause'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('42')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:30:55 --> Unknown column 'post.postId_post' in 'on clause'
+CRITICAL - 2022-05-20 03:30:55 --> Unknown column 'post.postId_post' in 'on clause'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('42')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:30:56 --> Unknown column 'post.postId_post' in 'on clause'
+CRITICAL - 2022-05-20 03:30:56 --> Unknown column 'post.postId_post' in 'on clause'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('42')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:30:56 --> Unknown column 'post.postId_post' in 'on clause'
+CRITICAL - 2022-05-20 03:30:56 --> Unknown column 'post.postId_post' in 'on clause'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('42')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+ERROR - 2022-05-20 03:30:56 --> Unknown column 'post.postId_post' in 'on clause'
+CRITICAL - 2022-05-20 03:30:57 --> Unknown column 'post.postId_post' in 'on clause'
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Kanokphon\Desktop\FriendZone\app\Models\ParticModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(72): App\Models\ParticModel->viewHistoryPartic('42')
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+CRITICAL - 2022-05-20 03:45:50 --> Undefined array key "creation_date"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\postPatic.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 8)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(60): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(75): view('viewProfile', Array)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+CRITICAL - 2022-05-20 03:46:23 --> Undefined array key "name_th"
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\postPatic.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Kanokp...', 31)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewProfile.php(60): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewProfile', Array, true)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(75): view('viewProfile', Array)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->viewProfile()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+CRITICAL - 2022-05-20 04:17:51 --> Undefined variable $hisparts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\postPatic.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 1)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewUserProfile.php(55): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewUserProfile', Array, true)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(253): view('viewUserProfile', Array)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->ViewUserProfile('44')
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}
+CRITICAL - 2022-05-20 04:18:01 --> Undefined variable $hisparts
+#0 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\components\postPatic.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\Kanokp...', 1)
+#1 C:\Users\Kanokphon\Desktop\FriendZone\app\Views\viewUserProfile.php(55): require('C:\\Users\\Kanokp...')
+#2 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(210): include('C:\\Users\\Kanokp...')
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('viewUserProfile', Array, true)
+#5 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\UserController.php(253): view('viewUserProfile', Array)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->ViewUserProfile('46')
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#11 {main}

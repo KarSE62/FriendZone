@@ -72,6 +72,8 @@ class PostModel extends Model{
         ->where('postId',$postId)
         ->get()->getResultArray();
     }
+
+    
 }
 
 
