@@ -40,16 +40,19 @@
                     <form action="/UserController/register" method="post">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="username">ชื่อผู้ใช้</label>
-                            <input type="text" class="form-control" id="userName" name="userName" require>
+                            <input type="text" class="form-control" id="userName" name="userName" 
+                            required=""oninvalid="this.setCustomValidity('กรุณากรอกบัญชีผู้ใช้')"oninput="this.setCustomValidity('')">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="password">รหัสผ่าน</label>
-                            <input type="password" class="form-control" id="password" name="password" require>
+                            <input type="password" class="form-control" id="password" name="password" 
+                            required=""oninvalid="this.setCustomValidity('กรุณากรอกรหัสผ่าน')"oninput="this.setCustomValidity('')">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="confirmPassword">ยืนยันรหัสผ่าน</label>
-                            <input type="password" onchange="checkPassword()" class="form-control" id="confirmPassword" name="confirmpassword">
+                            <input type="password" onchange="checkPassword()" class="form-control" id="confirmPassword" name="password2"
+                            required=""oninvalid="this.setCustomValidity('กรุณายืนยันรหัสผ่าน')"oninput="this.setCustomValidity('')">
                         </div>
 
                         <center>

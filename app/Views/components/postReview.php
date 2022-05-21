@@ -1,39 +1,39 @@
-<?php foreach ($posts as $post) { ?>
+<?php foreach ($postreviews as $postreview) { ?>
     <div class="card-post">
         <div class="card-post-title1">
-            <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
+            <img src="<?php echo $postreview["userImage"] ?>" class="img-post-profileUser">
 
-            <h6 class="text-post-user"><?php echo $post["FName"] . " " . $post["LName"] ?> </h6>
+            <h6 class="text-post-user"><?php echo $postreview["FName"] . " " . $postreview["LName"] ?> </h6>
 
-            <p class="text-post-title-time"><?php echo $post["creation_date"] ?></p>
+            <p class="text-post-title-time"><?php echo $postreview["creation_date"] ?></p>
         </div>
         <div class="card-post-title2">
             <div class="div-post-title">
-                <h5 class="text-post-title"><?php echo $post["postTitle"] ?></h5>
+                <h5 class="text-post-title"><?php echo $postreview["postTitle"] ?></h5>
             </div>
         </div>
 
-        <img src="<?php echo $post["imagePost"] ?>" class="card-img-top">
+        <img src="<?php echo $postreview["imagePost"] ?>" class="card-img-top">
 
         <div class="card-post-body">
             <div class="row row-post-body">
                 <div class="col-8">
                     <i class="far fa-calendar-alt fa-post-calendar"></i>
                     <label class="text-post-date">วันที่ :</label>
-                    <span class="span span-post-date">&nbsp;<?php echo $post["date_start"] ?>&nbsp;</span>
+                    <span class="span span-post-date">&nbsp;<?php echo $postreview["date_start"] ?>&nbsp;</span>
                     <label class="text-post-date">ถึง</label>
-                    <span class="span span-post-date">&nbsp;<?php echo $post["date_end"] ?></span>
+                    <span class="span span-post-date">&nbsp;<?php echo $postreview["date_end"] ?></span>
                     <br />
 
                     <i class="fas fa-map-marker-alt fa-post-location"></i>
                     <label class="text-post-province">จังหวัด :</label>
-                    <span class="span span-post-province">&nbsp;<?php echo $post["name_th"] ?></span>
+                    <span class="span span-post-province">&nbsp;<?php echo $postreview["name_th"] ?></span>
 
                     <br />
 
                     <i class="fas fa-users fa-post-numPeople"></i>
                     <label class="text-post-numPeople">ต้องการผู้เข้าร่วม :</label>
-                    <span class="span span-post-numPeople">&nbsp;<?php echo $post["num_people"] ?> &nbsp; คน</span>
+                    <span class="span span-post-numPeople">&nbsp;<?php echo $postreview["num_people"] ?> &nbsp; คน</span>
                 </div>
 
                 <div class="col-4">

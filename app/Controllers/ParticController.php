@@ -19,6 +19,7 @@ class ParticController extends ResourceController
     {
         $session = session();
         $userId_user = $session->get("userId");
+        $statusUser = $session->get("statusUser");
         $status = "0";
         $dataPartic = [
             'statusPart' => $status,
@@ -26,9 +27,24 @@ class ParticController extends ResourceController
             'postId_post' => $postId,
         ];
         //var_dump($dataPartic);
-        $modelPart = new ParticModel();
-        $insertPart = $modelPart->insertPart($dataPartic);
-        if($insertPart){
+        if ($statusUser == "1") {
+            $modelPart = new ParticModel();
+            $insertPart = $modelPart->insertPart($dataPartic);
+            if ($insertPart) {
+                $model = new UserModel();
+                $numprovince = $session->get("province");
+                $datapost['province'] = $model->getProvince($numprovince);
+                $modelpost = new PostModel();
+                $datapost['posts'] = $modelpost->viewPost();
+                $modelCom = new CommentModel();
+                $datapost['comments'] = $modelCom->viewComment();
+                $modelPart = new ParticModel();
+                $datapost['parts'] = $modelPart->viewPartic();
+                $session->setFlashdata('Success', 'ส่งคำขอเข้าร่วมกิจกรรมสำเร็จ!!');
+                echo view('showdata', $datapost);
+                return redirect()->to('/showdata');
+            }
+        }else if($statusUser == "0"){
             $model = new UserModel();
             $numprovince = $session->get("province");
             $datapost['province'] = $model->getProvince($numprovince);
@@ -38,7 +54,7 @@ class ParticController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
-            $session->setFlashdata('Success', 'ส่งคำขอเข้าร่วมกิจกรรมสำเร็จ!!');
+            $session->setFlashdata('Err', 'ไม่สามารถส่งคำขอได้กรุณารอการยืนยันตัวตน');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
         }
@@ -73,7 +89,7 @@ class ParticController extends ResourceController
             'statusPart' => $status,
         ];
         $save = $modelPart->acceptPart($accept, $partId);
-        if($save){
+        if ($save) {
             $session = session();
             $model = new UserModel();
             $numprovince = $session->get("province");

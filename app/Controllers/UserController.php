@@ -69,9 +69,10 @@ class UserController extends ResourceController
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
         $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
+        $datapost['postreviews'] = $modelpost->viewPostReview($userId);
         $modelReview = new ReviewModel();
         $datapost['reviews'] = $modelReview->viewReview();
-        //var_dump($datapost['hisparts']);
+        //var_dump( $datapost['posts']);
         return view('viewProfile', $datapost);
         
     }
@@ -138,6 +139,7 @@ class UserController extends ResourceController
         $rules = [
             'userName' => 'required|min_length[6]|max_length[20]',
             'password' => 'required|min_length[6]|max_length[20]',
+            'password2' => 'required|min_length[6]|max_length[20]',
         ];
         if ($this->validate($rules)) {
             $model = new UserModel();
@@ -246,11 +248,12 @@ class UserController extends ResourceController
         $modelpost = new PostModel();
         $datapost['posts'] = $modelpost->viewMyPost($userId);
         $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
+        $datapost['postreviews'] = $modelpost->viewPostReview($userId);
         $modelCom = new CommentModel();
         $datapost['comments'] = $modelCom->viewComment();
         $modelReview = new ReviewModel();
         $datapost['reviews'] = $modelReview->viewReview();
-        //var_dump($datapost['reviews']);
+        //var_dump($datapost['postreviews']);
         echo view('viewUserProfile', $datapost);
     }
 

@@ -1,4 +1,4 @@
-<?php foreach ($posts as $post) { ?>
+<?php foreach ($hisparts as $hispart) { ?>
     <div class="modal fade" id="review<?php echo $hispart["postId"] ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">

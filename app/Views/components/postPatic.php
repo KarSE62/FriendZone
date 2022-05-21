@@ -60,7 +60,6 @@
                         <div class="post-join-title" id="">
                             <i class="fas fa-plus-circle fa-post-join-plus"></i>
                             <a data-bs-target="#review<?php echo $hispart["postId"] ?>" data-bs-toggle="modal" class="text-post-join" href="#">รีวิว</a>
-                            <a href="#" class="text-post-join">รีวิว</a>
                         </div>
                     </div>
                     <div class="col">

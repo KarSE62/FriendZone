@@ -29,9 +29,13 @@
 
             <label>เพศ :</label>
             <span><?php echo $session->get('gender'); ?> </span>
-            <i class="fa-solid fa-mars" style="color: #1194ff;"></i>
-            <!-- <i class="fa-solid fa-venus" style="color: #ff5ebc;"></i> -->
-            <!-- <i class="fa-solid fa-mars-and-venus" style="color: #7e2dff;"></i> -->
+            <?php if($session->get('gender')=="ชาย"){ ?>
+                <i class="fa-solid fa-mars" style="color: #1194ff;"></i>
+            <?php } else if($session->get('gender')=="หญิง"){ ?>
+                <i class="fa-solid fa-venus" style="color: #ff5ebc;"></i> 
+            <?php } else if($session->get('gender')=="อื่น") {?>
+            <i class="fa-solid fa-mars-and-venus" style="color: #7e2dff;"></i>
+            <?php } ?>
             <br />
 
             <i class="fas fa-map-marker-alt"></i>

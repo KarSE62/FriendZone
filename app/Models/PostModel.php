@@ -26,7 +26,6 @@ class PostModel extends Model{
         ->join('provinces','post.province = provinces.id')
         ->join('users','post.userId = users.userId')
         ->orderBy('postId','DESC' )
-        ->where('statusPost','1')
         ->where('userId_user',$id)
         ->get()->getResultArray();
     }
@@ -70,6 +69,17 @@ class PostModel extends Model{
         ->join('category','post.categoryId = category.categoryId')
         ->orderBy('postId','DESC' )
         ->where('postId',$postId)
+        ->get()->getResultArray();
+    }
+
+    public function viewPostReview($id)
+    {
+        return $this->db->table('post')
+        ->join('provinces','post.province = provinces.id')
+        ->join('users','post.userId = users.userId')
+        ->orderBy('postId','DESC' )
+        ->where('statusPost','0')
+        ->where('userId_user',$id)
         ->get()->getResultArray();
     }
 
