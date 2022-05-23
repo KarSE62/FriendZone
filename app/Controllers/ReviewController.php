@@ -36,6 +36,7 @@ class ReviewController extends ResourceController
         $datapost['province'] = $model->getProvince($numprovince);
         $modelpost = new PostModel();
         $datapost['posts'] = $modelpost->viewMyPost($userId);
+        $datapost['postreviews'] = $modelpost->viewPostReview($userId);
         $modelCom = new CommentModel();
         $datapost['comments'] = $modelCom ->viewComment();
         $modelPart = new ParticModel();

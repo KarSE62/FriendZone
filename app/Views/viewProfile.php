@@ -17,6 +17,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
     <title>Profile</title>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/CSS/viewProfile.css">
     <link rel="stylesheet" href="/CSS/cardProfile.css">
     <link rel="stylesheet" href="/CSS/profile.css">
@@ -43,6 +44,16 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
+            <?php if (session()->getFlashdata('Success')) : ?>
+            <div>
+                <script>
+                    Swal.fire({
+                        icon: 'success',
+                        title: "<?= session()->getFlashdata('Success') ?>",
+                    })
+                </script>
+            </div>
+        <?php endif ?>
                 <?php require('components/cardProfile.php'); ?>
                 <?php require('components/menuProfile.php'); ?>
             </div>

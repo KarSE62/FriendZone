@@ -72,7 +72,7 @@
         <div class="slidedown slidecomment">
 
             <?php foreach ($reviews as $review) { ?>
-                <?php if ($post["postId"] == $review["postId"]) { ?>
+                <?php if ($postreview["postId"] == $review["postId"]) { ?>
                     <div class="div-review">
                         <img class="img-review" src="<?php echo $review["userImage"] ?>">
                         <i class="fas fa-star fa-star-review1"></i>

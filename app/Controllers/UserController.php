@@ -64,15 +64,15 @@ class UserController extends ResourceController
         $datapost['province'] = $model->getProvince($numprovince);
         $modelpost = new PostModel();
         $datapost['posts'] = $modelpost->viewMyPost($userId);
+        $datapost['postreviews'] = $modelpost->viewPostReview($userId);
         $modelCom = new CommentModel();
         $datapost['comments'] = $modelCom ->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
         $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
-        $datapost['postreviews'] = $modelpost->viewPostReview($userId);
         $modelReview = new ReviewModel();
         $datapost['reviews'] = $modelReview->viewReview();
-        //var_dump( $datapost['posts']);
+        //var_dump( $datapost['reviews']);
         return view('viewProfile', $datapost);
         
     }
@@ -245,9 +245,9 @@ class UserController extends ResourceController
         $datapost['users'] = $model->getProfile($userId);
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
+        $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
         $modelpost = new PostModel();
         $datapost['posts'] = $modelpost->viewMyPost($userId);
-        $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
         $datapost['postreviews'] = $modelpost->viewPostReview($userId);
         $modelCom = new CommentModel();
         $datapost['comments'] = $modelCom->viewComment();
