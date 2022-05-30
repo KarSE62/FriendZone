@@ -8,6 +8,7 @@ use App\Models\UserModel;
 use App\Models\CommentModel;
 use App\Models\ParticModel;
 use App\Models\ReportModel;
+use App\Models\NotificationModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -39,6 +40,8 @@ class ReportController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'ส่งรายงานโพสต์กิจกรรมสำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');

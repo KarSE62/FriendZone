@@ -8,6 +8,7 @@ use App\Models\CommentModel;
 use App\Models\ParticModel;
 use App\Models\ReportModel;
 use App\Models\ReviewModel;
+use App\Models\NotificationModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -44,6 +45,8 @@ class ReviewController extends ResourceController
         $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
         $modelReview = new ReviewModel();
         $datapost['reviews'] = $modelReview->viewReview();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
         $session->setFlashdata('Success', 'รีวิวโพสต์กิจกรรมสำเร็จ!!');
         return view('viewProfile', $datapost);
        }

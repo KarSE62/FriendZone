@@ -7,6 +7,7 @@ use App\Models\PostModel;
 use App\Models\UserModel;
 use App\Models\CommentModel;
 use App\Models\ParticModel;
+use App\Models\NotificationModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -40,6 +41,8 @@ class ParticController extends ResourceController
                 $datapost['comments'] = $modelCom->viewComment();
                 $modelPart = new ParticModel();
                 $datapost['parts'] = $modelPart->viewPartic();
+                $modelNotic = new NotificationModel();
+                $datapost['notics'] = $modelNotic->viewNotification();
                 $session->setFlashdata('Success', 'ส่งคำขอเข้าร่วมกิจกรรมสำเร็จ!!');
                 echo view('showdata', $datapost);
                 return redirect()->to('/showdata');
@@ -54,6 +57,8 @@ class ParticController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Err', 'ไม่สามารถส่งคำขอได้กรุณารอการยืนยันตัวตน');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
@@ -75,6 +80,8 @@ class ParticController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'ปฏิเสธการเข้าร่วมกิจกรรมสำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
@@ -100,6 +107,8 @@ class ParticController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'ยอมรับเข้าร่วมกิจกรรมสำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
