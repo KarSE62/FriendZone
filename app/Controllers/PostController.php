@@ -7,6 +7,7 @@ use App\Models\PostModel;
 use App\Models\UserModel;
 use App\Models\CommentModel;
 use App\Models\ParticModel;
+use App\Models\NotificationModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -68,6 +69,8 @@ class PostController extends ResourceController
                 $datapost['comments'] = $modelCom->viewComment();
                 $modelPart = new ParticModel();
                 $datapost['parts'] = $modelPart->viewPartic();
+                $modelNotic = new NotificationModel();
+                $datapost['notics'] = $modelNotic->viewNotification();
                 $session->setFlashdata('Success', 'สร้างโพสต์ประกาศกิจกรรมสำเร็จ');
                 echo view('showdata', $datapost);
                 return redirect()->to('/showdata');
@@ -82,6 +85,8 @@ class PostController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Err', 'ไม่สามารถสร้างโพสต์ได้กรุณารอการยืนยันตัวตน');
             //var_dump(session()->getFlashdata('Err'));
             echo view('showdata', $datapost);
@@ -104,6 +109,8 @@ class PostController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'ลบโพสต์ประกาศกิจกรรมสำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
@@ -129,6 +136,8 @@ class PostController extends ResourceController
         $datapost['province'] = $model->getProvince($numprovince);
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
         //var_dump($datapost);
         echo view('FormEditPost', $datapost);
     }
@@ -166,6 +175,8 @@ class PostController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
         }
@@ -179,6 +190,8 @@ class PostController extends ResourceController
         $datapost['comments'] = $modelCom->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
         //var_dump($datapost);
         echo view('viewPostDetail', $datapost);
     }

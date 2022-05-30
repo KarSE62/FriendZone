@@ -7,6 +7,7 @@ use App\Models\PostModel;
 use App\Models\CommentModel;
 use App\Models\ParticModel;
 use App\Models\ReviewModel;
+use App\Models\NotificationModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -48,7 +49,9 @@ class UserController extends ResourceController
         $datapost['comments'] = $modelCom ->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
-        //var_dump($datapost['posts']);
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
+        //var_dump($datapost['notics']);
         return view('showdata', $datapost);
         
     }
@@ -72,6 +75,8 @@ class UserController extends ResourceController
         $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
         $modelReview = new ReviewModel();
         $datapost['reviews'] = $modelReview->viewReview();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
         //var_dump( $datapost['reviews']);
         return view('viewProfile', $datapost);
         
@@ -122,6 +127,8 @@ class UserController extends ResourceController
             $datapost['comments'] = $modelCom ->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'แก้ไขข้อมูลสำเร็จ!!');
             echo view('editProfile', $datapost);
             return redirect()->to('/showdata');
@@ -180,6 +187,8 @@ class UserController extends ResourceController
                 $datapost['comments'] = $modelCom ->viewComment();
                 $modelPart = new ParticModel();
                 $datapost['parts'] = $modelPart->viewPartic();
+                $modelNotic = new NotificationModel();
+                $datapost['notics'] = $modelNotic->viewNotification();
                 //var_dump($datapost);
                 echo view('showdata',$datapost);
                 return redirect()->to('/showdata');
@@ -221,14 +230,16 @@ class UserController extends ResourceController
 
         $data = $model->saveGenaral($userId, $data);
         if ($data) {
-            $numprovince = $session->get("province");
-            $datapost['province'] = $model->getProvince($numprovince);
-            $modelpost = new PostModel();
-            $datapost['posts'] = $modelpost->viewPost();
-            $modelCom = new CommentModel();
-            $datapost['comments'] = $modelCom ->viewComment();
-            $modelPart = new ParticModel();
-            $datapost['parts'] = $modelPart->viewPartic();
+                $numprovince = $session->get("province");
+                $datapost['province'] = $model->getProvince($numprovince);
+                $modelpost = new PostModel();
+                $datapost['posts'] = $modelpost->viewPost();
+                $modelCom = new CommentModel();
+                $datapost['comments'] = $modelCom ->viewComment();
+                $modelPart = new ParticModel();
+                $datapost['parts'] = $modelPart->viewPartic();
+                $modelNotic = new NotificationModel();
+                $datapost['notics'] = $modelNotic->viewNotification();
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
         }
@@ -253,6 +264,8 @@ class UserController extends ResourceController
         $datapost['comments'] = $modelCom->viewComment();
         $modelReview = new ReviewModel();
         $datapost['reviews'] = $modelReview->viewReview();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
         //var_dump($datapost['postreviews']);
         echo view('viewUserProfile', $datapost);
     }

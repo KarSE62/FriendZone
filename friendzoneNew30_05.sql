@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2022 at 10:13 AM
+-- Generation Time: May 30, 2022 at 08:34 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -1084,7 +1084,10 @@ INSERT INTO `commented` (`commentId`, `commentDetail`, `userId`, `postId`) VALUE
 (6, 'เดินทางยังไงครับ', 42, 44),
 (7, 'อยากไปทำบุญไหว้พระด้วยครับ', 40, 5),
 (8, 'อากาศหนาวไหมครับ', 42, 4),
-(9, 'บ้านอยู่ห่างจากชาดหาดไหมค่ะ', 44, 44);
+(9, 'บ้านอยู่ห่างจากชาดหาดไหมค่ะ', 44, 44),
+(29, 'สวัสดีครับผมแจ๊กแปปโฮ', 40, 71),
+(31, 'สวัสดี', 40, 4),
+(32, 'สวัสดีครับ', 46, 71);
 
 -- --------------------------------------------------------
 
@@ -9966,6 +9969,28 @@ INSERT INTO `districts` (`id`, `zip_code`, `name_th_dis`, `name_en`, `amphure_id
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `notification`
+--
+
+CREATE TABLE `notification` (
+  `notificateId` int(50) NOT NULL,
+  `notificateDetail` varchar(255) DEFAULT NULL,
+  `statusNotic` varchar(255) DEFAULT NULL,
+  `userId` int(50) NOT NULL,
+  `notificationDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `notification`
+--
+
+INSERT INTO `notification` (`notificateId`, `notificateDetail`, `statusNotic`, `userId`, `notificationDate`) VALUES
+(2, 'ได้ผ่านการยืนยันตัวตนเรียบร้อยแล้วสามารถโพสต์หาเพื่อนร่วมกิจกรรมหรือส่งคำขอเข้าร่วมกิจกรรมได้เลย!!', '0', 40, '2022-05-30 05:54:05'),
+(3, 'ได้ผ่านการยืนยันตัวตนเรียบร้อยแล้วสามารถโพสต์หาเพื่อนร่วมกิจกรรมหรือส่งคำขอเข้าร่วมกิจกรรมได้เลย!!', '0', 42, '2022-05-30 06:07:54');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `officer`
 --
 
@@ -10005,8 +10030,11 @@ CREATE TABLE `participate` (
 --
 
 INSERT INTO `participate` (`partId`, `statusPart`, `userId_user`, `postId_post`) VALUES
-(9, '1', 42, 44),
-(11, '1', 31, 69);
+(20, '1', 42, 44),
+(21, '1', 31, 44),
+(23, '1', 40, 5),
+(24, '0', 47, 71),
+(25, '0', 47, 71);
 
 -- --------------------------------------------------------
 
@@ -10041,9 +10069,9 @@ CREATE TABLE `post` (
 INSERT INTO `post` (`postId`, `postTitle`, `imagePost`, `detailPost`, `note`, `num_people`, `expenses`, `province`, `district`, `subDistrict`, `date_start`, `date_end`, `creation_date`, `statusPost`, `userId`, `categoryId`, `userId_user`) VALUES
 (3, 'วัดกงลาด', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระ', 'รับทุกคนที่ใจบุญ', 5, '10000', '58', '810', '730407', '2022-03-03', '2022-03-05', '2022-02-28 17:00:00', 0, 40, 4, 40),
 (4, 'เที่ยวเชียงใหม่', 'https://media.discordapp.net/attachments/778499819072913482/937216083725783050/bb8e0f2bb92ca379.jpg?width=628&height=471', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 5, '20000', '38', '584', '501704', '2022-03-03', '2022-03-05', '2022-02-28 17:00:00', 1, 31, 4, 31),
-(5, 'องค์พระปฐมเจดีย์', 'https://media.discordapp.net/attachments/778499819072913482/948829468460478565/d7f60ea9cbdd4b33.jpg', 'ทำบุญไหว้พระร่วงโรจฤทธิ์', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 2, '10000', '58', '807', '730101', '2022-03-04', '2022-03-04', '2022-03-02 17:00:00', 1, 42, 4, 42),
-(44, 'หาเพื่อนเที่ยวบ้านพักพลูวิลล่าทะเลชะอำ', 'https://media.discordapp.net/attachments/778499819072913482/949144347880853574/84f124989805b53b.jpg', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'ขอคนแบบปาร์ตี้ๆไม่หาเรื่อง', 20, '2000', '14', '172', '230202', '01-04-2565', '03-04-2565', '2022-03-19 17:00:00', 1, 40, 4, 40),
-(69, 'หาเพื่อนไป Dream world ครับ', 'https://media.discordapp.net/attachments/778499819072913482/959278446809350204/dreamword.webp?width=700&height=467', 'คือผมได้บัตรส่วนลดมา 14 ใบ เลยอยากหาเพื่อนไปด้วยกันครับ^^ เป็นทริป one day', 'ไม่พาเด็กมาด้วยนะครับ อยากให้เล่นสนุกแบบเต็มที่', 5, '2000', '16', '199', '251107', '20-04-2565', '21-04-2565', '2022-04-20 07:12:10', 1, 40, 6, 40);
+(5, 'องค์พระปฐมเจดีย์', 'https://media.discordapp.net/attachments/778499819072913482/948829468460478565/d7f60ea9cbdd4b33.jpg', 'ทำบุญไหว้พระร่วงโรจฤทธิ์', 'รับทุกคนที่ใจบุญ ใส่ใจทุกการท่องเที่ยว', 2, '10000', '58', '807', '730101', '2022-03-04', '2022-03-04', '2022-03-02 17:00:00', 0, 42, 4, 42),
+(44, 'หาเพื่อนเที่ยวบ้านพักพลูวิลล่าทะเลชะอำ', 'https://media.discordapp.net/attachments/778499819072913482/949144347880853574/84f124989805b53b.jpg', 'ทำบุญไหว้พระธาตุเชียงใหม่', 'ขอคนแบบปาร์ตี้ๆไม่หาเรื่อง', 20, '2000', '14', '172', '230202', '01-04-2565', '03-04-2565', '2022-03-19 17:00:00', 0, 40, 4, 40),
+(71, 'หาเพื่อนไปล่องแพกาญจนบุรี :)', 'https://media.discordapp.net/attachments/778499819072913482/973837431126261771/f1f28b479afb4c72.jpg', 'อากาศร้อนๆหาคนไปเล่นน้ำล่องแพ', 'เน้น ผู้หญิงโสด ผู้ชายไม่เอาเป็นกลุ่มได้ยิ่งดี', 10, '2000', '56', '783', '710204', '15-05-2565', '17-05-2565', '2022-05-11 06:44:26', 1, 46, 2, 46);
 
 -- --------------------------------------------------------
 
@@ -10156,6 +10184,16 @@ CREATE TABLE `report` (
   `userId` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `report`
+--
+
+INSERT INTO `report` (`reportId`, `reportTitle`, `reportDetail`, `postId`, `userId`) VALUES
+(6, 'คำหยาบคาย', 'หยาบคาย', 4, 40),
+(7, 'คำหยาบคาย', 'หยาบคายมากครับ', 4, 40),
+(8, 'หลอกลวง', 'สูญเงินนับ 10 ล้าน', 5, 40),
+(9, 'อนาจาร', 'sdaasdasd', 44, 46);
+
 -- --------------------------------------------------------
 
 --
@@ -10169,6 +10207,15 @@ CREATE TABLE `review` (
   `postId` int(50) NOT NULL,
   `userId` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`id_review`, `detail_review`, `point`, `postId`, `userId`) VALUES
+(3, 'สนุกมากครับ', 4, 5, 40),
+(4, 'ดีมากเฟรนลี่มากครับ', 4, 44, 42),
+(5, 'สนุกมากครับ', 4, 44, 42);
 
 -- --------------------------------------------------------
 
@@ -10203,10 +10250,11 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userId`, `FName`, `LName`, `userName`, `password`, `idCard`, `idCardImage`, `statusUser`, `gender`, `userImage`, `birthday`, `address`, `province`, `district`, `subDistrict`, `email`, `expIdCard`, `phoneNumber`) VALUES
 (31, 'ณัฐพล', 'แซ่โฟ้ง', 'natthapon', '$2y$10$ATxGHB63RvgSf9lewLfxFuyF0ocBPC1JWZGFcmU1nr5GkaawQhwAO', '1515151515151', 'https://media.discordapp.net/attachments/901413238841946187/946620558420873306/-2021-.jpg', '1', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg?width=671&height=676', '2022-02-01', '114 หมู่ 5', '72', '949', '920701', '624259001@webmail.npru.ac.th', '2022-02-28', '0987392476'),
-(40, 'กนกพล', 'พวงวัดโพธิ์', 'kanokphon', '$2y$10$wXl6IDcXX0AkpsqL.NjTnOkrzFT47yoRnBur.Y8eVkiVYdXi2Ba1q', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '1', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', '58', '808', '730214', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392474'),
+(40, 'กนกพล', 'พวงวัดโพธิ์', 'kanokphon', '$2y$10$wXl6IDcXX0AkpsqL.NjTnOkrzFT47yoRnBur.Y8eVkiVYdXi2Ba1q', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '1', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-02-01', '114 หมู่ 5', '58', '808', '730214', 'kanokphon.kar2017@hotmail.com', '2022-02-28', '0987392476'),
 (42, 'ญาณสิชฌ์', 'สันติเอกชุน', 'com007', '$2y$10$VcpBwr8Z96Ikvzy5aC11serJBFzzMRUWtV/0XQOemNlrRZzlBo1WK', '1739901526485', 'https://cdn.discordapp.com/attachments/901413238841946187/901413325861171210/Com.jpg', '0', 'ชาย', 'https://cdn.discordapp.com/attachments/901413238841946187/901413325861171210/Com.jpg', '2000-01-01', '157/131', '58', '807', '730109', '624259011@webmail.npru.ac.th', '2022-03-04', '0801912652'),
 (44, 'ชนกานต์', 'บัวขาว', 'gus007', '$2y$10$5MnoGCrUWMEnffg8G.GLnu8Qc9VfspTlakfw4EihMrZHEcdYxPtay', '1739901546247', 'https://media.discordapp.net/attachments/901413238841946187/946620558420873306/-2021-.jpg', '0', 'หญิง', 'https://media.discordapp.net/attachments/778499819072913482/958981116663050270/gus.jpg?width=673&height=676', '2001-01-01', '157/131', '3', '60', '120301', '624259009@webmail.npru.ac.th', '2022-03-30', '0987659874'),
-(45, 'กนกพล', 'พวงวัดโพธิ์', 'knp001', '$2y$10$ZnnmOMYUXoPZh5bTvrD5dO.C8bEnKC2gpwEF8GUFG8sY.Xv237Vce', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-04-12', '157/131', '18', '207', '270202', 'bow.aorapan@facebook.com', '2022-04-28', '0987392476');
+(46, 'เมธี', 'พงษ์พากเพัยร', 'few007', '$2y$10$wG4I1oXjamUc3ZVRi/QQPu3gUQRc429NpLjZ2dMGF.de4GzSGg.Wq', '1739920123456', 'https://media.discordapp.net/attachments/778499819072913482/973836142283739176/few.jpg?width=380&height=676', '1', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/977443927089111080/4950decdd673bcf4.jpg?width=677&height=676', '2019-05-21', '152/44 ปะปานคร', '13', '162', '220316', 'kolaza001@gmail.com', '2022-05-27', '0854415424'),
+(47, 'กนกพล', 'พวงวัดโพธิ์', 'knp001', '$2y$10$IqPSfJL/I87itYbzVGsh0.eALiPSYRzBPzuS.dV3vCUJI9C3r8LL2', '1515151515151', 'https://media.discordapp.net/attachments/901413238841946187/946620558420873306/-2021-.jpg', '0', 'ชาย', 'https://media.discordapp.net/attachments/778499819072913482/936489935022747648/158282142_728598437840104_1157295371700176386_n.jpg', '2022-05-05', '114 หมู่ 5', '17', '203', '260202', 'kar.kanokphon@gmail.com', '2022-05-27', '0801912652');
 
 --
 -- Indexes for dumped tables
@@ -10237,6 +10285,13 @@ ALTER TABLE `commented`
 --
 ALTER TABLE `districts`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `notification`
+--
+ALTER TABLE `notification`
+  ADD PRIMARY KEY (`notificateId`),
+  ADD KEY `userId` (`userId`);
 
 --
 -- Indexes for table `officer`
@@ -10308,7 +10363,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `commented`
 --
 ALTER TABLE `commented`
-  MODIFY `commentId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `commentId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- AUTO_INCREMENT for table `notification`
+--
+ALTER TABLE `notification`
+  MODIFY `notificateId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `officer`
@@ -10320,13 +10381,13 @@ ALTER TABLE `officer`
 -- AUTO_INCREMENT for table `participate`
 --
 ALTER TABLE `participate`
-  MODIFY `partId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `partId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `postId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `postId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `provinces`
@@ -10338,19 +10399,29 @@ ALTER TABLE `provinces`
 -- AUTO_INCREMENT for table `report`
 --
 ALTER TABLE `report`
-  MODIFY `reportId` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `reportId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `id_review` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_review` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `userId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `notification`
+--
+ALTER TABLE `notification`
+  ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

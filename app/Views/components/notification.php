@@ -89,30 +89,22 @@
         </div>
 
         <div class="noti-etc" id="notiEtc"> <!-- แจ้งเตือนอื่นๆ -->
-            <div class="noti"> <!-- กล่องแจ้งเตือนอื่นๆ การติดตาม -->
-                <img src="https://cdn.discordapp.com/attachments/778499819072913482/936575366338838578/5adf240418944669.jpg" class="noti-img-user">
 
-                <div class="noti-text">
-                    <a href="#" class="noti-text-username">Nutthapon</a>
-                    <span class="noti-text-time">1 ชั่วโมงที่แล้ว</span>
-
-                    <p class="noti-text-join">เริ่มติดตามคุณ</p>
-
-                </div>
-            </div>
-
+        <?php foreach ($notics as $notic) { ?>
+            <?php if($notic["userId"] == $session->get('userId')){?>
             <div class="noti"> <!-- กล่องแจ้งเตือนอื่นๆ เตือนการรีวิวจากระบบ -->
                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/966615192110764052/bg.jpg" class="noti-img-user">
 
                 <div class="noti-text">
                     <a href="#" class="noti-text-username">แจ้งเตือนจากระบบ</a>
-                    <span class="noti-text-time">3 ชั่วโมงที่แล้ว</span>
+                    <span class="noti-text-time"><?php echo $notic["notificationDate"] ?></span>
 
-                    <p class="noti-text-join">มี 1 กิจกรรมที่คุณยังไม่ได้รีวิว</p>
+                    <p class="noti-text-join"><?php echo $notic["notificateDetail"] ?></p>
 
                 </div>
             </div>
-
+        <?php } ?>
+        <?php } ?>
             <div class="noti"> <!-- กล่องแจ้งเตือนอื่นๆ เตือนการยืนยันตัวตนสำเร็จจากระบบ -->
                 <img src="https://cdn.discordapp.com/attachments/778499819072913482/966615192110764052/bg.jpg" class="noti-img-user">
 
