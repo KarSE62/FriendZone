@@ -93,6 +93,8 @@ class UserController extends ResourceController
         $datapost['user'] = $model->getProfile($userId);
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
         //var_dump($datapost);
         return view('editProfile', $datapost);
     }

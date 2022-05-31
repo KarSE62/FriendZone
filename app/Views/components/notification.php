@@ -35,12 +35,12 @@
         <div class="noti-type">
             <div class="row noti-row-type">
                 <div class="col noti-col-type1" id="notiCol1">
-                    <i class="fas fa-bell-plus fa-noti-bell-plus"></i>
+                    <!-- <i class="fa-solid fa-bell-plus fa-noti-bell-plus"></i> -->
                     <h6 class="noti-text-type1" onclick="notiJoin(1)">คำขอร่วมกิจกรรม</h6>
                 </div>
                 
                 <div class="col noti-col-type2" id="notiCol2">
-                    <i class="fas fa-bells fa-noti-bells"></i>
+                    <!-- <i class="fas fa-bells fa-noti-bells"></i> -->
                     <h6 class="noti-text-type2" onclick="notiJoin(0)">การแจ้งเตือนอื่นๆ</h6>
                 </div>
             </div>

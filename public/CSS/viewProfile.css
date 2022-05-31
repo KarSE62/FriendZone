@@ -60,13 +60,12 @@ body{
     margin: 1% 0%;
     color: #ffffff;
 }
-.active {
+.m-active {
     background-color: #ffe0f0;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     color: #414141;
-    margin-left: 5%;
-    /* background: var(--clr); */
+    margin-left: 6%;
 }
 ul {
     padding: 0;

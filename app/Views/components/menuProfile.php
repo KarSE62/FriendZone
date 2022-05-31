@@ -1,6 +1,6 @@
 <div class="menu-card">
     <ul id="menu">
-        <li class="divmenu active" id="div-menu-text-post">
+        <li class="divmenu m-active" id="div-menu-text-post">
             <span class="menu-text menu-text-post">
                 <i class="fas fa-file-invoice fa-menu-post"></i>
                 &nbsp; โพสต์
@@ -14,7 +14,7 @@
         </li>
         <li class="divmenu" id="div-menu-text-review">
             <span class="menu-text menu-text-review">
-                <i class="fas fa-stars fa-menu-review"></i>
+                <i class="fa-solid fa-star fa-menu-review"></i>
                 &nbsp; รีวิว
             </span>
         </li>
@@ -35,9 +35,9 @@
             console.log(divmenu);
             const alldivmenu = list.querySelectorAll(".divmenu");
             alldivmenu.forEach(function(el){
-                el.classList.remove("active")
+                el.classList.remove("m-active")
             })
-            divmenu.classList.add("active");
+            divmenu.classList.add("m-active");
     })
     
 </script>
