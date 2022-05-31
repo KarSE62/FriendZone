@@ -27,9 +27,9 @@
 
                 <label>เพศ :</label>
                 <span><?php echo $session->get('gender'); ?> </span>
-                <i class="far fa-mars" style="color: #1194ff;"></i>
-                <!-- <i class="far fa-venus" style="color: #ff5ebc;"></i> -->
-                <!-- <i class="far fa-venus-mars" style="color: #7e2dff;"></i> -->
+                <i class="fa-solid fa-mars" style="color: #1194ff;"></i>
+                <!-- <i class="fa-solid fa-venus" style="color: #ff5ebc;"></i>  -->
+                <!-- <i class="fa-solid fa-mars-and-venus" style="color: #7e2dff;"></i> -->
                 <br />
 
                 <i class="fas fa-map-marker-alt"></i>
