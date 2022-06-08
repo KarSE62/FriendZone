@@ -1,0 +1,10 @@
+CRITICAL - 2022-06-08 01:42:10 --> Invalid file: FormEditPost.php
+#0 C:\Users\Kanokphon\Desktop\FriendZone\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('FormEditPost.ph...')
+#1 C:\Users\Kanokphon\Desktop\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('FormEditPost', Array, true)
+#2 C:\Users\Kanokphon\Desktop\FriendZone\app\Controllers\PostController.php(142): view('FormEditPost', Array)
+#3 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(825): App\Controllers\PostController->editPost('74')
+#4 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#5 C:\Users\Kanokphon\Desktop\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
+#8 {main}

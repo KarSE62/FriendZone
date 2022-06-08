@@ -13,10 +13,32 @@
             </div>
             <div class="modal-body">
                 <div class="modalCreatePost-form">
-                    <form action="/PostController/createpost" method="post">
+                    
+                        <div class="mb-3">
+                            <label for="image" class="form-label modalCreatePost-label">รูปกิจกรรม</label>
+                            <img id="previewImgCreatePost" class="img-fluid rounded">
+                            <form>
+                            <input type="file" accept="image/*" id="postImage" name="post_image" class="form-control mt-3">
+                            <p>*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
+                            <button type="button" onclick="uploadPostImage()">อัพโหลดรูปภาพ</button>
+                            </form>
+                        </div>
+                        <script>
+                            let imgInputCreatePost = document.querySelector("#postImage");
+                            let previewImgCreatePost = document.querySelector("#previewImgCreatePost");
+
+                            imgInputCreatePost.onchange = evt => {
+                                const [file] = imgInputCreatePost.files;
+                                if (file) {
+                                    previewImgCreatePost.src = URL.createObjectURL(file);
+                                }
+                            }
+                        </script>
                         <div class="row ">
                             <div class="col-8">
+                            <form action="/PostController/createpost" method="post">
                                 <div class="mb-3">
+                                    <input type="hidden" class="form-control modalCreatePost-input" id="postImageURL" name="imagePost">
                                     <label class="form-label modalCreatePost-label">หัวข้อ</label>
                                     <input type="text" class="form-control modalCreatePost-input" name="postTitle" placeholder="ใส่หัวข้อกิจกรรมของคุณ" required="" oninvalid="this.setCustomValidity('กรุณากรอกหัวข้อโพสต์ประกาศกิจกรรม')" oninput="this.setCustomValidity('')">
                                 </div>
@@ -34,23 +56,6 @@
                             </div>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="image" class="form-label modalCreatePost-label">รูปกิจกรรม</label>
-                            <img id="previewImgCreatePost" class="img-fluid rounded">
-                            <input type="file" accept="image/*" id="imgInputCreatePost" name="post_image" class="form-control mt-3">
-                            <input type="text" class="form-control modalCreatePost-input" id="testimg" name="imagePost">
-                        </div>
-                        <script>
-                            let imgInputCreatePost = document.querySelector("#imgInputCreatePost");
-                            let previewImgCreatePost = document.querySelector("#previewImgCreatePost");
-
-                            imgInputCreatePost.onchange = evt => {
-                                const [file] = imgInputCreatePost.files;
-                                if (file) {
-                                    previewImgCreatePost.src = URL.createObjectURL(file);
-                                }
-                            }
-                        </script>
 
                         <div class="mb-3">
                             <label class="form-label modalCreatePost-label">รายละเอียด</label>

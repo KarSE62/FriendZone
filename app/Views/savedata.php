@@ -31,27 +31,40 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     $sql_provinces = "SELECT * FROM provinces";
     $query_province = mysqli_query($con, $sql_provinces);
 
-    
+
 
     ?>
-    <?php require('components/nav.php');?>
+    <?php require('components/nav.php'); ?>
 
     <div class="row">
-        <div class="col-4"></div>
+        <div class="col-4">
+
+        </div>
 
         <div class="col-4">
             <div class="form">
-                <form action="/UserController/saveGenaral" method="post">
+                
                     <h3>บันทึกข้อมูล</h3>
-
+                    <label for="imgcard" class="form-label">รูปโปรไฟล์</label>
+                    <img id="previewImgSaveDataProfile" class="img-fluid rounded">
+                    <form>
+                        <input type="file" accept="image/*" id="userImage" class="form-control mt-3" >
+                        <p>*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
+                        <button type="button" onclick="uploadProfile()">อัพโหลดรูปภาพ</button>
+                    </form>
+                    <label for="imgcard" class="form-label">รูปบัตรประชาชน</label>
+                    <img id="previewImgSaveDataCard" class="img-fluid rounded">
+                    <form enctype="multipart/form-data">
+                        <input type="file" accept="image/*" id="cardImage" class="form-control mt-3">
+                        <p>*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
+                        <button type="button" onclick="uploadIdCardImage()">อัพโหลดรูปภาพ</button>
+                    </form>
                     <div class="mb-4">
-                        <label for="imgcard" class="form-label">รูปโปรไฟล์</label>
-                        <img id="previewImgSaveDataProfile" class="img-fluid rounded">
-                        <input type="file" accept="image/*" id="imgInputSaveDataProfile" name="post_image" class="form-control mt-3">
-                        <input class="form-control" type="text" name="userImage" require>
+                    <form action="/UserController/saveGenaral" method="post">
+                        <input class="form-control" type="hidden" id="userImageURL" name="userImage" >
                     </div>
                     <script>
-                        let imgInputSaveDataProfile = document.querySelector("#imgInputSaveDataProfile");
+                        let imgInputSaveDataProfile = document.querySelector("#userImage");
                         let previewImgSaveDataProfile = document.querySelector("#previewImgSaveDataProfile");
 
                         imgInputSaveDataProfile.onchange = evt => {
@@ -64,14 +77,12 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="fname" class="form-label">ชื่อ</label>
-                        <input type="text" class="form-control" name="FName" placeholder="Example : John" 
-                        required=""oninvalid="this.setCustomValidity('กรุณากรอกชื่อ')"oninput="this.setCustomValidity('')">
+                        <input type="text" class="form-control" name="FName" placeholder="Example : John" required="" oninvalid="this.setCustomValidity('กรุณากรอกชื่อ')" oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
                         <label for="lname" class="form-label">นามสกุล</label>
-                        <input type="text" class="form-control" name="LName" placeholder="Example : Smith" 
-                        required=""oninvalid="this.setCustomValidity('กรุณากรอกนามสกุล')"oninput="this.setCustomValidity('')">
+                        <input type="text" class="form-control" name="LName" placeholder="Example : Smith" required="" oninvalid="this.setCustomValidity('กรุณากรอกนามสกุล')" oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
@@ -100,18 +111,16 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="idcard" class="form-label">รหัสบัตรประชาชน</label>
-                        <input type="text" class="form-control" name="idCard" placeholder="กรอกรหัสบัตรประชาชน 13 หลัก" 
-                        required=""oninvalid="this.setCustomValidity('กรุณากรอกรหัสบัตรประจำตัวประชาชน')"oninput="this.setCustomValidity('')">
+                        <input type="text" class="form-control" name="idCard" placeholder="กรอกรหัสบัตรประชาชน 13 หลัก" required="" oninvalid="this.setCustomValidity('กรุณากรอกรหัสบัตรประจำตัวประชาชน')" oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
-                        <label for="imgcard" class="form-label">รูปบัตรประชาชน</label>
-                        <img id="previewImgSaveDataCard" class="img-fluid rounded">
-                        <input type="file" accept="image/*" id="imgInputSaveDataCard" name="post_image" class="form-control mt-3">
-                        <input class="form-control" type="text" name="idCardImage" require>
+
+                        <input class="form-control" type="hidden" id="cardImageURL" name="idCardImage" require>
                     </div>
+
                     <script>
-                        let imgInputSaveDataCard = document.querySelector("#imgInputSaveDataCard");
+                        let imgInputSaveDataCard = document.querySelector("#cardImage");
                         let previewImgSaveDataCard = document.querySelector("#previewImgSaveDataCard");
 
                         imgInputSaveDataCard.onchange = evt => {
@@ -124,18 +133,16 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="expIdCard" class="form-label">วันหมดอายุของบัตรประชาชน</label>
-                        <input type="date" class="form-control" name="expIdCard" 
-                        required=""oninvalid="this.setCustomValidity('กรุณากรอกวันหมดอายุของบัตรประชาชน')"oninput="this.setCustomValidity('')">
+                        <input type="date" class="form-control" name="expIdCard" required="" oninvalid="this.setCustomValidity('กรุณากรอกวันหมดอายุของบัตรประชาชน')" oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
                         <label for="exampleFormControlTextarea1" class="form-label">ที่อยู่</label>
-                        <input type="text" class="form-control" name="address" placeholder="กรอกที่อยู่" 
-                        required=""oninvalid="this.setCustomValidity('กรุณากรอกที่อยู่')"oninput="this.setCustomValidity('')">
+                        <input type="text" class="form-control" name="address" placeholder="กรอกที่อยู่" required="" oninvalid="this.setCustomValidity('กรุณากรอกที่อยู่')" oninput="this.setCustomValidity('')">
 
                         <div class="row">
                             <div class="col">
-                               <select class="form-select" name="province" id="provinces">
+                                <select class="form-select" name="province" id="provinces">
                                     <option selected>จังหวัด</option>
                                     <?php foreach ($query_province as $value) { ?>
                                         <option value="<?= $value['id'] ?>"><?= $value['name_th'] ?></option>
@@ -157,18 +164,16 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 
                     <div class="mb-4">
                         <label for="tel" class="form-label">เบอร์โทร</label>
-                        <input class="form-control" type="text" name="phoneNumber" placeholder="082-XXXXXXX" 
-                        required=""oninvalid="this.setCustomValidity('กรุณากรอกเบอร์โทร')"oninput="this.setCustomValidity('')">
+                        <input class="form-control" type="text" name="phoneNumber" placeholder="082-XXXXXXX" required="" oninvalid="this.setCustomValidity('กรุณากรอกเบอร์โทร')" oninput="this.setCustomValidity('')">
                     </div>
 
                     <div class="mb-4">
                         <label for="email" class="form-label">อีเมล</label>
-                        <input class="form-control" type="email" name="email" placeholder="John032@gmail.com" 
-                        required=""oninvalid="this.setCustomValidity('กรุณากรอกอีเมล')"oninput="this.setCustomValidity('')">
+                        <input class="form-control" type="email" name="email" placeholder="John032@gmail.com" required="" oninvalid="this.setCustomValidity('กรุณากรอกอีเมล')" oninput="this.setCustomValidity('')">
                     </div>
 
                     <center>
-                        <button type="submit" class="button" require>บันทึก</button> &nbsp;
+                        <button class="button" type="submit">บันทึก</button> &nbsp;
                         <button type="button" class="cancel"><a href="/logout" id="can">ยกเลิก</a></button>
                     </center>
 
@@ -176,10 +181,35 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
             </div>
         </div>
 
-        <div class="col-4"></div>
+        <div class="col-4">
+
+        </div>
     </div>
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script>
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCjgkfJ_3GT1jgEhCfDfV0qpPtICozgHro",
+            authDomain: "friendzone-project-5d1e7.firebaseapp.com",
+            projectId: "friendzone-project-5d1e7",
+            storageBucket: "friendzone-project-5d1e7.appspot.com",
+            messagingSenderId: "881597460300",
+            appId: "1:881597460300:web:84fa0548d904e1f87f69e9",
+            measurementId: "G-KQSCY21RYD"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+    </script>
+    <script type="text/javascript" src="js/uploadimage.js"></script>
+    <?php include('script.php'); ?>
 </body>
 
 </html>
-<?php include('script.php');?>
