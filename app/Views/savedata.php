@@ -49,19 +49,19 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                     <img id="previewImgSaveDataProfile" class="img-fluid rounded">
                     <form>
                         <input type="file" accept="image/*" id="userImage" class="form-control mt-3" >
-                        <p>*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
+                        <p id="message">*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
                         <button type="button" onclick="uploadProfile()">อัพโหลดรูปภาพ</button>
                     </form>
                     <label for="imgcard" class="form-label">รูปบัตรประชาชน</label>
                     <img id="previewImgSaveDataCard" class="img-fluid rounded">
                     <form enctype="multipart/form-data">
                         <input type="file" accept="image/*" id="cardImage" class="form-control mt-3">
-                        <p>*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
+                        <p id="messageIdCard">*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
                         <button type="button" onclick="uploadIdCardImage()">อัพโหลดรูปภาพ</button>
                     </form>
                     <div class="mb-4">
                     <form action="/UserController/saveGenaral" method="post">
-                        <input class="form-control" type="hidden" id="userImageURL" name="userImage" >
+                        <input class="form-control" type="text" id="userImageURL" name="userImage" >
                     </div>
                     <script>
                         let imgInputSaveDataProfile = document.querySelector("#userImage");

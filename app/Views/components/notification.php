@@ -105,17 +105,7 @@
             </div>
         <?php } ?>
         <?php } ?>
-            <div class="noti"> <!-- กล่องแจ้งเตือนอื่นๆ เตือนการยืนยันตัวตนสำเร็จจากระบบ -->
-                <img src="https://cdn.discordapp.com/attachments/778499819072913482/966615192110764052/bg.jpg" class="noti-img-user">
-
-                <div class="noti-text">
-                    <a href="#" class="noti-text-username">แจ้งเตือนจากระบบ</a>
-                    <span class="noti-text-time">5 วันที่แล้ว</span>
-
-                    <p class="noti-text-join">บัญชีของคุณได้รับการยืนยันตัวตนสำเร็จแล้ว กรุณาออกจากระบบและเข้าสู่ระบบใหม่เพื่อการใช้งานที่มีประสิทธิภาพ</p>
-
-                </div>
-            </div>
+           
 
         </div>
 

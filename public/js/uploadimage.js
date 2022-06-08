@@ -7,7 +7,6 @@ function uploadProfile() {
     var imageName = image.name;
     //firebase storage reference
     //it is the path where your image will store
-    //var storageRef = firebase.storage().ref('images/' + imageName);
     var storageRef = firebase.storage().ref('profile/' + imageName);
     //upload image to selected storage reference
 
@@ -28,6 +27,7 @@ function uploadProfile() {
             //get your upload image url here
             //console.log(getDownloadURL);
             document.getElementById('userImageURL').value = getDownloadURL;
+            document.getElementById('message').innerHTML = "อัพโหลดรูปภาพสำเร็จ";
         });
     });
 }
@@ -60,6 +60,7 @@ function uploadIdCardImage() {
             //get your upload image url here
             //console.log(getDownloadURL);
             document.getElementById('cardImageURL').value = getDownloadURL;
+            document.getElementById('messageIdCard').innerHTML = "อัพโหลดรูปภาพสำเร็จ";
         });
     });
 }
@@ -92,6 +93,7 @@ function uploadPostImage() {
             //get your upload image url here
             //console.log(getDownloadURL);
             document.getElementById('postImageURL').value = getDownloadURL;
+            document.getElementById('messagePostImage').innerHTML = "อัพโหลดรูปภาพสำเร็จ";
         });
     });
 }

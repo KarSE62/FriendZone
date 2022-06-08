@@ -19,7 +19,7 @@
                             <img id="previewImgCreatePost" class="img-fluid rounded">
                             <form>
                             <input type="file" accept="image/*" id="postImage" name="post_image" class="form-control mt-3">
-                            <p>*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
+                            <p id="messagePostImage">*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
                             <button type="button" onclick="uploadPostImage()">อัพโหลดรูปภาพ</button>
                             </form>
                         </div>

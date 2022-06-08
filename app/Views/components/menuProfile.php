@@ -18,12 +18,7 @@
                 &nbsp; รีวิว
             </span>
         </li>
-        <li class="divmenu" id="div-menu-text-setting">
-            <span class="menu-text menu-text-setting">
-                <i class="fas fa-cog fa-menu-setting"></i>
-                &nbsp; ข้อมูลส่วนตัว
-            </span>
-        </li>
+        
     </ul>
 </div>
 
