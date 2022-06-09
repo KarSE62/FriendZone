@@ -34,7 +34,7 @@
             <?php } else if($session->get('gender')=="หญิง"){ ?>
                 <i class="fa-solid fa-venus" style="color: #ff5ebc;"></i> 
             <?php } else if($session->get('gender')=="อื่น") {?>
-            <i class="fa-solid fa-mars-and-venus" style="color: #7e2dff;"></i>
+                <i class="fa-solid fa-mars-and-venus" style="color: #7e2dff;"></i>
             <?php } ?>
             <br />
 

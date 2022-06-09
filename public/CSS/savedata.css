@@ -4,59 +4,107 @@ body{
     font-family: 'Kanit', cursive;
     
 }
-.row {
-    padding-top: 20px;
-}
-h3 {
-    color: #EF5DA8;
+.saveData-title { /*? หัวข้อ */
+    margin-top: 3%;
+    color: #ef5da8;
     text-align: center;
-    margin-bottom: 5%;
 }
-.col-4 {
-    margin-bottom: 50px;
+.saveData-bigRow {
+    margin-top: 3%;
 }
-.col-4 .form {
-    border-radius: 15px;
-    padding: 10% 15% 10% 15%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.sub-col {
+    border-left: 3px solid #9d9d9d;
+    margin-left: 1%;
+    padding-left: 2%;
 }
-.mb-4 input {
-    border-radius: 15px;
+.saveData-border-bgcolor { /*? div สีพื้นหลัง */
+    /* background-color: #ef5da8; */
+    background: #ff70c1; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, #ff70c1, #439bff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #ff70c1, #439bff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #ff70c1, #439bff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #ff70c1, #439bff); /* Standard syntax (must be last) */
+    width: 204px;
+    height: 204px;
+    border-radius: 50%;
 }
-.col select {
-    border-radius: 15px;
+.saveData-img-profile-default { /*? รูปโปรไฟล์ */
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    margin: -232px 0px 0px 0px;
 }
-.button {
-    background: #ff75b1;
+.saveData-img-card-default { /*? รูปบัตรประชาชน */
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 6%;
+}
+
+.saveData-btn-upload { /*? ปุ่มอัพโหลด */
+    width: 100%;
+    height: 100%;
     border: none;
-    border-radius: 15px;
-    width: 46%;
-    height: 38px;
-    margin: 20px 0 10px 0;
-    box-shadow: 2px 2px 4px gray;
+    border-radius: 20px;
+    background-color: #ffbce0;
+    color: #646464;
+    box-shadow: 1px 2px 6px rgb(146, 146, 146);
 }
-.button:hover {background-color: #EF5DA8}
-.button:active {
+.saveData-btn-upload:hover {
     background-color: #EF5DA8;
-    box-shadow: 2px 2px #bfbfbf;
+    color: #fff;
 }
-.cancel {
-    background: #adadad;
+#message, #messageIdCard { /*? ข้อความกรุณาเลือกภาพแล้วกดอัพโหลด */
+    color: #9d9d9d;
+    margin-top: 1%;
+    font-size: 14px;
+}
+
+
+.form-label { /*? text หัวข้อย่อย */
+    color: #ef5da8;
+}
+.form-control { /*? ช่อง input */
+    border-radius: 20px;
+}
+.form-select { /*? ช่อง input จังหวัด */
+    border-radius: 20px;
+    margin-top: 6%;
+}
+
+.saveData-btn {
     border: none;
-    border-radius: 15px;
-    width: 46%;
-    height: 38px;
-    margin: 20px 0 10px 0;
-    box-shadow: 2px 2px 4px gray;
+    box-shadow: 1px 2px 6px rgb(146, 146, 146);
+    border-radius: 20px;
+    background-color: #6fb9ff;
+    width: 30%;
+    height: 37px;
+    margin-top: 8%;
 }
-.cancel:hover {background-color: #8f8f8f}
-.cancel:active {
-    background-color: #8f8f8f;
-    box-shadow: 2px 2px #bfbfbf;
+.saveData-btn:hover {
+    background-color: #3ca1ff;
+    color: #ffffff;
 }
-
-
-#can{
+.saveData-btn-cancel {
+    border: none;
+    box-shadow: 1px 2px 6px rgb(146, 146, 146);
+    border-radius: 20px;
+    background-color: #ababab;
+    width: 30%;
+    height: 37px;
+    color: #000000;
     text-decoration: none;
-    color: black;
+}
+.saveData-btn-cancel:hover {
+    background-color: #797979;
+    color: #ffffff;
+}
+
+@media screen and (max-width:992px){
+    .saveData-btn-upload {
+        height: 37px;
+        margin-top: 3%;
+    }
+    .saveData-btn {
+        margin-bottom: 5%;
+    }
 }

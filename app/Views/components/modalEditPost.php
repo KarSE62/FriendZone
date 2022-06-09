@@ -11,6 +11,34 @@
                 <div class="modal-body">
                     <div class="modalCreatePost-form">
                         <form action="/PostController/editPostSave" method="post" enctype="multipart/form-data">
+
+                            <div class="mb-3">
+                                <label for="image" class="form-label modalCreatePost-label">รูปกิจกรรม</label>
+                                <img id="previewImgEditPost" class="modalCreatePost-image-upload img-fluid rounded">
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <input type="file" accept="image/*" id="imgInputEditPost" name="post_image" class="form-control modalCreatePost-input-upload">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="button" class="modalCreatePost-btn-upload" onclick="uploadPostImage()">อัพโหลด</button>
+                                    </div>
+                                </div>
+
+                                <input type="text" class="form-control modalCreatePost-input" id="testimg" name="imagePost" value="<?php echo $post['imagePost'] ?>">
+                            </div>
+
+                            <script>
+                                let imgInputEditPost = document.querySelector("#imgInputEditPost");
+                                let previewImgEditPost = document.querySelector("#previewImgEditPost");
+
+                                imgInputEditPost.onchange = evt => {
+                                    const [file] = imgInputEditPost.files;
+                                    if (file) {
+                                        previewImgEditPost.src = URL.createObjectURL(file);
+                                    }
+                                }
+                            </script>
+
                             <div class="row ">
                                 <div class="col-8">
                                     <div class="mb-3">
@@ -31,24 +59,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="mb-3">
-                                <label for="image" class="form-label modalCreatePost-label">รูปกิจกรรม</label>
-                                <img id="previewImgEditPost" class="img-fluid rounded">
-                                <input type="file" accept="image/*" id="imgInputEditPost" name="post_image" class="form-control mt-3">
-                                <input type="text" class="form-control modalCreatePost-input" id="testimg" name="imagePost" value="<?php echo $post['imagePost'] ?>">
-                            </div>
-                            <script>
-                                let imgInputEditPost = document.querySelector("#imgInputEditPost");
-                                let previewImgEditPost = document.querySelector("#previewImgEditPost");
-
-                                imgInputEditPost.onchange = evt => {
-                                    const [file] = imgInputEditPost.files;
-                                    if (file) {
-                                        previewImgEditPost.src = URL.createObjectURL(file);
-                                    }
-                                }
-                            </script>
 
                             <div class="mb-3">
                                 <label class="form-label modalCreatePost-label">รายละเอียด</label>
