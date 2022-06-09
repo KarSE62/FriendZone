@@ -16,11 +16,18 @@
                     
                         <div class="mb-3">
                             <label for="image" class="form-label modalCreatePost-label">รูปกิจกรรม</label>
-                            <img id="previewImgCreatePost" class="img-fluid rounded">
+                            <img id="previewImgCreatePost" class="modalCreatePost-image-upload img-fluid rounded">
                             <form>
-                            <input type="file" accept="image/*" id="postImage" name="post_image" class="form-control mt-3">
-                            <p id="messagePostImage">*กรุณาเลือกภาพและกดอัพโหลดรูปภาพ</p>
-                            <button type="button" onclick="uploadPostImage()">อัพโหลดรูปภาพ</button>
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <input type="file" accept="image/*" id="postImage" name="post_image" class="form-control modalCreatePost-input-upload">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="button" class="modalCreatePost-btn-upload" onclick="uploadPostImage()">อัพโหลด</button>
+                                    </div>
+                                </div>
+
+                                <p id="messagePostImage">** กรุณาเลือกภาพที่ต้องการและกดอัพโหลด **</p>
                             </form>
                         </div>
                         <script>
