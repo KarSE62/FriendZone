@@ -76,6 +76,28 @@ li {
     border-radius: 50%;
 }
 
+/*! noti */
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.red-noti {
+    position: absolute;
+    top: 0px;
+    right: -7px;
+    width: 18px;
+    height: 18px;
+    background-color: #d30000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width:992px){
     .nav-imgprofile {
