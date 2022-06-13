@@ -8,6 +8,7 @@ use App\Models\CommentModel;
 use App\Models\ParticModel;
 use App\Models\ReviewModel;
 use App\Models\NotificationModel;
+use App\Models\CategoryModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -51,7 +52,9 @@ class UserController extends ResourceController
         $datapost['partsProfile'] = $modelPart->viewProfilePartic();
         $modelNotic = new NotificationModel();
         $datapost['notics'] = $modelNotic->viewNotification();
-        //var_dump($datapost['partsProfile']);
+        $modelCategory = new CategoryModel();
+        $datapost['categorys'] = $modelCategory->showCategory();
+        //var_dump($datapost['categorys']);
         return view('showdata', $datapost);
         
     }

@@ -60,7 +60,7 @@
         <div class="card-post-body">
             <div class="row row-post-body">
                 <div class="col-8">
-                    <i class="far fa-calendar-alt fa-post-calendar"></i>
+                    <i class="fa-solid fa-calendar-days fa-post-calendar"></i>
                     <label class="text-post-date">วันที่ :</label>
                     <span class="span span-post-date">&nbsp;<?php echo $post["date_start"] ?>&nbsp;</span>
                     <label class="text-post-date">ถึง</label>
@@ -109,7 +109,7 @@
                     <div class="col">
                         <div class="post-comment-title btn-show-comment" id="<?php echo $post["postId"] ?>">
                             <a class="text-post-comment" id="down">
-                                <i class="fad fa-comments-alt fa-post-view-comment"></i>
+                                <i class="fa-solid fa-comments fa-post-view-comment"></i>
                                 &nbsp;ดูความคิดเห็นทั้งหมด
                             </a>
                         </div>
