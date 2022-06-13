@@ -41,6 +41,7 @@ class ParticController extends ResourceController
                 $datapost['comments'] = $modelCom->viewComment();
                 $modelPart = new ParticModel();
                 $datapost['parts'] = $modelPart->viewPartic();
+                $datapost['partsProfile'] = $modelPart->viewProfilePartic();
                 $modelNotic = new NotificationModel();
                 $datapost['notics'] = $modelNotic->viewNotification();
                 $session->setFlashdata('Success', 'ส่งคำขอเข้าร่วมกิจกรรมสำเร็จ!!');
@@ -57,6 +58,7 @@ class ParticController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Err', 'ไม่สามารถส่งคำขอได้กรุณารอการยืนยันตัวตน');
@@ -80,6 +82,7 @@ class ParticController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'ปฏิเสธการเข้าร่วมกิจกรรมสำเร็จ!!');
@@ -107,6 +110,7 @@ class ParticController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'ยอมรับเข้าร่วมกิจกรรมสำเร็จ!!');

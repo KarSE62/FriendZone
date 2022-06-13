@@ -17,7 +17,6 @@ class UserController extends ResourceController
     use RequestTrait;
     public function index()
     {
-        //include helper form
         helper(['form']);
         echo view('login');
     }
@@ -49,9 +48,10 @@ class UserController extends ResourceController
         $datapost['comments'] = $modelCom ->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
         $modelNotic = new NotificationModel();
         $datapost['notics'] = $modelNotic->viewNotification();
-        //var_dump($datapost['notics']);
+        //var_dump($datapost['partsProfile']);
         return view('showdata', $datapost);
         
     }
@@ -73,6 +73,7 @@ class UserController extends ResourceController
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
         $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
         $modelReview = new ReviewModel();
         $datapost['reviews'] = $modelReview->viewReview();
         $modelNotic = new NotificationModel();
@@ -93,6 +94,7 @@ class UserController extends ResourceController
         $datapost['user'] = $model->getProfile($userId);
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
         $modelNotic = new NotificationModel();
         $datapost['notics'] = $modelNotic->viewNotification();
         //var_dump($datapost);
@@ -129,6 +131,7 @@ class UserController extends ResourceController
             $datapost['comments'] = $modelCom ->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'แก้ไขข้อมูลสำเร็จ!!');
@@ -189,6 +192,7 @@ class UserController extends ResourceController
                 $datapost['comments'] = $modelCom ->viewComment();
                 $modelPart = new ParticModel();
                 $datapost['parts'] = $modelPart->viewPartic();
+                $datapost['partsProfile'] = $modelPart->viewProfilePartic();
                 $modelNotic = new NotificationModel();
                 $datapost['notics'] = $modelNotic->viewNotification();
                 //var_dump($datapost);
@@ -240,6 +244,7 @@ class UserController extends ResourceController
                 $datapost['comments'] = $modelCom ->viewComment();
                 $modelPart = new ParticModel();
                 $datapost['parts'] = $modelPart->viewPartic();
+                $datapost['partsProfile'] = $modelPart->viewProfilePartic();
                 $modelNotic = new NotificationModel();
                 $datapost['notics'] = $modelNotic->viewNotification();
             echo view('showdata', $datapost);
@@ -259,6 +264,7 @@ class UserController extends ResourceController
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
         $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
         $modelpost = new PostModel();
         $datapost['posts'] = $modelpost->viewMyPost($userId);
         $datapost['postreviews'] = $modelpost->viewPostReview($userId);
@@ -268,7 +274,7 @@ class UserController extends ResourceController
         $datapost['reviews'] = $modelReview->viewReview();
         $modelNotic = new NotificationModel();
         $datapost['notics'] = $modelNotic->viewNotification();
-        //var_dump($datapost['postreviews']);
+        //var_dump($datapost['users']);
         echo view('viewUserProfile', $datapost);
     }
 

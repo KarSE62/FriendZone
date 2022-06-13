@@ -24,7 +24,7 @@
                                     </div>
                                 </div>
 
-                                <input type="text" class="form-control modalCreatePost-input" id="testimg" name="imagePost" value="<?php echo $post['imagePost'] ?>">
+                                <input type="hidden" class="form-control modalCreatePost-input" id="testimg" name="imagePost" value="<?php echo $post['imagePost'] ?>">
                             </div>
 
                             <script>

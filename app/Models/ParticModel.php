@@ -52,6 +52,15 @@ class ParticModel extends Model{
         ->orderBy('partId','ASC' )
         ->get()->getResultArray();
     }
+
+    public function viewProfilePartic()
+    {
+        return $this->db->table('participate')
+        ->join('users','participate.userId_user = users.userId')
+        ->orderBy('partId','ASC' )
+        ->where('statusPart','1')
+        ->get()->getResultArray();
+    }
 }
 
 

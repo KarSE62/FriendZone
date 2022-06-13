@@ -43,6 +43,7 @@ class ReviewController extends ResourceController
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
         $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
         $modelReview = new ReviewModel();
         $datapost['reviews'] = $modelReview->viewReview();
         $modelNotic = new NotificationModel();

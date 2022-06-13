@@ -5,9 +5,13 @@
         <label class="sm-profile-username"><?php echo $user["userName"] ?></label>
 
         <label class="sm-profile-name"> <?php echo $user["FName"] . " " . $user["LName"] ?>
-            <!-- <i class="fas fa-mars" style="color: #1194ff;"></i> -->
-            <!-- <i class="fas fa-venus" style="color: #ff5ebc;"></i> -->
-            <i class="far fa-venus-mars" style="color: #7e2dff;"></i>
+        <?php if($user["gender"]=="ชาย"){ ?>
+                <i class="fa-solid fa-mars" style="color: #1194ff;"></i>
+            <?php } else if($user["gender"]=="หญิง"){ ?>
+                <i class="fa-solid fa-venus" style="color: #ff5ebc;"></i> 
+            <?php } else if($user["gender"]=="อื่น") {?>
+                <i class="fa-solid fa-mars-and-venus" style="color: #7e2dff;"></i>
+            <?php } ?>
         </label>
 
         <label class="sm-profile-province">

@@ -38,6 +38,7 @@ class CommentController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'สร้างความคิดเห็นสำเร็จ');
@@ -61,6 +62,7 @@ class CommentController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'ลบคอมเม้นท์สำเร็จ!!');
@@ -95,6 +97,7 @@ class CommentController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'แก้ไขคอมเม้นท์สำเร็จ!!');

@@ -24,9 +24,11 @@ class PostController extends ResourceController
     public function viewPost()
     {
         $modelPost = new PostModel();
-        $modelCom = new CommentModel();
         $datapost['posts'] = $modelPost->viewPost();
+        $modelCom = new CommentModel();
         $datapost['comments'] = $modelCom->viewComment();
+        $modelPart = new ParticModel();
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
         //var_dump($datapost);
         return view('home', $datapost);
     }
@@ -69,6 +71,7 @@ class PostController extends ResourceController
                 $datapost['comments'] = $modelCom->viewComment();
                 $modelPart = new ParticModel();
                 $datapost['parts'] = $modelPart->viewPartic();
+                $datapost['partsProfile'] = $modelPart->viewProfilePartic();
                 $modelNotic = new NotificationModel();
                 $datapost['notics'] = $modelNotic->viewNotification();
                 $session->setFlashdata('Success', 'สร้างโพสต์ประกาศกิจกรรมสำเร็จ');
@@ -85,6 +88,7 @@ class PostController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Err', 'ไม่สามารถสร้างโพสต์ได้กรุณารอการยืนยันตัวตน');
@@ -109,6 +113,7 @@ class PostController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             $session->setFlashdata('Success', 'ลบโพสต์ประกาศกิจกรรมสำเร็จ!!');
@@ -124,23 +129,6 @@ class PostController extends ResourceController
     }
 
     
-
-    public function editPost($id)
-    {
-        $session = session();
-        //$id = 35;
-        $model = new PostModel();
-        $datapost['posts'] = $model->viewsinglepost($id);
-        $model = new UserModel();
-        $numprovince = $session->get("province");
-        $datapost['province'] = $model->getProvince($numprovince);
-        $modelPart = new ParticModel();
-        $datapost['parts'] = $modelPart->viewPartic();
-        $modelNotic = new NotificationModel();
-        $datapost['notics'] = $modelNotic->viewNotification();
-        //var_dump($datapost);
-        echo view('FormEditPost', $datapost);
-    }
 
     public function editPostSave()
     {
@@ -175,6 +163,7 @@ class PostController extends ResourceController
             $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
             echo view('showdata', $datapost);
@@ -190,6 +179,7 @@ class PostController extends ResourceController
         $datapost['comments'] = $modelCom->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
         $modelNotic = new NotificationModel();
         $datapost['notics'] = $modelNotic->viewNotification();
         //var_dump($datapost);

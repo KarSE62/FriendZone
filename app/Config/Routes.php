@@ -33,7 +33,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 
 $routes->get('/', 'PostController::viewPost',);
-$routes->get('/home', 'Home::index');
+$routes->get('/home', 'UserController::index');
 $routes->get('/login', 'UserController::index',);
 $routes->get('/register', 'UserController::index2',);
 $routes->get('/savedata', 'UserController::index3',);
