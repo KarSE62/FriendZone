@@ -1,10 +1,11 @@
+
 <div class="card card-category">
     <div class="card-body card-category-body">
 
         <h5 class="text-category-title">ประเภทกิจกรรม</h5>
 
         <label class="text-category-namePlace">
-            <i class="fas fa-mountains"></i>&nbsp; ภูเขา
+        <i class="fa-solid fa-mountain-sun"></i>&nbsp; ภูเขา
         </label>
         <span class="text-category-numPost">2 โพสต์</span>
 
@@ -18,7 +19,7 @@
         <br />
 
         <label class="text-category-namePlace">
-            <i class="fas fa-island-tropical"></i>&nbsp; ทะเล
+        <i class="fa-solid fa-umbrella-beach"></i>&nbsp; ทะเล
         </label>
         <span class="text-category-numPost">0 โพสต์</span>
 

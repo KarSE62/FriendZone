@@ -66,7 +66,7 @@
                     <div class="col">
                         <div class="post-comment-title btn-show-comment" >
                             <a class="text-post-comment" id="down">
-                                <i class="fad fa-comments-alt fa-post-view-comment"></i>
+                            <i class="fa-solid fa-comments fa-post-view-comment"></i>
                                 &nbsp;ดูความคิดเห็นทั้งหมด
                             </a>
                         </div>

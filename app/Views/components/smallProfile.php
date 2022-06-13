@@ -13,7 +13,7 @@
                 <i class="fa-solid fa-mars-and-venus" style="color: #7e2dff;"></i>
             <?php } ?>
         </label>
-
+        <br />        
         <label class="sm-profile-province">
             <i class="fas fa-map-marker-alt" style="color: #ff5ebc;"></i>
             <?php echo $user["name_th"] ?>
