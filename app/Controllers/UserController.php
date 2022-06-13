@@ -198,6 +198,8 @@ class UserController extends ResourceController
                 $datapost['partsProfile'] = $modelPart->viewProfilePartic();
                 $modelNotic = new NotificationModel();
                 $datapost['notics'] = $modelNotic->viewNotification();
+                $modelCategory = new CategoryModel();
+                $datapost['categorys'] = $modelCategory->showCategory();
                 //var_dump($datapost);
                 echo view('showdata',$datapost);
                 return redirect()->to('/showdata');
@@ -250,6 +252,8 @@ class UserController extends ResourceController
                 $datapost['partsProfile'] = $modelPart->viewProfilePartic();
                 $modelNotic = new NotificationModel();
                 $datapost['notics'] = $modelNotic->viewNotification();
+                $modelCategory = new CategoryModel();
+                $datapost['categorys'] = $modelCategory->showCategory();
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
         }

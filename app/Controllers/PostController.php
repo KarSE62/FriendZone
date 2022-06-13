@@ -8,6 +8,7 @@ use App\Models\UserModel;
 use App\Models\CommentModel;
 use App\Models\ParticModel;
 use App\Models\NotificationModel;
+use App\Models\CategoryModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -29,6 +30,8 @@ class PostController extends ResourceController
         $datapost['comments'] = $modelCom->viewComment();
         $modelPart = new ParticModel();
         $datapost['partsProfile'] = $modelPart->viewProfilePartic();
+        $modelCategory = new CategoryModel();
+        $datapost['categorys'] = $modelCategory->showCategory();
         //var_dump($datapost);
         return view('home', $datapost);
     }
@@ -74,6 +77,8 @@ class PostController extends ResourceController
                 $datapost['partsProfile'] = $modelPart->viewProfilePartic();
                 $modelNotic = new NotificationModel();
                 $datapost['notics'] = $modelNotic->viewNotification();
+                $modelCategory = new CategoryModel();
+                $datapost['categorys'] = $modelCategory->showCategory();
                 $session->setFlashdata('Success', 'สร้างโพสต์ประกาศกิจกรรมสำเร็จ');
                 echo view('showdata', $datapost);
                 return redirect()->to('/showdata');
@@ -91,6 +96,8 @@ class PostController extends ResourceController
             $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
             $session->setFlashdata('Err', 'ไม่สามารถสร้างโพสต์ได้กรุณารอการยืนยันตัวตน');
             //var_dump(session()->getFlashdata('Err'));
             echo view('showdata', $datapost);
@@ -116,6 +123,8 @@ class PostController extends ResourceController
             $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
             $session->setFlashdata('Success', 'ลบโพสต์ประกาศกิจกรรมสำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
@@ -166,6 +175,8 @@ class PostController extends ResourceController
             $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
         }

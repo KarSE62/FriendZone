@@ -8,6 +8,7 @@ use App\Models\UserModel;
 use App\Models\CommentModel;
 use App\Models\ParticModel;
 use App\Models\NotificationModel;
+use App\Models\CategoryModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\RequestTrait;
 use CodeIgniter\API\ResponseTrait;
@@ -41,6 +42,8 @@ class CommentController extends ResourceController
             $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
             $session->setFlashdata('Success', 'สร้างความคิดเห็นสำเร็จ');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
@@ -65,6 +68,8 @@ class CommentController extends ResourceController
             $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
             $session->setFlashdata('Success', 'ลบคอมเม้นท์สำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
@@ -100,6 +105,8 @@ class CommentController extends ResourceController
             $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
             $session->setFlashdata('Success', 'แก้ไขคอมเม้นท์สำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');

@@ -134,7 +134,7 @@
                             <?php if ($comment["userId"] == $session->get('userId')) { ?>
                                 <div class="card-post-dropdown-comment">
                                     <a class="dropdown" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
-                                        <i class="fal fa-ellipsis-h dot-comment"></i>
+                                        <i class="fas fa-ellipsis-h dot-comment"></i>
                                     </a>
 
                                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
