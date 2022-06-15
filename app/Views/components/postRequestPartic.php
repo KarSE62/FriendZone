@@ -56,18 +56,12 @@
             <div class="post-line"></div>
 
             <div class="post-bar-bottom">
-                <div class="row"> 
-                <div class="col">
-                        <div class="post-join-title" id="">
-                            <i class="fas fa-plus-circle fa-post-join-plus"></i>
-                            <a data-bs-target="#review<?php echo $hispart["postId"] ?>" data-bs-toggle="modal" class="text-post-join" href="#">รีวิว</a>
-                        </div>
-                    </div>
+                <div class="row">
                     <div class="col">
-                        <div class="post-comment-title btn-show-comment" >
+                        <div class="post-comment-title btn-show-comment">
                             <a class="text-post-comment" id="down">
-                            <i class="fa-solid fa-comments fa-post-view-comment"></i>
-                                &nbsp;ดูความคิดเห็นทั้งหมด
+                                <i class="fas fa-star"></i>
+                                &nbsp;รอตอบรับคำขอเข้าร่วมกิจกรรม
                             </a>
                         </div>
                     </div>
@@ -75,24 +69,6 @@
             </div>
 
             <div class="post-line-bottom"></div>
-        </div>
-
-        <div class="slidedown slidecomment">
-        <?php foreach ($comments as $comment) { ?>
-            <?php if ($hispart["postId"] == $comment["postId"]) { ?>
-            <div class="post-comment-body">
-                <img src="<?php echo $comment["userImage"] ?>" class="img-post-user-comment">
-                <div class="text-post-user-comment">
-                    <span class="span-post-user-comment">
-                        <a href="#" class="post-user-comment-username"><?php echo $comment["FName"] ?> : </a>
-                        <?php echo $comment["commentDetail"] ?>
-                    </span>
-                </div>
-            </div>
-            <?php } ?>
-        <?php } ?>
-
-            
         </div>
 
     </div>

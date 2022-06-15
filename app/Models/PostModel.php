@@ -86,7 +86,19 @@ class PostModel extends Model{
         ->get()->getResultArray();
     }
 
-    
+    public function viewMyPostActive($id)
+    {
+        return $this->db->table('post')
+        ->join('provinces','post.province = provinces.id')
+        ->join('users','post.userId = users.userId')
+        ->join('category','post.categoryId = category.categoryId')
+        ->join('amphures','post.district = amphures.id')
+        ->join('districts','post.subDistrict = districts.id')
+        ->orderBy('postId','DESC' )
+        ->where('statusPost','1')
+        ->where('userId_user',$id)
+        ->get()->getResultArray();
+    }
 }
 
 

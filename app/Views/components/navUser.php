@@ -30,17 +30,26 @@ $query = mysqli_query($con, $sql_category);
                         <?php } ?>
                     </ul>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown" href="#" id="navbarDropdownActivite" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-car"></i> &nbsp;กิจกรรม
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivite">
+                            <li><a class="nav-link" href="/mypostActive"></i> &nbsp;กิจกรรมของฉัน</a></li>
+                            <li><a class="nav-link" href="/viewrequestPartic"></i> &nbsp;กิจกรรมที่ขอเข้าร่วม</a></li>
+                        
+                    </ul>
+                </li>            
+
+
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <i class="fas fa-bell"></i> &nbsp;การแจ้งเตือน
                         <span class="red-noti">1</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-car"></i> &nbsp;กิจกรรม
-                    </a>
-                </li>
+                
                 <li class="nav-item nav-profile">
                     <a class="nav-link" href="/viewProfile">
                         <i class="fas fa-car"></i> &nbsp;โปรไฟล์

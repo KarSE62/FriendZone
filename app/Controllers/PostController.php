@@ -83,7 +83,7 @@ class PostController extends ResourceController
                 echo view('showdata', $datapost);
                 return redirect()->to('/showdata');
             }
-         } else if ($statusUser == "0" || $statusUser == "2") {
+        } else if ($statusUser == "0" || $statusUser == "2") {
             $model = new UserModel();
             $numprovince = $session->get("province");
             $datapost['province'] = $model->getProvince($numprovince);
@@ -137,7 +137,7 @@ class PostController extends ResourceController
         echo view('FormEditPost');
     }
 
-    
+
 
     public function editPostSave()
     {
@@ -198,5 +198,4 @@ class PostController extends ResourceController
     }
 
     
-
 }

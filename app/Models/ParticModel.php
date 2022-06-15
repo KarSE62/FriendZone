@@ -61,6 +61,26 @@ class ParticModel extends Model{
         ->where('statusPart','1')
         ->get()->getResultArray();
     }
+
+    public function viewRequestPartic($id)
+    {
+        return $this->db->table('participate')
+        ->select("participate.partId,participate.userId_user,participate.statusPart,participate.postId_post
+        ,post.postId,post.postTitle,post.imagePost,post.date_start,post.date_end,post.num_people,post.userId,post.creation_date,post.province,post.statusPost
+        ,users.FName,users.LName,users.userImage
+        ,provinces.name_th")
+        ->join('post','participate.postId_post = post.postId')
+        ->join('users','post.userId = users.userId')
+        ->join('provinces','post.province = provinces.Id')
+        ->where('statusPart','0')
+        ->where('post.statusPost','1')
+        ->where('participate.userId_user',$id)
+        ->orderBy('partId','ASC')
+        ->get()->getResultArray();
+    }
+
+
+
 }
 
 
