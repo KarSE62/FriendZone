@@ -59,7 +59,8 @@ $routes->get('/deletePartic/(:any)', 'ParticController::deletePartic/$1',);
 $routes->get('/acceptPartic/(:any)', 'ParticController::acceptPartic/$1',);
 $routes->get('/requestPartic/(:any)', 'ParticController::requestPartic/$1',);
 
-
+$routes->get('/mypostActive', 'UserController::viewMyPostActive',);
+$routes->get('/viewrequestPartic', 'UserController::viewMyRequestPatic',);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

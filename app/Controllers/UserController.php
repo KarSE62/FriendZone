@@ -307,4 +307,43 @@ class UserController extends ResourceController
         return redirect()->to('/');
     }
 
+    public function viewMyPostActive()
+    {
+        $session = session();
+        $userId = $session->get("userId");
+        $model = new UserModel();
+        $numprovince = $session->get("province");
+        $datapost['province'] = $model->getProvince($numprovince);
+        $modelpost = new PostModel();
+        $datapost['posts'] = $modelpost->viewMyPostActive($userId);
+        $modelCom = new CommentModel();
+        $datapost['comments'] = $modelCom->viewComment();
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
+        $modelCategory = new CategoryModel();
+        $datapost['categorys'] = $modelCategory->showCategory();
+        //var_dump($datapost['posts']);
+        echo view('viewMyPost', $datapost);
+    }
+
+    public function viewMyRequestPatic()
+    {
+        $session = session();
+        $userId = $session->get("userId");
+        $model = new UserModel();
+        $numprovince = $session->get("province");
+        $datapost['province'] = $model->getProvince($numprovince);
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
+        $datapost['hisparts'] = $modelPart->viewRequestPartic($userId);
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
+        $modelCategory = new CategoryModel();
+        $datapost['categorys'] = $modelCategory->showCategory();
+        echo view('viewRequestPatic' , $datapost);
+    }
 }
