@@ -25,9 +25,16 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <link rel="stylesheet" href="/CSS/modalCreatePost.css">
     <link rel="stylesheet" href="/CSS/modalEditComment.css">
     <link rel="stylesheet" href="/CSS/report.css">
-    
+
     <title>Home</title>
 
+    <style>
+        .text-title {
+            color: #ef5da8;
+            margin-top: 3%;
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,18 +49,18 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <?php require('components/navUser.php'); ?>
 
     <div class="container">
-        
+
         <div class="row">
             <div class="col-sm-3">
-            <?php require('components/cardProfile.php'); ?>
-            <?php require('components/cardTrip.php'); ?>
+                <?php require('components/cardProfile.php'); ?>
+                <?php require('components/cardTrip.php'); ?>
             </div>
             <div class="col-sm-6 allPost">
-            <h4>โพสต์ประกาศกิจกรรมที่ส่งคำขอเข้าร่วม</h4>
-            <?php require('components/postRequestPartic.php'); ?>
+                <label class="text-title">กิจกรรมที่ส่งคำขอเข้าร่วม</label>
+                <?php require('components/postRequestPartic.php'); ?>
             </div>
             <div class="col-sm-3">
-            <?php require('components/carousel.php'); ?>
+                <?php require('components/carousel.php'); ?>
             </div>
         </div>
     </div>

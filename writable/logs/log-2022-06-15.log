@@ -142,3 +142,16 @@ CRITICAL - 2022-06-15 02:36:36 --> Undefined array key 0
 #9 C:\Users\Kanokphon\Desktop\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #10 C:\Users\Kanokphon\Desktop\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Kanokp...')
 #11 {main}
+ERROR - 2022-06-15 03:15:14 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-06-15 03:15:14 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\Users\bank0\Downloads\fz\FriendZone\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\bank0\Downloads\fz\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\bank0\Downloads\fz\FriendZone\app\Models\PostModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\bank0\Downloads\fz\FriendZone\app\Controllers\PostController.php(28): App\Models\PostModel->viewPost()
+#4 C:\Users\bank0\Downloads\fz\FriendZone\system\CodeIgniter.php(825): App\Controllers\PostController->viewPost()
+#5 C:\Users\bank0\Downloads\fz\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#6 C:\Users\bank0\Downloads\fz\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\bank0\Downloads\fz\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\bank0\Downloads\fz\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\bank0\\...')
+#9 {main}
