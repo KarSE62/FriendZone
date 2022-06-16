@@ -1,25 +1,5 @@
 <?php foreach ($posts as $post) { ?>
     <div class="card-post">
-        <?php if (session()->getFlashdata('Err')) : ?>
-            <div>
-                <script>
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'ไม่สามารถสร้างโพสต์ได้กรุณารอการยืนยันตัวตน!!',
-                    })
-                </script>
-            </div>
-        <?php endif ?>
-        <?php if (session()->getFlashdata('Success')) : ?>
-            <div>
-                <script>
-                    Swal.fire({
-                        icon: 'success',
-                        title: "<?= session()->getFlashdata('Success') ?>",
-                    })
-                </script>
-            </div>
-        <?php endif ?>
         <div class="card-post-title1">
             <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
@@ -103,7 +83,7 @@
                     <div class="col">
                         <div class="post-join-title" id="">
                             <i class="fas fa-times fa-post-join-plus"></i> &nbsp;
-                            <a href="/requestPartic/<?php echo $post["postId"] ?>" class="text-post-join">ปิดกิจกรรม</a>
+                            <a href="/closepostActivity/<?php echo $post["postId"] ?>" class="text-post-join">ปิดกิจกรรม</a>
                         </div>
                     </div>
                     <div class="col">

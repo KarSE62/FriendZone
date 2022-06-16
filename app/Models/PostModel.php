@@ -99,6 +99,12 @@ class PostModel extends Model{
         ->where('userId_user',$id)
         ->get()->getResultArray();
     }
+
+    public function closePostActivity($statusPost,$postId)
+    {
+        $this->where('postId', $postId)->set($statusPost)->update();
+        return true;
+    }
 }
 
 

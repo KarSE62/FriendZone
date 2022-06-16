@@ -327,6 +327,7 @@ class UserController extends ResourceController
         $datapost['categorys'] = $modelCategory->showCategory();
         //var_dump($datapost['posts']);
         echo view('viewMyPost', $datapost);
+        
     }
 
     public function viewMyRequestPatic()

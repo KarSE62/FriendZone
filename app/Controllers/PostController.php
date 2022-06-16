@@ -197,5 +197,40 @@ class PostController extends ResourceController
         echo view('viewPostDetail', $datapost);
     }
 
-    
+    public function ClosePostActivity($postId)
+    {   
+        $status = 0 ;
+        $postId = [
+            'postId' => $postId,
+        ];
+        $statusPost = [
+            'statusPost' => $status,
+        ];
+        //var_dump($postId,$statusPost);
+        $model = new PostModel();
+        $close = $model->closePostActivity($statusPost, $postId);
+        if($close){
+            $session = session();
+            $userId = $session->get("userId");
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewMyPostActive($userId);
+            $modelCom = new CommentModel();
+            $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
+            $session->setFlashdata('Success', 'ปิดโพสต์ประกาศกิจกรรมสำเร็จ!!');
+            //var_dump($datapost['posts']);
+            echo view('viewMyPost', $datapost);
+            return redirect()->to('/mypostActive');
+        }
+        
+    }
 }
