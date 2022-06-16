@@ -56,6 +56,26 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                 <?php require('components/cardTrip.php'); ?>
             </div>
             <div class="col-sm-6 allPost">
+            <?php if (session()->getFlashdata('Err')) : ?>
+            <div>
+                <script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: "<?= session()->getFlashdata('Err') ?>",
+                    })
+                </script>
+            </div>
+        <?php endif ?>
+        <?php if (session()->getFlashdata('Success')) : ?>
+            <div>
+                <script>
+                    Swal.fire({
+                        icon: 'success',
+                        title: "<?= session()->getFlashdata('Success') ?>",
+                    })
+                </script>
+            </div>
+        <?php endif ?>
                 <label class="text-title">กิจกรรมของฉันที่ยังดำเนินการอยู่</label>
                 <?php require('components/postMyUserActive.php'); ?>
             </div>
