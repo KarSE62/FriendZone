@@ -107,6 +107,6 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <?php require('components/ModalReport.php'); ?>
     <?php require('components/ModalEditPost.php'); ?>
 </body>
-<?php include('script.php'); ?>
+
 
 </html>

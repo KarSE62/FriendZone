@@ -178,7 +178,6 @@
             </div>
         </div>
     </div>
-</div>
 <?php include('script.php'); ?>
 <?php include('scriptDateStart.php'); ?>
 <?php include('scriptDateEnd.php'); ?>
