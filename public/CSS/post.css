@@ -317,3 +317,7 @@ body{
 .slidecomment {
     padding: 2% 0% 3% 0%;
 }
+
+.postParticActive-img-qrcode {
+    width: 40%;
+}

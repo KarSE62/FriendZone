@@ -52,8 +52,11 @@
                     <?php } ?>
                 <?php } ?>
             </div>
-            <label class="text-post-people-join">QRCode ติดต่อ :</label>
-            <img src="<?php echo $postActive["QRCodeImage"] ?>" class="card-img-top">
+            <label class="text-post-people-join">QRCode ติดต่อ :</label> <br/>
+            <center>
+                <img src="<?php echo $postActive["QRCodeImage"] ?>" class="card-img-top postParticActive-img-qrcode">
+            </center>
+            
             <div class="post-line"></div>
 
             <div class="post-bar-bottom">

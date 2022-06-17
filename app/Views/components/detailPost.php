@@ -48,13 +48,13 @@
 
             <div class="col-4">
                 <label class="text-post-paperplane">
-                    <i class="fad fa-paper-plane fa-post-paperplane"></i>
+                    <i class="fa-solid fa-paper-plane fa-post-paperplane"></i>
                     <?php echo $post["name_category"] ?>
                 </label>
             </div>
         </div>
 
-        <i class="fad fa-sticky-note fa-post-detail"></i>
+        <i class="fa-solid fa-file-pen fa-post-detail"></i>
         <label class="text-post-detail">รายละเอียด :</label>
         <span class="span span-post-detail">&nbsp; <?php echo $post["detailPost"] ?></span>
 
