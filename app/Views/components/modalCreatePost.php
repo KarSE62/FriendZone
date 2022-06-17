@@ -43,8 +43,11 @@
                         </script>
                         <!-- จบรูปกิจกรรม -->
                         <!-- รูป QRCODE สำหรับติดต่อ -->
-                        <label for="image" class="form-label modalCreatePost-label">รูป QRCode สำหรับติดต่อ</label>
-                        <img id="previewImgQRcode" class="modalCreatePost-image-upload img-fluid rounded">
+                        <label for="image" class="form-label modalCreatePost-label mb-2">รูป QRCode สำหรับติดต่อ</label>
+                        <center>
+                            <img id="previewImgQRcode" class="modalCreatePost-image-qrcode-upload img-fluid rounded">
+                        </center>
+                        
                             <form>
                                 <div class="row">
                                     <div class="col-sm-9">
