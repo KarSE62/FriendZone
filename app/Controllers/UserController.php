@@ -347,4 +347,25 @@ class UserController extends ResourceController
         $datapost['categorys'] = $modelCategory->showCategory();
         echo view('viewRequestPatic' , $datapost);
     }
+
+    public function viewPostPaticActive()
+    {
+        $session = session();
+        $userId = $session->get("userId");
+        $model = new UserModel();
+        $numprovince = $session->get("province");
+        $datapost['province'] = $model->getProvince($numprovince);
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
+        $datapost['postActives'] = $modelPart->viewPostParticActive($userId);
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
+        $modelCategory = new CategoryModel();
+        $datapost['categorys'] = $modelCategory->showCategory();
+        $modelCom = new CommentModel();
+        $datapost['comments'] = $modelCom->viewComment();
+        //var_dump($datapost['postActives']);
+        echo view('viewPostParticipate', $datapost);
+    }
 }

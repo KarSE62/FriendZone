@@ -25,9 +25,16 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <link rel="stylesheet" href="/CSS/modalCreatePost.css">
     <link rel="stylesheet" href="/CSS/modalEditComment.css">
     <link rel="stylesheet" href="/CSS/report.css">
-    
-    <title>Home</title>
 
+    <title>Post Participate Active</title>
+
+    <style>
+        .text-title {
+            color: #ef5da8;
+            margin-top: 3%;
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,46 +49,21 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <?php require('components/navUser.php'); ?>
 
     <div class="container">
-        
+
         <div class="row">
             <div class="col-sm-3">
-                <?php require('components/cardProfile.php'); ?>
-                <?php require('components/cardTrip.php'); ?>
-                
-                
+            <?php require('components/cardProfile.php'); ?>
+            <?php require('components/cardTrip.php'); ?>
             </div>
             <div class="col-sm-6 allPost">
-                <?php require('components/postUser.php'); ?>
-
+            <label class="text-title">กิจกรรมที่เข้าร่วมแล้ว</label>
+            <?php require('components/postParticActive.php'); ?>
             </div>
             <div class="col-sm-3">
-                <?php require('components/ModalCreatePost.php'); ?>
-                <?php require('components/carousel.php'); ?>
+            <?php require('components/carousel.php'); ?>
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script>
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyCjgkfJ_3GT1jgEhCfDfV0qpPtICozgHro",
-            authDomain: "friendzone-project-5d1e7.firebaseapp.com",
-            projectId: "friendzone-project-5d1e7",
-            storageBucket: "friendzone-project-5d1e7.appspot.com",
-            messagingSenderId: "881597460300",
-            appId: "1:881597460300:web:84fa0548d904e1f87f69e9",
-            measurementId: "G-KQSCY21RYD"
-        };
-
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-    </script>
-    <script type="text/javascript" src="js/uploadimage.js"></script>
-    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const cardPost = document.querySelector(".allPost");
@@ -103,10 +85,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
             })
         }, false);
     </script>
-    <?php require('components/ModalEditcomment.php'); ?>
-    <?php require('components/ModalReport.php'); ?>
-    <?php require('components/ModalEditPost.php'); ?>
 </body>
-<?php include('script.php'); ?>
+
 
 </html>

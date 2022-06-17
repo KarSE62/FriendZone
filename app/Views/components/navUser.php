@@ -38,7 +38,7 @@ $query = mysqli_query($con, $sql_category);
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivite">
                             <li><a class="nav-link" href="/mypostActive"></i> &nbsp;กิจกรรมของฉัน</a></li>
                             <li><a class="nav-link" href="/viewrequestPartic"></i> &nbsp;กิจกรรมที่ขอเข้าร่วม</a></li>
-                        
+                            <li><a class="nav-link" href="/viewPostParticActive"></i> &nbsp;กิจกรรมที่เข้าร่วมแล้ว</a></li>
                     </ul>
                 </li>            
 

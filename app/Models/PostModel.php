@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 
 class PostModel extends Model{
     protected $table = 'post';
-    protected $allowedFields = ['postTitle','imagePost','detailPost','note','num_people','expenses','province','district','subDistrict','date_start','date_end','statusPost','userId','categoryId','userId_user'];
+    protected $allowedFields = ['postTitle','imagePost','detailPost','note','num_people','expenses','province','district','subDistrict','date_start','date_end','statusPost','userId','categoryId','userId_user','QRCodeImage'];
     protected $primaryKey = 'postId';
 
     public function viewPost()
