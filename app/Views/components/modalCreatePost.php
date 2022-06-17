@@ -13,7 +13,7 @@
             </div>
             <div class="modal-body">
                 <div class="modalCreatePost-form">
-                    
+                    <!-- รูป กิจกรรม -->
                         <div class="mb-3">
                             <label for="image" class="form-label modalCreatePost-label">รูปกิจกรรม</label>
                             <img id="previewImgCreatePost" class="modalCreatePost-image-upload img-fluid rounded">
@@ -41,11 +41,42 @@
                                 }
                             }
                         </script>
+                        <!-- จบรูปกิจกรรม -->
+                        <!-- รูป QRCODE สำหรับติดต่อ -->
+                        <label for="image" class="form-label modalCreatePost-label">รูป QRCode สำหรับติดต่อ</label>
+                        <img id="previewImgQRcode" class="modalCreatePost-image-upload img-fluid rounded">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <input type="file" accept="image/*" id="QRcodeImage" name="post_image" class="form-control modalCreatePost-input-upload">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="button" class="modalCreatePost-btn-upload" onclick="uploadQRCode()">อัพโหลด</button>
+                                    </div>
+                                </div>
+
+                                <p id="messageQRCodeImage">** กรุณาเลือกภาพที่ต้องการและกดอัพโหลด **</p>
+                            </form>
+                        </div>
+                        <script>
+                            let imgInputQRCode = document.querySelector("#QRcodeImage");
+                            let previewImgQRCode = document.querySelector("#previewImgQRcode");
+
+                            imgInputQRCode.onchange = evt => {
+                                const [file] = imgInputQRCode.files;
+                                if (file) {
+                                    previewImgQRCode.src = URL.createObjectURL(file);
+                                }
+                            }
+                        </script>
+                        <!-- จบรูป QRCODE สำหรับติดต่อ --> 
+                        <!-- Form กรอกข้อมูลต่างๆ-->
                         <div class="row ">
                             <div class="col-8">
                             <form action="/PostController/createpost" method="post">
                                 <div class="mb-3">
                                     <input type="hidden" class="form-control modalCreatePost-input" id="postImageURL" name="imagePost">
+                                    <input type="hidden" class="form-control modalCreatePost-input" id="QRCodeURL" name="QRCodeImage">
                                     <label class="form-label modalCreatePost-label">หัวข้อ</label>
                                     <input type="text" class="form-control modalCreatePost-input" name="postTitle" placeholder="ใส่หัวข้อกิจกรรมของคุณ" required="" oninvalid="this.setCustomValidity('กรุณากรอกหัวข้อโพสต์ประกาศกิจกรรม')" oninput="this.setCustomValidity('')">
                                 </div>
@@ -141,6 +172,7 @@
                             </a>
                         </center>
                     </form>
+                    <!-- จบ Form กรอกข้อมูลต่างๆ-->
                 </div>
 
             </div>

@@ -61,6 +61,7 @@ class PostController extends ResourceController
                 'statusPost' => $statusPost,
                 'userId' => $userId,
                 'userId_user' => $userId,
+                'QRCodeImage' => $this->request->getVar('QRCodeImage'),
             ];
             //var_dump($dataPost);
             $post = $model->createpost($dataPost);
