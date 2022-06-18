@@ -52,3 +52,33 @@ body{
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+
+.fa-star-title-review {
+    color: #ef5da8;
+    margin: 0% 1% 0% 0%;
+}
+.modal-review-btn-ok {
+    background-color: #6fb9ff;
+    color: #222222;
+    border-radius:20px;
+    margin: 5% 3% 0% 0%;
+    width: 150px;
+    height: 37px;
+}
+.modal-review-btn-ok:hover {
+    background-color: #3ca1ff;
+    color: #ffffff;
+}
+
+.modal-review-btn-cancel {
+    background-color: #ababab;
+    color: #222222;
+    border-radius: 20px;
+    margin-top: 5%;
+    width: 150px;
+    height: 37px;
+}
+.modal-review-btn-cancel:hover {
+    background-color: #797979;
+    color: #ffffff;
+}
