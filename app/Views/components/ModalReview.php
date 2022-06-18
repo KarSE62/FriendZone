@@ -3,7 +3,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <i class="fa-solid fa-circle-exclamation fa-model-report"></i>
+                    <i class="fas fa-star fa-star-title-review"></i>
                     <h5 class="modal-title modal-report-title" id="staticBackdropLabel">รีวิว</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -30,8 +30,8 @@
                         <label class="text-detail-report">รายละเอียดรีวิว</label> <br />
                         <textarea class="form-control input-detail-report" name="detail_review"></textarea>
                         <center>
-                            <button type="submit" class="btn modal-report-btn-ok">รีวิว</button>
-                            <button type="button" class="btn modal-report-btn-cancel">ยกเลิก</button>
+                            <button type="submit" class="btn modal-review-btn-ok">รีวิว</button>
+                            <button type="button" class="btn modal-review-btn-cancel">ยกเลิก</button>
                         </center>
                     </form>
                 </div>
