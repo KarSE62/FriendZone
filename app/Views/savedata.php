@@ -26,6 +26,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 </head>
 
 <body>
+
     <?php
     $sql_provinces = "SELECT * FROM provinces";
     $query_province = mysqli_query($con, $sql_provinces);
@@ -113,7 +114,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="birthday" class="form-label mt-4">วันเกิด</label>
-                            <input type="date" class="form-control" name="birthday" require>
+                            <input type="text" class="form-control" name="birthday" id="date_birthday" require>
                         </div>
                         <div class="col-sm-6">
                             <label for="gender" class="form-label mt-4">เพศ</label><br>
@@ -142,7 +143,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                         </div>
                         <div class="col-sm-6">
                             <label for="expIdCard" class="form-label mt-4">วันหมดอายุของบัตรประชาชน</label>
-                            <input type="date" class="form-control" name="expIdCard" required="" oninvalid="this.setCustomValidity('กรุณากรอกวันหมดอายุของบัตรประชาชน')" oninput="this.setCustomValidity('')">
+                            <input type="text" class="form-control" id="date_expCard" name="expIdCard" required="" oninvalid="this.setCustomValidity('กรุณากรอกวันหมดอายุของบัตรประชาชน')" oninput="this.setCustomValidity('')">
                         </div>
                     </div>
 
@@ -234,6 +235,8 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     </script>
     <script type="text/javascript" src="js/uploadimage.js"></script>
     <?php include('script.php'); ?>
+    <?php include('scriptBirthday.php'); ?>
+    <?php include('scriptExpCard.php'); ?>
 </body>
 
 </html>

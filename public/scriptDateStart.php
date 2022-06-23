@@ -6,14 +6,11 @@
 <script type="text/javascript">
     var dateStart = new Date();
     dateStart.setDate(dateStart.getDate());
-    var dateEnd = new Date();
-    dateEnd.setDate(dateEnd.getDate()+60);
     $('#date_start').datepicker({
         format: 'dd-mm-yyyy',
         language: 'th',
         startDate: dateStart,
-        endDate: dateEnd,
-        
+        endDate: dateEnd 
     });
     if (typeof $.fn.datepicker === 'undefined') {
         throw new Error('Load bootstrap-datepicker first !!!');

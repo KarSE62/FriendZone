@@ -1,0 +1,26 @@
+ERROR - 2022-06-22 01:51:23 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-06-22 01:51:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\Users\bank0\Downloads\fz\FriendZone\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\bank0\Downloads\fz\FriendZone\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\bank0\Downloads\fz\FriendZone\app\Models\PostModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\bank0\Downloads\fz\FriendZone\app\Controllers\PostController.php(28): App\Models\PostModel->viewPost()
+#4 C:\Users\bank0\Downloads\fz\FriendZone\system\CodeIgniter.php(825): App\Controllers\PostController->viewPost()
+#5 C:\Users\bank0\Downloads\fz\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#6 C:\Users\bank0\Downloads\fz\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\bank0\Downloads\fz\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\bank0\Downloads\fz\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\bank0\\...')
+#9 {main}
+CRITICAL - 2022-06-22 05:39:19 --> Undefined array key 0
+#0 C:\Users\bank0\Downloads\fz\FriendZone\app\Views\components\cardProfile.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\bank0\\...', 42)
+#1 C:\Users\bank0\Downloads\fz\FriendZone\app\Views\showdata.php(48): require('C:\\Users\\bank0\\...')
+#2 C:\Users\bank0\Downloads\fz\FriendZone\system\View\View.php(210): include('C:\\Users\\bank0\\...')
+#3 C:\Users\bank0\Downloads\fz\FriendZone\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\bank0\Downloads\fz\FriendZone\system\Common.php(1089): CodeIgniter\View\View->render('showdata', Array, true)
+#5 C:\Users\bank0\Downloads\fz\FriendZone\app\Controllers\UserController.php(58): view('showdata', Array)
+#6 C:\Users\bank0\Downloads\fz\FriendZone\system\CodeIgniter.php(825): App\Controllers\UserController->showdata()
+#7 C:\Users\bank0\Downloads\fz\FriendZone\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\Users\bank0\Downloads\fz\FriendZone\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\bank0\Downloads\fz\FriendZone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\bank0\Downloads\fz\FriendZone\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\bank0\\...')
+#11 {main}
