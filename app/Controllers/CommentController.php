@@ -25,7 +25,11 @@ class CommentController extends ResourceController
             'commentDetail' => $this->request->getVar('Comment'),
             'userId' => $userId,
             'postId' => $this->request->getVar('postId'),
-
+        ];
+        $notificat = [
+            'notificateDetail' => "ได้มีแสดงความคิดเห็นต่อโพสต์ประกาศกิจกรรม",
+            'statusNotic' => 0,
+            'userId' => $this->request->getVar('myUserId')
         ];
         $model = new CommentModel();
         $Add = $model->insertComment($Comment);
@@ -42,6 +46,7 @@ class CommentController extends ResourceController
             $datapost['partsProfile'] = $modelPart->viewProfilePartic();
             $modelNotic = new NotificationModel();
             $datapost['notics'] = $modelNotic->viewNotification();
+            $AddNotificat = $modelNotic->insertNotification($notificat);
             $modelCategory = new CategoryModel();
             $datapost['categorys'] = $modelCategory->showCategory();
             $session->setFlashdata('Success', 'สร้างความคิดเห็นสำเร็จ');

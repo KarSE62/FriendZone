@@ -15,7 +15,11 @@ class NotificationModel extends Model{
         ->get()->getResultArray();
     }
 
-   
+    public function insertNotification($notificat)
+    {
+        $this->insert($notificat);
+        return TRUE;
+    }
 
 }
 ?>

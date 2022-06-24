@@ -54,7 +54,7 @@ class UserController extends ResourceController
         $datapost['notics'] = $modelNotic->viewNotification();
         $modelCategory = new CategoryModel();
         $datapost['categorys'] = $modelCategory->showCategory();
-        //var_dump($datapost['categorys']);
+        //var_dump($datapost['posts']);
         return view('showdata', $datapost);
         
     }

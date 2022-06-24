@@ -31,6 +31,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 </head>
 
 <body>
+    
     <?php
     $sql_category = "SELECT * FROM category";
     $query = mysqli_query($con, $sql_category);

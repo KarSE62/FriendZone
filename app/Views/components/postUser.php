@@ -152,6 +152,7 @@
                 <div class="card-post-footer">
                     <img src="<?php echo $session->get('userImage'); ?>" class="img-post-footer-comment">
                     <input type="hidden" class="form-control input-post-footer" name="postId" value="<?php echo $post["postId"] ?>">
+                    <input type="hidden" class="form-control input-post-footer" name="myUserId" value="<?php echo $post["userId"] ?>">
                     <input type="text" class="form-control input-post-footer" name="Comment" placeholder="แสดงความคิดเห็น . . .">
                     <button class="btn-fa-post-inbox"><i class="fas fa-paper-plane fa-comment-check"></i></button>
                 </div>
