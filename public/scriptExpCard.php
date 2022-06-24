@@ -4,13 +4,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js" integrity="sha512-cp+S0Bkyv7xKBSbmjJR0K7va0cor7vHYhETzm2Jy//ZTQDUvugH/byC4eWuTii9o5HN9msulx2zqhEXWau20Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script type="text/javascript">
-    var dateEnd = new Date();
-    dateEnd.setDate(dateEnd.getDate()+60);
-    $('#date_end').datepicker({
+    var dateExpCard = new Date();
+    dateExpCard.setDate(dateExpCard.getDate());
+    $('#date_expCard').datepicker({
         format: 'dd-mm-yyyy',
         language: 'th',
-        startDate: dateStart,
-        endDate: dateEnd
+        startDate: dateStart
     });
     if (typeof $.fn.datepicker === 'undefined') {
         throw new Error('Load bootstrap-datepicker first !!!');
