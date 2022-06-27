@@ -1,6 +1,3 @@
-<?php include('scriptDateStart.php'); ?>
-<?php include('scriptDateEnd.php'); ?>
-<?php include('script.php'); ?>
 
 <?php foreach ($posts as $post) { ?>
     <div class="modal fade" id="editpost<?php echo $post["postId"] ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -143,3 +140,6 @@
         </div>
     </div>
 <?php } ?>
+<?php include('scriptDateStart.php'); ?>
+<?php include('scriptDateEnd.php'); ?>
+<?php include('script.php'); ?>

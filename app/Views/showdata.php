@@ -41,7 +41,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     ?>
     <?php $session = session(); ?>
     <?php require('components/navUser.php'); ?>
-
+    <?php require('components/modalCancelPatic.php'); ?>
     <div class="container">
         
         <div class="row">

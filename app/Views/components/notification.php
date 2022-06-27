@@ -75,7 +75,7 @@
                             <p class="noti-text-join"><?php echo $part["postTitle"] ?></p>
 
                             <a href="/acceptPartic/<?php echo $part["partId"] ?>"><button class="noti-btn-yes">ยืนยัน</button></a>
-                            <a href="/deletePartic/<?php echo $part["partId"] ?>"><button type="button" class="noti-btn-no" data-bs-toggle="modal" data-bs-target="#exampleModalNoti">
+                            <a href="#"><button type="button" class="noti-btn-no" data-bs-toggle="modal" data-bs-target="#exampleModalNoti">
                                     ปฏิเสธ
                                 </button></a>
                         </div>
@@ -120,70 +120,5 @@
 
         </div>
 
-    </div>
-</div>
-
-<!------------ ป็อปอัพปฏิเสธ ------------>
-
-<div class="modal fade" id="exampleModalNoti" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title noti-modal-title" id="exampleModalLabel">ปฏิเสธคำขอของ
-                    <label class="noti-modal-title-username">Kanokphon</label>
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body noti-modal-body">
-                <label class="noti-modal-title-reason">เหตุผล</label>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick="text(1)" checked>
-                            <label class="form-check-label" for="exampleRadios1">
-                                มีผู้เข้าร่วมครบแล้ว
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onclick="text(1)">
-                            <label class="form-check-label" for="exampleRadios2">
-                                กิจกรรมนี้ถูกยกเลิก
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option3" onclick="text(0)">
-                            <label class="form-check-label" for="exampleRadios2">
-                                อื่น ๆ
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option4" onclick="text(1)">
-                            <label class="form-check-label" for="exampleRadios1">
-                                ก่อกวน
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option5" onclick="text(1)">
-                            <label class="form-check-label" for="exampleRadios2">
-                                ผู้ใช้นี้ไม่ตรงตามเงื่อนไขที่กำหนด
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <input type="text" class="form-control noti-modal-input-reason" id="notiInput" placeholder="อื่นๆ.. โปรดระบุเหตุผลที่ปฏิเสธคำขอ">
-
-                <!-- <br />
-                <label class="noti-modal-title-reason">เหตุผล</label>
-                <input type="text" class="form-control noti-modal-input-reason" placeholder="เหตุผลที่ปฏิเสธคำขอ"> -->
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="noti-modal-btn">ปฏิเสธ</button>
-            </div>
-        </div>
     </div>
 </div>

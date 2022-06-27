@@ -72,8 +72,19 @@ class ParticController extends ResourceController
         }
     }
 
-    public function deletePartic($partId = null)
+    public function deletePartic()
     {
+        $partId = [
+            'partId' => $this->request->getVar('partId')
+        ];
+        $notificat = [
+            'notificateDetail' => $this->request->getVar('cancel'),
+            'statusNotic' => 0,
+            'userId' => $this->request->getVar('userId_user')
+        ];
+        //var_dump($notificat);
+         $modelNotic = new NotificationModel();
+         $AddNotificat = $modelNotic->insertNotification($notificat);
         $modelPart = new ParticModel();
         $daletePart = $modelPart->deletePart($partId);
         if ($daletePart) {

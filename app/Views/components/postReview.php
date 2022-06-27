@@ -76,11 +76,37 @@
                 <?php if ($postreview["postId"] == $review["postId"]) { ?>
                     <div class="div-review">
                         <img class="img-review" src="<?php echo $review["userImage"] ?>">
-                        <i class="fas fa-star fa-star-review1"></i>
-                        <i class="fas fa-star fa-star-review"></i>
-                        <i class="fas fa-star fa-star-review"></i>
-                        <i class="fas fa-star fa-star-review"></i>
-                        <i class="far fa-star fa-star-review"></i>
+                        <?php if($review["point"] == "1") {?>
+                            <i class="fas fa-star fa-star-review1"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                        <?php }else if($review["point"] == "2") { ?>
+                            <i class="fas fa-star fa-star-review1"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                        <?php } else if($review["point"] == "3") {?>
+                            <i class="fas fa-star fa-star-review1"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                        <?php } else if($review["point"] == "4") {?>
+                            <i class="fas fa-star fa-star-review1"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                            <i class="far fa-star fa-star-review"></i>
+                        <?php } else if($review["point"] == "5") {?>
+                            <i class="fas fa-star fa-star-review1"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                            <i class="fas fa-star fa-star-review"></i>
+                        <?php } ?>
                         <div class="div-text-review">
                             <span class="span-review">
                                 <a href="#" class="username-review"><?php echo $review["FName"] ?> : </a>
