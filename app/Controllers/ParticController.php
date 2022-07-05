@@ -51,7 +51,7 @@ class ParticController extends ResourceController
                 echo view('showdata', $datapost);
                 return redirect()->to('/showdata');
             }
-        }else if($statusUser == "0"){
+        } else if ($statusUser == "0"){
             $model = new UserModel();
             $numprovince = $session->get("province");
             $datapost['province'] = $model->getProvince($numprovince);
@@ -83,8 +83,8 @@ class ParticController extends ResourceController
             'userId' => $this->request->getVar('userId_user')
         ];
         //var_dump($notificat);
-         $modelNotic = new NotificationModel();
-         $AddNotificat = $modelNotic->insertNotification($notificat);
+        $modelNotic = new NotificationModel();
+        $AddNotificat = $modelNotic->insertNotification($notificat);
         $modelPart = new ParticModel();
         $daletePart = $modelPart->deletePart($partId);
         if ($daletePart) {
@@ -136,6 +136,56 @@ class ParticController extends ResourceController
             $session->setFlashdata('Success', 'ยอมรับเข้าร่วมกิจกรรมสำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
+        }
+    }
+
+    public function cancelRequestPartic($partId = null)
+    {
+        $modelPart = new ParticModel();
+        $daletePart = $modelPart->deletePart($partId);
+        if ($daletePart) {
+            $session = session();
+            $userId = $session->get("userId");
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['hisparts'] = $modelPart->viewRequestPartic($userId);
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
+            $session->setFlashdata('Success', 'ยกเลิกคำขอเข้าร่วมกิจกรรมสำเร็จ!!');
+            echo view('viewRequestPatic', $datapost);
+            return redirect()->to('/viewrequestPartic');
+        }
+    }
+
+    public function cancelPartic($partId = null)
+    {
+        $modelPart = new ParticModel();
+        $daletePart = $modelPart->deletePart($partId);
+        if ($daletePart) {
+            $session = session();
+            $userId = $session->get("userId");
+            $model = new UserModel();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['postActives'] = $modelPart->viewPostParticActive($userId);
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
+            $modelCom = new CommentModel();
+            $datapost['comments'] = $modelCom->viewComment();
+            $session->setFlashdata('Success', 'ยกเลิกเข้าร่วมกิจกรรมสำเร็จ!!');
+            echo view('viewPostParticipate', $datapost);
+            return redirect()->to('/viewPostParticActive');
         }
     }
 }

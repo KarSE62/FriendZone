@@ -61,6 +61,14 @@
 
             <div class="post-bar-bottom">
                 <div class="row"> 
+                <div class="col">
+                        <div class="post-comment-title btn-show-comment">
+                            <a href="/cancelPartic/<?php echo $postActive["partId"] ?>" class="text-post-comment">
+                                <i class="fas fa-times fa-post-join-plus"></i>
+                                &nbsp;ยกเลิกเข้าร่วมกิจกรรม
+                            </a>
+                        </div>
+                    </div>
                     <div class="col">
                         <div class="post-comment-title btn-show-comment" >
                             <a class="text-post-comment" id="down">

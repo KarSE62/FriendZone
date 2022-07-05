@@ -345,6 +345,7 @@ class UserController extends ResourceController
         $datapost['notics'] = $modelNotic->viewNotification();
         $modelCategory = new CategoryModel();
         $datapost['categorys'] = $modelCategory->showCategory();
+        //var_dump($datapost['hisparts']);
         echo view('viewRequestPatic' , $datapost);
     }
 

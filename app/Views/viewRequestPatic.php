@@ -51,6 +51,16 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <div class="container">
 
         <div class="row">
+            <?php if (session()->getFlashdata('Success')) : ?>
+                <div>
+                    <script>
+                        Swal.fire({
+                            icon: 'success',
+                            title: "<?= session()->getFlashdata('Success') ?>",
+                        })
+                    </script>
+                </div>
+            <?php endif ?>
             <div class="col-sm-3">
                 <?php require('components/cardProfile.php'); ?>
                 <?php require('components/cardTrip.php'); ?>

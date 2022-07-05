@@ -63,6 +63,9 @@ $routes->get('/mypostActive', 'UserController::viewMyPostActive',);
 $routes->get('/viewrequestPartic', 'UserController::viewMyRequestPatic',);
 $routes->get('/closepostActivity/(:any)', 'PostController::ClosePostActivity/$1',);
 $routes->get('/viewPostParticActive', 'UserController::viewPostPaticActive',);
+
+$routes->get('/cancelRequest/(:any)', 'ParticController::cancelRequestPartic/$1',);
+$routes->get('/cancelPartic/(:any)', 'ParticController::cancelPartic/$1',);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

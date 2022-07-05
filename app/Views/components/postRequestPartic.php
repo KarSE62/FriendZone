@@ -59,9 +59,9 @@
                 <div class="row">
                     <div class="col">
                         <div class="post-comment-title btn-show-comment">
-                            <a class="text-post-comment" id="down">
-                                <i class="fas fa-star"></i>
-                                &nbsp;รอตอบรับคำขอเข้าร่วมกิจกรรม
+                            <a href="/cancelRequest/<?php echo $hispart["partId"] ?>" class="text-post-comment">
+                                <i class="fas fa-times fa-post-join-plus"></i>
+                                &nbsp;ยกเลิกคำขอเข้าร่วมกิจกรรม
                             </a>
                         </div>
                     </div>
