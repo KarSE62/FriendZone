@@ -59,6 +59,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
                 <?php require('components/ModalCreatePost.php'); ?>
                 <?php require('components/carousel.php'); ?>
             </div>
+            <?php require('components/SocialButton.php'); ?>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
