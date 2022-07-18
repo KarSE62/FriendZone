@@ -3,9 +3,6 @@
 <?php include('scriptDateEnd.php'); ?>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn modalCreatePost-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    สร้างกิจกรรม
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

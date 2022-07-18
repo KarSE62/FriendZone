@@ -25,13 +25,13 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <link rel="stylesheet" href="/CSS/modalCreatePost.css">
     <link rel="stylesheet" href="/CSS/modalEditComment.css">
     <link rel="stylesheet" href="/CSS/report.css">
-    
+
     <title>Home</title>
 
 </head>
 
 <body>
-    
+
     <?php
     $sql_category = "SELECT * FROM category";
     $query = mysqli_query($con, $sql_category);
@@ -43,19 +43,29 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
     <?php require('components/navUser.php'); ?>
     <?php require('components/modalCancelPatic.php'); ?>
     <div class="container">
-        
+
         <div class="row">
             <div class="col-sm-3">
                 <?php require('components/cardProfile.php'); ?>
                 <?php require('components/cardTrip.php'); ?>
-                
-                
+
+
             </div>
             <div class="col-sm-6 allPost">
                 <?php require('components/postUser.php'); ?>
 
             </div>
             <div class="col-sm-3">
+                <?php if ($session->get('statusUser') == "0") {
+                    echo '<button type="button" class="btn modalCreatePost-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled>
+                        สร้างกิจกรรม
+                    </button>';
+                } else if ($session->get('statusUser') == "1") {
+                    echo '<button type="button" class="btn modalCreatePost-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        สร้างกิจกรรม
+                    </button>';
+                }; ?>
+
                 <?php require('components/ModalCreatePost.php'); ?>
                 <?php require('components/carousel.php'); ?>
             </div>
@@ -83,7 +93,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
         const app = firebase.initializeApp(firebaseConfig);
     </script>
     <script type="text/javascript" src="js/uploadimage.js"></script>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const cardPost = document.querySelector(".allPost");
