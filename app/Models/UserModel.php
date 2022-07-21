@@ -73,6 +73,10 @@ class UserModel extends Model{
         return true;
     }
 
-    
+    public function getDataProfile($userId){
+        return $this->db->table('users')
+        ->where('userId' ,$userId)
+        ->get()->getResultArray();
+    }
 
 }

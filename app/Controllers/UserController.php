@@ -34,6 +34,17 @@ class UserController extends ResourceController
         helper(['form']);
         echo view('savedata');
     }
+    public function index4()
+    {
+        //include helper form
+        helper(['form']);
+        $session = session();
+        $userId = $session->get("userId");
+        $model = new UserModel();
+        $datapost['data'] = $model->getDataProfile($userId);
+        //var_dump($datapost);
+        echo view('editdata', $datapost);
+    }
 
     public function showdata()
     {
@@ -46,7 +57,7 @@ class UserController extends ResourceController
         $modelpost = new PostModel();
         $datapost['posts'] = $modelpost->viewPost();
         $modelCom = new CommentModel();
-        $datapost['comments'] = $modelCom ->viewComment();
+        $datapost['comments'] = $modelCom->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
         $datapost['partsProfile'] = $modelPart->viewProfilePartic();
@@ -56,15 +67,12 @@ class UserController extends ResourceController
         $datapost['categorys'] = $modelCategory->showCategory();
         //var_dump($datapost['parts']);
         return view('showdata', $datapost);
-        
     }
 
     public function viewProfile()
     {
-        
         $session = session();
         $userId = $session->get("userId");
-        //var_dump($userId);
         $model = new UserModel();
         $numprovince = $session->get("province");
         $datapost['province'] = $model->getProvince($numprovince);
@@ -72,7 +80,7 @@ class UserController extends ResourceController
         $datapost['posts'] = $modelpost->viewMyPost($userId);
         $datapost['postreviews'] = $modelpost->viewPostReview($userId);
         $modelCom = new CommentModel();
-        $datapost['comments'] = $modelCom ->viewComment();
+        $datapost['comments'] = $modelCom->viewComment();
         $modelPart = new ParticModel();
         $datapost['parts'] = $modelPart->viewPartic();
         $datapost['hisparts'] = $modelPart->viewHistoryPartic($userId);
@@ -83,11 +91,10 @@ class UserController extends ResourceController
         $datapost['notics'] = $modelNotic->viewNotification();
         //var_dump( $datapost['reviews']);
         return view('viewProfile', $datapost);
-        
     }
-    
-    public function editProfile(){
-        //include helper form
+
+    public function editProfile()
+    {
         $session = session();
         helper(['form']);
         $model = new UserModel();
@@ -104,8 +111,8 @@ class UserController extends ResourceController
         return view('editProfile', $datapost);
     }
 
-    public function updateProfile(){
-        //include helper form
+    public function updateProfile()
+    {
         $session = session();
         helper(['form']);
         $model = new UserModel();
@@ -120,7 +127,7 @@ class UserController extends ResourceController
         ];
         //var_dump($userId, $dataUser);
         $save = $model->updateUser($dataUser, $userId);
-        if($save){
+        if ($save) {
             $session = session();
             helper(['form']);
             $model = new UserModel();
@@ -131,7 +138,7 @@ class UserController extends ResourceController
             $modelpost = new PostModel();
             $datapost['posts'] = $modelpost->viewMyPost($userId);
             $modelCom = new CommentModel();
-            $datapost['comments'] = $modelCom ->viewComment();
+            $datapost['comments'] = $modelCom->viewComment();
             $modelPart = new ParticModel();
             $datapost['parts'] = $modelPart->viewPartic();
             $datapost['partsProfile'] = $modelPart->viewProfilePartic();
@@ -140,10 +147,7 @@ class UserController extends ResourceController
             $session->setFlashdata('Success', 'แก้ไขข้อมูลสำเร็จ!!');
             echo view('editProfile', $datapost);
             return redirect()->to('/showdata');
-
         }
-    
-       
     }
 
 
@@ -192,7 +196,7 @@ class UserController extends ResourceController
                 $modelpost = new PostModel();
                 $datapost['posts'] = $modelpost->viewPost();
                 $modelCom = new CommentModel();
-                $datapost['comments'] = $modelCom ->viewComment();
+                $datapost['comments'] = $modelCom->viewComment();
                 $modelPart = new ParticModel();
                 $datapost['parts'] = $modelPart->viewPartic();
                 $datapost['partsProfile'] = $modelPart->viewProfilePartic();
@@ -201,10 +205,12 @@ class UserController extends ResourceController
                 $modelCategory = new CategoryModel();
                 $datapost['categorys'] = $modelCategory->showCategory();
                 //var_dump($datapost);
-                echo view('showdata',$datapost);
+                echo view('showdata', $datapost);
                 return redirect()->to('/showdata');
-            } else if($statusUser == "2" || $statusUser == "") {
+            } else if ($statusUser == "") {
                 return redirect()->to('/savedata');
+            } else if ($statusUser == "2") {
+                return redirect()->to('/editdata');
             }
         } else {
             $session->setFlashdata('msg', 'ไม่สามารถเข้าสู่ระบบได้ !!!');
@@ -241,28 +247,27 @@ class UserController extends ResourceController
 
         $data = $model->saveGenaral($userId, $data);
         if ($data) {
-                $numprovince = $session->get("province");
-                $datapost['province'] = $model->getProvince($numprovince);
-                $modelpost = new PostModel();
-                $datapost['posts'] = $modelpost->viewPost();
-                $modelCom = new CommentModel();
-                $datapost['comments'] = $modelCom ->viewComment();
-                $modelPart = new ParticModel();
-                $datapost['parts'] = $modelPart->viewPartic();
-                $datapost['partsProfile'] = $modelPart->viewProfilePartic();
-                $modelNotic = new NotificationModel();
-                $datapost['notics'] = $modelNotic->viewNotification();
-                $modelCategory = new CategoryModel();
-                $datapost['categorys'] = $modelCategory->showCategory();
+            $numprovince = $session->get("province");
+            $datapost['province'] = $model->getProvince($numprovince);
+            $modelpost = new PostModel();
+            $datapost['posts'] = $modelpost->viewPost();
+            $modelCom = new CommentModel();
+            $datapost['comments'] = $modelCom->viewComment();
+            $modelPart = new ParticModel();
+            $datapost['parts'] = $modelPart->viewPartic();
+            $datapost['partsProfile'] = $modelPart->viewProfilePartic();
+            $modelNotic = new NotificationModel();
+            $datapost['notics'] = $modelNotic->viewNotification();
+            $modelCategory = new CategoryModel();
+            $datapost['categorys'] = $modelCategory->showCategory();
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
         }
-
     }
 
 
     public function ViewUserProfile($userId)
-    { 
+    {
         $session = session();
         $model = new UserModel();
         $numprovince = $session->get("province");
@@ -327,7 +332,6 @@ class UserController extends ResourceController
         $datapost['categorys'] = $modelCategory->showCategory();
         //var_dump($datapost['posts']);
         echo view('viewMyPost', $datapost);
-        
     }
 
     public function viewMyRequestPatic()
@@ -346,7 +350,7 @@ class UserController extends ResourceController
         $modelCategory = new CategoryModel();
         $datapost['categorys'] = $modelCategory->showCategory();
         //var_dump($datapost['hisparts']);
-        echo view('viewRequestPatic' , $datapost);
+        echo view('viewRequestPatic', $datapost);
     }
 
     public function viewPostPaticActive()

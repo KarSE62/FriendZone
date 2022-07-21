@@ -37,6 +37,7 @@ $routes->get('/home', 'UserController::index');
 $routes->get('/login', 'UserController::index',);
 $routes->get('/register', 'UserController::index2',);
 $routes->get('/savedata', 'UserController::index3',);
+$routes->get('/editdata', 'UserController::index4',);
 $routes->get('/logout', 'UserController::Logout',);
 $routes->get('/showdata', 'UserController::showdata',);
 $routes->get('/createPost', 'PostController::index',);
@@ -53,7 +54,6 @@ $routes->get('/editPost/(:any)', 'PostController::editPost/$1',);
 $routes->get('/deletePost/(:any)', 'PostController::deletePost/$1',);
 
 $routes->get('/deleteComment/(:any)', 'CommentController::deleteComment/$1',);
-
 
 $routes->get('/deletePartic/(:any)', 'ParticController::deletePartic/$1',);
 $routes->get('/acceptPartic/(:any)', 'ParticController::acceptPartic/$1',);
