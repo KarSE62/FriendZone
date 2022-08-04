@@ -38,13 +38,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 </head>
 
 <body>
-    <?php
-    $sql_category = "SELECT * FROM category";
-    $query = mysqli_query($con, $sql_category);
-
-    $sql_provinces = "SELECT * FROM provinces";
-    $query1 = mysqli_query($con, $sql_provinces);
-    ?>
+    <?php require('components/SQLconnect.php'); ?>
     <?php $session = session(); ?>
     <?php require('components/navUser.php'); ?>
 

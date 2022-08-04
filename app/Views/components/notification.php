@@ -83,18 +83,7 @@
                 <?php } ?>
             <?php } ?>
 
-            <div class="noti">
-                <!-- กล่องแจ้งเตือนการปฏิเสธคำขอเข้าร่วม -->
-                <img src="https://cdn.discordapp.com/attachments/778499819072913482/802451103404130314/140456311_896854401129979_6687474046750012869_n.jpg" class="noti-img-user">
-
-                <div class="noti-text">
-                    <a href="#" class="noti-text-username">Yannasit</a>
-                    <span class="noti-text-time">1 ชั่วโมงที่แล้ว</span>
-
-                    <p class="noti-text-join">ปฏิเสธการเข้าร่วมของคุณเนื่องจาก กิจกรรมนี้ถูกยกเลิก</p>
-
-                </div>
-            </div>
+            
         </div>
 
         <div class="noti-etc" id="notiEtc">

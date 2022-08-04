@@ -1,8 +1,3 @@
-<?php
-$con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
-$sql_category = "SELECT * FROM category";
-$query = mysqli_query($con, $sql_category);
-?>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/showdata">
@@ -26,7 +21,7 @@ $query = mysqli_query($con, $sql_category);
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php foreach ($query as $value) { ?>
-                            <li><a class="dropdown-item" href="#"><?= $value['name_category'] ?></a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url("postCategory"."/". $value['categoryId'] ) ?>"><?= $value['name_category'] ?></a></li>
                         <?php } ?>
                     </ul>
                 </li>

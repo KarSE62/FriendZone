@@ -105,7 +105,26 @@ class PostModel extends Model{
         $this->where('postId', $postId)->set($statusPost)->update();
         return true;
     }
+
+    public function viewPostCategory($categoryId)
+    {
+        return $this->db->table('post')
+        ->join('provinces','post.province = provinces.id')
+        ->join('users','post.userId = users.userId')
+        ->join('category','post.categoryId = category.categoryId')
+        ->join('amphures','post.district = amphures.id')
+        ->join('districts','post.subDistrict = districts.id')
+        ->select("provinces.name_th,
+        ,users.FName,users.LName,users.userImage
+        ,category.name_category,category.categoryId
+        ,amphures.name_th_am
+        ,districts.name_th_dis
+        ,post.postId,post.postTitle,post.imagePost,post.detailPost,post.note,post.num_people,post.expenses,post.province,post.date_start,
+        post.date_end,post.creation_date,post.statusPost,post.userId,post.userId_user")
+        ->orderBy('postId','DESC' )
+        ->where('statusPost','1')
+        ->where('category.categoryId',$categoryId)
+        ->get()->getResultArray();
+    }
 }
-
-
 ?>

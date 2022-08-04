@@ -22,13 +22,11 @@
     <link rel="stylesheet" href="/CSS/modalEditComment.css">
     <link rel="stylesheet" href="/CSS/report.css">
 
-    <title>Home</title>
+    <title>Post Category</title>
 
 </head>
-
 <body>
     <?php require('components/SQLconnect.php'); ?>
-
     <?php $session = session(); ?>
     <?php require('components/navUser.php'); ?>
     <?php require('components/modalCancelPatic.php'); ?>
@@ -108,7 +106,9 @@
     <?php require('components/ModalEditcomment.php'); ?>
     <?php require('components/ModalReport.php'); ?>
     <?php require('components/ModalEditPost.php'); ?>
+
+
+
+    
 </body>
-
-
 </html>

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-$con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
-?>
 
 <head>
     <meta charset="UTF-8">
@@ -26,10 +23,7 @@ $con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . 
 </head>
 
 <body>
-    <?php
-    $sql_provinces = "SELECT * FROM provinces";
-    $query_province = mysqli_query($con, $sql_provinces);
-    ?>
+    <?php require('components/SQLconnect.php'); ?> 
     <?php require('components/nav.php'); ?>
 
     <div class="container">

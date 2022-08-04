@@ -234,4 +234,25 @@ class PostController extends ResourceController
         }
         
     }
+
+    public function PostCategory($categoryId)
+    {   
+        $session = session();
+        $model = new UserModel();
+        $numprovince = $session->get("province");
+        $datapost['province'] = $model->getProvince($numprovince);
+        $modelpost = new PostModel();
+        $datapost['posts'] = $modelpost->viewPostCategory($categoryId);
+        $modelCom = new CommentModel();
+        $datapost['comments'] = $modelCom->viewComment();
+        $modelPart = new ParticModel();
+        $datapost['parts'] = $modelPart->viewPartic();
+        $datapost['partsProfile'] = $modelPart->viewProfilePartic();
+        $modelNotic = new NotificationModel();
+        $datapost['notics'] = $modelNotic->viewNotification();
+        $modelCategory = new CategoryModel();
+        $datapost['categorys'] = $modelCategory->showCategory();
+        //var_dump($datapost['posts']);
+        return view('viewPostCategory', $datapost);
+    }
 }

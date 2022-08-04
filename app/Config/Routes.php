@@ -66,6 +66,8 @@ $routes->get('/viewPostParticActive', 'UserController::viewPostPaticActive',);
 
 $routes->get('/cancelRequest/(:any)', 'ParticController::cancelRequestPartic/$1',);
 $routes->get('/cancelPartic/(:any)', 'ParticController::cancelPartic/$1',);
+
+$routes->get('/postCategory/(:any)', 'PostController::PostCategory/$1',);
 /*
  * --------------------------------------------------------------------
  * Additional Routing
