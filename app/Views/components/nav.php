@@ -45,14 +45,14 @@ $query = mysqli_query($con, $sql_category);
                 </li>
             </ul>
             <span class="nav-regis-login-li">
-                <a href="/register" class="nav-regis">สมัครสมาชิก</a> &nbsp;/&nbsp;
-                <a href="/login" class="nav-login">เข้าสู่ระบบ</a>
+                <a href="<?php echo base_url("register" )?>" class="nav-regis">สมัครสมาชิก</a> &nbsp;/&nbsp;
+                <a href="<?php echo base_url("login" )?>" class="nav-login">เข้าสู่ระบบ</a>
             </span>
         </div>
 
         <span class="nav-regis-login">
-            <a href="/register" class="nav-regis">สมัครสมาชิก</a> /
-            <a href="/login" class="nav-login">เข้าสู่ระบบ</a>
+            <a href="<?php echo base_url("register" )?>" class="nav-regis">สมัครสมาชิก</a> /
+            <a href="<?php echo base_url("login" )?>" class="nav-login">เข้าสู่ระบบ</a>
         </span>
 
     </div>

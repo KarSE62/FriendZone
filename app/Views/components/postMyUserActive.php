@@ -3,7 +3,7 @@
         <div class="card-post-title1">
             <img src="<?php echo $post["userImage"] ?>" class="img-post-profileUser">
 
-            <h6 class="text-post-user"><a href="/viewUserProfile/<?php echo $post["userId"] ?>" class="text-post-user-a"> <?php echo $post["FName"] . " " . $post["LName"] ?></a></h6>
+            <h6 class="text-post-user"><a href="<?php echo base_url("viewUserProfile"."/". $post["userId"] ) ?>" class="text-post-user-a"> <?php echo $post["FName"] . " " . $post["LName"] ?></a></h6>
 
             <?php if ($post["userId"] == $session->get('userId')) { ?>
                 <div class="card-post-dropdown">
@@ -12,8 +12,8 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a data-bs-target="#editpost<?php echo $post["postId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="/editPost/<?php echo $post["postId"] ?>">แก้ไขกิจกรรม</a></li>
-                        <li><a class="dropdown-item" href="/deletePost/<?php echo $post["postId"] ?>">ลบโพสต์</a></li>
+                        <li><a data-bs-target="#editpost<?php echo $post["postId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="#">แก้ไขกิจกรรม</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url("deletePost"."/". $post["postId"] ) ?>">ลบโพสต์</a></li>
                     </ul>
                 </div>
             <?php } else if ($post["userId"] != $session->get('userId')) { ?>
@@ -23,7 +23,7 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a data-bs-target="#report<?php echo $post["postId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="/report/<?php echo $post["postId"] ?>">รายงานโพสต์</a></li>
+                        <li><a data-bs-target="#report<?php echo $post["postId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="#">รายงานโพสต์</a></li>
                     </ul>
                 </div>
             <?php } ?>
@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="col-4">
-                    <a href="/viewPostDetail/<?php echo $post["postId"] ?>" class="text-post-viewDetail">รายละเอียดเพิ่มเติม</a>
+                    <a href="<?php echo base_url("viewPostDetail"."/". $post["postId"] ) ?>" class="text-post-viewDetail">รายละเอียดเพิ่มเติม</a>
                 </div>
 
             </div>
@@ -83,7 +83,7 @@
                     <div class="col">
                         <div class="post-join-title" id="">
                             <i class="fas fa-times fa-post-join-plus"></i> &nbsp;
-                            <a href="/closepostActivity/<?php echo $post["postId"] ?>" class="text-post-join">ปิดกิจกรรม</a>
+                            <a href="<?php echo base_url("closepostActivity"."/". $post["postId"] ) ?>" class="text-post-join">ปิดกิจกรรม</a>
                         </div>
                     </div>
                     <div class="col">
@@ -118,8 +118,8 @@
                                     </a>
 
                                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                                        <li><a data-bs-target="#editcomment<?php echo $comment["commentId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขความคิดเห็น</a></li>
-                                        <li><a class="dropdown-item" href="/deleteComment/<?php echo $comment["commentId"] ?>">ลบความคิดเห็น</a></li>
+                                        <li><a data-bs-target="#editcomment<?php echo $comment["commentId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="#">แก้ไขความคิดเห็น</a></li>
+                                        <li><a class="dropdown-item" href="<?php echo base_url("deleteComment"."/". $comment["commentId"] ) ?>">ลบความคิดเห็น</a></li>
                                     </ul>
                                 </div>
                             <?php } ?>

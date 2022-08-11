@@ -3,7 +3,7 @@
         <div class="card-post-title1">
             <img src="<?php echo $hispart["userImage"] ?>" class="img-post-profileUser">
 
-            <h6 class="text-post-user"><a href="/viewUserProfile/<?php echo $hispart["userId"] ?>" class="text-post-user-a"><?php echo $hispart["FName"] . " " . $hispart["LName"] ?></a> </h6>
+            <h6 class="text-post-user"><a href="<?php echo base_url("viewUserProfile"."/". $hispart["userId"] ) ?>" class="text-post-user-a"><?php echo $hispart["FName"] . " " . $hispart["LName"] ?></a> </h6>
             
             <p class="text-post-title-time"><?php echo $hispart["creation_date"] ?></p>
         </div>
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="col-4">
-                <a href="/viewPostDetail/<?php echo $hispart["postId"] ?>" class="text-post-viewDetail">รายละเอียดเพิ่มเติม</a>
+                <a href="<?php echo base_url("viewPostDetail"."/". $hispart["postId"] ) ?>" class="text-post-viewDetail">รายละเอียดเพิ่มเติม</a>
                 </div>
 
             </div>
@@ -59,7 +59,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="post-comment-title btn-show-comment">
-                            <a href="/cancelRequest/<?php echo $hispart["partId"] ?>" class="text-post-comment">
+                            <a href="<?php echo base_url("cancelRequest"."/". $hispart["partId"] ) ?>" class="text-post-comment">
                                 <i class="fas fa-times fa-post-join-plus"></i>
                                 &nbsp;ยกเลิกคำขอเข้าร่วมกิจกรรม
                             </a>

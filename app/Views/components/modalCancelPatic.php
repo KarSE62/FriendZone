@@ -5,13 +5,13 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title noti-modal-title" id="exampleModalLabel">ปฏิเสธคำขอของ
-                                    <label class="noti-modal-title-username">Kanokphon</label>
+                                    <label class="noti-modal-title-username"><?php echo $part["FName"] ?></label>
                                 </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body noti-modal-body">
                                 <label class="noti-modal-title-reason">เหตุผล</label>
-                                <form action="/ParticController/deletePartic" method="post">
+                                <form action="<?php echo base_url("ParticController"."/"."deletePartic") ?>" method="post">
                                 <input type="hidden" class="form-control noti-modal-input-reason" name="partId" value="<?php echo $part["partId"] ?>" >
                                 <input type="hidden" class="form-control noti-modal-input-reason" name="userId_user" value="<?php echo $part["userId"] ?>" >
                                 <div class="row">

@@ -31,9 +31,9 @@
                     <i class="fas fa-car"></i> &nbsp;กิจกรรม
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivite">
-                            <li><a class="nav-link" href="/mypostActive"></i> &nbsp;กิจกรรมของฉัน</a></li>
-                            <li><a class="nav-link" href="/viewrequestPartic"></i> &nbsp;กิจกรรมที่ขอเข้าร่วม</a></li>
-                            <li><a class="nav-link" href="/viewPostParticActive"></i> &nbsp;กิจกรรมที่เข้าร่วมแล้ว</a></li>
+                            <li><a class="nav-link" href="<?php echo base_url("mypostActive" )?>"></i> &nbsp;กิจกรรมของฉัน</a></li>
+                            <li><a class="nav-link" href="<?php echo base_url("viewrequestPartic" )?>"></i> &nbsp;กิจกรรมที่ขอเข้าร่วม</a></li>
+                            <li><a class="nav-link" href="<?php echo base_url("viewPostParticActive" )?>"></i> &nbsp;กิจกรรมที่เข้าร่วมแล้ว</a></li>
                     </ul>
                 </li>            
 
@@ -46,13 +46,13 @@
                 </li>
                 
                 <li class="nav-item nav-profile">
-                    <a class="nav-link" href="/viewProfile">
+                    <a class="nav-link" href="<?php echo base_url("viewProfile" )?>">
                         <i class="fas fa-car"></i> &nbsp;โปรไฟล์
                     </a>
                 </li>
             </ul>
 
-            <a href="/logout" class="nav-logout">ออกจากระบบ</a>
+            <a href="<?php echo base_url("logout" )?>" class="nav-logout">ออกจากระบบ</a>
 
         </div>
 
@@ -60,8 +60,8 @@
             <div class="dropdown">
                 <img src="<?php echo $session->get('userImage'); ?>" class="nav-user-imgprofile dropdown" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="/viewProfile">โปรไฟล์</a></li>
-                    <li><a class="dropdown-item" href="/logout">ออกจากระบบ</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("viewProfile" )?>">โปรไฟล์</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("logout" )?>">ออกจากระบบ</a></li>
                 </ul>
             </div>
         </div>

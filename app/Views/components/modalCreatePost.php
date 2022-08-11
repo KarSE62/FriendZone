@@ -79,7 +79,7 @@
                 <!-- Form กรอกข้อมูลต่างๆ-->
                 <div class="row ">
                     <div class="col-8">
-                        <form action="/PostController/createpost" method="post">
+                        <form action="<?php echo base_url("PostController"."/"."createpost") ?>" method="post">
                             <div class="mb-3">
                                 <input type="hidden" class="form-control modalCreatePost-input" id="postImageURL" name="imagePost">
                                 <input type="hidden" class="form-control modalCreatePost-input" id="QRCodeURL" name="QRCodeImage">
@@ -173,7 +173,7 @@
 
                 <center>
                     <button class="btn modalCreatePost-btn-post" type="submit">โพสต์กิจกรรม</button> &nbsp;
-                    <a href="/showdata" type="button" class="btn modalCreatePost-btn-cancel">
+                    <a href="<?php echo base_url("showdata")?>" type="button" class="btn modalCreatePost-btn-cancel">
                         <label>ยกเลิก</label>
                     </a>
                 </center>

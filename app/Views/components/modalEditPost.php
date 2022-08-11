@@ -11,7 +11,7 @@
 
                 <div class="modal-body">
                     <div class="modalCreatePost-form">
-                        <form action="/PostController/editPostSave" method="post" enctype="multipart/form-data">
+                        <form action="<?php echo base_url("PostController"."/"."editPostSave")?>" method="post" enctype="multipart/form-data">
 
                             <div class="mb-3">
                                 <label for="image" class="form-label modalCreatePost-label">รูปกิจกรรม</label>
@@ -128,7 +128,7 @@
 
                             <div class="button">
                                 <button class="btn modalCreatePost-btn-post-e" type="submit">แก้ไข</button> &nbsp;
-                                <a href="/showdata" type="button" class="btn modalCreatePost-btn-cancel-e">
+                                <a href="<?php echo base_url("showdata")?>" type="button" class="btn modalCreatePost-btn-cancel-e">
                                     <label>ยกเลิก</label>
                                 </a>
                             </div>

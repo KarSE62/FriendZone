@@ -11,8 +11,8 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a data-bs-target="#editpost<?php echo $post["postId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="/editPost/<?php echo $post["postId"] ?>">แก้ไขกิจกรรม</a></li>
-                        <li><a class="dropdown-item" href="/deletePost/<?php echo $post["postId"] ?>">ลบโพสต์</a></li>
+                        <li><a data-bs-target="#editpost<?php echo $post["postId"] ?>" data-bs-toggle="modal" class="dropdown-item" href="#">แก้ไขกิจกรรม</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url("deletePost"."/". $post["postId"] ) ?>">ลบโพสต์</a></li>
                     </ul>
                 </div>
             <?php }else if($post["userId"] != $session->get('userId')){ ?>
@@ -107,7 +107,7 @@
                     <div class="col">
                         <div class="post-join-title" id="">
                             <i class="fas fa-plus-circle fa-post-join-plus"></i>
-                            <a href="/requestPartic/<?php echo $post["postId"] ?>" class="text-post-join">เข้าร่วมกิจกรรม</a>
+                            <a href="<?php echo base_url("requestPartic"."/". $post["postId"] ) ?>" class="text-post-join">เข้าร่วมกิจกรรม</a>
                         </div>
                     </div>
                     <div class="col">
@@ -141,8 +141,8 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="/editComment/<?php echo $comment["commentId"] ?>">แก้ไขคอมเม้นท์</a></li>
-                        <li><a class="dropdown-item" href="/deleteComment/<?php echo $comment["commentId"] ?>">ลบคอมเม้นท์</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url("editComment"."/". $comment["commentId"] ) ?>">แก้ไขคอมเม้นท์</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url("deleteComment"."/". $comment["commentId"] ) ?>">ลบคอมเม้นท์</a></li>
                     </ul>
                 </div>
                 <?php } ?>

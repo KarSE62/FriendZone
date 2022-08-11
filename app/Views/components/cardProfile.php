@@ -7,7 +7,7 @@
                 <img src="<?php echo $session->get('userImage'); ?>" class="cardProfile-img-user">
             </div>
             <div class="col-7">
-                <a href="/editProfile" class="cardProfile-btn-edit">
+                <a href="<?php echo base_url("editProfile")?>" class="cardProfile-btn-edit">
                     <i class="fas fa-cog fa-cardProfile-setting"> &nbsp;</i>แก้ไขข้อมูล
                 </a>
             </div>

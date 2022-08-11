@@ -16,7 +16,7 @@
 
         <h3 class="TitleEditData">แก้ไขข้อมูล</h3>
         <div class="form-editProfile">
-        <form action="/UserController/updateProfile" method="post">
+        <form action="<?php echo base_url("UserController"."/"."updateProfile") ?>" method="post">
             <div class="row">
                     <input type="hidden" class="form-control" name="userId" value="<?php echo $user[0]['userId']; ?>">
                 <div class="col">
@@ -65,7 +65,7 @@
 
             <center>
                 <button type="submit" class="submitEditProfile">บันทึก</button> &nbsp; &nbsp;
-                <button type="button" class="cancelEditProfile"><a href="/showdata">ยกเลิก</a></button>
+                <button type="button" class="cancelEditProfile"><a href="<?php echo base_url("showdata") ?>">ยกเลิก</a></button>
             </center>
             </form>
         </div>

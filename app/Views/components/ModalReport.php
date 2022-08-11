@@ -8,7 +8,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body modal-body-report">
-                    <form action="/ReportController/requestReport" method="post">
+                    <form action="<?php echo base_url("ReportController"."/"."requestReport") ?>" method="post">
                         <input type="hidden" class="form-control input-title-report" name="postId" value="<?php echo $post["postId"] ?>">
 
                         <div class="modal-report-div-img">

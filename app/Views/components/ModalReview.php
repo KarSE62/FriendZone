@@ -8,7 +8,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body modal-body-report">
-                    <form action="/ReviewController/Review" method="post">
+                    <form action="<?php echo base_url("ReviewController"."/"."Review" )?>" method="post">
                         <h5 class="modal-title modal-report-title" id="staticBackdropLabel"><?php echo $hispart["postTitle"] ?></h5>
                         <input type="hidden" class="form-control input-title-report" name="postId" value="<?php echo $hispart["postId"] ?>">
 

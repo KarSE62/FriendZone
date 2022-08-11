@@ -7,7 +7,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/CommentController/editComment" method="post">
+                    <form action="<?php echo base_url("CommentController"."/"."editComment")?>" method="post">
                         <input type="hidden" class="form-control input-post-footer" name="commentId" value="<?php echo $comment["commentId"] ?>">
                         <input type="text" class="form-control modal-ecomment-input" name="Comment" value="<?php echo $comment["commentDetail"] ?>">
                         <input type="hidden" class="form-control input-post-footer" name="postId" value="<?php echo $comment["postId"] ?>">

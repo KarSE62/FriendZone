@@ -69,12 +69,12 @@
                         <img src="<?php echo $part["userImage"] ?>" class="noti-img-user">
 
                         <div class="noti-text">
-                            <a href="/viewUserProfile/<?php echo $part["userId"] ?>" class="noti-text-username"><?php echo $part["FName"] ?></a>
+                            <a href="<?php echo base_url("viewUserProfile"."/". $part["userId"] ) ?>" class="noti-text-username"><?php echo $part["FName"] ?></a>
                             <span class="noti-text-time">2 นาทีที่แล้ว</span>
 
                             <p class="noti-text-join"><?php echo $part["postTitle"] ?></p>
 
-                            <a href="/acceptPartic/<?php echo $part["partId"] ?>"><button class="noti-btn-yes">ยืนยัน</button></a>
+                            <a href="<?php echo base_url("acceptPartic"."/". $part["partId"] ) ?>"><button class="noti-btn-yes">ยืนยัน</button></a>
                             <a href="#"><button type="button" class="noti-btn-no" data-bs-toggle="modal" data-bs-target="#exampleModalNoti">
                                     ปฏิเสธ
                                 </button></a>
