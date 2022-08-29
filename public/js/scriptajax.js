@@ -24,7 +24,7 @@ $('document').ready(function () {
                 } else if (response == 'not_taken') {
                     document.getElementById("text-notify").innerHTML = "*** สามารถใช้งาน UserName นี้ได้ ***";
                     message.style.color = "#e20000";
-                    document.getElementById("btn").disabled = true;
+                    document.getElementById("btn").disabled = false;
                 }
             }
         })
