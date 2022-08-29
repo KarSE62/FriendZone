@@ -89,7 +89,7 @@
                 <div class="col-sm-6 sub-col">
                     <div class="">
                         <form action="/UserController/saveGenaral" method="post">
-                            <input class="form-control" type="hidden" id="userImageURL" name="userImage">
+                            <input class="form-control" type="hidden" id="userImageURL" name="userImage" value="https://media.discordapp.net/attachments/778499819072913482/964380238446489640/28bd6e21ded14639b5af7e3a515ce252-removebg-preview.png">
                     </div>
 
                     <div class="row">
@@ -176,7 +176,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <input class="form-control" type="hidden" id="cardImageURL" name="idCardImage" require>
+                        <input class="form-control" type="hidden" id="cardImageURL" name="idCardImage" value="https://media.discordapp.net/attachments/901413238841946187/946620558420873306/-2021-.jpg">
                     </div>
 
                     <center>

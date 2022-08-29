@@ -11,9 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="/CSS/nav.css">
     <link rel="stylesheet" href="/CSS/register.css">
+    <script type="text/javascript" src="js/scriptajax.js"></script>
 
     <title>Register FriendZone</title>
 
@@ -42,6 +44,7 @@
                             <label for="exampleFormControlInput1" class="username">ชื่อผู้ใช้</label>
                             <input type="text" class="form-control" id="userName" name="userName" 
                             required=""oninvalid="this.setCustomValidity('กรุณากรอกบัญชีผู้ใช้')"oninput="this.setCustomValidity('')">
+                            <span id="text-notify"></span>
                         </div>
 
                         <div class="mb-3">
@@ -86,6 +89,8 @@
                 document.getElementById("btn").disabled = true;
             }
         }
+    </script>
+    <script>
     </script>
 
 <body>
