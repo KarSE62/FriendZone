@@ -42,6 +42,12 @@ body {
     margin-top: -5px;
 }
 
+#text-notify {
+    font-size: 13px;
+    margin-top: 10px;
+    
+}
+
 .button {
     background-color: #ef5da8;
     border: none;

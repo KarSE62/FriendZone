@@ -44,7 +44,9 @@
                             <label for="exampleFormControlInput1" class="username">ชื่อผู้ใช้</label>
                             <input type="text" class="form-control" id="userName" name="userName" 
                             required=""oninvalid="this.setCustomValidity('กรุณากรอกบัญชีผู้ใช้')"oninput="this.setCustomValidity('')">
+                            <center>
                             <p id="text-notify"></p>
+                            </center>
                         </div>
 
                         <div class="mb-3">

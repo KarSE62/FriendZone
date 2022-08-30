@@ -18,12 +18,12 @@ $('document').ready(function () {
                 if (response == 'taken') {
 
                     document.getElementById("text-notify").innerHTML = "*** ไม่สามารถใช้งาน UserName นี้ได้ ***";
-                    message.style.color = "#19b80a";
+                    document.getElementById("text-notify").style.color = '#e20000';
                     document.getElementById("btn").disabled = true;
 
                 } else if (response == 'not_taken') {
                     document.getElementById("text-notify").innerHTML = "*** สามารถใช้งาน UserName นี้ได้ ***";
-                    message.style.color = "#e20000";
+                    document.getElementById("text-notify").style.color = '#19b80a';
                     document.getElementById("btn").disabled = false;
                 }
             }
