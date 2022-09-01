@@ -11,21 +11,24 @@
 
                 <div class="modal-body">
                     <div class="modalCreatePost-form">
-                        <form action="<?php echo base_url("PostController"."/"."editPostSave")?>" method="post" enctype="multipart/form-data">
+                        
 
                             <div class="mb-3">
                                 <label for="image" class="form-label modalCreatePost-label">รูปกิจกรรม</label>
                                 <img id="previewImgEditPost" class="modalCreatePost-image-upload img-fluid rounded">
+                                <form>
                                 <div class="row">
                                     <div class="col-sm-9">
-                                        <input type="file" accept="image/*" id="imgInputEditPost" name="post_image" class="form-control modalCreatePost-input-upload">
+                                    <input type="file" accept="image/*" id="postImage" name="post_image" class="form-control modalCreatePost-input-upload">
                                     </div>
                                     <div class="col-sm-3">
-                                        <button type="button" class="modalCreatePost-btn-upload" onclick="uploadPostImage()">อัพโหลด</button>
+                                    <button type="button" class="modalCreatePost-btn-upload" onclick="uploadPostImage()">อัพโหลด</button>
                                     </div>
+                                    <p id="messagePostImage">** กรุณาเลือกภาพที่ต้องการและกดอัพโหลด **</p>
                                 </div>
-
-                                <input type="hidden" class="form-control modalCreatePost-input" id="testimg" name="imagePost" value="<?php echo $post['imagePost'] ?>">
+                                </form>
+                            <form action="<?php echo base_url("PostController"."/"."editPostSave")?>" method="post" enctype="multipart/form-data">
+                                <input type="text" class="form-control modalCreatePost-input" id="postImageURL" name="imagePost" value="<?php echo $post['imagePost'] ?>">
                             </div>
 
                             <script>
@@ -93,7 +96,7 @@
 
                                 <div class="row">
                                     <div class="col">
-                                        <select class="form-select" aria-label="Default select example" name="province" id="provinces">
+                                        <select class="form-select" aria-label="Default select example" name="province" id="provinces1">
                                             <option selected><?php echo $post['name_th'] ?></option>
                                             <?php foreach ($query1 as $value_province) { ?>
                                                 <option value="<?= $value_province['id'] ?>"><?= $value_province['name_th'] ?></option>
@@ -101,12 +104,12 @@
                                         </select>
                                     </div>
                                     <div class="col">
-                                        <select class="form-select" aria-label="Default select example" name="district" id="amphures">
+                                        <select class="form-select" aria-label="Default select example" name="district" id="amphures1">
                                             <option selected><?php echo $post['name_th_am'] ?></option>
                                         </select>
                                     </div>
                                     <div class="col">
-                                        <select class="form-select" aria-label="Default select example" name="subDistrict" id="districts">
+                                        <select class="form-select" aria-label="Default select example" name="subDistrict" id="districts1">
                                             <option selected><?php echo $post['name_th_dis'] ?></option>
                                         </select>
                                     </div>
@@ -142,4 +145,4 @@
 <?php } ?>
 <?php include('scriptDateStart.php'); ?>
 <?php include('scriptDateEnd.php'); ?>
-<?php include('script.php'); ?>
+<?php include('scriptedit.php'); ?>

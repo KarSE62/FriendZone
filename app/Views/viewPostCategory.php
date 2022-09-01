@@ -54,7 +54,7 @@
                     </button>';
                 }; ?>
 
-                <?php require('components/ModalCreatePost.php'); ?>
+                <?php require('components/modalCreatePost.php'); ?>
                 <?php require('components/carousel.php'); ?>
             </div>
             <?php require('components/SocialButton.php'); ?>
@@ -105,7 +105,7 @@
     </script>
     <?php require('components/ModalEditcomment.php'); ?>
     <?php require('components/ModalReport.php'); ?>
-    <?php require('components/ModalEditPost.php'); ?>
+    <?php require('components/modalEditPost.php'); ?>
 
 
 

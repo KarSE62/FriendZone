@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "root", "", "friendzone") or die("Error: " . mysqli_error($con));
+$con = mysqli_connect("localhost", "friendszon_admin", "123456", "friendszon_admin") or die("Error: " . mysqli_error($con));
 
 
     $sql_provinces = "SELECT * FROM provinces";

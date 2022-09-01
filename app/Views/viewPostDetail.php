@@ -62,7 +62,7 @@
             })
         }, false);
     </script>
+    <?php require('components/modalEditPost.php'); ?>
 </body>
-<?php require('components/ModalEditPost.php'); ?>
-<?php include('script.php'); ?>
+
 </html>

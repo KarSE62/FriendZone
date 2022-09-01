@@ -70,7 +70,7 @@
                 <?php require('components/postMyUserActive.php'); ?>
             </div>
             <div class="col-sm-3">
-                <?php require('components/ModalCreatePost.php'); ?>
+                <?php require('components/modalCreatePost.php'); ?>
                 <?php require('components/carousel.php'); ?>
             </div>
         </div>
@@ -96,7 +96,7 @@
             })
         }, false);
     </script>
-    <?php require('components/ModalEditPost.php'); ?>
+    <?php require('components/modalEditPost.php'); ?>
     <?php require('components/ModalEditcomment.php'); ?>
 </body>
 

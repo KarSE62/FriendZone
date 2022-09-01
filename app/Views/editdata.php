@@ -13,12 +13,12 @@
 
     <title>Edit Data Genaral</title>
 
-    <link rel="stylesheet" href="/CSS/navUser.css">
-    <link rel="stylesheet" href="/CSS/notification.css">
-    <link rel="stylesheet" href="/CSS/post.css">
-    <link rel="stylesheet" href="/CSS/profile.css">
-    <link rel="stylesheet" href="/CSS/formEditProfile.css">
-    <link rel="stylesheet" href="/CSS/savedata.css">
+    <link rel="stylesheet" href="CSS/navUser.css">
+    <link rel="stylesheet" href="CSS/notification.css">
+    <link rel="stylesheet" href="CSS/post.css">
+    <link rel="stylesheet" href="CSS/profile.css">
+    <link rel="stylesheet" href="CSS/formEditProfile.css">
+    <link rel="stylesheet" href="CSS/savedata.css">
 
 </head>
 

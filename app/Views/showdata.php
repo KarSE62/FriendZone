@@ -12,15 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="/CSS/navUser.css">
-    <link rel="stylesheet" href="/CSS/notification.css">
-    <link rel="stylesheet" href="/CSS/post.css">
-    <link rel="stylesheet" href="/CSS/cardTrip.css">
-    <link rel="stylesheet" href="/CSS/cardProfile.css">
-    <link rel="stylesheet" href="/CSS/profile.css">
-    <link rel="stylesheet" href="/CSS/modalCreatePost.css">
-    <link rel="stylesheet" href="/CSS/modalEditComment.css">
-    <link rel="stylesheet" href="/CSS/report.css">
+    <link rel="stylesheet" href="CSS/navUser.css">
+    <link rel="stylesheet" href="CSS/notification.css">
+    <link rel="stylesheet" href="CSS/post.css">
+    <link rel="stylesheet" href="CSS/cardTrip.css">
+    <link rel="stylesheet" href="CSS/cardProfile.css">
+    <link rel="stylesheet" href="CSS/profile.css">
+    <link rel="stylesheet" href="CSS/modalCreatePost.css">
+    <link rel="stylesheet" href="CSS/modalEditComment.css">
+    <link rel="stylesheet" href="CSS/report.css">
 
     <title>Home</title>
 
@@ -56,7 +56,7 @@
                     </button>';
                 }; ?>
 
-                <?php require('components/ModalCreatePost.php'); ?>
+                <?php require('components/modalCreatePost.php'); ?>
                 <?php require('components/carousel.php'); ?>
             </div>
             <?php require('components/SocialButton.php'); ?>
@@ -105,9 +105,11 @@
             })
         }, false);
     </script>
+    <?php require('components/modalEditPost.php'); ?>
     <?php require('components/ModalEditcomment.php'); ?>
     <?php require('components/ModalReport.php'); ?>
-    <?php require('components/ModalEditPost.php'); ?>
+    
+    
 </body>
 
 

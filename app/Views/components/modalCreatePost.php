@@ -1,6 +1,4 @@
-<?php include('script.php'); ?>
-<?php include('scriptDateStart.php'); ?>
-<?php include('scriptDateEnd.php'); ?>
+
 
 <!-- Button trigger modal -->
 
@@ -79,18 +77,18 @@
                 <!-- Form กรอกข้อมูลต่างๆ-->
                 <div class="row ">
                     <div class="col-8">
-                        <form action="<?php echo base_url("PostController"."/"."createpost") ?>" method="post">
+                        <form action="<?php echo base_url(); ?>/PostController/createpost" method="post">
                             <div class="mb-3">
                                 <input type="hidden" class="form-control modalCreatePost-input" id="postImageURL" name="imagePost">
                                 <input type="hidden" class="form-control modalCreatePost-input" id="QRCodeURL" name="QRCodeImage">
                                 <label class="form-label modalCreatePost-label">หัวข้อ</label>
-                                <input type="text" class="form-control modalCreatePost-input" name="postTitle" placeholder="ใส่หัวข้อกิจกรรมของคุณ" required="" oninvalid="this.setCustomValidity('กรุณากรอกหัวข้อโพสต์ประกาศกิจกรรม')" oninput="this.setCustomValidity('')">
+                                <input type="text" class="form-control modalCreatePost-input" name="postTitle" id="postTitle" placeholder="ใส่หัวข้อกิจกรรมของคุณ" required="" oninvalid="this.setCustomValidity('กรุณากรอกหัวข้อโพสต์ประกาศกิจกรรม')" oninput="this.setCustomValidity('')">
                             </div>
                     </div>
                     <div class="col-4">
                         <div class="mb-3">
                             <label class="form-label modalCreatePost-label">หมวดหมู่</label>
-                            <select class="form-select modalCreatePost-input" name="categoryId">
+                            <select class="form-select modalCreatePost-input" name="categoryId" id="categoryId">
                                 <option selected>เลือก</option>
                                 <?php foreach ($query as $value) { ?>
                                     <option value="<?= $value['categoryId'] ?>"><?= $value['name_category'] ?></option>
@@ -102,26 +100,26 @@
 
                 <div class="mb-3">
                     <label class="form-label modalCreatePost-label">รายละเอียด</label>
-                    <input type="text" class="form-control modalCreatePost-input" id="detail1" name="detailPost" placeholder="รายละเอียดเบื้องต้นเกี่ยวกับทริปของคุณ" required="" oninvalid="this.setCustomValidity('กรุณากรอกรายละเอียด')" oninput="this.setCustomValidity('')">
+                    <input type="text" class="form-control modalCreatePost-input" id="detail1" name="detailPost" id="detailPost" placeholder="รายละเอียดเบื้องต้นเกี่ยวกับทริปของคุณ" required="" oninvalid="this.setCustomValidity('กรุณากรอกรายละเอียด')" oninput="this.setCustomValidity('')">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label modalCreatePost-label">หมายเหตุ</label>
-                    <input type="text" class="form-control modalCreatePost-input" id="detail2" name="note" placeholder="หมายเหตุเพิ่มเติม เช่น เพศชายเท่านั้น" required="" oninvalid="this.setCustomValidity('กรุณากรอกหมายเหตุ')" oninput="this.setCustomValidity('')">
+                    <input type="text" class="form-control modalCreatePost-input" id="detail2" name="note" id="note" placeholder="หมายเหตุเพิ่มเติม เช่น เพศชายเท่านั้น" required="" oninvalid="this.setCustomValidity('กรุณากรอกหมายเหตุ')" oninput="this.setCustomValidity('')">
                 </div>
 
                 <div class="row">
                     <div class="col-5">
                         <label class="form-label modalCreatePost-label">จำนวนคน</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control modalCreatePost-input modalCreatePost-input-people" name="num_people" required="" oninvalid="this.setCustomValidity('กรุณากรอกจำนวนคน')" oninput="this.setCustomValidity('')">
+                            <input type="text" class="form-control modalCreatePost-input modalCreatePost-input-people" name="num_people" id="num_people" required="" oninvalid="this.setCustomValidity('กรุณากรอกจำนวนคน')" oninput="this.setCustomValidity('')">
                             <span class="input-group-text modalCreatePost-input">คน</span>
                         </div>
                     </div>
                     <div class="col-7">
                         <label class="form-label modalCreatePost-label">ค่าใช้จ่าย</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control modalCreatePost-input modalCreatePost-input-money" name="expenses" required="" oninvalid="this.setCustomValidity('กรุณากรอกค่าใช้จ่าย')" oninput="this.setCustomValidity('')">
+                            <input type="text" class="form-control modalCreatePost-input modalCreatePost-input-money" name="expenses" id="expenses" required="" oninvalid="this.setCustomValidity('กรุณากรอกค่าใช้จ่าย')" oninput="this.setCustomValidity('')">
                             <span class="input-group-text modalCreatePost-input">บาท / คน</span>
                         </div>
                     </div>
@@ -165,7 +163,7 @@
                 </div>
 
                 <div class="mb-3 modalCreatePost-text-radio">
-                    <input class="form-check-input modalCreatePost-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <input class="form-check-input modalCreatePost-input" type="radio" name="Radio1" id="Radio1">
                     <label class="label form-check-label" for="flexRadioDefault1">
                         ฉันยอมรับ <a href="" class="ok">ข้อตกลง</a> ของการโพสต์หาเพื่อนเที่ยว
                     </label>
@@ -184,3 +182,6 @@
         </div>
     </div>
 </div>
+<?php include('script.php'); ?>
+<?php include('scriptDateStart.php'); ?>
+<?php include('scriptDateEnd.php'); ?>
