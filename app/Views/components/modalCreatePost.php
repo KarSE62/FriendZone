@@ -79,8 +79,8 @@
                     <div class="col-8">
                         <form action="<?php echo base_url(); ?>/PostController/createpost" method="post">
                             <div class="mb-3">
-                                <input type="hidden" class="form-control modalCreatePost-input" id="postImageURL" name="imagePost">
-                                <input type="hidden" class="form-control modalCreatePost-input" id="QRCodeURL" name="QRCodeImage">
+                                <input type="hidden" class="form-control modalCreatePost-input" id="postImageURL" name="imagePost" value="https://media.discordapp.net/attachments/778499819072913482/966615191863296000/bg.jpg?width=676&height=676">
+                                <input type="hidden" class="form-control modalCreatePost-input" id="QRCodeURL" name="QRCodeImage" value="https://media.discordapp.net/attachments/778499819072913482/1014787262816468992/qrcode.jpg">
                                 <label class="form-label modalCreatePost-label">หัวข้อ</label>
                                 <input type="text" class="form-control modalCreatePost-input" name="postTitle" id="postTitle" placeholder="ใส่หัวข้อกิจกรรมของคุณ" required="" oninvalid="this.setCustomValidity('กรุณากรอกหัวข้อโพสต์ประกาศกิจกรรม')" oninput="this.setCustomValidity('')">
                             </div>

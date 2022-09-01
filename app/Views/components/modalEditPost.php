@@ -119,11 +119,11 @@
                             <div class="row">
                                 <div class="col-6">
                                     <label class="form-label modalCreatePost-label">วันที่ไป</label>
-                                    <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" name="date_start" id="date_start" value="<?php echo $post['date_start'] ?>" disabled>
+                                    <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" name="date_start" id="date_start" value="<?php echo $post['date_start'] ?>" >
                                 </div>
                                 <div class="col-6">
                                     <label class="form-label modalCreatePost-label">วันที่กลับ</label>
-                                    <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" name="date_end" id="date_end" value="<?php echo $post['date_end'] ?>" disabled>
+                                    <input type="text" class="form-control modalCreatePost-input" placeholder="วัน/เดือน/ปี" name="date_end" id="date_end" value="<?php echo $post['date_end'] ?>" >
                                 </div>
                             </div>
 

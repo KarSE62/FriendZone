@@ -178,6 +178,7 @@ class PostController extends ResourceController
             $datapost['notics'] = $modelNotic->viewNotification();
             $modelCategory = new CategoryModel();
             $datapost['categorys'] = $modelCategory->showCategory();
+            $session->setFlashdata('Success', 'แก้ไขโพสต์ประกาศกิจกรรมสำเร็จ!!');
             echo view('showdata', $datapost);
             return redirect()->to('/showdata');
         }
