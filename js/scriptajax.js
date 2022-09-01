@@ -8,7 +8,7 @@ $('document').ready(function () {
             return;
         }
         $.ajax({
-            url: "http://localhost:8080/ajax_checkusername.php",
+            url: "ajax_checkusername.php",
             type: "post",
             data: {
                 'username_check': 1,
