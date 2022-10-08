@@ -5,7 +5,7 @@
                 <script>
                     Swal.fire({
                         icon: 'error',
-                        title: 'ไม่สามารถสร้างโพสต์ได้กรุณารอการยืนยันตัวตน!!',
+                        title: '<?= session()->getFlashdata('Err') ?>',
                     })
                 </script>
             </div>
