@@ -14,34 +14,9 @@
                         
 
                             <div class="mb-3">
-                                <label for="image" class="form-label modalCreatePost-label">รูปกิจกรรม</label>
-                                <img id="previewImgEditPost" class="modalCreatePost-image-upload img-fluid rounded">
-                                <form>
-                                <div class="row">
-                                    <div class="col-sm-9">
-                                    <input type="file" accept="image/*" id="postImage" name="post_image" class="form-control modalCreatePost-input-upload">
-                                    </div>
-                                    <div class="col-sm-3">
-                                    <button type="button" class="modalCreatePost-btn-upload" onclick="uploadPostImage()">อัพโหลด</button>
-                                    </div>
-                                    <p id="messagePostImage">** กรุณาเลือกภาพที่ต้องการและกดอัพโหลด **</p>
-                                </div>
-                                </form>
                             <form action="<?php echo base_url("PostController"."/"."editPostSave")?>" method="post" enctype="multipart/form-data">
-                                <input type="text" class="form-control modalCreatePost-input" id="postImageURL" name="imagePost" value="<?php echo $post['imagePost'] ?>">
+                                <input type="hidden" class="form-control modalCreatePost-input" id="postImageURL" name="imagePost" value="<?php echo $post['imagePost'] ?>">
                             </div>
-
-                            <script>
-                                let imgInputEditPost = document.querySelector("#imgInputEditPost");
-                                let previewImgEditPost = document.querySelector("#previewImgEditPost");
-
-                                imgInputEditPost.onchange = evt => {
-                                    const [file] = imgInputEditPost.files;
-                                    if (file) {
-                                        previewImgEditPost.src = URL.createObjectURL(file);
-                                    }
-                                }
-                            </script>
 
                             <div class="row ">
                                 <div class="col-8">

@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <?php require('components/cardTrip.php'); ?>
+                <?php require('components/cardTripNoLogin.php'); ?>
             </div>
             <div class="col-md-6 allPost">
                 <?php require('components/post.php'); ?>
